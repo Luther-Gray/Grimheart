@@ -1,0 +1,227 @@
+{
+	"connections": [
+		{
+			"from": "fbm3",
+			"from_port": 0,
+			"to": "tones_2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm3_2",
+			"from_port": 0,
+			"to": "tones",
+			"to_port": 0
+		},
+		{
+			"from": "tones_2",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "tones",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 6
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@877",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 75.8670043945312,
+				"y": -103.818008422852
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 0.0,
+					"g": 0.0,
+					"r": 0.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 1.0,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 7,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "fbm3",
+			"node_position": {
+				"x": -640.5,
+				"y": -225.5
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 2.0,
+				"noise": 1,
+				"offset": 0.0,
+				"persistence": 0.45,
+				"scale_x": 3.0,
+				"scale_y": 3.0
+			},
+			"seed_int": 0,
+			"type": "fbm3"
+		},
+		{
+			"name": "tones_2",
+			"node_position": {
+				"x": -419.5,
+				"y": -229.5
+			},
+			"parameters": {
+				"in_max": {
+					"a": 1.0,
+					"b": 0.619056105613708,
+					"g": 0.619056105613708,
+					"r": 0.619056105613708,
+					"type": "Color"
+				},
+				"in_mid": {
+					"a": 0.5,
+					"b": 0.550000011920929,
+					"g": 0.550000011920929,
+					"r": 0.550000011920929,
+					"type": "Color"
+				},
+				"in_min": {
+					"a": 0.0,
+					"b": 0.21875,
+					"g": 0.21875,
+					"r": 0.21875,
+					"type": "Color"
+				},
+				"out_max": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"out_min": {
+					"a": 0.0,
+					"b": 0.412499994039536,
+					"g": 0.412499994039536,
+					"r": 0.412499994039536,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "tones"
+		},
+		{
+			"name": "fbm3_2",
+			"node_position": {
+				"x": -659.5,
+				"y": 50.0
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 1.0,
+				"noise": 1,
+				"offset": 0.0,
+				"persistence": 0.0,
+				"scale_x": 5.0,
+				"scale_y": 5.0
+			},
+			"seed_int": 746519872,
+			"type": "fbm3"
+		},
+		{
+			"name": "tones",
+			"node_position": {
+				"x": -417.5,
+				"y": 61.5
+			},
+			"parameters": {
+				"in_max": {
+					"a": 1.0,
+					"b": 0.993749976158142,
+					"g": 0.993749976158142,
+					"r": 0.993749976158142,
+					"type": "Color"
+				},
+				"in_mid": {
+					"a": 0.5,
+					"b": 0.5,
+					"g": 0.5,
+					"r": 0.5,
+					"type": "Color"
+				},
+				"in_min": {
+					"a": 0.0,
+					"b": 0.416506320238113,
+					"g": 0.416506320238113,
+					"r": 0.416506320238113,
+					"type": "Color"
+				},
+				"out_max": {
+					"a": 1.0,
+					"b": 0.71875,
+					"g": 0.71875,
+					"r": 0.71875,
+					"type": "Color"
+				},
+				"out_min": {
+					"a": 0.0,
+					"b": 0.0,
+					"g": 0.0,
+					"r": 0.0,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "tones"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -165.828521728516,
+				"y": -49.1184844970703
+			},
+			"parameters": {
+				"amount1": 0.5,
+				"blend_type1": 0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
