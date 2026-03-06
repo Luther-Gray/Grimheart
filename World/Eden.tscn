@@ -1,3 +1,84 @@
-[gd_scene format=3 uid="uid://brcttbaxwuu5b"]
+[gd_scene format=3 uid="uid://c3wthaj2pok5q"]
 
-[node name="Eden" type="Node3D" unique_id=166605173]
+[ext_resource type="FontFile" uid="uid://5g47nlidunmr" path="res://Theme/Fonts/Kubasta.ttf" id="1_4xa60"]
+[ext_resource type="PackedScene" uid="uid://dqlrb3crcwls2" path="res://Actors/Zombie/Zombie.tscn" id="1_054xo"]
+[ext_resource type="Texture2D" uid="uid://celh00tvw175f" path="res://World/DEV/texture_01.png" id="2_t812m"]
+[ext_resource type="Script" uid="uid://b6n1jdur57rse" path="res://System/Debug.gd" id="2_tuaqs"]
+[ext_resource type="Theme" uid="uid://dcirjlthjc61h" path="res://Theme/ProgressBars.tres" id="3_plgna"]
+
+[sub_resource type="Theme" id="Theme_bmxlf"]
+default_font = ExtResource("1_4xa60")
+default_font_size = 28
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 10
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4qx6"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_054xo"]
+sky_material = SubResource("ProceduralSkyMaterial_j4qx6")
+
+[sub_resource type="Environment" id="Environment_t812m"]
+background_mode = 2
+sky = SubResource("Sky_054xo")
+tonemap_mode = 2
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_t812m"]
+vertices = PackedVector3Array(-998, 1.895, -998, -998, 1.895, 998, 998, 1.895, 998, 998, 1.895, -998)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_size = 2.0
+cell_height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t812m"]
+albedo_texture = ExtResource("2_t812m")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_qpi2y"]
+material = SubResource("StandardMaterial3D_t812m")
+size = Vector3(2000, 0.01, 2000)
+
+[node name="Eden" type="Node3D" unique_id=996762852]
+
+[node name="Debug" type="Control" parent="." unique_id=1244074132]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bmxlf")
+script = ExtResource("2_tuaqs")
+zombie = ExtResource("1_054xo")
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug" unique_id=548434524]
+layout_mode = 0
+offset_right = 79.0
+offset_bottom = 140.0
+
+[node name="PropertyContainer" type="VBoxContainer" parent="Debug/MarginContainer" unique_id=528477394]
+layout_mode = 2
+theme = ExtResource("3_plgna")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=2146243689]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 500, 0)
+
+[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=336501627]
+environment = SubResource("Environment_t812m")
+
+[node name="Zombie" parent="." unique_id=636667246 instance=ExtResource("1_054xo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1667948000]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.8660254, 0, -0.8660254, 0.5, -1, 34, 22)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=881402445]
+navigation_mesh = SubResource("NavigationMesh_t812m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1574240947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.099999994, 0)
+mesh = SubResource("BoxMesh_qpi2y")
