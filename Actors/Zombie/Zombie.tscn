@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ujg5sa2l0h5f" path="res://Actors/Zombie/Zombie.gd" id="1_7f2lo"]
 [ext_resource type="PackedScene" uid="uid://bk2avmiybmxe1" path="res://Actors/Zombie/ZombieMesh.tscn" id="2_7f2lo"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_7f2lo"]
-radius = 0.4
+[ext_resource type="Texture2D" uid="uid://6cidv6int4dq" path="res://Actors/DropShadow.png" id="3_df03c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_df03c"]
 radius = 0.4
@@ -16,35 +14,41 @@ animation = &"aIdle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_df03c"]
 animation = &"aWalk"
 
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_df03c"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jnhar"]
-graph_offset = Vector2(-1454.0265, 96.916176)
-nodes/output/position = Vector2(240, 213.33333)
+graph_offset = Vector2(-285.89584, 240.79688)
+nodes/output/position = Vector2(346.66666, 213.33333)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_7f2lo")
-nodes/Idle/position = Vector2(0, 213.33333)
+nodes/Idle/position = Vector2(-106.666664, 160)
 nodes/Walk1/node = SubResource("AnimationNodeAnimation_df03c")
-nodes/Walk1/position = Vector2(186.66667, 346.66666)
-node_connections = [&"output", 0, &"Idle"]
+nodes/Walk1/position = Vector2(-213.33333, 400)
+nodes/WalkBlend/node = SubResource("AnimationNodeBlend2_df03c")
+nodes/WalkBlend/position = Vector2(80, 293.33334)
+node_connections = [&"output", 0, &"WalkBlend", &"WalkBlend", 0, &"Idle", &"WalkBlend", 1, &"Walk1"]
 
 [node name="Zombie" type="CharacterBody3D" unique_id=636667246]
+collision_layer = 2
 script = ExtResource("1_7f2lo")
 
-[node name="ZHeadCol" type="CollisionShape3D" parent="." unique_id=1044651773]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
-shape = SubResource("SphereShape3D_7f2lo")
-
 [node name="ZBodyCol" type="CollisionShape3D" parent="." unique_id=404739843]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 shape = SubResource("CapsuleShape3D_df03c")
 
 [node name="Zombie" parent="." unique_id=1143249683 instance=ExtResource("2_7f2lo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="ZombieAnimTree" type="AnimationTree" parent="." unique_id=983629739]
 root_node = NodePath("../Zombie")
 tree_root = SubResource("AnimationNodeBlendTree_jnhar")
 anim_player = NodePath("../Zombie/AnimationPlayer")
+parameters/WalkBlend/blend_amount = 0.0
 
 [node name="Timer" type="Timer" parent="." unique_id=198641939]
 wait_time = 5.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1770387685]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1361557737]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0, 0, 0)
+texture_filter = 2
+texture = ExtResource("3_df03c")
