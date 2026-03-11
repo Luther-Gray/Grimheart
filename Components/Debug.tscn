@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bkfud1goxwydj"]
+
+[ext_resource type="FontFile" uid="uid://5g47nlidunmr" path="res://Theme/Fonts/Kubasta.ttf" id="1_xtmb4"]
+[ext_resource type="Script" uid="uid://b6n1jdur57rse" path="res://System/Debug.gd" id="2_aqvr4"]
+[ext_resource type="Theme" uid="uid://dcirjlthjc61h" path="res://Theme/ProgressBars.tres" id="3_kogs3"]
+
+[sub_resource type="Theme" id="Theme_bmxlf"]
+default_font = ExtResource("1_xtmb4")
+default_font_size = 28
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 10
+
+[node name="Debug" type="Control" unique_id=1671918337]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bmxlf")
+script = ExtResource("2_aqvr4")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1138068132]
+layout_mode = 0
+offset_right = 79.0
+offset_bottom = 140.0
+
+[node name="PropertyContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1636401468]
+layout_mode = 2
+theme = ExtResource("3_kogs3")
