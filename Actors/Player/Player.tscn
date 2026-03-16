@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c33ygtmn7gujp"]
+
+[ext_resource type="Script" uid="uid://dir08dwocnjcb" path="res://Actors/Player/Player.gd" id="1_yqfyh"]
+[ext_resource type="PackedScene" uid="uid://d4nkuraytowfv" path="res://Actors/Player/Clyde.tscn" id="3_l6vkj"]
+[ext_resource type="PackedScene" uid="uid://12um0f5avgwo" path="res://Actors/Player/Debug.tscn" id="3_vywg6"]
+[ext_resource type="Script" uid="uid://b46e3mat8dx5" path="res://addons/open-world-database/src/open_world_database.gd" id="4_rsi04"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ahfe7"]
+animation = &"aIdle"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_4xa60"]
+graph_offset = Vector2(-494.66666, 56)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_ahfe7")
+nodes/Animation/position = Vector2(0, 160)
+node_connections = [&"output", 0, &"Animation"]
+
+[node name="Player" type="CharacterBody3D" unique_id=247372515]
+script = ExtResource("1_yqfyh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2117931213]
+shape = SubResource("CapsuleShape3D_qpi2y")
+
+[node name="Debug" parent="." unique_id=1625954760 instance=ExtResource("3_vywg6")]
+
+[node name="Clyde" parent="." unique_id=2031059066 instance=ExtResource("3_l6vkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="bHips" parent="Clyde/Player" parent_id_path=PackedInt32Array(2031059066, 1131210404) index="0" unique_id=1523439892]
+transform = Transform3D(1, 0, 0, 0, 0.99904823, -0.043619383, 0, 0.043619383, 0.99904823, 0, 0.765625, 0)
+
+[node name="bTorso" parent="Clyde/Player/bHips" index="0" unique_id=529028951]
+transform = Transform3D(1, 0, 0, 0, 0.9951388, 0.09848106, 0, -0.09848106, 0.9951388, 0, 0.203125, 0)
+
+[node name="bHead" parent="Clyde/Player/bHips/bTorso/bNeck" parent_id_path=PackedInt32Array(2031059066, 796929492) index="0" unique_id=2008353325]
+transform = Transform3D(1, 0, 0, 0, 0.99777204, 0.06671535, 0, -0.06671535, 0.99777204, 0, 0.046875, 0)
+
+[node name="Stud_L" parent="Clyde/Player/bHips/bTorso/bNeck/bHead/bEar_L/bEarExtra_L" parent_id_path=PackedInt32Array(2031059066, 1344395544) index="0" unique_id=38063341]
+layers = 2
+
+[node name="Ear_L" parent="Clyde/Player/bHips/bTorso/bNeck/bHead/bEar_L" parent_id_path=PackedInt32Array(2031059066, 35471573) index="1" unique_id=901520842]
+layers = 2
+
+[node name="Stud_R" parent="Clyde/Player/bHips/bTorso/bNeck/bHead/bEar_R/bEarExtra_R" parent_id_path=PackedInt32Array(2031059066, 1825760504) index="0" unique_id=619761378]
+layers = 2
+
+[node name="Ear_R" parent="Clyde/Player/bHips/bTorso/bNeck/bHead/bEar_R" parent_id_path=PackedInt32Array(2031059066, 584645962) index="1" unique_id=1943629440]
+layers = 2
+
+[node name="Head" parent="Clyde/Player/bHips/bTorso/bNeck/bHead" index="4" unique_id=1609873373]
+layers = 2
+
+[node name="DEV_Camera" type="Camera3D" parent="Clyde/Player/bHips/bTorso/bNeck/bHead" index="5" unique_id=246273054]
+transform = Transform3D(1, 0, 0, 0, 0.9949625, -0.10024682, 0, 0.10024682, 0.9949625, 0, 0.20790708, 0.03141281)
+cull_mask = 1048573
+
+[node name="Face" parent="Clyde/Player/bHips/bTorso/bNeck/bHead" index="6" unique_id=109033932]
+layers = 2
+
+[node name="Neck" parent="Clyde/Player/bHips/bTorso/bNeck" parent_id_path=PackedInt32Array(2031059066, 796929492) index="1" unique_id=1090770540]
+layers = 2
+
+[node name="bUpperArm_L" parent="Clyde/Player/bHips/bTorso" index="1" unique_id=1402735437]
+transform = Transform3D(1, 0, 0, 0, 0.99777496, -0.06667176, 0, 0.06667176, 0.99777496, -0.25, 0.3125, 0)
+
+[node name="bUpperArm_R" parent="Clyde/Player/bHips/bTorso" index="2" unique_id=1675588997]
+transform = Transform3D(1, 0, 0, 0, 0.99777496, -0.06667176, 0, 0.06667176, 0.99777496, 0.25, 0.3125, 0)
+
+[node name="bUpperLeg_L" parent="Clyde/Player/bHips" index="1" unique_id=355950238]
+transform = Transform3D(0.99904823, 0.04361939, 0, -0.043453407, 0.9952466, 0.087155744, 0.0038016804, -0.08707279, 0.9961947, -0.09375, -0.046875, 0)
+
+[node name="bUpperLeg_R" parent="Clyde/Player/bHips" index="2" unique_id=1353481394]
+transform = Transform3D(0.99904823, -0.043619383, 0, 0.043619383, 0.99904823, 0, 0, 0, 1, 0.09375, -0.046875, 0)
+
+[node name="bLowerLeg_R" parent="Clyde/Player/bHips/bUpperLeg_R" index="0" unique_id=1065581681]
+transform = Transform3D(1, 0, 0, 0, 0.9961947, 0.08715574, 0, -0.08715574, 0.9961947, 0, -0.359375, 0)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
+root_node = NodePath("../Clyde")
+tree_root = SubResource("AnimationNodeBlendTree_4xa60")
+anim_player = NodePath("../Clyde/AnimationPlayer")
+
+[node name="OpenWorldDatabase" type="Node" parent="." unique_id=963950599]
+script = ExtResource("4_rsi04")
+metadata/_custom_type_script = "uid://b46e3mat8dx5"
+
+[editable path="Clyde"]

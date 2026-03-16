@@ -23,10 +23,11 @@ config/icon="uid://cpdakj60wqbny"
 
 [autoload]
 
-Debug="*uid://cr74nwug55noi"
+Debug="*uid://12um0f5avgwo"
 
 [display]
 
+window/size/mode=4
 window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
@@ -35,7 +36,7 @@ window/physics_ticks_per_second=144
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/MarchingSquaresTerrain/plugin.cfg", "res://addons/asset_placer/plugin.cfg", "res://addons/open-world-database/plugin.cfg")
+enabled=PackedStringArray("res://addons/asset_placer/plugin.cfg", "res://addons/open-world-database/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [filesystem]
 

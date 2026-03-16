@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d4nkuraytowfv"]
+
+[ext_resource type="PackedScene" uid="uid://de5o87uoluwlr" path="res://Actors/Player/Player.gltf" id="1_dihog"]
+
+[node name="Clyde" unique_id=2031059066 instance=ExtResource("1_dihog")]
