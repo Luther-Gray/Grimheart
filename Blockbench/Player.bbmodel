@@ -2220,7 +2220,7 @@
 			"rotation": [0, 0, 0],
 			"fov": 70,
 			"aspect_ratio": [16, 9],
-			"linked_preview": "main",
+			"linked_preview": "",
 			"camera_linked": false,
 			"visibility": true,
 			"type": "camera",
@@ -2280,7 +2280,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": false
+			"primary_selected": true
 		},
 		{
 			"uuid": "d338f478-b06c-b173-9621-30c966014b1d",
@@ -2406,7 +2406,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": true
+			"primary_selected": false
 		},
 		{
 			"uuid": "b50b2247-62b2-e307-fba7-6ceb36b57caa",
@@ -4271,7 +4271,7 @@
 			"override": false,
 			"length": 0.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"group_name": "",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -4805,7 +4805,7 @@
 			"override": false,
 			"length": 0.75,
 			"snapping": 24,
-			"selected": false,
+			"selected": true,
 			"group_name": "",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -5111,6 +5111,20 @@
 							],
 							"uuid": "be87c378-2a7a-6117-1cd7-856acb188904",
 							"time": 0.04167,
+							"color": -1,
+							"interpolation": "catmullrom"
+						},
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-5.53",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "189234ba-ae78-ce21-0c93-9b0059c4c0ec",
+							"time": 0.58333,
 							"color": -1,
 							"interpolation": "catmullrom"
 						}
