@@ -1,101 +1,83 @@
 [gd_scene format=3 uid="uid://d4nkuraytowfv"]
 
-[ext_resource type="PackedScene" uid="uid://de5o87uoluwlr" path="res://Actors/Player/Player.gltf" id="1_dihog"]
-[ext_resource type="Script" uid="uid://vjylbctsl48n" path="res://Actors/Player/Camera.gd" id="2_3bjht"]
-[ext_resource type="Texture2D" uid="uid://6cidv6int4dq" path="res://Actors/DropShadow.png" id="3_lvj6b"]
-[ext_resource type="Script" uid="uid://bmlkvek1e1mmf" path="res://Resources/GameSettings.gd" id="3_qucjq"]
+[ext_resource type="PackedScene" uid="uid://de5o87uoluwlr" path="res://_GLTF/-Actors/Player.gltf" id="1_dihog"]
 
 [node name="Clyde" unique_id=600218105 instance=ExtResource("1_dihog")]
 
-[node name="bHips" parent="Player" parent_id_path=PackedInt32Array(1735141420) index="0" unique_id=1634743871]
-transform = Transform3D(1, 0, 0, 0, 0.08715568, 0.99619466, 0, -0.99619466, 0.08715568, 0, 0.765625, 0)
+[node name="bHips" parent="Player" parent_id_path=PackedInt32Array(1208963485) index="0" unique_id=12425025]
+transform = Transform3D(1, 0, 0, 0, 0.9990482, -0.04361938, 0, 0.04361938, 0.9990482, 0, 0.765625, 0)
 
-[node name="Hips_F" parent="Player/bHips" index="0" unique_id=464455109]
+[node name="Hips_F" parent="Player/bHips" index="0" unique_id=2011885703]
 visible = false
 
-[node name="bTorso" parent="Player/bHips" index="2" unique_id=445728381]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0.203125, 0)
+[node name="bTorso" parent="Player/bHips" index="2" unique_id=1410487380]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.996074, 0.088523455, 0, -0.08852345, 0.9960741, 0, 0.203125, 0)
 
-[node name="Torso_F" parent="Player/bHips/bTorso" index="0" unique_id=1599728361]
+[node name="Torso_F" parent="Player/bHips/bTorso" index="0" unique_id=1632622365]
 visible = false
 
-[node name="bNeck" parent="Player/bHips/bTorso" index="2" unique_id=1109612824]
+[node name="bNeck" parent="Player/bHips/bTorso" index="2" unique_id=1819008316]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0.375, 0)
 
-[node name="bHead" parent="Player/bHips/bTorso/bNeck" index="0" unique_id=337335301]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.67559016, -0.7372773, 0, 0.73727727, 0.6755902, 0, 0.046875, 0)
+[node name="bHead" parent="Player/bHips/bTorso/bNeck" index="0" unique_id=1858938707]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9992481, 0.038769953, 0, -0.03876995, 0.99924815, 0, 0.046875, 0)
 
-[node name="Stud_L" parent="Player/bHips/bTorso/bNeck/bHead/bEar_L/bEarExtra_L" parent_id_path=PackedInt32Array(916630629) index="0" unique_id=20962332]
+[node name="Stud_L" parent="Player/bHips/bTorso/bNeck/bHead/bEar_L/bEarExtra_L" parent_id_path=PackedInt32Array(1737610078) index="0" unique_id=934983174]
 layers = 2
 
-[node name="Ear_L" parent="Player/bHips/bTorso/bNeck/bHead/bEar_L" parent_id_path=PackedInt32Array(288934675) index="1" unique_id=1398845250]
+[node name="Ear_L" parent="Player/bHips/bTorso/bNeck/bHead/bEar_L" parent_id_path=PackedInt32Array(1712408546) index="1" unique_id=1607362378]
 layers = 2
 
-[node name="Stud_R" parent="Player/bHips/bTorso/bNeck/bHead/bEar_R/bEarExtra_R" parent_id_path=PackedInt32Array(1851779837) index="0" unique_id=57342278]
+[node name="Stud_R" parent="Player/bHips/bTorso/bNeck/bHead/bEar_R/bEarExtra_R" parent_id_path=PackedInt32Array(1799472617) index="0" unique_id=2031075198]
 layers = 2
 
-[node name="Ear_R" parent="Player/bHips/bTorso/bNeck/bHead/bEar_R" parent_id_path=PackedInt32Array(1477695982) index="1" unique_id=1224178552]
+[node name="Ear_R" parent="Player/bHips/bTorso/bNeck/bHead/bEar_R" parent_id_path=PackedInt32Array(1159410277) index="1" unique_id=281425453]
 layers = 2
 
-[node name="Head" parent="Player/bHips/bTorso/bNeck/bHead" index="4" unique_id=1954607097]
+[node name="Head" parent="Player/bHips/bTorso/bNeck/bHead" index="4" unique_id=1802520084]
 layers = 2
 
-[node name="Face" parent="Player/bHips/bTorso/bNeck/bHead" index="5" unique_id=588531458]
+[node name="Face" parent="Player/bHips/bTorso/bNeck/bHead" index="5" unique_id=290449624]
 layers = 2
 
-[node name="FPS Camera" parent="Player/bHips/bTorso/bNeck/bHead" index="6" unique_id=1439026596]
+[node name="FPS Camera" parent="Player/bHips/bTorso/bNeck/bHead" index="6" unique_id=116634050]
 visible = false
 
-[node name="CameraPivot" type="Node3D" parent="Player/bHips/bTorso/bNeck/bHead" index="7" unique_id=1122740090]
-transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.217, -0.199)
-script = ExtResource("2_3bjht")
-Settings = ExtResource("3_qucjq")
+[node name="CameraMarker" type="Marker3D" parent="Player/bHips/bTorso/bNeck/bHead" index="7" unique_id=483338888]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9925347, -0.12196377, 0, 0.12196377, 0.99253464, 0, 0.21571183, -0.18327044)
 
-[node name="DEV_Camera" type="Camera3D" parent="Player/bHips/bTorso/bNeck/bHead/CameraPivot" index="0" unique_id=741787927]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000001, 0, 0, 0)
-cull_mask = 1048573
-current = true
-
-[node name="Neck" parent="Player/bHips/bTorso/bNeck" index="1" unique_id=1706820864]
+[node name="Neck" parent="Player/bHips/bTorso/bNeck" index="1" unique_id=996314018]
 layers = 2
 
-[node name="bUpperArm_L" parent="Player/bHips/bTorso" index="3" unique_id=234403838]
-transform = Transform3D(0.4226182, 2.9802322e-08, -0.90630776, -0.45315385, -0.8660254, -0.21130912, -0.7848856, 0.49999997, -0.3659981, -0.25, 0.3125, 0)
+[node name="bUpperArm_L" parent="Player/bHips/bTorso" index="3" unique_id=584276518]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.9965816, -0.08261423, 0, 0.08261425, 0.9965814, -0.25, 0.3125, 0)
 
-[node name="UpperArmF_L" parent="Player/bHips/bTorso/bUpperArm_L" index="0" unique_id=1071354753]
+[node name="UpperArmF_L" parent="Player/bHips/bTorso/bUpperArm_L" index="0" unique_id=1679628523]
 visible = false
 
-[node name="bLowerArm_L" parent="Player/bHips/bTorso/bUpperArm_L" index="2" unique_id=650216498]
-transform = Transform3D(1, 0, 0, 0, 0.4617486, -0.8870108, 0, 0.8870108, 0.4617486, -0.000238125, -0.3070525, 0)
+[node name="bLowerArm_L" parent="Player/bHips/bTorso/bUpperArm_L" index="2" unique_id=622921215]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.000238125, -0.3070525, 0)
 
-[node name="LowerArmF_L" parent="Player/bHips/bTorso/bUpperArm_L/bLowerArm_L" index="0" unique_id=1627389157]
+[node name="LowerArmF_L" parent="Player/bHips/bTorso/bUpperArm_L/bLowerArm_L" index="0" unique_id=982824789]
 visible = false
 
-[node name="bUpperArm_R" parent="Player/bHips/bTorso" index="4" unique_id=980868807]
-transform = Transform3D(0.22147022, 0.25117135, 0.9422651, 0.26450306, -0.9455095, 0.18986732, 0.9386102, 0.20718208, -0.27583775, 0.25, 0.3125, 0)
+[node name="bUpperArm_R" parent="Player/bHips/bTorso" index="4" unique_id=562291132]
+transform = Transform3D(1, 0, 0, 0, 0.99658126, -0.08261421, 0, 0.08261422, 0.9965812, 0.25, 0.3125, 0)
 
-[node name="UpperArmF_R" parent="Player/bHips/bTorso/bUpperArm_R" index="0" unique_id=1914757607]
+[node name="UpperArmF_R" parent="Player/bHips/bTorso/bUpperArm_R" index="0" unique_id=1643336986]
 visible = false
 
-[node name="bLowerArm_R" parent="Player/bHips/bTorso/bUpperArm_R" index="2" unique_id=1467072038]
-transform = Transform3D(1, 0, 0, 0, 0.4226182, -0.90630776, 0, 0.90630776, 0.4226182, 0.000238125, -0.3070525, 0)
+[node name="bLowerArm_R" parent="Player/bHips/bTorso/bUpperArm_R" index="2" unique_id=2081477334]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.000238125, -0.3070525, 0)
 
-[node name="LowerArmF_R" parent="Player/bHips/bTorso/bUpperArm_R/bLowerArm_R" index="0" unique_id=1457297186]
+[node name="LowerArmF_R" parent="Player/bHips/bTorso/bUpperArm_R/bLowerArm_R" index="0" unique_id=1494550411]
 visible = false
 
-[node name="bUpperLeg_L" parent="Player/bHips" index="3" unique_id=311715379]
-transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202015, 0, -0.34202015, 0.9396926, -0.09375, -0.046875, 0)
+[node name="bUpperLeg_L" parent="Player/bHips" index="3" unique_id=1383809350]
+transform = Transform3D(0.99904823, 0.04361939, 0, -0.043453407, 0.9952466, 0.087155744, 0.0038016804, -0.08707279, 0.9961947, -0.09375, -0.046875, 0)
 
-[node name="bLowerLeg_L" parent="Player/bHips/bUpperLeg_L" index="1" unique_id=1972914966]
-transform = Transform3D(1, 0, 0, 0, 0.976296, 0.21643962, 0, -0.21643962, 0.976296, 0, -0.359375, 0)
+[node name="bUpperLeg_R" parent="Player/bHips" index="4" unique_id=1058638058]
+transform = Transform3D(0.99904823, -0.04361937, 0, 0.043619383, 0.9990479, 0, 0, 0, 0.9999999, 0.09375, -0.046875, 0)
 
-[node name="bUpperLeg_R" parent="Player/bHips" index="4" unique_id=1418983689]
-transform = Transform3D(0.9961947, 0.015134431, -0.08583163, -1.8626451e-09, 0.9848076, 0.17364813, 0.08715573, -0.17298736, 0.98106015, 0.09375, -0.046875, 0)
-
-[node name="bLowerLeg_R" parent="Player/bHips/bUpperLeg_R" index="1" unique_id=31854810]
-transform = Transform3D(1, 0, 0, 0, 0.976296, 0.21643962, 0, -0.21643962, 0.976296, 0, -0.359375, 0)
-
-[node name="Sprite3D" type="Sprite3D" parent="." index="2" unique_id=1447502192]
-transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
-texture_filter = 2
-texture = ExtResource("3_lvj6b")
+[node name="bLowerLeg_R" parent="Player/bHips/bUpperLeg_R" index="1" unique_id=1055208376]
+transform = Transform3D(1, 0, 0, 0, 0.9961947, 0.08715574, 0, -0.08715574, 0.9961947, 0, -0.359375, 0)

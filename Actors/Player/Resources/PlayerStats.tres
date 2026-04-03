@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://dmj2hsfgovph"]
+
+[ext_resource type="Script" uid="uid://dr7sulxtsdvf0" path="res://Resources/Stats.gd" id="1_xolmv"]
+
+[resource]
+script = ExtResource("1_xolmv")
+WalkSpeed = 5.0
+SprintSpeed = 10.0
+JumpStrength = 20.0
+metadata/_custom_type_script = "uid://dr7sulxtsdvf0"

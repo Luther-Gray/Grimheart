@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://12um0f5avgwo"]
 
 [ext_resource type="FontFile" uid="uid://5g47nlidunmr" path="res://Theme/Fonts/Kubasta.ttf" id="1_r5wdt"]
-[ext_resource type="Script" uid="uid://b6n1jdur57rse" path="res://Actors/Player/Debug.gd" id="2_6b582"]
+[ext_resource type="Script" uid="uid://b6n1jdur57rse" path="res://Actors/Player/Scripts/Debug.gd" id="2_6b582"]
 [ext_resource type="Theme" uid="uid://dcirjlthjc61h" path="res://Theme/ProgressBars.tres" id="3_36t3r"]
 
 [sub_resource type="Theme" id="Theme_bmxlf"]

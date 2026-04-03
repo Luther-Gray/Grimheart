@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Attributes" format=3 uid="uid://36ixy4ngdwic"]
+
+[ext_resource type="Script" uid="uid://b3ww1lon8g65n" path="res://Resources/Attributes.gd" id="1_5ddd8"]
+
+[resource]
+script = ExtResource("1_5ddd8")
+metadata/_custom_type_script = "uid://b3ww1lon8g65n"

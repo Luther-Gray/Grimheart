@@ -1,9 +1,10 @@
 extends Node3D
-@onready var Player = $"../../../../../../.."
-@onready var CameraPivot: Node3D = $"."
-@export var Settings = GameSettings
+@export var Player: CharacterBody3D
+@export var Head: Node3D
+@export var CameraMarker : Marker3D
+@onready var CameraPivot: Node3D = self
+@export var Settings : Resource
 var isMouseCaptured = true
-
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -29,3 +30,7 @@ func _process(delta: float) -> void:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(Settings.SwayAmount),Settings.SwaySpeed * delta)
 	else:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
+
+func _physics_process(delta: float) -> void:
+### Head Bobbing
+	global_position = global_position.lerp(CameraMarker.global_position, delta * Settings.CameraSmooth)

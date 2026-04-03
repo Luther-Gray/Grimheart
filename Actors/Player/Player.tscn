@@ -1,16 +1,25 @@
 [gd_scene format=3 uid="uid://c33ygtmn7gujp"]
 
-[ext_resource type="Script" uid="uid://dir08dwocnjcb" path="res://Actors/Player/Player.gd" id="1_yqfyh"]
+[ext_resource type="Script" uid="uid://dir08dwocnjcb" path="res://Actors/Player/Scripts/Player.gd" id="1_yqfyh"]
+[ext_resource type="Resource" uid="uid://36ixy4ngdwic" path="res://Actors/Player/Resources/PlayerAttributes.tres" id="2_rsi04"]
+[ext_resource type="Resource" uid="uid://dmj2hsfgovph" path="res://Actors/Player/Resources/PlayerStats.tres" id="3_kkbrm"]
 [ext_resource type="PackedScene" uid="uid://d4nkuraytowfv" path="res://Actors/Player/Clyde.tscn" id="3_l6vkj"]
 [ext_resource type="PackedScene" uid="uid://12um0f5avgwo" path="res://Actors/Player/Debug.tscn" id="3_vywg6"]
-[ext_resource type="Script" uid="uid://gu16dllt3tn1" path="res://Actors/Player/AnimationManager.gd" id="6_l6vkj"]
+[ext_resource type="Script" uid="uid://gu16dllt3tn1" path="res://Actors/Player/Scripts/AnimationManager.gd" id="6_l6vkj"]
+[ext_resource type="Script" uid="uid://vjylbctsl48n" path="res://Actors/Player/Scripts/Camera.gd" id="7_kkbrm"]
+[ext_resource type="Resource" uid="uid://8v38iuoo4o54" path="res://Actors/Player/Resources/PlayerSettings.tres" id="8_6e37q"]
+[ext_resource type="Texture2D" uid="uid://6cidv6int4dq" path="res://Actors/DropShadow.png" id="9_6e37q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vywg6"]
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l6vkj"]
 animation = &"aIdle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vywg6"]
+animation = &"aJump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kkbrm"]
+animation = &"aSprint"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rsi04"]
 animation = &"aWalk"
@@ -18,17 +27,36 @@ animation = &"aWalk"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kkbrm"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vywg6"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l6vkj"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6e37q"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qhy2x"]
+xfade_time = 0.3
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_upr3p"]
-states/Start/position = Vector2(493.14233, 8.088547)
+states/End/position = Vector2(1066.5729, 101.40161)
+states/Start/position = Vector2(361.05902, 107.141945)
 states/aIdle/node = SubResource("AnimationNodeAnimation_l6vkj")
-states/aIdle/position = Vector2(494.23956, 101.47917)
+states/aIdle/position = Vector2(494.32523, 100.43923)
+states/aJump/node = SubResource("AnimationNodeAnimation_vywg6")
+states/aJump/position = Vector2(698.3305, 198.35939)
+states/aSprint/node = SubResource("AnimationNodeAnimation_kkbrm")
+states/aSprint/position = Vector2(589.3242, -38.117645)
 states/aWalk/node = SubResource("AnimationNodeAnimation_rsi04")
-states/aWalk/position = Vector2(661.0659, 7.489588)
-transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm")]
-graph_offset = Vector2(-482.42578, -194.39844)
+states/aWalk/position = Vector2(698.34717, 101.49941)
+transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aIdle", "aWalk", SubResource("AnimationNodeStateMachineTransition_vywg6"), "aWalk", "aIdle", SubResource("AnimationNodeStateMachineTransition_l6vkj"), "aWalk", "aSprint", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aSprint", "aWalk", SubResource("AnimationNodeStateMachineTransition_qhy2x")]
+graph_offset = Vector2(298.76953, -207.51172)
 
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
 script = ExtResource("1_yqfyh")
+Attribute = ExtResource("2_rsi04")
+Stat = ExtResource("3_kkbrm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2117931213]
 shape = SubResource("CapsuleShape3D_qpi2y")
@@ -40,18 +68,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Debug" parent="Clyde/DEV_Stuff" unique_id=1625954760 instance=ExtResource("3_vywg6")]
 
-[node name="SpringArm3D" type="SpringArm3D" parent="Clyde" unique_id=250324723]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 1.6, 0)
-shape = SubResource("SphereShape3D_vywg6")
-spring_length = 6.0
-
-[node name="3rd Person" type="Camera3D" parent="Clyde/SpringArm3D" unique_id=309288645]
-fov = 90.0
-
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
 root_node = NodePath("../Clyde")
 tree_root = SubResource("AnimationNodeStateMachine_upr3p")
 anim_player = NodePath("../Clyde/AnimationPlayer")
 
-[node name="AnimCenter" type="Node3D" parent="." unique_id=101054499]
+[node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
 script = ExtResource("6_l6vkj")
+AnimTree = NodePath("../AnimationTree")
+Source = NodePath("..")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1906564157 node_paths=PackedStringArray("Player", "Head", "CameraMarker")]
+transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6170001, -0.099)
+script = ExtResource("7_kkbrm")
+Player = NodePath("..")
+Head = NodePath("../Clyde/Player/bHips/bTorso/bNeck/bHead")
+CameraMarker = NodePath("../Clyde/Player/bHips/bTorso/bNeck/bHead/CameraMarker")
+Settings = ExtResource("8_6e37q")
+metadata/_edit_pinned_properties_ = [&"Player"]
+
+[node name="DEV_Camera" type="Camera3D" parent="CameraPivot" unique_id=2143699930]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000001, 0, 0, 0)
+cull_mask = 1048573
+current = true
+
+[node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, -1, 0)
+texture_filter = 2
+texture = ExtResource("9_6e37q")

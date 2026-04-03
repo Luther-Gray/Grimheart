@@ -1,19 +1,26 @@
 extends CharacterBody3D
 
-var MoveSpeed = 5.0
-var JumpStrength = 20
+@export var Attribute : Attributes
+@export var Stat : Stats
+var MoveSpeed : float
 #// State
 var InputDir : Vector2 = Vector2.ZERO
-var isMoving = false
+var isMoving : bool = false
+var isSprinting : bool = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	if Input.is_action_pressed("MV_Sprint") and isMoving:
+		isSprinting = true
+		MoveSpeed = Stat.SprintSpeed
+	else:
+		isSprinting = false
+		MoveSpeed = Stat.WalkSpeed
 	# Handle jump.
 	if Input.is_action_just_pressed("MV_Jump") and is_on_floor():
-		velocity.y = JumpStrength
+		velocity.y = Stat.JumpStrength
 
 	InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
 	var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()

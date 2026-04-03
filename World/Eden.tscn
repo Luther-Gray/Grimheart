@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c3wthaj2pok5q"]
 
 [ext_resource type="PackedScene" uid="uid://c33ygtmn7gujp" path="res://Actors/Player/Player.tscn" id="1_054xo"]
-[ext_resource type="Shader" uid="uid://cjpxkabjyf4b7" path="res://Shaders/MarchingTerrain.gdshader" id="2_t812m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4qx6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,45 +14,6 @@ background_mode = 2
 sky = SubResource("Sky_054xo")
 tonemap_mode = 2
 
-[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_ahfe7"]
-_shader_parameters = {
-&"flat_terrain_normals": true,
-&"shader_uniforms": null,
-&"shader_uniforms::general": null,
-&"step_height": 2.0,
-&"stepped_terrain": true
-}
-world_background = 0
-texture_filtering = 3
-output_roughness = false
-output_normal_map = false
-output_ambient_occlusion = false
-shader_override_enabled = true
-shader_override = ExtResource("2_t812m")
-show_checkered = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xa60"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 128.0
-distance_fade_max_distance = 96.0
-
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_tuaqs"]
-generated_type = 1
-height_offset = 0.5
-density = 10.0
-material_override = SubResource("StandardMaterial3D_4xa60")
-last_lod = 0
-last_shadow_lod = 0
-lod0_range = 128.0
-
-[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_plgna"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_tuaqs")])
-
 [node name="Eden" type="Node3D" unique_id=996762852]
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2146243689]
@@ -66,14 +26,6 @@ environment = SubResource("Environment_t812m")
 [node name="Player" parent="." unique_id=247372515 instance=ExtResource("1_054xo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Terrain3D" type="Terrain3D" parent="." unique_id=108099472]
-data_directory = "res://World/Eden_TerrainData"
-material = SubResource("Terrain3DMaterial_ahfe7")
-assets = SubResource("Terrain3DAssets_plgna")
-vertex_spacing = 6.0
-displacement_sharpness = 0.5
-ocean_cast_shadows = 3
-ocean_gi_mode = 1
-show_checkered = true
-top_level = true
-metadata/_edit_lock_ = true
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=728378631]
+use_collision = true
+size = Vector3(20, 0.001, 20)
