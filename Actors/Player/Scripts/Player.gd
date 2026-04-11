@@ -7,11 +7,16 @@ var MoveSpeed : float
 var InputDir : Vector2 = Vector2.ZERO
 var isMoving : bool = false
 var isSprinting : bool = false
+var isJumping : bool = false
+var isFalling : bool = false
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
+		isJumping = false
+		isFalling = true
 		velocity += get_gravity() * delta
+	elif is_on_floor():
+		isFalling = false
 	if Input.is_action_pressed("MV_Sprint") and isMoving:
 		isSprinting = true
 		MoveSpeed = Stat.SprintSpeed
@@ -20,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		MoveSpeed = Stat.WalkSpeed
 	# Handle jump.
 	if Input.is_action_just_pressed("MV_Jump") and is_on_floor():
+		isJumping = true
 		velocity.y = Stat.JumpStrength
 
 	InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
