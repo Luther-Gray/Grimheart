@@ -6,6 +6,7 @@ class_name StatusEffects
 @export var Bleeding : bool
 @export var Blessed : bool
 @export var Burning : bool
+@export var Crippled : bool
 @export var Diseased : bool
 @export var Drowning : bool
 @export var Fatigued : bool

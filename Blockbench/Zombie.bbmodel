@@ -53,9 +53,9 @@
 				"ByrprgF3": {
 					"uv": {
 						"lo3P": [14, 21.96],
+						"9QQE": [17.5458, 22.72],
 						"4VRS": [14, 16.26],
-						"tv9W": [17.5458, 15.5],
-						"9QQE": [17.5458, 22.72]
+						"tv9W": [17.5458, 15.5]
 					},
 					"texture": 0,
 					"vertices": ["9QQE", "tv9W", "4VRS", "lo3P"]
@@ -63,29 +63,29 @@
 				"Ft0B0TnK": {
 					"uv": {
 						"9QQE": [17.5458, 22.72],
+						"vM65": [21.0916, 21.96],
 						"tv9W": [17.5458, 15.5],
-						"H1V0": [21.0916, 16.26],
-						"vM65": [21.0916, 21.96]
+						"H1V0": [21.0916, 16.26]
 					},
 					"texture": 0,
 					"vertices": ["vM65", "H1V0", "tv9W", "9QQE"]
 				},
 				"7UYJcqEv": {
 					"uv": {
-						"kKA3": [5.125, 14.82637],
-						"TQKi": [5.125, 7.92075],
-						"RaEy": [9.4209, 7],
-						"z8Re": [9.4209, 15.74712]
+						"kKA3": [5.5, 14.87091],
+						"z8Re": [9.5459, 15.73808],
+						"TQKi": [5.5, 8.36717],
+						"RaEy": [9.5459, 7.5]
 					},
 					"texture": 0,
 					"vertices": ["z8Re", "RaEy", "TQKi", "kKA3"]
 				},
 				"kqABKUWx": {
 					"uv": {
-						"z8Re": [9.4209, 15.74712],
-						"RaEy": [9.4209, 7],
-						"834G": [13.7168, 7.92075],
-						"JKEE": [13.7168, 14.82637]
+						"z8Re": [9.5459, 15.73808],
+						"JKEE": [13.5918, 14.87091],
+						"RaEy": [9.5459, 7.5],
+						"834G": [13.5918, 8.36717]
 					},
 					"texture": 0,
 					"vertices": ["JKEE", "834G", "RaEy", "z8Re"]
@@ -102,10 +102,10 @@
 				},
 				"UCwnFpqZ": {
 					"uv": {
-						"H1V0": [0, 8.5],
-						"TQKi": [5, 8.5],
 						"kKA3": [5, 14.5],
-						"vM65": [0, 14.5]
+						"vM65": [0, 14.5],
+						"H1V0": [0, 8.5],
+						"TQKi": [5, 8.5]
 					},
 					"texture": 0,
 					"vertices": ["vM65", "kKA3", "TQKi", "H1V0"]
@@ -1444,7 +1444,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": true
+			"primary_selected": false
 		},
 		{
 			"name": "bUpperLeg.L",
@@ -2028,7 +2028,7 @@
 			"internal": true,
 			"saved": false,
 			"uuid": "736d038a-e134-042e-16ef-6ea947741cc4",
-			"source": "data:image/png;base64,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"
+			"source": "data:image/png;base64,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"
 		}
 	],
 	"animations": [
@@ -2039,7 +2039,7 @@
 			"override": false,
 			"length": 1.75,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"group_name": "",
 			"scope": 0,
 			"anim_time_update": "",

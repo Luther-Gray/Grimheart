@@ -15,7 +15,9 @@ func _ready() -> void:
 
 # Priority Matters
 func _process(_delta: float) -> void:
-	if Source.isJumping:
+	if Source.isUnsheathed:
+		StateMachine.travel("aIdleArmed")
+	elif Source.isJumping:
 		StateMachine.travel("aJump")
 	elif Source.isFalling:
 		StateMachine.travel("aFall")
