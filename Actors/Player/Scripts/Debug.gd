@@ -1,3 +1,4 @@
+@icon("res://addons/IconGodotNode/control/icon_thunder.png")
 extends Control
 
 @onready var property_container: VBoxContainer = $MarginContainer/PropertyContainer

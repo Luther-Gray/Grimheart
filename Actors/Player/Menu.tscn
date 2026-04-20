@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://70mpb30ysxto"]
+
+[ext_resource type="Script" uid="uid://dyohwcsgmixfy" path="res://Actors/Player/Menu.gd" id="1_dc7aq"]
+
+[node name="Menu" type="CanvasLayer" unique_id=884505131]
+script = ExtResource("1_dc7aq")
+
+[node name="PauseMenu" type="VBoxContainer" parent="." unique_id=743198351]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Resume" type="Button" parent="PauseMenu" unique_id=696440673]
+layout_mode = 2
+text = "Resume"
+
+[node name="Options" type="Button" parent="PauseMenu" unique_id=303331165]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="PauseMenu" unique_id=1694939859]
+layout_mode = 2
+text = "Quit"
+
+[node name="OptionsMenu" type="VBoxContainer" parent="." unique_id=1924445910]
+visible = false
+offset_right = 105.0
+offset_bottom = 18.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu" unique_id=684562712]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="OptionsMenu/HBoxContainer" unique_id=1064368052]
+layout_mode = 2
+text = "Mouse Sense"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/HBoxContainer" unique_id=2077831855]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+rounded = true
+
+[connection signal="pressed" from="PauseMenu/Resume" to="." method="_on_resume"]
+[connection signal="pressed" from="PauseMenu/Options" to="." method="_on_options"]
+[connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit"]

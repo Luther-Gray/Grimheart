@@ -1,3 +1,4 @@
+@icon("res://addons/IconGodotNode/node_3D/icon_camera_grid.png")
 extends Node3D
 @export var Player: CharacterBody3D
 @export var HeadBone: Node3D
@@ -13,9 +14,6 @@ func _ready() -> void:
 	CameraPivot.rotation.x = deg_to_rad(0)
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("SYS_Escape"):  # Esc to toggle mouse
-		isMouseCaptured = !isMouseCaptured
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if isMouseCaptured else Input.MOUSE_MODE_VISIBLE
 #// Mouse Look
 	if event is InputEventMouseMotion and isMouseCaptured:
 # Left & Right Mouse Look
@@ -37,3 +35,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 ### Head Bobbing
 	global_position = global_position.lerp(CameraMarker.global_position, delta * Settings.CameraSmooth)
+
+func _on_menu_visibility_changed() -> void:
+		isMouseCaptured = !isMouseCaptured
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if isMouseCaptured else Input.MOUSE_MODE_VISIBLE

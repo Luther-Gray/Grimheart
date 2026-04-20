@@ -4,12 +4,17 @@ extends CharacterBody3D
 @export var Stat : Stats
 @export var Vitals : Core
 
+@onready var CameraRaycast: RayCast3D = $CameraPivot/CameraRaycast
+
+#// Global Speed
 var MoveSpeed : float
 #// Tap vs Hold
 var HoldTimer : float = 0.3
 var TapTimer : float = 0.0
 #// Coyote Time
 var CoyoteTime : float = 0.3
+#// Ledge Grab
+#// Parkour
 #// State
 var InputDir : Vector2 = Vector2.ZERO
 var isUnsheathed : bool = false
@@ -17,8 +22,10 @@ var isMoving : bool = false
 var isSprinting : bool = false
 var isJumping : bool = false
 var isFalling : bool = false
+var isHanging : bool = false
 
 func _physics_process(delta: float) -> void:
+	#// State Manager
 	if not is_on_floor():
 		isJumping = false
 		isFalling = true
@@ -35,15 +42,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("MV_Jump") and is_on_floor():
 		isJumping = true
 		velocity.y = Stat.JumpStrength
-	# Handle Arms
-	if Input.is_action_just_pressed("ATK_Left") or Input.is_action_just_pressed("ATK_Right") and !isUnsheathed:
-		isUnsheathed = true
-	# Handle Reload vs Sheathe
-	if InputHelper.isTap("ATK_Reload"):
-		print("Reload!")
-	elif InputHelper.isHold("ATK_Reload"):
-		print("Sheathe!")
-		isUnsheathed = false
 
 	InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
 	var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()
@@ -57,3 +55,7 @@ func _physics_process(delta: float) -> void:
 		isMoving = false
 		
 	move_and_slide()
+	
+#// Functions
+func _crouch():
+	pass

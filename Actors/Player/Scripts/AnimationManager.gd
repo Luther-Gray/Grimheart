@@ -1,5 +1,8 @@
+@icon("res://addons/IconGodotNode/node/icon_animation.png")
 extends Node
 class_name  AnimationManager
+
+
 
 @export var AnimTree : AnimationTree
 @export var Source: CharacterBody3D
@@ -10,6 +13,8 @@ var TargetMoveDirection : Vector2 = Vector2.ZERO
 var AnimationSpeed : int = 5
 
 func _ready() -> void:
+	#//Turn Animation Manager off for Testing Mechanics.
+	process_mode = Node.PROCESS_MODE_DISABLED
 	StateMachine = AnimTree.get("parameters/playback")
 	
 
