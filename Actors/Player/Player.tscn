@@ -11,9 +11,13 @@
 [ext_resource type="Resource" uid="uid://8v38iuoo4o54" path="res://Actors/Player/Resources/PlayerSettings.tres" id="8_6e37q"]
 [ext_resource type="Texture2D" uid="uid://6cidv6int4dq" path="res://Actors/DropShadow.png" id="9_6e37q"]
 [ext_resource type="PackedScene" uid="uid://70mpb30ysxto" path="res://Actors/Player/Menu.tscn" id="11_gh11b"]
+[ext_resource type="Script" uid="uid://d0ee1lb8ej21l" path="res://Actors/Player/Scripts/Jump.gd" id="12_ujyek"]
+[ext_resource type="Script" uid="uid://dg34oqkorvqld" path="res://Actors/Player/Scripts/Crouch.gd" id="12_upr3p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
 radius = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e37q"]
 animation = &"aFall"
@@ -138,35 +142,22 @@ states/aWalkSpace/position = Vector2(804.2161, 101.07914)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aIdle", "aJump", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aSprint", "aJump", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aJump", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aJump", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aJump", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aFall", "aJump", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJump", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aWalkSpace", "aJump", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc")]
 graph_offset = Vector2(-586.04297, -194.79297)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
-
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
 script = ExtResource("1_yqfyh")
 Attribute = ExtResource("2_rsi04")
 Stat = ExtResource("3_kkbrm")
 Vitals = ExtResource("4_qhy2x")
 
-[node name="Debug" parent="." unique_id=1625954760 instance=ExtResource("3_vywg6")]
-
-[node name="Menu" parent="." unique_id=884505131 instance=ExtResource("11_gh11b")]
-visible = false
-
 [node name="Clyde" parent="." unique_id=1503265258 instance=ExtResource("3_l6vkj")]
+
+[node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
+texture_filter = 2
+texture = ExtResource("9_6e37q")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=2117931213]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_qpi2y")
-
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
-root_node = NodePath("../Clyde")
-tree_root = SubResource("AnimationNodeStateMachine_upr3p")
-anim_player = NodePath("../Clyde/AnimationPlayer")
-parameters/aWalkSpace/blend_position = Vector2(0, 0)
-
-[node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
-script = ExtResource("6_l6vkj")
-AnimTree = NodePath("../AnimationTree")
-Source = NodePath("..")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1906564157 node_paths=PackedStringArray("Player", "HeadBone", "CameraMarker")]
 transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 1.6170001, -0.199)
@@ -186,11 +177,6 @@ fov = 90.0
 [node name="CameraRaycast" type="RayCast3D" parent="CameraPivot" unique_id=283864831]
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 3.659807e-10, -0.01700008, -0.201)
 
-[node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
-transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
-texture_filter = 2
-texture = ExtResource("9_6e37q")
-
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=944277932]
 transform = Transform3D(1, 0, 0, 0, -1.5, 8.742278e-08, 0, -1.3113416e-07, -1, 0, 2, 0)
 
@@ -200,5 +186,30 @@ transform = Transform3D(1, 0, 0, 0, -1.0606601, -0.7071067, 0, 1.06066, -0.70710
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
 transform = Transform3D(0.4, 0, 0, 0, -3.059797e-08, -1, 0, 0.7, -4.371139e-08, 0, 1, 0)
 shape = SubResource("BoxShape3D_qhy2x")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
+root_node = NodePath("../Clyde")
+tree_root = SubResource("AnimationNodeStateMachine_upr3p")
+anim_player = NodePath("../Clyde/AnimationPlayer")
+parameters/aWalkSpace/blend_position = Vector2(0, 0)
+
+[node name="Menu" parent="." unique_id=884505131 instance=ExtResource("11_gh11b")]
+visible = false
+
+[node name="Debug" parent="." unique_id=1625954760 instance=ExtResource("3_vywg6")]
+
+[node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
+script = ExtResource("6_l6vkj")
+AnimTree = NodePath("../AnimationTree")
+Source = NodePath("..")
+
+[node name="Jump" type="Node3D" parent="." unique_id=1934262400 node_paths=PackedStringArray("Source")]
+script = ExtResource("12_ujyek")
+Source = NodePath("..")
+
+[node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source")]
+script = ExtResource("12_upr3p")
+Source = NodePath("..")
+Settings = ExtResource("8_6e37q")
 
 [connection signal="visibility_changed" from="Menu" to="CameraPivot" method="_on_menu_visibility_changed"]

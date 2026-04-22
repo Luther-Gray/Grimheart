@@ -2,8 +2,6 @@
 extends Node
 class_name  AnimationManager
 
-
-
 @export var AnimTree : AnimationTree
 @export var Source: CharacterBody3D
 
