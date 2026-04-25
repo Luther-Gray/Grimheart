@@ -20,6 +20,7 @@ var isMoving : bool = false
 var isSprinting : bool = false
 var isFalling : bool = false
 var isHanging : bool = false
+var isCrouched : bool = false
 
 func _physics_process(delta: float) -> void:
 	#// State Manager

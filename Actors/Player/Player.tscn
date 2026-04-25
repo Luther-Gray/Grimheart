@@ -140,7 +140,7 @@ states/aSprint/position = Vector2(589.3242, -38.117645)
 states/aWalkSpace/node = SubResource("AnimationNodeBlendSpace2D_fllei")
 states/aWalkSpace/position = Vector2(804.2161, 101.07914)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aIdle", "aJump", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aSprint", "aJump", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aJump", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aJump", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aJump", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aFall", "aJump", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJump", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aWalkSpace", "aJump", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc")]
-graph_offset = Vector2(-586.04297, -194.79297)
+graph_offset = Vector2(160.95703, -145.79297)
 
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
 script = ExtResource("1_yqfyh")
@@ -159,22 +159,22 @@ texture = ExtResource("9_6e37q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_qpi2y")
 
-[node name="CameraPivot" type="Node3D" parent="." unique_id=1906564157 node_paths=PackedStringArray("Player", "HeadBone", "CameraMarker")]
-transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 1.6170001, -0.199)
+[node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "HeadBone", "CameraMarker")]
+transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6170001, -0.199)
 script = ExtResource("7_kkbrm")
-Player = NodePath("..")
-HeadBone = NodePath("../Clyde/Root/bHips/bTorso/bNeck/bHead")
-CameraMarker = NodePath("../Clyde/Root/bHips/bTorso/bNeck/bHead/CameraMarker")
+Player = NodePath("../..")
+HeadBone = NodePath("../../Clyde/Root/bHips/bTorso/bNeck/bHead")
+CameraMarker = NodePath("../../Clyde/Root/bHips/bTorso/bNeck/bHead/CameraMarker")
 Settings = ExtResource("8_6e37q")
 metadata/_edit_pinned_properties_ = [&"Player"]
 
-[node name="DEV_Camera" type="Camera3D" parent="CameraPivot" unique_id=2143699930]
+[node name="DEV_Camera" type="Camera3D" parent="PlayerCollision/CameraPivot" unique_id=2143699930]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000001, 0, 0, 0)
 cull_mask = 1048573
 current = true
 fov = 90.0
 
-[node name="CameraRaycast" type="RayCast3D" parent="CameraPivot" unique_id=283864831]
+[node name="CameraRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=283864831]
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 3.659807e-10, -0.01700008, -0.201)
 
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=944277932]
@@ -212,4 +212,4 @@ script = ExtResource("12_upr3p")
 Source = NodePath("..")
 Settings = ExtResource("8_6e37q")
 
-[connection signal="visibility_changed" from="Menu" to="CameraPivot" method="_on_menu_visibility_changed"]
+[connection signal="visibility_changed" from="Menu" to="PlayerCollision/CameraPivot" method="_on_menu_visibility_changed"]
