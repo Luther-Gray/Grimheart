@@ -3,17 +3,16 @@ extends CharacterBody3D
 @export var Attribute : Attributes
 @export var Stat : Stats
 @export var Vitals : Core
+@export var PlayerSettings : GameSettings
 
-@onready var CameraRaycast: RayCast3D = $CameraPivot/CameraRaycast
+@onready var CameraRaycast: RayCast3D = $PlayerCollision/CameraPivot/CameraRaycast
 
 #// Global Speed
 var MoveSpeed : float
 #// Tap vs Hold
 var HoldTimer : float = 0.3
 var TapTimer : float = 0.0
-#// Ledge Grab
-#// Parkour
-#// State
+#// State Flags
 var InputDir : Vector2 = Vector2.ZERO
 var isUnsheathed : bool = false
 var isMoving : bool = false

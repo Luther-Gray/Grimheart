@@ -202,7 +202,7 @@ SYS_Perspective={
 common/physics_ticks_per_second=144
 common/physics_jitter_fix=0.0
 3d/physics_engine="Jolt Physics"
-3d/default_gravity=60.0
+3d/default_gravity=45.0
 common/physics_interpolation=true
 
 [rendering]

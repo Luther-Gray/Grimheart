@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5vsa436i7wto"]
+
+[ext_resource type="Texture2D" uid="uid://celh00tvw175f" path="res://World/DEV/texture_01.png" id="1_ay5bg"]
+
+[resource]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ay5bg")
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -10,3 +10,4 @@ class_name Consumable
 @export var ConsumableStatTarget : String
 @export var ConsumableElement : String
 @export_range(0, 100, 0.1) var ToxicityAmount : float
+@export_range(0, 100, 0.1) var Freshness : float

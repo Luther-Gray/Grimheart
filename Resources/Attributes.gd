@@ -7,9 +7,9 @@ class_name Attributes
 @export_range(0, 100, 1) var Toughness : int
 ## Coordination is a stat that represents how well one can use their extremities for the purpose of handling weapons, maneuvering their body, and coordinating their hands and eyes accurately.
 @export_range(0, 100, 1) var Coordination  : int
-## Representation of the Maximum Life a creature holds.
+## Vitality is a representation of the Maximum Life a creature holds.
 @export_range(0, 100, 1) var Vitality :int
-## Mind influences the player's ability to cast Magic Artes. It also represents the player's ability to see beyond the visible.
+## Mind
 @export_range(0, 100, 1) var Mind :int
 ## Alacrity is a value that controls how fast you are capable of moving.
 @export_range(0, 100, 1) var Alacrity :int

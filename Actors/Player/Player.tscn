@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://70mpb30ysxto" path="res://Actors/Player/Menu.tscn" id="11_gh11b"]
 [ext_resource type="Script" uid="uid://d0ee1lb8ej21l" path="res://Actors/Player/Scripts/Jump.gd" id="12_ujyek"]
 [ext_resource type="Script" uid="uid://dg34oqkorvqld" path="res://Actors/Player/Scripts/Crouch.gd" id="12_upr3p"]
+[ext_resource type="Script" uid="uid://df6mjfy4sxbco" path="res://Actors/Player/Scripts/Clamber.gd" id="14_fllei"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
 radius = 0.4
@@ -147,6 +148,7 @@ script = ExtResource("1_yqfyh")
 Attribute = ExtResource("2_rsi04")
 Stat = ExtResource("3_kkbrm")
 Vitals = ExtResource("4_qhy2x")
+PlayerSettings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=1503265258 instance=ExtResource("3_l6vkj")]
 
@@ -160,7 +162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_qpi2y")
 
 [node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "HeadBone", "CameraMarker")]
-transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6170001, -0.199)
+transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6, -0.199)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
 HeadBone = NodePath("../../Clyde/Root/bHips/bTorso/bNeck/bHead")
@@ -175,7 +177,7 @@ current = true
 fov = 90.0
 
 [node name="CameraRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=283864831]
-transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 3.659807e-10, -0.01700008, -0.201)
+transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 0, 0, -0.1)
 
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=944277932]
 transform = Transform3D(1, 0, 0, 0, -1.5, 8.742278e-08, 0, -1.3113416e-07, -1, 0, 2, 0)
@@ -207,9 +209,14 @@ Source = NodePath("..")
 script = ExtResource("12_ujyek")
 Source = NodePath("..")
 
-[node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source")]
+[node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]
 script = ExtResource("12_upr3p")
 Source = NodePath("..")
+CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 Settings = ExtResource("8_6e37q")
+
+[node name="Clamber" type="Node" parent="." unique_id=477160350 node_paths=PackedStringArray("Source")]
+script = ExtResource("14_fllei")
+Source = NodePath("..")
 
 [connection signal="visibility_changed" from="Menu" to="PlayerCollision/CameraPivot" method="_on_menu_visibility_changed"]
