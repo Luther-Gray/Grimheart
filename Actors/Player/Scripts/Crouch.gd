@@ -20,14 +20,11 @@ func _physics_process(_delta: float) -> void:
 	if Settings.CrouchToggle:
 		if Input.is_action_just_pressed("MV_Crouch"):
 			_toggle_crouch()
-			print(Source.isCrouched)
-		elif !Settings.CrouchToggle:
-			if Input.is_action_pressed("MV_Crouch"):
-				_hold_crouch()
-			elif Input.is_action_just_released("MV_Crouch"):
-				_release_crouch()
 	elif !Settings.CrouchToggle:
-		pass
+		if Input.is_action_pressed("MV_Crouch"):
+			_hold_crouch()
+		else:
+			_release_crouch()
 
 func _toggle_crouch():
 	if !Source.isCrouched:
@@ -47,6 +44,7 @@ func _hold_crouch():
 		PlayerCollision.position.y = TargetColPosition
 		CameraPivot.CameraMarker.position.y = TargetMarkerPos
 		Source.isCrouched = true
+		
 func _release_crouch():
 	if Source.isCrouched and !CrouchRaycast.is_colliding():
 		PlayerCollision.shape.height = InitPlayerHeight
