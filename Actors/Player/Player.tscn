@@ -18,8 +18,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
 radius = 0.4
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e37q"]
 animation = &"aFall"
 
@@ -143,6 +141,8 @@ states/aWalkSpace/position = Vector2(804.2161, 101.07914)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aIdle", "aJump", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aSprint", "aJump", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aJump", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aJump", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aJump", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aFall", "aJump", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJump", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aWalkSpace", "aJump", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc")]
 graph_offset = Vector2(160.95703, -145.79297)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
+
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
 script = ExtResource("1_yqfyh")
 Attribute = ExtResource("2_rsi04")
@@ -180,17 +180,6 @@ fov = 90.0
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 0, 0, -0.1)
 debug_shape_custom_color = Color(0.68630785, 0.3100806, 1, 1)
 
-[node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=944277932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-debug_shape_custom_color = Color(0.6828412, 0.271935, 0.25775287, 1)
-
-[node name="LedgeRaycast" type="RayCast3D" parent="." unique_id=1101919216]
-transform = Transform3D(1, 0, 0, 0, -1.0606601, -0.7071067, 0, 1.06066, -0.7071068, 0, 1.9, -0.3)
-
-[node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
-transform = Transform3D(0.4, 0, 0, 0, -3.059797e-08, -1, 0, 0.7, -4.371139e-08, 0, 1, 0)
-shape = SubResource("BoxShape3D_qhy2x")
-
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
 root_node = NodePath("../Clyde")
 tree_root = SubResource("AnimationNodeStateMachine_upr3p")
@@ -211,13 +200,26 @@ Source = NodePath("..")
 script = ExtResource("12_ujyek")
 Source = NodePath("..")
 
+[node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=944277932]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 2, 0)
+hit_from_inside = true
+debug_shape_custom_color = Color(0.23296636, 0.47713345, 0.40613192, 1)
+
+[node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
+transform = Transform3D(0.99999994, 0, 0, 0, 2.9999995, -5.960464e-08, 0, 1.1920929e-07, 0.9999999, 0, 2.4, -0.8000001)
+
+[node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
+transform = Transform3D(0.4, 0, 0, 0, -3.059797e-08, -1, 0, 0.7, -4.371139e-08, 0, 1, 0)
+shape = SubResource("BoxShape3D_qhy2x")
+debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
+
 [node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]
 script = ExtResource("12_upr3p")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 Settings = ExtResource("8_6e37q")
 
-[node name="Clamber" type="Node" parent="." unique_id=477160350 node_paths=PackedStringArray("Source")]
+[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source")]
 script = ExtResource("14_fllei")
 Source = NodePath("..")
 

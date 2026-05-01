@@ -9,3 +9,4 @@ class_name Stats
 @export var StaminaEfficiency : float
 @export var PhysicalAttack : float
 @export var PhysicalDefense : float
+@export var ClimbSpeed : float

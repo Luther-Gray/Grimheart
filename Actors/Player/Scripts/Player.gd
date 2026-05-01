@@ -25,7 +25,8 @@ func _physics_process(delta: float) -> void:
 	#// State Manager
 	if not is_on_floor():
 		isFalling = true
-		velocity += get_gravity() * delta
+		if !isHanging:
+			velocity += get_gravity() * delta
 	elif is_on_floor():
 		isFalling = false
 	if Input.is_action_pressed("MV_Sprint") and isMoving:
@@ -34,16 +35,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		isSprinting = false
 		MoveSpeed = Stat.WalkSpeed
-
-	InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
-	var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()
-	if Direction:
-		velocity.x = Direction.x * MoveSpeed
-		velocity.z = Direction.z * MoveSpeed
-		isMoving = true
-	else:
-		velocity.x = move_toward(velocity.x, 0, MoveSpeed)
-		velocity.z = move_toward(velocity.z, 0, MoveSpeed)
-		isMoving = false
+	if !isHanging:
+		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
+		var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()
+		if Direction:
+			velocity.x = Direction.x * MoveSpeed
+			velocity.z = Direction.z * MoveSpeed
+			isMoving = true
+		else:
+			velocity.x = move_toward(velocity.x, 0, MoveSpeed)
+			velocity.z = move_toward(velocity.z, 0, MoveSpeed)
+			isMoving = false
 		
 	move_and_slide()
