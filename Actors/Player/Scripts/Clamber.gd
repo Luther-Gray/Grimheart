@@ -4,8 +4,12 @@ extends Node3D
 @export var Source: CharacterBody3D
 @onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
+@onready var AnimManager: AnimationManager = $"../AnimCenter"
+
 
 var VaultDistance : float = 1.5
+var ClamberUpTime : float = 0.2
+var ClamberOverTime : float = 0.15
 
 
 func _physics_process(_delta: float) -> void:
@@ -31,19 +35,24 @@ func _detect_ledge():
 	var TargetTopSurface = ClamberTarget.get_collision_point().y
 	var HeightDiff = TargetTopSurface - Source.global_position.y
 	
+	#// Height Chart
 	if HeightDiff < 0.15: # Too Small - Ignore
 		return
 	elif HeightDiff < 0.6: #Knee Height - Step Over
-		_step_over()
+		if Input.is_action_pressed("MV_Forward"):
+			_step_over()
 	elif HeightDiff < 1.2: #Waist Height - Vault
-		_vault()
-	elif HeightDiff < 2.2: # Climbable!
-		_grab_ledge()
+		if Input.is_action_pressed("MV_Forward"):
+			_vault()
+	elif HeightDiff < 2.0: # Climbable!
+		if Source.isFalling:
+			_grab_ledge()
 	else: # Too Tall - Ignore
 		return
 
 #// Vault
 func _vault():
+	AnimManager.StateMachine.travel("aKongVault")
 	var WallNormal = ClamberCast.get_collision_normal(0)
 	var VaultTarget = ClamberTarget.get_collision_point() + Vector3(0, 0.3, 0)
 	var VaultEnd = VaultTarget + (-WallNormal * VaultDistance)
@@ -62,6 +71,18 @@ func _vault():
 func _grab_ledge():
 	Source.velocity = Vector3.ZERO
 	Source.isHanging = true
+	var LedgeSurface = ClamberTarget.get_collision_point().y
+	var WallNormal = ClamberCast.get_collision_normal(0)
+	var LedgeYOffset : float = 1.4
+	var LedgeZOffset : float = 0.2
+	var HangPos = Vector3(
+		Source.global_position.x,
+		LedgeSurface - LedgeYOffset,
+		Source.global_position.z
+	) + (WallNormal * LedgeZOffset)
+	var SnapTween = get_tree().create_tween()
+	SnapTween.tween_property(Source, "global_position", HangPos, 0.12)\
+		.set_trans(Tween.TRANS_SINE)
 	print("Ledge Grab")
 
 #// Ledge Release
@@ -72,15 +93,23 @@ func _release_ledge():
 
 #// Ledge Pull Up
 func _clamber_ledge():
-	var Ledge = ClamberTarget.get_collision_point() + Vector3(0, 1.0, 0)
+	AnimManager.StateMachine.travel("aLedgeClimb")
+	var HalfHeight = Source.PlayerCollision.shape.height / 2.0 + 0.05
+	var WallNormal = ClamberCast.get_collision_normal(0)
+	var Surface = ClamberTarget.get_collision_point()
+	var LedgeUp = Vector3(Source.global_position.x, Surface.y + HalfHeight, Source.global_position.z)
+	var LedgeOver = LedgeUp + (-WallNormal * 0.3)
+	### In this Tween, we're doing the clamber in two steps. Up -> Over.
 	var ClamberTween = get_tree().create_tween()
-	ClamberTween.tween_property(Source, "global_position", Ledge, 0.4).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+	ClamberTween.tween_property(Source, "global_position", LedgeUp, ClamberUpTime).set_trans(Tween.TRANS_SINE)
+	ClamberTween.tween_property(Source, "global_position", LedgeOver, ClamberOverTime).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 	ClamberTween.tween_callback(func():
+		Source.velocity = Vector3.ZERO
 		Source.isHanging = false)
 	
 #// Step Over
 func _step_over():
-	Source.velocity.y = 2.0
+	Source.velocity.y = 0.15
 	print("Step Over")
 	
 # Move on Ledge

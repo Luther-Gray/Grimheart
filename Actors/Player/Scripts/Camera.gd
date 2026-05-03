@@ -1,12 +1,16 @@
 @icon("res://addons/IconGodotNode/node_3D/icon_camera_grid.png")
 extends Node3D
+
+#----Camera----
+## The Camera controls anything having to do with mouse movement and mouse locking. When you open a menu, this script is pinged. When you press escape, this script is pinged.
+## This Camera script also controls Camera Parameters such as head bob, sway, zoom, and the like.
+
 @export var Player: CharacterBody3D
 @export var HeadBone: Node3D
 @export var CameraMarker : Marker3D
 @onready var CameraPivot: Node3D = self
 @export var Settings : Resource
 var isMouseCaptured = true
-
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -33,6 +37,18 @@ func _process(delta: float) -> void:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
 
 func _physics_process(delta: float) -> void:
+	### Prevent Camera from clipping into wall.
+	var CameraTarget = CameraMarker.global_position
+	var WorldSpace = get_world_3d().direct_space_state
+	var RayQuery = PhysicsRayQueryParameters3D.create(
+		Player.global_position,
+		CameraTarget
+	)
+	RayQuery.exclude = [Player]
+	var IntersectionResult = WorldSpace.intersect_ray(RayQuery)
+	if IntersectionResult:
+		var Buffer = (CameraTarget - Player.global_position).normalized()
+		CameraTarget = IntersectionResult.position - Buffer * 0.05
 ### Head Bobbing
 	global_position = global_position.lerp(CameraMarker.global_position, delta * Settings.CameraSmooth)
 
