@@ -19,7 +19,8 @@
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
-radius = 0.4
+radius = 0.2
+height = 1.7
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e37q"]
 animation = &"aFall"
@@ -206,7 +207,7 @@ states/aSprint/position = Vector2(589.7644, -40.404102)
 states/aWalkSpace/node = SubResource("AnimationNodeBlendSpace2D_fllei")
 states/aWalkSpace/position = Vector2(802.4088, 103.04671)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aLedgeHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aLedgeHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aLedgeHang", "aLedgeClimb", SubResource("AnimationNodeStateMachineTransition_aao0a"), "aLedgeClimb", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aKongVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aKongVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q")]
-graph_offset = Vector2(-212.53906, -208.05469)
+graph_offset = Vector2(-235.34375, -184.49219)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
@@ -217,7 +218,7 @@ Stat = ExtResource("3_kkbrm")
 Vitals = ExtResource("4_qhy2x")
 Settings = ExtResource("8_6e37q")
 
-[node name="Clyde" parent="." unique_id=1866406297 instance=ExtResource("6_lxc4y")]
+[node name="Clyde" parent="." unique_id=47621695 instance=ExtResource("6_lxc4y")]
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -225,14 +226,14 @@ texture_filter = 2
 texture = ExtResource("9_6e37q")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=2117931213]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_qpi2y")
 
 [node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "CameraMarker")]
 transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6, -0.199)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
-CameraMarker = NodePath("../../Clyde/Root/bHips/bTorsoMid/bTorso/bNeck/bHead/CameraMarker")
+CameraMarker = NodePath("../../Clyde/Skeleton3D/Head/CameraMarker")
 Settings = ExtResource("8_6e37q")
 metadata/_edit_pinned_properties_ = [&"Player"]
 
@@ -247,7 +248,7 @@ transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 
 debug_shape_custom_color = Color(0.68630785, 0.3100806, 1, 1)
 
 [node name="CrouchRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=2101530425]
-transform = Transform3D(1, -1.7534032e-07, 1.8626451e-09, -1.7534032e-07, -1, 8.742278e-08, 1.8626299e-09, -8.742278e-08, -1, 0, 0.39999998, 0.2)
+transform = Transform3D(1, -1.7534032e-07, 1.8626451e-09, -1.7534032e-07, -1, 8.742278e-08, 1.8626299e-09, -8.742278e-08, -1, -3.2325587e-11, 0.3346647, 0.2)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
 root_node = NodePath("../Clyde")
@@ -271,10 +272,10 @@ shape = SubResource("BoxShape3D_qhy2x")
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
-transform = Transform3D(-4.371139e-08, -0.5, 0, 1, -2.1855694e-08, 0, 0, 0, 1, 0.4, 1.5, 0)
+transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
 
 [node name="WallRayR" type="RayCast3D" parent="." unique_id=36886257]
-transform = Transform3D(-4.371139e-08, 0.5, 0, -1, -2.1855694e-08, 0, 0, 0, 1, -0.40000004, 1.5, 0)
+transform = Transform3D(-3.7855173e-08, 0.43301272, -0.50000006, -1, -2.1855694e-08, 0, -2.1855694e-08, 0.25000003, 0.86602545, -0.40000004, 1.5, 0)
 
 [node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
 script = ExtResource("6_l6vkj")
@@ -306,7 +307,8 @@ Source = NodePath("..")
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
-transform = Transform3D(1, 0, 0, 0, -20, 1.509958e-07, 0, -3.019916e-06, -1, 0, 2, 2.9802322e-08)
+transform = Transform3D(1, 0, 0, 0, -20, 1.509958e-07, 0, -3.019916e-06, -1, 0, 1.8830854, 0)
+debug_shape_custom_color = Color(0.6745098, 0, 0, 1)
 
 [node name="TemperatureF" type="RayCast3D" parent="Temperature" unique_id=1930501241]
 transform = Transform3D(1, 0, 0, 0, -2.1855695e-07, -1, 0, 5, -4.371139e-08, 0, 1, -0.39999998)

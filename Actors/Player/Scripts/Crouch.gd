@@ -7,10 +7,10 @@ extends Node3D
 @export var CameraPivot: Node3D
 
 #// Crouch Values
-var InitPlayerHeight : float = 2.0
-var InitColPosition : float = 1.0
+var InitPlayerHeight : float = 1.7
+var InitColPosition : float = 0.85
 var InitMarkerPos : float = 0.14
-var TargetPlayerHeight : float = 0.9
+var TargetPlayerHeight : float = 0.7
 var TargetColPosition : float = 0.5
 var TargetMarkerPos : float = -1
 

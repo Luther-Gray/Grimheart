@@ -7487,7 +7487,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": true
+			"primary_selected": false
 		},
 		{
 			"name": "bThumbTip.L",
@@ -21473,7 +21473,7 @@
 		},
 		{
 			"uuid": "76c840b7-767c-465b-a4f2-83086d7ce841",
-			"name": "RESET",
+			"name": "REST",
 			"loop": "hold",
 			"override": false,
 			"length": 0.25,
