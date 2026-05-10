@@ -6,7 +6,6 @@ extends Node3D
 ## This Camera script also controls Camera Parameters such as head bob, sway, zoom, and the like.
 
 @export var Player: CharacterBody3D
-@export var HeadBone: Node3D
 @export var CameraMarker : Marker3D
 @onready var CameraPivot: Node3D = self
 @export var Settings : Resource

@@ -12,6 +12,10 @@ extends CharacterBody3D
 
 #// Global Speed - This is modified by Stat
 var MoveSpeed : float
+var Acceleration : float = 20.0
+var Deceleration : float = 15.0
+var AirControl : float = 0.25
+var Influence : float
 #// State Flags
 var InputDir : Vector2 = Vector2.ZERO
 var isUnsheathed : bool = false
@@ -30,13 +34,19 @@ func _physics_process(delta: float) -> void:
 	if !isHanging:
 		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
 		var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()
+		### Momentum Stuff
+		if is_on_floor():
+			Influence = 1.0
+		else:
+			Influence = AirControl
+
 		if Direction:
-			velocity.x = Direction.x * MoveSpeed
-			velocity.z = Direction.z * MoveSpeed
+			velocity.x = move_toward(velocity.x, Direction.x * MoveSpeed, Acceleration * Influence * delta)
+			velocity.z = move_toward(velocity.z, Direction.z * MoveSpeed, Acceleration * Influence * delta)
 			isMoving = true
 		else:
-			velocity.x = move_toward(velocity.x, 0, MoveSpeed)
-			velocity.z = move_toward(velocity.z, 0, MoveSpeed)
+			velocity.x = move_toward(velocity.x, 0, Deceleration * Influence * delta)
+			velocity.z = move_toward(velocity.z, 0, Deceleration * Influence * delta)
 			isMoving = false
 		
 	move_and_slide()

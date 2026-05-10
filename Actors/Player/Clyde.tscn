@@ -4,71 +4,71 @@
 
 [node name="Clyde" unique_id=1843895544 instance=ExtResource("1_dihog")]
 
-[node name="Hips_F" parent="Root/bHips" parent_id_path=PackedInt32Array(782140363) index="0" unique_id=2001273548]
+[node name="Hips_F" parent="Root/bHips" parent_id_path=PackedInt32Array(1586307231) index="1" unique_id=1228211650]
 visible = false
 
-[node name="Torso_F" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(447154885) index="0" unique_id=1632829238]
+[node name="Torso_F" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(974035900) index="1" unique_id=1968652831]
 visible = false
 
-[node name="Stud_L" parent="Root/bHips/bTorso/bNeck/bHead/bEar_L/bEarExtra_L" parent_id_path=PackedInt32Array(1382458612) index="0" unique_id=478799431]
-layers = 2
-
-[node name="Ear_L" parent="Root/bHips/bTorso/bNeck/bHead/bEar_L" parent_id_path=PackedInt32Array(1329568990) index="1" unique_id=1668380562]
-layers = 2
-
-[node name="Stud_R" parent="Root/bHips/bTorso/bNeck/bHead/bEar_R/bEarExtra_R" parent_id_path=PackedInt32Array(1604805529) index="0" unique_id=1550028152]
-layers = 2
-
-[node name="Ear_R" parent="Root/bHips/bTorso/bNeck/bHead/bEar_R" parent_id_path=PackedInt32Array(1359965198) index="1" unique_id=1471731493]
-layers = 2
-
-[node name="EyeLeft" parent="Root/bHips/bTorso/bNeck/bHead/bEyes/bEye_L" parent_id_path=PackedInt32Array(1429334243) index="0" unique_id=743827670]
-layers = 2
-
-[node name="EyeRight" parent="Root/bHips/bTorso/bNeck/bHead/bEyes/bEye_R" parent_id_path=PackedInt32Array(1849135204) index="0" unique_id=318752216]
-layers = 2
-
-[node name="Scalera" parent="Root/bHips/bTorso/bNeck/bHead/bEyes" parent_id_path=PackedInt32Array(960086074) index="2" unique_id=694070015]
-layers = 2
-
-[node name="Lashes" parent="Root/bHips/bTorso/bNeck/bHead/bEyes" parent_id_path=PackedInt32Array(960086074) index="3" unique_id=1835538363]
-layers = 2
-
-[node name="Hair" parent="Root/bHips/bTorso/bNeck/bHead/bHair" parent_id_path=PackedInt32Array(2139232394) index="2" unique_id=1695796694]
-layers = 2
-
-[node name="Head" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1528903830) index="4" unique_id=1320418641]
-layers = 2
-
-[node name="FPS Camera" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1528903830) index="5" unique_id=1815633750]
+[node name="FPS Camera" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1249412768) index="0" unique_id=1117184221]
 visible = false
 
-[node name="CameraMarker" type="Marker3D" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1528903830) index="6" unique_id=483338888]
+[node name="Stud_L" parent="Root/bHips/bTorso/bNeck/bHead/bEar_L/bEarExtra_L" parent_id_path=PackedInt32Array(1371376334) index="0" unique_id=827648338]
+layers = 2
+
+[node name="Ear_L" parent="Root/bHips/bTorso/bNeck/bHead/bEar_L" parent_id_path=PackedInt32Array(1497454662) index="1" unique_id=101252173]
+layers = 2
+
+[node name="Stud_R" parent="Root/bHips/bTorso/bNeck/bHead/bEar_R/bEarExtra_R" parent_id_path=PackedInt32Array(1843986627) index="0" unique_id=742072635]
+layers = 2
+
+[node name="Ear_R" parent="Root/bHips/bTorso/bNeck/bHead/bEar_R" parent_id_path=PackedInt32Array(926760233) index="1" unique_id=1642698424]
+layers = 2
+
+[node name="EyeLeft" parent="Root/bHips/bTorso/bNeck/bHead/bEyes/bEye_L" parent_id_path=PackedInt32Array(1835820108) index="0" unique_id=1828804112]
+layers = 2
+
+[node name="EyeRight" parent="Root/bHips/bTorso/bNeck/bHead/bEyes/bEye_R" parent_id_path=PackedInt32Array(1879969688) index="0" unique_id=870678058]
+layers = 2
+
+[node name="Scalera" parent="Root/bHips/bTorso/bNeck/bHead/bEyes" parent_id_path=PackedInt32Array(817527598) index="2" unique_id=1301408950]
+layers = 2
+
+[node name="Lashes" parent="Root/bHips/bTorso/bNeck/bHead/bEyes" parent_id_path=PackedInt32Array(817527598) index="3" unique_id=1529215815]
+layers = 2
+
+[node name="Hair" parent="Root/bHips/bTorso/bNeck/bHead/bHair" parent_id_path=PackedInt32Array(1196370761) index="2" unique_id=857609398]
+layers = 2
+
+[node name="Head" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1249412768) index="5" unique_id=995613152]
+layers = 2
+
+[node name="CameraMarker" type="Marker3D" parent="Root/bHips/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(1249412768) index="6" unique_id=483338888]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.98100924, -0.19396082, 0, 0.1939608, 0.9810092, 0, 0.14, -0.176)
 
-[node name="Neck" parent="Root/bHips/bTorso/bNeck" parent_id_path=PackedInt32Array(305182850) index="1" unique_id=1244872960]
+[node name="Neck" parent="Root/bHips/bTorso/bNeck" parent_id_path=PackedInt32Array(1239866362) index="1" unique_id=1871115674]
 layers = 2
 
-[node name="bUpperArm_L" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(447154885) index="2" unique_id=1604154337]
+[node name="bUpperArm_L" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(974035900) index="3" unique_id=489927995]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.25, 0.3125, 0)
 
-[node name="UpperArmF_L" parent="Root/bHips/bTorso/bUpperArm_L" index="0" unique_id=469129913]
+[node name="UpperArmF_L" parent="Root/bHips/bTorso/bUpperArm_L" index="1" unique_id=802205956]
 visible = false
 
-[node name="bLowerArm_L" parent="Root/bHips/bTorso/bUpperArm_L" index="1" unique_id=565993272]
+[node name="bLowerArm_L" parent="Root/bHips/bTorso/bUpperArm_L" index="2" unique_id=1390264089]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.000238125, -0.3070525, 0)
 
-[node name="LowerArmF_L" parent="Root/bHips/bTorso/bUpperArm_L/bLowerArm_L" index="0" unique_id=804104262]
+[node name="LowerArmF_L" parent="Root/bHips/bTorso/bUpperArm_L/bLowerArm_L" index="1" unique_id=1619806848]
 visible = false
 
-[node name="bUpperArm_R" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(447154885) index="3" unique_id=1270651899]
+[node name="bUpperArm_R" parent="Root/bHips/bTorso" parent_id_path=PackedInt32Array(974035900) index="4" unique_id=55203928]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.25, 0.3125, 0)
 
-[node name="UpperArmF_R" parent="Root/bHips/bTorso/bUpperArm_R" index="0" unique_id=1463698010]
+[node name="UpperArmF_R" parent="Root/bHips/bTorso/bUpperArm_R" index="1" unique_id=2057963234]
 visible = false
 
-[node name="LowerArmF_R" parent="Root/bHips/bTorso/bUpperArm_R/bLowerArm_R" parent_id_path=PackedInt32Array(1726436625) index="0" unique_id=226950792]
+[node name="LowerArmF_R" parent="Root/bHips/bTorso/bUpperArm_R/bLowerArm_R" parent_id_path=PackedInt32Array(689036761) index="1" unique_id=156731734]
 visible = false
 
-[node name="bUpperLeg_R" parent="Root/bHips" parent_id_path=PackedInt32Array(782140363) index="3" unique_id=1049753728]
+[node name="bUpperLeg_R" parent="Root/bHips" parent_id_path=PackedInt32Array(1586307231) index="4" unique_id=962116724]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0.09375, -0.046875, 0)

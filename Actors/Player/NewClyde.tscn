@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dya0qaj8j1cd"]
+
+[ext_resource type="PackedScene" uid="uid://rnh0m0jetjby" path="res://_GLTF/-Actors/NewPlayer.gltf" id="1_3o2hb"]
+
+[node name="Clyde" unique_id=47621695 instance=ExtResource("1_3o2hb")]
+
+[node name="bTorso" parent="Root/bHips/bTorsoMid" parent_id_path=PackedInt32Array(1653973064) index="1" unique_id=789492181]
+transform = Transform3D(0.99619436, -3.9115548e-07, -0.08715534, 0.0075964713, 0.9961947, 0.08682403, 0.08682362, -0.08715571, 0.9924039, -0.000135625, 0.14374937, -0.00156)
+
+[node name="Neck" parent="Root/bHips/bTorsoMid/bTorso/bNeck" parent_id_path=PackedInt32Array(196448593) index="0" unique_id=1588970530]
+layers = 2
+
+[node name="CameraMarker" type="Marker3D" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(927656980) index="0" unique_id=977741486]
+transform = Transform3D(0.9990339, 0.0053197416, 0.043625046, -0.0018879278, 0.9969254, -0.078333005, -0.043907616, 0.07817497, 0.9959721, -0.0050117834, 0.11946404, -0.08740257)
+
+[node name="Head" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(927656980) index="1" unique_id=527187720]
+layers = 2
+
+[node name="Ear_L" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(927656980) index="2" unique_id=127455465]
+layers = 2
+
+[node name="Ear_R" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead" parent_id_path=PackedInt32Array(927656980) index="3" unique_id=320654153]
+layers = 2
+
+[node name="FlatTop" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead/bHair" parent_id_path=PackedInt32Array(1655215928) index="0" unique_id=559800044]
+layers = 2
+
+[node name="Strand" parent="Root/bHips/bTorsoMid/bTorso/bNeck/bHead/bHair" parent_id_path=PackedInt32Array(1655215928) index="1" unique_id=1967258544]
+layers = 2
+
+[node name="bUpperArm_L" parent="Root/bHips/bTorsoMid/bTorso" index="2" unique_id=1660033758]
+transform = Transform3D(0.08682413, -0.6345222, -0.7680121, 0.99240386, 0.1225337, 0.010955751, 0.087155744, -0.76312894, 0.6403416, -0.16677062, 0.27179313, 0.0041)
+
+[node name="bHand_L" parent="Root/bHips/bTorsoMid/bTorso/bUpperArm_L/bLowerArm_L" parent_id_path=PackedInt32Array(952547754) index="1" unique_id=98046033]
+transform = Transform3D(0.991445, -0.130525, -5.597248e-07, 0.12743095, 0.9679434, -0.21643998, 0.028251382, 0.21458821, 0.9762958, -0.265625, 0, 0)
+
+[node name="bThumb_L" parent="Root/bHips/bTorsoMid/bTorso/bUpperArm_L/bLowerArm_L/bHand_L" index="5" unique_id=553610339]
+transform = Transform3D(0.87367153, 0.3460498, -0.341976, 0.4244964, -0.19878592, 0.8833384, 0.23769912, -0.91691506, -0.3205705, -0.03104125, -0.005705, -0.03125)
+
+[node name="bUpperArm_R" parent="Root/bHips/bTorsoMid/bTorso" index="3" unique_id=2064253510]
+transform = Transform3D(0.086824074, 0.7582466, 0.6461606, -0.99240386, 0.12257458, -0.01048848, -0.08715574, -0.64034146, 0.7631294, 0.16677062, 0.27179313, 0.0041)
+
+[node name="bHand_R" parent="Root/bHips/bTorsoMid/bTorso/bUpperArm_R/bLowerArm_R" parent_id_path=PackedInt32Array(591547254) index="1" unique_id=1174743511]
+transform = Transform3D(0.9961948, 0.08715474, 4.4051555e-07, -0.08508876, 0.9725807, -0.2164393, -0.018864147, 0.2156156, 0.976296, 0.265625, 0, 0)
+
+[node name="bThumb_R" parent="Root/bHips/bTorsoMid/bTorso/bUpperArm_R/bLowerArm_R/bHand_R" index="1" unique_id=1504861336]
+transform = Transform3D(0.84570295, -0.5327382, -0.031244757, -0.12509413, -0.25481915, 0.9588631, -0.5187849, -0.8070048, -0.2821438, 0.03104125, -0.005705, -0.03125)
+
+[node name="bUpperLeg_R" parent="Root/bHips" parent_id_path=PackedInt32Array(491668662) index="3" unique_id=395039192]
+transform = Transform3D(0.952993, -0.053009253, -0.29831856, 0.037803028, 0.9976852, -0.056518584, 0.30062413, 0.042584468, 0.9527913, 0.06440063, -0.049554374, 0.0148125)
+
+[node name="ParkourDriver" type="Skeleton3D" parent="." index="2" unique_id=1184538574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+bones/0/name = "Root"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "UpperArm.L"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/1/enabled = true
+bones/1/position = Vector3(-0.17018162, 0.31948042, 0)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/name = "LowerArm.L"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/2/enabled = true
+bones/2/position = Vector3(-0.019460976, -0.26605415, -0.011986107)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/name = "Hand.L"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/3/enabled = true
+bones/3/position = Vector3(-0.0130511075, -0.265904, -0.038461745)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/name = "UpperArm.R"
+bones/4/parent = 0
+bones/4/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/4/enabled = true
+bones/4/position = Vector3(0.17362711, 0.32119906, 0)
+bones/4/rotation = Quaternion(0, 0, 0, 1)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/name = "LowerArm.R"
+bones/5/parent = 4
+bones/5/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/5/enabled = true
+bones/5/position = Vector3(0.0125857, -0.2697872, 0.010413453)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/name = "Hand.R"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/6/enabled = true
+bones/6/position = Vector3(0, -0.27914125, -0.044719756)
+bones/6/rotation = Quaternion(0, 0, 0, 1)
+bones/6/scale = Vector3(1, 1, 1)

@@ -1,7 +1,7 @@
 @icon("res://addons/IconGodotNode/control/icon_thunder.png")
 extends Control
 
-@onready var Source: CharacterBody3D = get_node("/root/DEV_Sandbox/Player")
+@export var Source: CharacterBody3D
 
 @onready var property_container: VBoxContainer = $MarginContainer/PropertyContainer
 
