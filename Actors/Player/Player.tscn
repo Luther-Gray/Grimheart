@@ -25,6 +25,9 @@ height = 1.7
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e37q"]
 animation = &"aFall"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lxc4y"]
+animation = &"aHang"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l6vkj"]
 animation = &"aIdle"
 
@@ -73,9 +76,6 @@ animation = &"aKongVault"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m1t7r"]
 animation = &"aLedgeClimb"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lxc4y"]
-animation = &"aLedgeHang"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kkbrm"]
 animation = &"aSprint"
@@ -190,6 +190,8 @@ states/End/position = Vector2(2308.0676, 239.81828)
 states/Start/position = Vector2(234.50172, 102.85854)
 states/aFall/node = SubResource("AnimationNodeAnimation_6e37q")
 states/aFall/position = Vector2(589.7481, 240.22969)
+states/aHang/node = SubResource("AnimationNodeAnimation_lxc4y")
+states/aHang/position = Vector2(587.2671, 347.08102)
 states/aIdle/node = SubResource("AnimationNodeAnimation_l6vkj")
 states/aIdle/position = Vector2(390.2367, 101.82254)
 states/aIdleArmed/node = SubResource("AnimationNodeAnimation_fllei")
@@ -200,14 +202,12 @@ states/aKongVault/node = SubResource("AnimationNodeAnimation_iwmb3")
 states/aKongVault/position = Vector2(589.93097, -179.39714)
 states/aLedgeClimb/node = SubResource("AnimationNodeAnimation_m1t7r")
 states/aLedgeClimb/position = Vector2(389.26093, 347.43573)
-states/aLedgeHang/node = SubResource("AnimationNodeAnimation_lxc4y")
-states/aLedgeHang/position = Vector2(589.24963, 346.35284)
 states/aSprint/node = SubResource("AnimationNodeAnimation_kkbrm")
 states/aSprint/position = Vector2(589.7644, -40.404102)
 states/aWalkSpace/node = SubResource("AnimationNodeBlendSpace2D_fllei")
 states/aWalkSpace/position = Vector2(802.4088, 103.04671)
-transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aLedgeHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aLedgeHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aLedgeHang", "aLedgeClimb", SubResource("AnimationNodeStateMachineTransition_aao0a"), "aLedgeClimb", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aKongVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aKongVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q")]
-graph_offset = Vector2(-235.34375, -184.49219)
+transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "aLedgeClimb", SubResource("AnimationNodeStateMachineTransition_aao0a"), "aLedgeClimb", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aKongVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aKongVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q")]
+graph_offset = Vector2(-43.46875, -177.13672)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
@@ -218,7 +218,7 @@ Stat = ExtResource("3_kkbrm")
 Vitals = ExtResource("4_qhy2x")
 Settings = ExtResource("8_6e37q")
 
-[node name="Clyde" parent="." unique_id=47621695 instance=ExtResource("6_lxc4y")]
+[node name="Clyde" parent="." unique_id=2099447179 instance=ExtResource("6_lxc4y")]
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)

@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 	if Source.isUnsheathed:
 		StateMachine.travel("aIdleArmed")
 	elif Source.isHanging:
-		StateMachine.travel("aLedgeHang")
+		StateMachine.travel("aHang")
 	elif Source.isMoving and !Source.isSprinting:
 		StateMachine.travel("aWalkSpace")
 	elif Source.isSprinting:

@@ -73,7 +73,7 @@ func _vault():
 	
 #// Ledge Grab
 func _grab_ledge():
-	AnimManager._override_travel("aLedgeHang")
+	AnimManager._override_travel("aHang")
 	Source.velocity = Vector3.ZERO
 	Source.isHanging = true
 	var LedgeSurface = ClamberTarget.get_collision_point().y
