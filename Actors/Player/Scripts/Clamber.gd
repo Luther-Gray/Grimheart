@@ -5,6 +5,8 @@ extends Node3D
 @onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
+@onready var CameraPivot: Node3D = $"../PlayerCollision/CameraPivot"
+
 #// IK Locations
 @export var IK_ArmL: TwoBoneIK3D
 @export var IK_ArmR: TwoBoneIK3D
@@ -17,7 +19,7 @@ var VaultDistance : float = 1.5
 var LedgeYOffset : float = 1.6
 var LedgeZOffset : float = -0.2
 # Clamber Boost - Magic number to make the clamber actually go up. No idea why delta alone isn't enough.
-var ClamberBoost : float = 7.5
+var ClamberBoost : float = 10
 
 func _physics_process(delta: float) -> void:
 	if Source.isClambering:
@@ -25,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		Source.velocity = (Source.global_transform.basis * RootMotion) / delta * ClamberBoost
 		return
 	if Source.isHanging:
-		var LedgeInput = Input.get_axis("MV_Left", "MV_Right")
+		var _LedgeInput = Input.get_axis("MV_Left", "MV_Right")
 		#_wall_check(LedgeInput)
 		
 		if Input.is_action_just_pressed("MV_Jump"):
@@ -68,11 +70,8 @@ func _grab_ledge():
 	var LedgeSurface = ClamberTarget.get_collision_point()
 	var WallNormal = ClamberCast.get_collision_normal(0)
 	var WallRight = Vector3.UP.cross(WallNormal).normalized()
-	var HangPos = Vector3(
-		Source.global_position.x,
-		LedgeSurface.y - LedgeYOffset,
-		Source.global_position.z
-	) + (WallNormal * LedgeZOffset)
+	var HandOffset = Vector3(0, 1.5, -0.7)
+	var HangPos = LedgeSurface - (Source.global_transform.basis * HandOffset)
 	# Position Hand Markers
 	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)
 	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.01, 0)
@@ -90,6 +89,7 @@ func _release_ledge():
 	IK_ArmL.active = false
 	IK_ArmR.active = false
 	Source.isHanging = false
+	CameraPivot.rotation.y = 0.0
 	Source.velocity.y = -2.0
 	print("Let Go")
 
@@ -101,6 +101,7 @@ func _clamber_ledge():
 	AnimManager._override_travel("root_aClamber")
 	Source.isClambering = true
 	Source.isHanging = false
+	CameraPivot.rotation.y = 0.0
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
 		Source.isClambering = false
 		AnimManager.AnimOverride = false)

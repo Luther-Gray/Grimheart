@@ -19,8 +19,13 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 #// Mouse Look
 	if event is InputEventMouseMotion and isMouseCaptured:
+# Left & Right Mouse Look (When on Ledge)
+		if Player.isHanging:
+			CameraPivot.rotation.y -= deg_to_rad(event.relative.x * Settings.MouseSensitivity)
+			CameraPivot.rotation.y = clamp(CameraPivot.rotation.y, deg_to_rad(-60), deg_to_rad(60))
+		else:
 # Left & Right Mouse Look
-		Player.rotate_y(deg_to_rad(-event.relative.x * Settings.MouseSensitivity))
+			Player.rotate_y(deg_to_rad(-event.relative.x * Settings.MouseSensitivity))
 # Up & Down Mouse Look
 		CameraPivot.rotation.x -= deg_to_rad(event.relative.y * Settings.MouseSensitivity)
 #Clamp how far up and down the player can look.
@@ -51,6 +56,10 @@ func _physics_process(delta: float) -> void:
 ### Head Bobbing
 	global_position = global_position.lerp(CameraMarker.global_position, delta * Settings.CameraSmooth)
 
-func _on_menu_visibility_changed() -> void:
-		isMouseCaptured = !isMouseCaptured
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if isMouseCaptured else Input.MOUSE_MODE_VISIBLE
+func _pause_camera():
+	isMouseCaptured = false
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func _resume_camera():
+	isMouseCaptured = true
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
