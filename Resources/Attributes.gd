@@ -2,23 +2,23 @@ extends Resource
 class_name Attributes
 
 ## Might is a measure of one's strength and their ability to exert incredible feats of force.
-@export_range(0, 100, 1) var Might : int
+@export_range(1, 100, 1) var Might : int
 ## Toughness is a measure of one's defenses. Not just against physical blows but also all kinds of ailments. Magical, biological, soul, mind, Toughness is the power to resist it all.
-@export_range(0, 100, 1) var Toughness : int
+@export_range(1, 100, 1) var Toughness : int
 ## Coordination is a stat that represents how well one can use their extremities for the purpose of handling weapons, maneuvering their body, and coordinating their hands and eyes accurately.
-@export_range(0, 100, 1) var Coordination  : int
+@export_range(1, 100, 1) var Coordination  : int
 ## Vitality is a representation of the Maximum Life a creature holds.
-@export_range(0, 100, 1) var Vitality :int
+@export_range(1, 100, 1) var Vitality :int
 ## Mind
-@export_range(0, 100, 1) var Mind :int
+@export_range(1, 100, 1) var Mind :int
 ## Alacrity is a value that controls how fast you are capable of moving.
-@export_range(0, 100, 1) var Alacrity :int
+@export_range(1, 100, 1) var Alacrity :int
 ## Fortune is a stat that influences hidden mechanics.
-@export_range(0, 100, 1) var Fortune : int
+@export_range(1, 100, 1) var Fortune : int
 ## Persona is a measure of one's ability to roleplay. The ability to charm whoever they may come across.
-@export_range(0, 100, 1) var Persona : int
+@export_range(1, 100, 1) var Persona : int
 ## Soul is a stat that determines the size of your Mana Seed.
-@export_range(0, 100, 1) var Soul :int
+@export_range(1, 100, 1) var Soul :int
 #// Secret Stats
 ## Piety is a Hidden Stat that is a representation of how in-touch this being is with higher power(s).
 var Piety : int

@@ -11,15 +11,10 @@ extends Node3D
 @export var HandTargetL: Marker3D
 @export var HandTargetR: Marker3D
 
-func _ready():
-	IK_ArmL.target_node = HandTargetL.get_path()
-	IK_ArmR.target_node = HandTargetR.get_path()
-	print(IK_ArmL.target_node, IK_ArmR.target_node)
-
 # Vault
 var VaultDistance : float = 1.5
 # Ledge Grab
-var LedgeYOffset : float = 1.4
+var LedgeYOffset : float = 1.6
 var LedgeZOffset : float = -0.2
 # Clamber Boost - Magic number to make the clamber actually go up. No idea why delta alone isn't enough.
 var ClamberBoost : float = 7.5
@@ -31,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		return
 	if Source.isHanging:
 		var LedgeInput = Input.get_axis("MV_Left", "MV_Right")
-		_wall_check(LedgeInput)
+		#_wall_check(LedgeInput)
 		
 		if Input.is_action_just_pressed("MV_Jump"):
 			_clamber_ledge()
@@ -41,8 +36,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("MV_Jump"):
 		_detect_ledge()
 
-	
-#// Detect Ledge
+	#// Detect Ledge
 func _detect_ledge():
 	if !ClamberCast.is_colliding():
 		return
@@ -65,25 +59,7 @@ func _detect_ledge():
 			_grab_ledge()
 	else: # Too Tall - Ignore
 		return
-
-#// Vault
-func _vault():
-	AnimManager._override_travel("aVault")
-	var WallNormal = ClamberCast.get_collision_normal(0)
-	var VaultTarget = ClamberTarget.get_collision_point() + Vector3(0, 0.3, 0)
-	var VaultEnd = VaultTarget + (-WallNormal * VaultDistance)
-	var CastObject = ClamberCast.get_collider(0)
-	if CastObject:
-		Source.add_collision_exception_with(CastObject)
-	var VaultTween = get_tree().create_tween()
-	VaultTween.tween_property(Source, "global_position", VaultTarget, 0.15).set_trans(Tween.TRANS_SINE)
-	VaultTween.tween_property(Source, "global_position", VaultEnd, 0.2).set_trans(Tween.TRANS_SINE)
-	VaultTween.tween_callback(func():
-		if CastObject:
-			Source.remove_collision_exception_with(CastObject)
-		AnimManager.AnimOverride = false)
-	print("Vault")
-	
+		
 #// Ledge Grab
 func _grab_ledge():
 	AnimManager._override_travel("aHang")
@@ -98,8 +74,8 @@ func _grab_ledge():
 		Source.global_position.z
 	) + (WallNormal * LedgeZOffset)
 	# Position Hand Markers
-	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.05, 0)
-	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.05, 0)
+	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)
+	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.01, 0)
 	var SnapTween = get_tree().create_tween()
 	SnapTween.tween_property(Source, "global_position", HangPos, 0.12)\
 		.set_trans(Tween.TRANS_SINE)
@@ -128,6 +104,24 @@ func _clamber_ledge():
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
 		Source.isClambering = false
 		AnimManager.AnimOverride = false)
+		
+#// Vault
+func _vault():
+	AnimManager._override_travel("aVault")
+	var WallNormal = ClamberCast.get_collision_normal(0)
+	var VaultTarget = ClamberTarget.get_collision_point() + Vector3(0, 0.3, 0)
+	var VaultEnd = VaultTarget + (-WallNormal * VaultDistance)
+	var CastObject = ClamberCast.get_collider(0)
+	if CastObject:
+		Source.add_collision_exception_with(CastObject)
+	var VaultTween = get_tree().create_tween()
+	VaultTween.tween_property(Source, "global_position", VaultTarget, 0.15).set_trans(Tween.TRANS_SINE)
+	VaultTween.tween_property(Source, "global_position", VaultEnd, 0.2).set_trans(Tween.TRANS_SINE)
+	VaultTween.tween_callback(func():
+		if CastObject:
+			Source.remove_collision_exception_with(CastObject)
+		AnimManager.AnimOverride = false)
+	print("Vault")
 	
 #// Step Over
 func _step_over():

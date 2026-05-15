@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dya0qaj8j1cd" path="res://Actors/Player/NewClyde.tscn" id="6_lxc4y"]
 [ext_resource type="Script" uid="uid://vjylbctsl48n" path="res://Actors/Player/Scripts/Camera.gd" id="7_kkbrm"]
 [ext_resource type="Resource" uid="uid://8v38iuoo4o54" path="res://Actors/Player/Resources/PlayerSettings.tres" id="8_6e37q"]
-[ext_resource type="Texture2D" uid="uid://6cidv6int4dq" path="res://Actors/DropShadow.png" id="9_6e37q"]
+[ext_resource type="Script" uid="uid://cc1x1nwmyyp3p" path="res://Actors/Player/Scripts/HUD.gd" id="10_lxc4y"]
 [ext_resource type="PackedScene" uid="uid://70mpb30ysxto" path="res://Actors/Player/Menu.tscn" id="11_gh11b"]
 [ext_resource type="Script" uid="uid://c2yyq68cu5h84" path="res://Actors/Player/Scripts/Sprint.gd" id="12_8np4b"]
 [ext_resource type="Script" uid="uid://d0ee1lb8ej21l" path="res://Actors/Player/Scripts/Jump.gd" id="12_ujyek"]
@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
-radius = 0.2
+radius = 0.4
 height = 1.7
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e37q"]
@@ -71,11 +71,11 @@ states/aLeapRight/position = Vector2(412.5143, 161.88411)
 transitions = ["Start", "aLeapLeft", SubResource("AnimationNodeStateMachineTransition_kr5aq"), "Start", "aJumpStill", SubResource("AnimationNodeStateMachineTransition_emuwr"), "Start", "aLeapRight", SubResource("AnimationNodeStateMachineTransition_ia8ke"), "aLeapLeft", "End", SubResource("AnimationNodeStateMachineTransition_f6sss"), "aJumpStill", "End", SubResource("AnimationNodeStateMachineTransition_4sko0"), "aLeapRight", "End", SubResource("AnimationNodeStateMachineTransition_0ieod")]
 graph_offset = Vector2(-55.44922, -227.2539)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iwmb3"]
-animation = &"aKongVault"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kkbrm"]
 animation = &"aSprint"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iwmb3"]
+animation = &"aKongVault"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qhy2x"]
 animation = &"aWalkF"
@@ -198,16 +198,16 @@ states/aIdleArmed/node = SubResource("AnimationNodeAnimation_fllei")
 states/aIdleArmed/position = Vector2(389.36423, -69.078125)
 states/aJumpVariants/node = SubResource("AnimationNodeStateMachine_jhh7x")
 states/aJumpVariants/position = Vector2(585.195, 102.9837)
-states/aKongVault/node = SubResource("AnimationNodeAnimation_iwmb3")
-states/aKongVault/position = Vector2(589.93097, -179.39714)
 states/aSprint/node = SubResource("AnimationNodeAnimation_kkbrm")
 states/aSprint/position = Vector2(589.7644, -40.404102)
+states/aVault/node = SubResource("AnimationNodeAnimation_iwmb3")
+states/aVault/position = Vector2(589.93097, -179.39714)
 states/aWalkSpace/node = SubResource("AnimationNodeBlendSpace2D_fllei")
 states/aWalkSpace/position = Vector2(802.4088, 103.04671)
 states/root_aClamber/node = SubResource("AnimationNodeAnimation_m1t7r")
 states/root_aClamber/position = Vector2(389.26093, 347.43573)
-transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "root_aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "root_aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aKongVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aKongVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q")]
-graph_offset = Vector2(-47.203125, -139.85938)
+transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "root_aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "root_aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q")]
+graph_offset = Vector2(107.328125, -147.05078)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
@@ -222,17 +222,9 @@ Settings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=2099447179 instance=ExtResource("6_lxc4y")]
 
-[node name="IKTarget_R" type="Marker3D" parent="Clyde" unique_id=328367114]
-top_level = true
-
-[node name="IKTarget_L" type="Marker3D" parent="Clyde" unique_id=1180558332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.99999994, 0)
-top_level = true
-
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
 texture_filter = 2
-texture = ExtResource("9_6e37q")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=2117931213]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
@@ -273,12 +265,22 @@ visible = false
 [node name="Debug" parent="." unique_id=1625954760 node_paths=PackedStringArray("Source") instance=ExtResource("3_vywg6")]
 Source = NodePath("..")
 
+[node name="HUD" type="Control" parent="." unique_id=283725596]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_lxc4y")
+
 [node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
-transform = Transform3D(0.99999994, 0, 0, 0, 2.9999995, -5.960464e-08, 0, 1.1920929e-07, 0.9999999, 0, 2.4, -0.8000001)
+transform = Transform3D(0.99999994, 0, 0, 0, 2.1599998, -5.960464e-08, 0, 8.583069e-08, 0.9999999, 0, 2.4, -0.50000006)
 hit_from_inside = true
 
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
-transform = Transform3D(0.6, 0, 0, 0, -3.059797e-08, -1, 0, 0.7, -4.371139e-08, 0, 1, 0)
+transform = Transform3D(0.6, 0, 0, 0, -2.4478377e-08, -1, 0, 0.56, -4.371139e-08, 0, 1, 0)
 shape = SubResource("BoxShape3D_qhy2x")
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
@@ -338,10 +340,11 @@ transform = Transform3D(-4.371139e-08, -5, 4.371139e-08, 0, -2.1855695e-07, -1, 
 transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, -1, -2.1855695e-07, 1.9106855e-15, -0.4, 1, 3.7252903e-08)
 
 [node name="DEBUG_3RD PERSON" type="SpringArm3D" parent="." unique_id=817219706]
-transform = Transform3D(0.9659258, -0.12940952, 0.22414386, 0, 0.8660254, 0.5, -0.25881904, -0.4829629, 0.83651626, 0, 1.5, 0)
+transform = Transform3D(1.0000001, -1.4901161e-08, 0, 0, 0.8660254, 0.5, 0, -0.50000006, 0.8660253, 0, 1.5, 0)
 shape = SubResource("SphereShape3D_lxc4y")
-spring_length = 1.374
+spring_length = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="DEBUG_3RD PERSON" unique_id=1370090717]
+current = true
 
 [connection signal="visibility_changed" from="Menu" to="PlayerCollision/CameraPivot" method="_on_menu_visibility_changed"]

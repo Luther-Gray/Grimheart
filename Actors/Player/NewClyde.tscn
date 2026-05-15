@@ -60,7 +60,7 @@ layers = 2
 transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1898756, -0.016779983)
 
 [node name="ElbowTarget_L" type="Marker3D" parent="Skeleton3D/UpperArm_L" index="1" unique_id=779303182]
-transform = Transform3D(1, 0, 4.1909516e-09, 0, 1, 1.4901161e-08, -2.7939677e-09, 0, 1.0000004, -0.13214016, -0.06467, -0.01959616)
+transform = Transform3D(0.9997236, -0.019498795, 0.013131455, 0.022254914, 0.9649594, -0.2614553, -0.007573247, 0.26167506, 0.9651268, -0.1791485, 0.05373448, 0.071232855)
 
 [node name="LowerArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1787797158) index="11" unique_id=1651444308]
 transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
@@ -102,7 +102,7 @@ transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.0324076
 transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
 
 [node name="ElbowTarget_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" index="1" unique_id=1225593278]
-transform = Transform3D(1.0000005, -2.9802322e-08, -5.4948032e-08, 3.7252903e-09, 1, 4.4703484e-08, 2.6542693e-08, 0, 1, 0.14363539, -0.05319968, -0.00712958)
+transform = Transform3D(0.99999714, -0.002207905, 0.0014940351, 0.002216339, 0.99998116, -0.005764067, -0.0014814138, 0.005767405, 0.99998254, 0.18339658, 0.040784776, 0.06887013)
 
 [node name="LowerArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1787797158) index="24" unique_id=1389025281]
 transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
@@ -165,8 +165,9 @@ transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992
 transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
 
 [node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1787797158) index="44" unique_id=1387102007]
+active = false
 setting_count = 1
-settings/0/target_node = NodePath("")
+settings/0/target_node = NodePath("../../IKTarget_L")
 settings/0/pole_node = NodePath("../UpperArm_L/ElbowTarget_L")
 settings/0/root_bone_name = "bUpperArm.L"
 settings/0/root_bone = 17
@@ -179,8 +180,9 @@ settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
 
 [node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1787797158) index="45" unique_id=5905828]
+active = false
 setting_count = 1
-settings/0/target_node = NodePath("")
+settings/0/target_node = NodePath("../../IKTarget_R")
 settings/0/pole_node = NodePath("../UpperArm_R/ElbowTarget_R")
 settings/0/root_bone_name = "bUpperArm.R"
 settings/0/root_bone = 43
@@ -191,3 +193,9 @@ settings/0/end_bone_name = "bHand.R"
 settings/0/end_bone = 47
 settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
+
+[node name="IKTarget_R" type="Marker3D" parent="." index="2" unique_id=1454238775]
+top_level = true
+
+[node name="IKTarget_L" type="Marker3D" parent="." index="3" unique_id=1735302883]
+top_level = true
