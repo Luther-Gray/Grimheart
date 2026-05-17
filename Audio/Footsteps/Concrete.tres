@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://c54ckxi3wqro0"]
+
+[ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="1_lpvak"]
+
+[resource]
+random_pitch = 1.005793
+streams_count = 1
+stream_0/stream = ExtResource("1_lpvak")
