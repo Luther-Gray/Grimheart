@@ -3,7 +3,10 @@ extends Node3D
 
 @export var Source: CharacterBody3D
 
-func _physics_process(_delta: float) -> void:
+var SprintGrace : float = 0.5
+var SprintTimer : float = 0.0
+
+func _physics_process(delta: float) -> void:
 	if Source.isVaulting or Source.isSliding:
 		return
 	if Source.Settings.SprintToggle and !Source.isCrouched:
@@ -13,15 +16,17 @@ func _physics_process(_delta: float) -> void:
 			_release_sprint()
 	elif !Source.Settings.SprintToggle and !Source.isCrouched:
 		if Input.is_action_pressed("MV_Sprint") and Source.isMoving:
+			SprintTimer = SprintGrace
 			_hold_sprint()
-		else:
-			_release_sprint()
+		elif Source.isSprinting and !Input.is_action_pressed("MV_Sprint"):
+			SprintTimer -= delta
+			if SprintTimer <= 0 or !Source.isMoving:
+				_release_sprint()
 			
 
 func _toggle_sprint():
 	Source.isSprinting = !Source.isSprinting
 	Source.MoveSpeed = Source.Stat.SprintSpeed
-	
 func _hold_sprint():
 	Source.isSprinting = true
 	Source.MoveSpeed = Source.Stat.SprintSpeed

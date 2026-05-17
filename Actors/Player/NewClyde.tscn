@@ -4,167 +4,173 @@
 
 [node name="Clyde" unique_id=962298241 instance=ExtResource("1_3o2hb")]
 
-[node name="Hips" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="0" unique_id=1538512908]
-transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7190587, -0.012782706)
+[node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="0" unique_id=720543761]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
 
-[node name="MidTorso" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="1" unique_id=1112798183]
-transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9374274, 0.00022134755)
-
-[node name="Torso" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="2" unique_id=2031257771]
-transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2308728, -0.014564589)
-
-[node name="Neck" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="3" unique_id=1612176102]
-transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
-
-[node name="Neck" parent="Skeleton3D/Neck" index="0" unique_id=1162608300]
+[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=878175325]
 layers = 2
 
-[node name="Head" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="4" unique_id=1184800634]
+[node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="1" unique_id=465832356]
+transform = Transform3D(0.0018878075, 0.84354496, 0.53705525, -0.9969255, -0.040481772, 0.06708845, 0.078333065, -0.5355307, 0.8408749, -0.05449909, 1.5775934, -0.17918769)
+
+[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=312848305]
+layers = 2
+
+[node name="FlatTopOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="2" unique_id=249918983]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
+
+[node name="FlatTopOutline" parent="Skeleton3D/FlatTopOutline" index="0" unique_id=1357480840]
+layers = 2
+
+[node name="Head" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="3" unique_id=1567613117]
 transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
 [node name="CameraMarker" type="Marker3D" parent="Skeleton3D/Head" index="0" unique_id=977741486]
 transform = Transform3D(0.999034, 0.0053197416, 0.043625046, -0.0018879281, 0.9969254, -0.078333, -0.04390762, 0.07817497, 0.995972, 0, 0, -0.1)
 
-[node name="Head" parent="Skeleton3D/Head" index="1" unique_id=1834573195]
+[node name="Head" parent="Skeleton3D/Head" index="1" unique_id=1327943534]
 layers = 2
 
-[node name="Ear_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="5" unique_id=1933104387]
+[node name="Ear_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="4" unique_id=892061836]
 transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5128847, -0.0034645018)
 
-[node name="Ear_L" parent="Skeleton3D/Ear_L" index="0" unique_id=1057467255]
+[node name="Ear_L" parent="Skeleton3D/Ear_L" index="0" unique_id=1709105312]
 layers = 2
 
-[node name="Ear_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="6" unique_id=376720337]
+[node name="Ear_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="5" unique_id=1701952504]
 transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.514281, 0.00798608)
 
-[node name="Ear_R" parent="Skeleton3D/Ear_R" index="0" unique_id=1058113223]
+[node name="Ear_R" parent="Skeleton3D/Ear_R" index="0" unique_id=363090255]
 layers = 2
 
-[node name="camera" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="7" unique_id=1504345572]
+[node name="camera" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="6" unique_id=2042046511]
 transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0011588504, 1.5123781, -0.013164459)
 visible = false
 
-[node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="8" unique_id=1183482766]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
+[node name="HeadOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="7" unique_id=1263862556]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
-[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=2049705357]
+[node name="HeadOutline" parent="Skeleton3D/HeadOutline" index="0" unique_id=1870287115]
 layers = 2
 
-[node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="9" unique_id=1029609805]
-transform = Transform3D(0.0018878075, 0.84354496, 0.53705525, -0.9969255, -0.040481772, 0.06708845, 0.078333065, -0.5355307, 0.8408749, -0.05449909, 1.5775934, -0.17918769)
+[node name="Neck" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="8" unique_id=1243907791]
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
 
-[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=559160184]
+[node name="Neck" parent="Skeleton3D/Neck" index="0" unique_id=1997712150]
 layers = 2
 
-[node name="UpperArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="10" unique_id=1230829578]
+[node name="NeckOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="9" unique_id=1101197091]
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
+
+[node name="NeckOutline" parent="Skeleton3D/NeckOutline" index="0" unique_id=957083409]
+layers = 2
+
+[node name="IndexTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="10" unique_id=965982102]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.647952, -0.06926042)
+
+[node name="IndexTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="11" unique_id=327504423]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.647952, -0.06926042)
+
+[node name="Index_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="12" unique_id=1567192720]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6900753, -0.06935491)
+
+[node name="Index_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="13" unique_id=1917881382]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6900753, -0.06935491)
+
+[node name="MiddleTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="14" unique_id=895470273]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.6438533, -0.06008158)
+
+[node name="MiddleTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="15" unique_id=497145821]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.6438533, -0.06008158)
+
+[node name="Middle_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="16" unique_id=1709137712]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.68909675, -0.060183063)
+
+[node name="Middle_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="17" unique_id=969390069]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.68909675, -0.060183063)
+
+[node name="RingTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="18" unique_id=2047988345]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.64328116, -0.044816483)
+
+[node name="RingTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="19" unique_id=1623217170]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.64328116, -0.044816483)
+
+[node name="Ring_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="20" unique_id=124678516]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.6885246, -0.044917967)
+
+[node name="Ring_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="21" unique_id=719090777]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.6885246, -0.044917967)
+
+[node name="PinkyTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="22" unique_id=311507861]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.6567501, -0.029582882)
+
+[node name="PinkyTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="23" unique_id=137662014]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.6567501, -0.029582882)
+
+[node name="Pinky_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="24" unique_id=1826357756]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.6910727, -0.029659871)
+
+[node name="Pinky_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="25" unique_id=1549631864]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.6910727, -0.029659871)
+
+[node name="ThumbTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="26" unique_id=549652565]
+transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.71892494, -0.0598442)
+
+[node name="ThumbTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="27" unique_id=924109970]
+transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.71892494, -0.0598442)
+
+[node name="Thumb_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="28" unique_id=652769172]
+transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.748091, -0.06781994)
+
+[node name="Thumb_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="29" unique_id=820703602]
+transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.748091, -0.06781994)
+
+[node name="Hand_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="30" unique_id=833452038]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.74886864, -0.049216427)
+
+[node name="Hand_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="31" unique_id=299934350]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.74886864, -0.049216427)
+
+[node name="LowerArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="32" unique_id=1490933343]
+transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
+
+[node name="LowerArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="33" unique_id=374772392]
+transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
+
+[node name="UpperArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="34" unique_id=1638921231]
 transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1898756, -0.016779983)
 
 [node name="ElbowTarget_L" type="Marker3D" parent="Skeleton3D/UpperArm_L" index="1" unique_id=779303182]
 transform = Transform3D(0.9997236, -0.019498795, 0.013131455, 0.022254914, 0.9649594, -0.2614553, -0.007573247, 0.26167506, 0.9651268, -0.1791485, 0.05373448, 0.071232855)
 
-[node name="LowerArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="11" unique_id=1417501404]
-transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
+[node name="UpperArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="35" unique_id=1497755182]
+transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1898756, -0.016779983)
 
-[node name="Hand_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="12" unique_id=2113310570]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.74886864, -0.049216427)
-
-[node name="Index_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="13" unique_id=2086651382]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6900753, -0.06935491)
-
-[node name="IndexTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="14" unique_id=879893150]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.647952, -0.06926042)
-
-[node name="Middle_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="15" unique_id=1217666671]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.68909675, -0.060183063)
-
-[node name="MiddleTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="16" unique_id=1070595995]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.6438533, -0.06008158)
-
-[node name="Ring_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="17" unique_id=836022651]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.6885246, -0.044917967)
-
-[node name="RingTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="18" unique_id=1606954610]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.64328116, -0.044816483)
-
-[node name="Pinky_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="19" unique_id=473804284]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.6910727, -0.029659871)
-
-[node name="PinkyTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="20" unique_id=1516908295]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.6567501, -0.029582882)
-
-[node name="Thumb_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="21" unique_id=860991260]
-transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.748091, -0.06781994)
-
-[node name="ThumbTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="22" unique_id=2040884025]
-transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.71892494, -0.0598442)
-
-[node name="UpperArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="23" unique_id=2046444419]
-transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
-
-[node name="ElbowTarget_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" index="1" unique_id=1225593278]
-transform = Transform3D(0.99999714, -0.002207905, 0.0014940351, 0.002216339, 0.99998116, -0.005764067, -0.0014814138, 0.005767405, 0.99998254, 0.18339658, 0.040784776, 0.06887013)
-
-[node name="LowerArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="24" unique_id=685731494]
-transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
-
-[node name="Hand_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="25" unique_id=20174212]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7513087, -0.0344421)
-
-[node name="Thumb_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="26" unique_id=1273526006]
-transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7515302, -0.07061593)
-
-[node name="ThumbTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="27" unique_id=2097599869]
+[node name="ThumbTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="36" unique_id=237657673]
 transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.72148687, -0.0791595)
 
-[node name="Index_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="28" unique_id=1316756044]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.69289213, -0.060540378)
+[node name="ThumbTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="37" unique_id=1807561809]
+transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.72148687, -0.0791595)
 
-[node name="IndexTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="29" unique_id=1189185510]
+[node name="Thumb_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="38" unique_id=1774032483]
+transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7515302, -0.07061593)
+
+[node name="Thumb_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="39" unique_id=25261819]
+transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7515302, -0.07061593)
+
+[node name="IndexTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="40" unique_id=1378431556]
 transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.65075135, -0.0624687)
 
-[node name="Middle_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="30" unique_id=939359152]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.69210446, -0.04701377)
+[node name="IndexTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="41" unique_id=1678748765]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.65075135, -0.0624687)
 
-[node name="MiddleTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="31" unique_id=1843647273]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6468422, -0.04908493)
+[node name="Index_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="42" unique_id=603360998]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.69289213, -0.060540378)
 
-[node name="Ring_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="32" unique_id=1239660522]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6912261, -0.029444532)
+[node name="Index_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="43" unique_id=312054884]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.69289213, -0.060540378)
 
-[node name="RingTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="33" unique_id=1696207732]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.64596385, -0.031515695)
-
-[node name="Pinky_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="34" unique_id=192210752]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.6934693, -0.011732456)
-
-[node name="PinkyTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="35" unique_id=500465632]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.65913236, -0.013303682)
-
-[node name="UpperLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="36" unique_id=94899321]
-transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.85711503, -0.00080565177)
-
-[node name="LowerLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="37" unique_id=1534950450]
-transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.09599081, 0.08959882)
-
-[node name="Foot_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="38" unique_id=456799979]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0019129962, 0.09079312)
-
-[node name="FootTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="39" unique_id=1960282913]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, -0.0022186507, -0.044362016)
-
-[node name="UpperLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="40" unique_id=1109296195]
-transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.8619256, -0.028516524)
-
-[node name="LowerLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="41" unique_id=1175485465]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.0963096, -0.04600669)
-
-[node name="Foot_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="42" unique_id=1678350874]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.0027087107, -0.04819598)
-
-[node name="FootTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="43" unique_id=1868012034]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
-
-[node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="44" unique_id=1387102007]
+[node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="44" unique_id=1387102007]
 active = false
 setting_count = 1
 settings/0/target_node = NodePath("../../IKTarget_L")
@@ -172,27 +178,150 @@ settings/0/pole_node = NodePath("../UpperArm_L/ElbowTarget_L")
 settings/0/root_bone_name = "bUpperArm.L"
 settings/0/root_bone = 17
 settings/0/middle_bone_name = "bLowerArm.L"
-settings/0/middle_bone = 19
+settings/0/middle_bone = 18
 settings/0/pole_direction = 0
 settings/0/end_bone_name = "bHand.L"
-settings/0/end_bone = 21
+settings/0/end_bone = 19
 settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
 
-[node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1227480250) index="45" unique_id=5905828]
+[node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="45" unique_id=5905828]
 active = false
 setting_count = 1
 settings/0/target_node = NodePath("../../IKTarget_R")
 settings/0/pole_node = NodePath("../UpperArm_R/ElbowTarget_R")
 settings/0/root_bone_name = "bUpperArm.R"
-settings/0/root_bone = 43
+settings/0/root_bone = 56
 settings/0/middle_bone_name = "bLowerArm.R"
-settings/0/middle_bone = 45
+settings/0/middle_bone = 57
 settings/0/pole_direction = 0
 settings/0/end_bone_name = "bHand.R"
-settings/0/end_bone = 47
+settings/0/end_bone = 58
 settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
+
+[node name="MiddleTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="46" unique_id=763956358]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6468422, -0.04908493)
+
+[node name="MiddleTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="47" unique_id=307232234]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6468422, -0.04908493)
+
+[node name="Middle_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="48" unique_id=1795586062]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.69210446, -0.04701377)
+
+[node name="Middle_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="49" unique_id=1194779822]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.69210446, -0.04701377)
+
+[node name="RingTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="50" unique_id=838859866]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.64596385, -0.031515695)
+
+[node name="RingTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="51" unique_id=1752230567]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.64596385, -0.031515695)
+
+[node name="Ring_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="52" unique_id=1658486989]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6912261, -0.029444532)
+
+[node name="Ring_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="53" unique_id=683237740]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6912261, -0.029444532)
+
+[node name="PinkyTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="54" unique_id=559471351]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.65913236, -0.013303682)
+
+[node name="PinkyTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="55" unique_id=1487423380]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.65913236, -0.013303682)
+
+[node name="Pinky_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="56" unique_id=105234543]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.6934693, -0.011732456)
+
+[node name="Pinky_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="57" unique_id=741953166]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.6934693, -0.011732456)
+
+[node name="Hand_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="58" unique_id=833758095]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7513087, -0.0344421)
+
+[node name="Hand_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="59" unique_id=491755648]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7513087, -0.0344421)
+
+[node name="LowerArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="60" unique_id=1036162738]
+transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
+
+[node name="LowerArm_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="61" unique_id=221892282]
+transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
+
+[node name="UpperArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="62" unique_id=844720427]
+transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
+
+[node name="ElbowTarget_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" index="1" unique_id=1225593278]
+transform = Transform3D(0.99999714, -0.002207905, 0.0014940351, 0.002216339, 0.99998116, -0.005764067, -0.0014814138, 0.005767405, 0.99998254, 0.18339658, 0.040784776, 0.06887013)
+
+[node name="UpperArm_R_2" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="63" unique_id=237102933]
+transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
+
+[node name="Torso" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="64" unique_id=1518928353]
+transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2308728, -0.014564589)
+
+[node name="TorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="65" unique_id=1461402501]
+transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2308728, -0.014564589)
+
+[node name="MidTorso" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="66" unique_id=754757884]
+transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9374274, 0.00022134755)
+
+[node name="MidTorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="67" unique_id=934813330]
+transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9374274, 0.00022134755)
+
+[node name="FootTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="68" unique_id=1500635773]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, -0.0022186507, -0.044362016)
+
+[node name="FootTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="69" unique_id=942531341]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, -0.0022186507, -0.044362016)
+
+[node name="Foot_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="70" unique_id=1369742692]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0019129962, 0.09079312)
+
+[node name="Foot_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="71" unique_id=1620054660]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0019129962, 0.09079312)
+
+[node name="LowerLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="72" unique_id=1587034517]
+transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.09599081, 0.08959882)
+
+[node name="LowerLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="73" unique_id=815949758]
+transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.09599081, 0.08959882)
+
+[node name="UpperLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="74" unique_id=389603839]
+transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.85711503, -0.00080565177)
+
+[node name="UpperLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="75" unique_id=376932037]
+transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.85711503, -0.00080565177)
+
+[node name="FootTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="76" unique_id=507635961]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
+
+[node name="FootTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="77" unique_id=1638970956]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
+
+[node name="Foot_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="78" unique_id=708670003]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.0027087107, -0.04819598)
+
+[node name="Foot_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="79" unique_id=426710293]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.0027087107, -0.04819598)
+
+[node name="LowerLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="80" unique_id=615561039]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.0963096, -0.04600669)
+
+[node name="LowerLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="81" unique_id=1701473939]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.0963096, -0.04600669)
+
+[node name="UpperLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="82" unique_id=9444764]
+transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.8619256, -0.028516524)
+
+[node name="UpperLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="83" unique_id=797978245]
+transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.8619256, -0.028516524)
+
+[node name="Hips" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="84" unique_id=697619350]
+transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7190587, -0.012782706)
+
+[node name="HipsOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(261236734) index="85" unique_id=247326427]
+transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7190587, -0.012782706)
 
 [node name="IKTarget_R" type="Marker3D" parent="." index="2" unique_id=1454238775]
 top_level = true

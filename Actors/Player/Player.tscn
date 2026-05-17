@@ -253,7 +253,7 @@ Stat = ExtResource("3_kkbrm")
 Vitals = ExtResource("4_qhy2x")
 Settings = ExtResource("8_6e37q")
 
-[node name="Clyde" parent="." unique_id=724550760 instance=ExtResource("6_lxc4y")]
+[node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -366,6 +366,7 @@ script = ExtResource("15_n45d6")
 Source = NodePath("..")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
+visible = false
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
@@ -386,6 +387,7 @@ transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, 
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1760431767]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 1, 0)
+visible = false
 shape = SubResource("SphereShape3D_vnq5c")
 spring_length = 3.0
 
