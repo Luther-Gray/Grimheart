@@ -16,10 +16,10 @@ extends Node3D
 # Vault
 var VaultDistance : float = 1.5
 # Ledge Grab
-var LedgeYOffset : float = 1.6
-var LedgeZOffset : float = -0.2
+@export_range(1.0, 3.0, 0.1) var LedgeYOffset : float = 1.4 # Higher Numbers mean Lower Down.
+@export_range(-1.0, 1.0, 0.1) var LedgeZOffset : float = -0.9 # Negative Moves away from Ledge.
 # Clamber Boost - Magic number to make the clamber actually go up. No idea why delta alone isn't enough.
-var ClamberBoost : float = 10
+var ClamberBoost : float = 7.5
 
 func _physics_process(delta: float) -> void:
 	if Source.isClambering:
@@ -50,14 +50,14 @@ func _detect_ledge():
 	#// Height Chart
 	if HeightDiff < 0.15: # Too Small - Ignore
 		return
-	elif HeightDiff < 0.6: #Knee Height - Step Over
+	elif HeightDiff < 0.2: #Knee Height - Step Over
 		if Input.is_action_pressed("MV_Forward"):
 			_step_over()
 	elif HeightDiff < 1.2: #Waist Height - Vault
-		if Input.is_action_pressed("MV_Forward"):
+		if Input.is_action_pressed("MV_Forward") and Source.is_on_floor():
 			_vault()
 	elif HeightDiff < 2.0: # Climbable!
-		if Source.isFalling or Source.velocity.y < 1.5:
+		if Source.velocity.y < 1.5:
 			_grab_ledge()
 	else: # Too Tall - Ignore
 		return
@@ -70,7 +70,7 @@ func _grab_ledge():
 	var LedgeSurface = ClamberTarget.get_collision_point()
 	var WallNormal = ClamberCast.get_collision_normal(0)
 	var WallRight = Vector3.UP.cross(WallNormal).normalized()
-	var HandOffset = Vector3(0, 1.5, -0.7)
+	var HandOffset = Vector3(0, LedgeYOffset, LedgeZOffset)
 	var HangPos = LedgeSurface - (Source.global_transform.basis * HandOffset)
 	# Position Hand Markers
 	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)

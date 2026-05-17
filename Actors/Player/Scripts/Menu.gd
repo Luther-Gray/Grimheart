@@ -7,10 +7,11 @@ func _input(event: InputEvent) -> void:
 		if self.visible:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
-			Input.MOUSE_MODE_CAPTURED
+			Input.mouse_mode =  Input.MOUSE_MODE_CAPTURED
 
 func _on_resume() -> void:
 	self.visible = !self.visible
+	Input.mouse_mode =  Input.MOUSE_MODE_CAPTURED
 
 
 func _on_options() -> void:
@@ -18,4 +19,4 @@ func _on_options() -> void:
 
 
 func _on_quit() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

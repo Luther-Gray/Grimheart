@@ -26,6 +26,7 @@ var isFalling : bool = false
 var isHanging : bool = false
 var isClambering : bool = false
 var isCrouched : bool = false
+var isSliding : bool = false
 var isWallRunning : bool = false
 
 func _physics_process(delta: float) -> void:

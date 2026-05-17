@@ -1,6 +1,7 @@
 extends Resource
 class_name GameSettings
-
+@export_category("Game Difficulty")
+@export_enum("Casual", "Survival", "Cataclysm") var Difficulty : String = "Cataclysm"
 @export_category("Mouse Controls")
 @export_range(0, 1) var MouseSensitivity : float = 0.35
 @export_range(0, 1) var ADSSensitivity : float = 0.20

@@ -16,10 +16,10 @@ var TargetMarkerPos : float = -1
 
 func _physics_process(_delta: float) -> void:
 	if Source.Settings.CrouchToggle:
-		if Input.is_action_just_pressed("MV_Crouch"):
+		if Input.is_action_just_pressed("MV_Crouch") and !Source.isHanging:
 			_toggle_crouch()
 	elif !Source.Settings.CrouchToggle:
-		if Input.is_action_pressed("MV_Crouch"):
+		if Input.is_action_pressed("MV_Crouch")  and !Source.isHanging:
 			_hold_crouch()
 		else:
 			_release_crouch()

@@ -8,7 +8,7 @@ extends Node
 var CoyoteTimer : float = 0.0
 const CoyoteDuration : float = 0.15
 var FallDistance : float = 0.0
-var FallDamage : float = FallDistance * 10.0
+var FallDamage : float = FallDistance * 3.0
 const FallDamageThreshold : float = 3.0
 var FallInit : float = 0.0
 var WasAirborn : bool = false
@@ -25,7 +25,8 @@ func _physics_process(delta: float) -> void:
 		if WasAirborn:
 			FallDistance = abs(FallInit - Source.global_position.y)
 			if FallDistance >= FallDamageThreshold:
-				print("OUCH! ", FallDamage, "From: ", FallDistance)
+				Source.Vitals._vital_impact("Health", FallDamage)
+				print(Source.Vitals.Health)
 			WasAirborn = false
 		Source.isFalling = false
 		Source.isJumping = false
@@ -44,6 +45,6 @@ func _physics_process(delta: float) -> void:
 		
 func _jump_anim():
 	if !Source.isMoving:
-		AnimManager._variant_travel("aJumpVariants", "aJumpStill")
+		AnimManager._variant_travel("aJumpVariants", "aJump")
 	if Source.isMoving:
-		AnimManager._variant_travel("aJumpVariants", ["aLeapLeft", "aLeapRight"].pick_random())
+		AnimManager._variant_travel("aJumpVariants", ["aLeapL", "aLeapR"].pick_random())

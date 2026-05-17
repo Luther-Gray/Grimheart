@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_4unfa")
+Difficulty = "Cataclysm"
 CrouchToggle = true
 SprintToggle = true
 metadata/_custom_type_script = "uid://bmlkvek1e1mmf"

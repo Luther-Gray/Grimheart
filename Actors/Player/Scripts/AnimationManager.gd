@@ -29,6 +29,8 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aHang")
 	elif Source.isMoving and !Source.isSprinting:
 		StateMachine.travel("aWalkSpace")
+	elif Source.isMoving and Source.isCrouched:
+		pass
 	elif Source.isSprinting:
 		StateMachine.travel("aSprint")
 	else:
