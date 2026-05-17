@@ -15,6 +15,8 @@ var TargetColPosition : float = 0.5
 var TargetMarkerPos : float = -1
 
 func _physics_process(_delta: float) -> void:
+	if Source.isSliding:
+		return
 	if Source.Settings.CrouchToggle:
 		if Input.is_action_just_pressed("MV_Crouch") and !Source.isHanging:
 			_toggle_crouch()

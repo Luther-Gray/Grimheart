@@ -25,13 +25,14 @@ var isJumping : bool = false
 var isFalling : bool = false
 var isHanging : bool = false
 var isClambering : bool = false
+var isVaulting : bool = false
 var isCrouched : bool = false
 var isSliding : bool = false
 var isWallRunning : bool = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		if !isHanging and !isClambering:
+		if !isHanging and !isClambering and !isVaulting:
 			velocity += get_gravity() * delta
 	if !isHanging and !isClambering:
 		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")

@@ -12,6 +12,7 @@ var FallDamage : float = FallDistance * 3.0
 const FallDamageThreshold : float = 3.0
 var FallInit : float = 0.0
 var WasAirborn : bool = false
+var VariableJumpMult : float = 0.35
 
 func _physics_process(delta: float) -> void:
 # Handle Fall
@@ -38,6 +39,8 @@ func _physics_process(delta: float) -> void:
 		Source.isJumping = true
 		Source.velocity.y = Source.Stat.JumpStrength
 		_jump_anim()
+	if Input.is_action_just_released("MV_Jump") and Source.velocity.y > 0 and Source.isJumping:
+		Source.velocity.y *= VariableJumpMult
 	if Source.is_on_floor():
 		CoyoteTimer = CoyoteDuration
 	else:

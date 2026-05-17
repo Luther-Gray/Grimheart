@@ -6,6 +6,8 @@ extends Node3D
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var CameraPivot: Node3D = $"../PlayerCollision/CameraPivot"
+@onready var DEV_Target: MeshInstance3D = $"../../DEV_Target"
+
 
 #// IK Locations
 @export var IK_ArmL: TwoBoneIK3D
@@ -13,18 +15,19 @@ extends Node3D
 @export var HandTargetL: Marker3D
 @export var HandTargetR: Marker3D
 
-# Vault
-var VaultDistance : float = 1.5
+
 # Ledge Grab
 @export_range(1.0, 3.0, 0.1) var LedgeYOffset : float = 1.4 # Higher Numbers mean Lower Down.
 @export_range(-1.0, 1.0, 0.1) var LedgeZOffset : float = -0.9 # Negative Moves away from Ledge.
 # Clamber Boost - Magic number to make the clamber actually go up. No idea why delta alone isn't enough.
-var ClamberBoost : float = 7.5
+var ClamberBoost : float = 10
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Source.isClambering:
 		var RootMotion = AnimManager.AnimTree.get_root_motion_position()
-		Source.velocity = (Source.global_transform.basis * RootMotion) / delta * ClamberBoost
+		Source.global_position += (Source.global_transform.basis * RootMotion) * ClamberBoost
+		Source.velocity = Vector3.ZERO
+		print(Source.velocity)
 		return
 	if Source.isHanging:
 		var _LedgeInput = Input.get_axis("MV_Left", "MV_Right")
@@ -50,9 +53,6 @@ func _detect_ledge():
 	#// Height Chart
 	if HeightDiff < 0.15: # Too Small - Ignore
 		return
-	elif HeightDiff < 0.2: #Knee Height - Step Over
-		if Input.is_action_pressed("MV_Forward"):
-			_step_over()
 	elif HeightDiff < 1.2: #Waist Height - Vault
 		if Input.is_action_pressed("MV_Forward") and Source.is_on_floor():
 			_vault()
@@ -82,6 +82,7 @@ func _grab_ledge():
 		IK_ArmL.active = true
 		IK_ArmR.active = true
 		AnimManager.AnimOverride = false)
+	DEV_Target.global_position = LedgeSurface
 	print("Ledge Grab")
 
 #// Ledge Release
@@ -109,25 +110,35 @@ func _clamber_ledge():
 #// Vault
 func _vault():
 	AnimManager._override_travel("aVault")
-	var WallNormal = ClamberCast.get_collision_normal(0)
-	var VaultTarget = ClamberTarget.get_collision_point() + Vector3(0, 0.3, 0)
-	var VaultEnd = VaultTarget + (-WallNormal * VaultDistance)
+		# Speed Boost whenever you successfully vault
+	Source.MoveSpeed += 4.5
+	get_tree().create_timer(1.0).timeout.connect(func(): Source.MoveSpeed -= 4.5)
+	
+	Source.isVaulting = true
+	var VaultTarget = ClamberTarget.get_collision_point().y
+	var VaultDirection = -Source.global_transform.basis.z
+	var VaultBoost : float = 1.8
+	
+	# Disable Collision
 	var CastObject = ClamberCast.get_collider(0)
 	if CastObject:
 		Source.add_collision_exception_with(CastObject)
+	# Boost Vault
 	var VaultTween = get_tree().create_tween()
-	VaultTween.tween_property(Source, "global_position", VaultTarget, 0.15).set_trans(Tween.TRANS_SINE)
-	VaultTween.tween_property(Source, "global_position", VaultEnd, 0.2).set_trans(Tween.TRANS_SINE)
+	VaultTween.set_parallel(true)
+	VaultTween.tween_property(Source, "global_position:y", VaultTarget, 0.1).set_trans(Tween.TRANS_SINE)
+	VaultTween.tween_property(Source, "global_position:x", Source.global_position.x + VaultDirection.x * VaultBoost, 0.1).set_trans(Tween.TRANS_SINE)
+	VaultTween.tween_property(Source, "global_position:z", Source.global_position.z + VaultDirection.z * VaultBoost, 0.25).set_trans(Tween.TRANS_SINE)
+	VaultTween.set_parallel(false)
+	
 	VaultTween.tween_callback(func():
 		if CastObject:
 			Source.remove_collision_exception_with(CastObject)
-		AnimManager.AnimOverride = false)
+		AnimManager.AnimOverride = false
+		Source.isVaulting = false
+		
+		)
 	print("Vault")
-	
-#// Step Over
-func _step_over():
-	Source.velocity.y = 0.15
-	print("Step Over")
 	
 # Move on Ledge
 func _wall_check(input_x: float) -> void:
