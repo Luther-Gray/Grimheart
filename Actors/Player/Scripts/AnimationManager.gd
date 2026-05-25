@@ -15,7 +15,7 @@ var AnimPlayer : AnimationPlayer
 func _ready() -> void:
 	StateMachine = AnimTree.get("parameters/playback")
 	AnimPlayer = Source.find_child("AnimationPlayer", true, false)
-	#//Turn Animation Manager off for Testing Mechanics.
+	#//Turn Animation Manager off DEV STUFF
 	#process_mode = Node.PROCESS_MODE_DISABLED
 
 

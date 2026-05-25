@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://drcq0c7jwxwij"]
+
+[ext_resource type="PackedScene" uid="uid://dn87naj3d8umy" path="res://_GLTF/-Weapons/--Blunt/Steel_Pipe.gltf" id="1_ek0b8"]
+[ext_resource type="Material" uid="uid://buanvpkflniti" path="res://Actors/Player/Materials/Outline.tres" id="2_cs6gs"]
+
+[node name="wSteelPipe" unique_id=1968976459 instance=ExtResource("1_ek0b8")]
+
+[node name="SteelPipeOutline" parent="bSteelPipe" parent_id_path=PackedInt32Array(540304976) index="1" unique_id=1803176739]
+surface_material_override/0 = ExtResource("2_cs6gs")

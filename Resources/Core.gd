@@ -11,8 +11,6 @@ class_name Core
 @export var Ears : int
 @export var Throat : int
 @export var Chest : int
-@export var Heart : int
-@export var Stomach : int
 @export var LeftArm : int
 @export var LeftHand : int
 @export var RightArm : int
@@ -28,7 +26,13 @@ class_name Core
 @export_subgroup("Breath")
 @export var Breath : int
 @export var MaxBreath : int
+@export_subgroup("Heart")
+@export var Heart : int
+@export var HeartRate : int
+@export var MaxHeart : int
 @export_subgroup("Hunger")
+@export var Stomach : int
+@export var MaxStomach : int
 @export var Hunger : int
 @export var MaxHunger: int
 @export_subgroup("Calories")

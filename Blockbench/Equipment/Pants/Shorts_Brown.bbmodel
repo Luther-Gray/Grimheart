@@ -706,6 +706,696 @@
 			},
 			"type": "mesh",
 			"uuid": "7a44b336-3b1e-a049-2c1f-a59d44b78d78"
+		},
+		{
+			"name": "Shorts.ROutline",
+			"color": 2,
+			"origin": [1.0415, 13.74481, -0.19832],
+			"rotation": [0, 0, 0],
+			"shading": "flat",
+			"export": true,
+			"visibility": true,
+			"locked": false,
+			"render_order": "default",
+			"scope": 0,
+			"allow_mirror_modeling": true,
+			"vertices": {
+				"YFgs": [0.09, -6.6, 0.42432],
+				"FKgI": [0.09, 0.97, 0.40665],
+				"VGkK": [0.7932, -6.08643, 1.38771],
+				"vihe": [0.68937, 0.45643, 1.45929],
+				"oq5B": [1.2278, -6.08643, 0.05632],
+				"vVFp": [1.05978, 0.45643, 0.09581],
+				"Hyvr": [0.09, -6.08643, -0.76652],
+				"xJBp": [0.09, 0.45643, -0.69961],
+				"KynD": [-1.0478, -6.08643, 0.05632],
+				"4An1": [-0.87978, 0.45643, 0.09581],
+				"xOjB": [-0.6132, -6.08643, 1.38771],
+				"fKNe": [-0.50937, 0.45643, 1.45929],
+				"cwCB": [0.09, -1.46688, -0.79997],
+				"wydX": [1.26141, -1.46688, 0.04843],
+				"jJY2": [0.81396, -1.46688, 1.66],
+				"Hh6q": [-0.63396, -1.46688, 1.66],
+				"x6WU": [-1.08141, -1.46688, 0.04843]
+			},
+			"faces": {
+				"ABVRauBQ": {
+					"uv": {
+						"YFgs": [22.21661, 23.0321],
+						"VGkK": [23.2589, 21.35607],
+						"oq5B": [21.183, 21.35607]
+					},
+					"texture": 1,
+					"vertices": ["VGkK", "oq5B", "YFgs"]
+				},
+				"rCPHIqtG": {
+					"uv": {
+						"vVFp": [5.38404, 7.3056],
+						"wydX": [5.2377, 10.63392],
+						"jJY2": [7.71737, 10.63392],
+						"vihe": [7.4789, 7.30649]
+					},
+					"texture": 1,
+					"vertices": ["wydX", "jJY2", "vihe", "vVFp"]
+				},
+				"zwGkjhQQ": {
+					"uv": {
+						"FKgI": [27.31361, 24.8038],
+						"vVFp": [26.4981, 26.34093],
+						"vihe": [28.59296, 26.34093]
+					},
+					"texture": 1,
+					"vertices": ["vVFp", "vihe", "FKgI"]
+				},
+				"NvPzyPZd": {
+					"uv": {
+						"YFgs": [22.81261, 26.5755],
+						"oq5B": [23.84055, 24.8961],
+						"Hyvr": [21.77067, 24.8961]
+					},
+					"texture": 1,
+					"vertices": ["oq5B", "Hyvr", "YFgs"]
+				},
+				"aec97UoK": {
+					"uv": {
+						"xJBp": [11.16616, 0.22997],
+						"cwCB": [11.07828, 3.54783],
+						"wydX": [13.21035, 3.54783],
+						"vVFp": [13.0128, 0.22217]
+					},
+					"texture": 1,
+					"vertices": ["cwCB", "wydX", "vVFp", "xJBp"]
+				},
+				"tcYftLZU": {
+					"uv": {
+						"FKgI": [7.89525, 28.3472],
+						"xJBp": [6.03005, 28.3472],
+						"vVFp": [7.06843, 29.87831]
+					},
+					"texture": 1,
+					"vertices": ["xJBp", "vVFp", "FKgI"]
+				},
+				"6XtMtYiW": {
+					"uv": {
+						"YFgs": [25.75452, 19.4887],
+						"Hyvr": [26.79645, 17.80931],
+						"KynD": [24.7264, 17.80931]
+					},
+					"texture": 1,
+					"vertices": ["Hyvr", "KynD", "YFgs"]
+				},
+				"l7dleMSP": {
+					"uv": {
+						"4An1": [10.75052, 14.39754],
+						"x6WU": [10.5528, 17.72125],
+						"cwCB": [12.68504, 17.72125],
+						"xJBp": [12.59716, 14.40162]
+					},
+					"texture": 1,
+					"vertices": ["x6WU", "cwCB", "xJBp", "4An1"]
+				},
+				"im5oYKa9": {
+					"uv": {
+						"FKgI": [29.80086, 5.3151],
+						"4An1": [28.2698, 6.14169],
+						"xJBp": [29.80086, 7.18015]
+					},
+					"texture": 1,
+					"vertices": ["4An1", "xJBp", "FKgI"]
+				},
+				"emT8ij9e": {
+					"uv": {
+						"YFgs": [30.35034, 17.4453],
+						"KynD": [31.38395, 15.76945],
+						"xOjB": [29.30805, 15.76945]
+					},
+					"texture": 1,
+					"vertices": ["KynD", "xOjB", "YFgs"]
+				},
+				"2Xh8TFON": {
+					"uv": {
+						"fKNe": [0.33895, 7.30614],
+						"Hh6q": [0.1003, 10.63339],
+						"x6WU": [2.58015, 10.63339],
+						"4An1": [2.43381, 7.30507]
+					},
+					"texture": 1,
+					"vertices": ["Hh6q", "x6WU", "4An1", "fKNe"]
+				},
+				"VJcFff0H": {
+					"uv": {
+						"FKgI": [1.76481, 28.3472],
+						"fKNe": [0.48547, 29.88415],
+						"4An1": [2.58015, 29.88415]
+					},
+					"texture": 1,
+					"vertices": ["fKNe", "4An1", "FKgI"]
+				},
+				"yW0DjZ5u": {
+					"uv": {
+						"YFgs": [27.82687, 23.0321],
+						"xOjB": [28.85995, 21.35058],
+						"VGkK": [26.79379, 21.35058]
+					},
+					"texture": 1,
+					"vertices": ["xOjB", "VGkK", "YFgs"]
+				},
+				"jGm0SLMw": {
+					"uv": {
+						"vihe": [16.31614, 0.20693],
+						"jJY2": [16.13294, 3.53773],
+						"Hh6q": [18.2604, 3.53773],
+						"fKNe": [18.07721, 0.20693]
+					},
+					"texture": 1,
+					"vertices": ["jJY2", "Hh6q", "fKNe", "vihe"]
+				},
+				"V2ykpHcP": {
+					"uv": {
+						"FKgI": [29.94623, 0],
+						"vihe": [28.36507, 1.22429],
+						"fKNe": [29.94623, 1.99974]
+					},
+					"texture": 1,
+					"vertices": ["vihe", "fKNe", "FKgI"]
+				},
+				"YDsRjvtD": {
+					"uv": {
+						"oq5B": [13.17757, 11.51605],
+						"wydX": [13.21035, 3.54783],
+						"cwCB": [11.07828, 3.54783],
+						"Hyvr": [11.10752, 11.51605]
+					},
+					"texture": 1,
+					"vertices": ["wydX", "cwCB", "Hyvr", "oq5B"]
+				},
+				"3u8AUOby": {
+					"uv": {
+						"VGkK": [7.3361, 18.60285],
+						"jJY2": [7.71737, 10.63392],
+						"wydX": [5.2377, 10.63392],
+						"oq5B": [5.26215, 18.60232]
+					},
+					"texture": 1,
+					"vertices": ["jJY2", "wydX", "oq5B", "VGkK"]
+				},
+				"nG2fhv5H": {
+					"uv": {
+						"xOjB": [18.22975, 11.51605],
+						"Hh6q": [18.2604, 3.53773],
+						"jJY2": [16.13294, 3.53773],
+						"VGkK": [16.16359, 11.51605]
+					},
+					"texture": 1,
+					"vertices": ["Hh6q", "jJY2", "VGkK", "xOjB"]
+				},
+				"MSQdQBns": {
+					"uv": {
+						"KynD": [2.5557, 18.60125],
+						"x6WU": [2.58015, 10.63339],
+						"Hh6q": [0.1003, 10.63339],
+						"xOjB": [0.48175, 18.60285]
+					},
+					"texture": 1,
+					"vertices": ["x6WU", "Hh6q", "xOjB", "KynD"]
+				},
+				"LFHSYnch": {
+					"uv": {
+						"Hyvr": [12.65581, 25.68965],
+						"cwCB": [12.68504, 17.72125],
+						"x6WU": [10.5528, 17.72125],
+						"KynD": [10.58575, 25.68947]
+					},
+					"texture": 1,
+					"vertices": ["cwCB", "x6WU", "KynD", "Hyvr"]
+				}
+			},
+			"type": "mesh",
+			"uuid": "bae14c5d-842a-909e-99e3-198cd3e8e26b"
+		},
+		{
+			"name": "Shorts.LOutline",
+			"color": 2,
+			"origin": [-1.0415, 13.74481, -0.19832],
+			"rotation": [0, 0, 0],
+			"shading": "flat",
+			"export": true,
+			"visibility": true,
+			"locked": false,
+			"render_order": "default",
+			"scope": 0,
+			"allow_mirror_modeling": true,
+			"vertices": {
+				"YFgs": [-0.09, -6.6, 0.42432],
+				"FKgI": [-0.09, 0.97, 0.40665],
+				"VGkK": [-0.7932, -6.08643, 1.38771],
+				"vihe": [-0.68937, 0.45643, 1.45929],
+				"oq5B": [-1.2278, -6.08643, 0.05632],
+				"vVFp": [-1.05978, 0.45643, 0.09581],
+				"Hyvr": [-0.09, -6.08643, -0.76652],
+				"xJBp": [-0.09, 0.45643, -0.69961],
+				"KynD": [1.0478, -6.08643, 0.05632],
+				"4An1": [0.87978, 0.45643, 0.09581],
+				"xOjB": [0.6132, -6.08643, 1.38771],
+				"fKNe": [0.50937, 0.45643, 1.45929],
+				"cwCB": [-0.09, -1.46688, -0.79997],
+				"wydX": [-1.26141, -1.46688, 0.04843],
+				"jJY2": [-0.81396, -1.46688, 1.66],
+				"Hh6q": [0.63396, -1.46688, 1.66],
+				"x6WU": [1.08141, -1.46688, 0.04843]
+			},
+			"faces": {
+				"ABVRauBQ": {
+					"uv": {
+						"YFgs": [22.21661, 23.0321],
+						"oq5B": [21.183, 21.35607],
+						"VGkK": [23.2589, 21.35607]
+					},
+					"texture": 1,
+					"vertices": ["oq5B", "VGkK", "YFgs"]
+				},
+				"zwGkjhQQ": {
+					"uv": {
+						"FKgI": [27.31361, 24.8038],
+						"vihe": [28.59296, 26.34093],
+						"vVFp": [26.4981, 26.34093]
+					},
+					"texture": 1,
+					"vertices": ["vihe", "vVFp", "FKgI"]
+				},
+				"NvPzyPZd": {
+					"uv": {
+						"YFgs": [22.81261, 26.5755],
+						"Hyvr": [21.77067, 24.8961],
+						"oq5B": [23.84055, 24.8961]
+					},
+					"texture": 1,
+					"vertices": ["Hyvr", "oq5B", "YFgs"]
+				},
+				"tcYftLZU": {
+					"uv": {
+						"FKgI": [7.89525, 28.3472],
+						"vVFp": [7.06843, 29.87831],
+						"xJBp": [6.03005, 28.3472]
+					},
+					"texture": 1,
+					"vertices": ["vVFp", "xJBp", "FKgI"]
+				},
+				"6XtMtYiW": {
+					"uv": {
+						"YFgs": [25.75452, 19.4887],
+						"KynD": [24.7264, 17.80931],
+						"Hyvr": [26.79645, 17.80931]
+					},
+					"texture": 1,
+					"vertices": ["KynD", "Hyvr", "YFgs"]
+				},
+				"im5oYKa9": {
+					"uv": {
+						"FKgI": [29.80086, 5.3151],
+						"xJBp": [29.80086, 7.18015],
+						"4An1": [28.2698, 6.14169]
+					},
+					"texture": 1,
+					"vertices": ["xJBp", "4An1", "FKgI"]
+				},
+				"emT8ij9e": {
+					"uv": {
+						"YFgs": [30.35034, 17.4453],
+						"xOjB": [29.30805, 15.76945],
+						"KynD": [31.38395, 15.76945]
+					},
+					"texture": 1,
+					"vertices": ["xOjB", "KynD", "YFgs"]
+				},
+				"VJcFff0H": {
+					"uv": {
+						"FKgI": [1.76481, 28.3472],
+						"4An1": [2.58015, 29.88415],
+						"fKNe": [0.48547, 29.88415]
+					},
+					"texture": 1,
+					"vertices": ["4An1", "fKNe", "FKgI"]
+				},
+				"yW0DjZ5u": {
+					"uv": {
+						"YFgs": [27.82687, 23.0321],
+						"VGkK": [26.79379, 21.35058],
+						"xOjB": [28.85995, 21.35058]
+					},
+					"texture": 1,
+					"vertices": ["VGkK", "xOjB", "YFgs"]
+				},
+				"V2ykpHcP": {
+					"uv": {
+						"FKgI": [29.94623, 0],
+						"fKNe": [29.94623, 1.99974],
+						"vihe": [28.36507, 1.22429]
+					},
+					"texture": 1,
+					"vertices": ["fKNe", "vihe", "FKgI"]
+				},
+				"YDsRjvtD": {
+					"uv": {
+						"oq5B": [13.17757, 11.51605],
+						"Hyvr": [11.10752, 11.51605],
+						"cwCB": [11.07828, 3.54783],
+						"wydX": [13.21035, 3.54783]
+					},
+					"texture": 1,
+					"vertices": ["Hyvr", "cwCB", "wydX", "oq5B"]
+				},
+				"3u8AUOby": {
+					"uv": {
+						"VGkK": [7.3361, 18.60285],
+						"oq5B": [5.26215, 18.60232],
+						"wydX": [5.2377, 10.63392],
+						"jJY2": [7.71737, 10.63392]
+					},
+					"texture": 1,
+					"vertices": ["oq5B", "wydX", "jJY2", "VGkK"]
+				},
+				"nG2fhv5H": {
+					"uv": {
+						"xOjB": [18.22975, 11.51605],
+						"VGkK": [16.16359, 11.51605],
+						"jJY2": [16.13294, 3.53773],
+						"Hh6q": [18.2604, 3.53773]
+					},
+					"texture": 1,
+					"vertices": ["VGkK", "jJY2", "Hh6q", "xOjB"]
+				},
+				"MSQdQBns": {
+					"uv": {
+						"KynD": [2.5557, 18.60125],
+						"xOjB": [0.48175, 18.60285],
+						"Hh6q": [0.1003, 10.63339],
+						"x6WU": [2.58015, 10.63339]
+					},
+					"texture": 1,
+					"vertices": ["xOjB", "Hh6q", "x6WU", "KynD"]
+				},
+				"LFHSYnch": {
+					"uv": {
+						"Hyvr": [12.65581, 25.68965],
+						"KynD": [10.58575, 25.68947],
+						"x6WU": [10.5528, 17.72125],
+						"cwCB": [12.68504, 17.72125]
+					},
+					"texture": 1,
+					"vertices": ["KynD", "x6WU", "cwCB", "Hyvr"]
+				},
+				"rCPHIqtG": {
+					"uv": {
+						"vVFp": [5.38404, 7.3056],
+						"vihe": [7.4789, 7.30649],
+						"jJY2": [7.71737, 10.63392],
+						"wydX": [5.2377, 10.63392]
+					},
+					"texture": 1,
+					"vertices": ["vihe", "jJY2", "wydX", "vVFp"]
+				},
+				"aec97UoK": {
+					"uv": {
+						"xJBp": [11.16616, 0.22997],
+						"vVFp": [13.0128, 0.22217],
+						"wydX": [13.21035, 3.54783],
+						"cwCB": [11.07828, 3.54783]
+					},
+					"texture": 1,
+					"vertices": ["vVFp", "wydX", "cwCB", "xJBp"]
+				},
+				"l7dleMSP": {
+					"uv": {
+						"4An1": [10.75052, 14.39754],
+						"xJBp": [12.59716, 14.40162],
+						"cwCB": [12.68504, 17.72125],
+						"x6WU": [10.5528, 17.72125]
+					},
+					"texture": 1,
+					"vertices": ["xJBp", "cwCB", "x6WU", "4An1"]
+				},
+				"2Xh8TFON": {
+					"uv": {
+						"fKNe": [0.33895, 7.30614],
+						"4An1": [2.43381, 7.30507],
+						"x6WU": [2.58015, 10.63339],
+						"Hh6q": [0.1003, 10.63339]
+					},
+					"texture": 1,
+					"vertices": ["4An1", "x6WU", "Hh6q", "fKNe"]
+				},
+				"jGm0SLMw": {
+					"uv": {
+						"vihe": [16.31614, 0.20693],
+						"fKNe": [18.07721, 0.20693],
+						"Hh6q": [18.2604, 3.53773],
+						"jJY2": [16.13294, 3.53773]
+					},
+					"texture": 1,
+					"vertices": ["fKNe", "Hh6q", "jJY2", "vihe"]
+				}
+			},
+			"type": "mesh",
+			"uuid": "29dff92d-5369-87e3-89d6-24bf80f5018f"
+		},
+		{
+			"name": "ShortsOutline",
+			"color": 3,
+			"origin": [0, 11.5, -0.025],
+			"rotation": [0, 0, 0],
+			"shading": "flat",
+			"export": true,
+			"visibility": true,
+			"locked": false,
+			"render_order": "default",
+			"scope": 0,
+			"allow_mirror_modeling": true,
+			"vertices": {
+				"DSZl": [1.75697, 4.15, 1.41629],
+				"6WVa": [1.75697, 4.15, -1.17709],
+				"4ts3": [1.86823, 3, 1.30734],
+				"sbpv": [1.86823, 3, -1.06814],
+				"xChR": [-1.75697, 4.15, 1.41629],
+				"9lPI": [-1.75697, 4.15, -1.17709],
+				"0TFy": [-1.86823, 3, 1.30734],
+				"DowX": [-1.86823, 3, -1.06814],
+				"ob6E": [0, 4.15, -1.425],
+				"ftRD": [0, 4.15, 1.75],
+				"jrAx": [0.64905, 1.85, 1.6275],
+				"A4SE": [-0.64905, 1.85, 1.6275],
+				"XflE": [0.64905, 1.85, -1.33111],
+				"LTYn": [-0.64905, 1.85, -1.33111],
+				"o0Us": [1.975, 4.15, 0.00518],
+				"5P3q": [1.975, 3, 0.00518],
+				"dJZX": [0.68615, 1.85, 0.0018],
+				"Xi49": [-1.975, 3, 0.00518],
+				"GaaA": [-1.975, 4.15, 0.00518],
+				"J8iF": [0, 4.15, 0.00518],
+				"F7FD": [-0.68615, 1.85, 0.0018]
+			},
+			"faces": {
+				"rFRsstOO": {
+					"uv": {
+						"DSZl": [25.86225, 10.6302],
+						"o0Us": [23.49738, 10.6302],
+						"5P3q": [23.49738, 12.4019],
+						"4ts3": [25.66647, 12.4019]
+					},
+					"texture": 1,
+					"vertices": ["o0Us", "5P3q", "4ts3", "DSZl"]
+				},
+				"88m7j2Gw": {
+					"uv": {
+						"0TFy": [27.775, 14.9019],
+						"Xi49": [25.99054, 14.9019],
+						"GaaA": [25.99054, 13.1302],
+						"xChR": [27.98725, 13.1302]
+					},
+					"texture": 1,
+					"vertices": ["Xi49", "GaaA", "xChR", "0TFy"]
+				},
+				"RcFNNAlU": {
+					"uv": {
+						"xChR": [0.5108, 4.7168],
+						"GaaA": [0.14406, 2.37426],
+						"J8iF": [3.466, 2.37426],
+						"ftRD": [3.466, 5.27081]
+					},
+					"texture": 1,
+					"vertices": ["GaaA", "J8iF", "ftRD", "xChR"]
+				},
+				"ZrdZeAbn": {
+					"uv": {
+						"A4SE": [25.29204, 8.8585],
+						"F7FD": [23.18021, 8.75128],
+						"Xi49": [23.21122, 5.95134],
+						"0TFy": [25.37114, 6.15053]
+					},
+					"texture": 1,
+					"vertices": ["F7FD", "Xi49", "0TFy", "A4SE"]
+				},
+				"9Phzil7K": {
+					"uv": {
+						"xChR": [16.41044, 15.08226],
+						"ftRD": [19.41265, 14.98407],
+						"A4SE": [18.32092, 18.60279],
+						"0TFy": [16.24517, 16.86036]
+					},
+					"texture": 1,
+					"vertices": ["ftRD", "A4SE", "0TFy", "xChR"]
+				},
+				"5szFfRK3": {
+					"uv": {
+						"DowX": [6.61874, 23.92953],
+						"LTYn": [4.55885, 25.68965],
+						"ob6E": [3.46711, 22.0801],
+						"9lPI": [6.45019, 22.15019]
+					},
+					"texture": 1,
+					"vertices": ["LTYn", "ob6E", "9lPI", "DowX"]
+				},
+				"ju3DfEdx": {
+					"uv": {
+						"ftRD": [3.466, 5.27081],
+						"J8iF": [3.466, 2.37426],
+						"o0Us": [6.78794, 2.37426],
+						"DSZl": [6.42119, 4.7168]
+					},
+					"texture": 1,
+					"vertices": ["J8iF", "o0Us", "DSZl", "ftRD"]
+				},
+				"mV1VK9nM": {
+					"uv": {
+						"4ts3": [22.57743, 16.86129],
+						"jrAx": [20.5044, 18.60285],
+						"ftRD": [19.41265, 14.98407],
+						"DSZl": [22.41765, 15.08153]
+					},
+					"texture": 1,
+					"vertices": ["jrAx", "ftRD", "DSZl", "4ts3"]
+				},
+				"Tx4spUdg": {
+					"uv": {
+						"jrAx": [20.50437, 18.60276],
+						"A4SE": [18.32093, 18.60276],
+						"ftRD": [19.41265, 14.98407]
+					},
+					"texture": 1,
+					"vertices": ["A4SE", "ftRD", "jrAx"]
+				},
+				"xuQhfmSM": {
+					"uv": {
+						"4ts3": [21.4539, 0.74718],
+						"5P3q": [23.61998, 0.65753],
+						"dJZX": [23.50907, 3.45557],
+						"jrAx": [21.39348, 3.45557]
+					},
+					"texture": 1,
+					"vertices": ["5P3q", "dJZX", "jrAx", "4ts3"]
+				},
+				"4qX8HHQd": {
+					"uv": {
+						"jrAx": [18.28839, 21.84116],
+						"dJZX": [18.35076, 23.95586],
+						"F7FD": [16.04259, 23.95586],
+						"A4SE": [16.10495, 21.84116]
+					},
+					"texture": 1,
+					"vertices": ["dJZX", "F7FD", "A4SE", "jrAx"]
+				},
+				"rtxRVpE1": {
+					"uv": {
+						"6WVa": [0.48703, 22.15086],
+						"ob6E": [3.46715, 22.08012],
+						"XflE": [2.37541, 25.68965],
+						"sbpv": [0.31326, 23.92873]
+					},
+					"texture": 1,
+					"vertices": ["ob6E", "XflE", "sbpv", "6WVa"]
+				},
+				"pUPh1HeU": {
+					"uv": {
+						"ob6E": [3.46713, 22.08016],
+						"LTYn": [4.55885, 25.68965],
+						"XflE": [2.37541, 25.68965]
+					},
+					"texture": 1,
+					"vertices": ["LTYn", "XflE", "ob6E"]
+				},
+				"fesgvkrE": {
+					"uv": {
+						"sbpv": [21.71293, 12.4019],
+						"5P3q": [23.49738, 12.4019],
+						"o0Us": [23.49738, 10.6302],
+						"6WVa": [21.50068, 10.6302]
+					},
+					"texture": 1,
+					"vertices": ["5P3q", "o0Us", "6WVa", "sbpv"]
+				},
+				"Bi4GVvfR": {
+					"uv": {
+						"XflE": [25.24031, 3.5434],
+						"dJZX": [23.50907, 3.45557],
+						"5P3q": [23.61998, 0.65754],
+						"sbpv": [25.40176, 0.83736]
+					},
+					"texture": 1,
+					"vertices": ["dJZX", "5P3q", "sbpv", "XflE"]
+				},
+				"n3RkTZzR": {
+					"uv": {
+						"LTYn": [16.10495, 25.68965],
+						"F7FD": [16.04259, 23.95586],
+						"dJZX": [18.35076, 23.95586],
+						"XflE": [18.28839, 25.68965]
+					},
+					"texture": 1,
+					"vertices": ["F7FD", "dJZX", "XflE", "LTYn"]
+				},
+				"fOTSmfsQ": {
+					"uv": {
+						"DowX": [21.4241, 6.04076],
+						"Xi49": [23.21122, 5.95147],
+						"F7FD": [23.18021, 8.75128],
+						"LTYn": [21.44519, 8.75128]
+					},
+					"texture": 1,
+					"vertices": ["Xi49", "F7FD", "LTYn", "DowX"]
+				},
+				"WPVDzM7q": {
+					"uv": {
+						"9lPI": [23.62568, 13.1302],
+						"GaaA": [25.99054, 13.1302],
+						"Xi49": [25.99054, 14.9019],
+						"DowX": [23.82145, 14.9019]
+					},
+					"texture": 1,
+					"vertices": ["GaaA", "Xi49", "DowX", "9lPI"]
+				},
+				"OePtZSnQ": {
+					"uv": {
+						"ob6E": [3.466, 0],
+						"J8iF": [3.466, 2.37426],
+						"GaaA": [0.14406, 2.37426],
+						"9lPI": [0.5108, 0.41157]
+					},
+					"texture": 1,
+					"vertices": ["J8iF", "GaaA", "9lPI", "ob6E"]
+				},
+				"vHXcrdAz": {
+					"uv": {
+						"6WVa": [6.42119, 0.41157],
+						"o0Us": [6.78794, 2.37426],
+						"J8iF": [3.466, 2.37426],
+						"ob6E": [3.466, 0]
+					},
+					"texture": 1,
+					"vertices": ["o0Us", "J8iF", "ob6E", "6WVa"]
+				}
+			},
+			"type": "mesh",
+			"uuid": "069f7ccf-454b-4697-4589-6a30fcdfe87f"
 		}
 	],
 	"groups": [
@@ -785,15 +1475,16 @@
 			"isOpen": true,
 			"children": [
 				"b83873a4-167f-945a-6268-339438af63f9",
+				"069f7ccf-454b-4697-4589-6a30fcdfe87f",
 				{
 					"uuid": "877cc134-50dc-3881-f306-cdb9f40dae3e",
 					"isOpen": true,
-					"children": ["0a355101-a339-dd07-d92d-484910cf817c"]
+					"children": ["0a355101-a339-dd07-d92d-484910cf817c", "29dff92d-5369-87e3-89d6-24bf80f5018f"]
 				},
 				{
 					"uuid": "bbe98b7d-6df7-607a-8c2e-4a7690856409",
 					"isOpen": true,
-					"children": ["7a44b336-3b1e-a049-2c1f-a59d44b78d78"]
+					"children": ["7a44b336-3b1e-a049-2c1f-a59d44b78d78", "bae14c5d-842a-909e-99e3-198cd3e8e26b"]
 				}
 			]
 		}
@@ -830,6 +1521,38 @@
 			"saved": false,
 			"uuid": "dac3c198-db2f-3be3-6a18-610a745b6695",
 			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACkUlEQVR4AeyaQU7EMAxF0RyBHRIX4QJsOABLDsGVkdhxhUFvJCNj2UnatJO6LdJXEsdJ/d+kGYS4fH68XUfq/fXlarVGPfIMu/flIcnP1/fPQ02RFdZFc2kARAZq8ZJ51u4ewPPTIz5D7R4AzoEgYqx1CADasO2fACyRrY7lCNu2t970J0ADmQMjPYA5pvWawwDg9wGkzdNPBwATWpioifwoJw0ATCBrhJjIzjFmjjZSGgCRgVqcS7KUc4GQlbfA5jD28rYYAwLyaus6AZkgYB4ItFpdAPRGWfsugGyfbA98F0DPhmut5fjWNOfZaQDMMdey5gTQQmmrOdxVVlNrPU/AVGJ7yx9+Aryb/Z6QhwPoMbsEvNQAPHhTL8XdAfCglGIngBKdUXP6GK9dw/AToM1KX5uWmG71vO3bi9HO23EXAB5mN7zHGBitz5E81lgx1wWADbLrMADsaZVxSgBS/NTT560bDoCiUKsZL9e+24yj/ViPZH44AClEFyUx27bk2DW18WYAUGjJ4JS5Ui7P0bqQ7Ekn0W/JIa9X3nOI9e4brd/UCYiKbIkDSdSSLzm7ASCGprYngKnERuXz1WYV1WLzGEe5w08AxVlFxa4RHw6g1RQXnM6149JcKTcNAG1wyX4qAPJJSlsCITnSRrmpAGCiZogcUUtuOgBibqk2FQD7bcE4AlGa02tSAdCFl/piXtpSbioA9p22Y89oDcJwAJiw8oy0xjzDXkz2Gw5ACmltgUWutPS1iHvSObqfDgDFY5B2CaUEsIRx2eMfgNK7IgvI0ZJ41vYPAKYwIS39I+gG4Gim9Qd7+2dpHaBfAqIvIN1nXUY1/1VYm8M40rGs/dsrkLX4Jeo+ASxBceQevc/+BQAA//+zcaF/AAAABklEQVQDAC1RwpCAh36CAAAAAElFTkSuQmCC"
+		},
+		{
+			"name": "tOutline",
+			"path": "",
+			"folder": "block",
+			"namespace": "",
+			"id": "2",
+			"group": "",
+			"scope": 0,
+			"width": 4,
+			"height": 4,
+			"uv_width": 4,
+			"uv_height": 4,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"file_format": "png",
+			"render_mode": "default",
+			"render_sides": "front",
+			"wrap_mode": "limited",
+			"pbr_channel": "color",
+			"fps": 7,
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": false,
+			"uuid": "08c57aa2-f535-09ff-c51f-c11d422bdba7",
+			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVR4AYSIsQ0AAAiDiP//rHZqtyYwwACbanybPg4AAP//A6LNzAAAAAZJREFUAwDosAQFdPHNIgAAAABJRU5ErkJggg=="
 		}
 	]
 }

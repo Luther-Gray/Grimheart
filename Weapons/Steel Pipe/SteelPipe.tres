@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Weapons" format=3 uid="uid://vwibk1lta8hb"]
+
+[ext_resource type="Script" uid="uid://bywooqbmebywu" path="res://Resources/Weapons.gd" id="1_cr0j2"]
+[ext_resource type="PackedScene" uid="uid://drcq0c7jwxwij" path="res://Weapons/Steel Pipe/wSteelPipe.tscn" id="1_yhirv"]
+
+[resource]
+script = ExtResource("1_cr0j2")
+WeaponID = "01"
+WeaponArchetype = "Hammer"
+WeaponDamageType = "Blunt"
+WeaponLore = "A stainless steel pipe. It sits heavily in your hand."
+WeaponMesh = ExtResource("1_yhirv")
+WeaponDamage = 1
+StealthDamage = 4.0
+WeaponDurability = 10.0
+Accuracy = 100.0
+metadata/_custom_type_script = "uid://bywooqbmebywu"

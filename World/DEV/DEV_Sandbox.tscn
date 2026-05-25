@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c33ygtmn7gujp" path="res://Actors/Player/Player.tscn" id="1_5gpxj"]
 [ext_resource type="Material" uid="uid://5vsa436i7wto" path="res://World/DEV/matDevGrid.tres" id="2_54f7j"]
+[ext_resource type="Shader" uid="uid://c1g10jl64nsdm" path="res://Shaders/Vagabond.gdshader" id="3_qbr34"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4qx6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,6 +21,21 @@ albedo_color = Color(0.91, 0.3094, 0.3094, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_54f7j"]
 material = SubResource("StandardMaterial3D_vnq5c")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2gqyv"]
+seed = 57
+frequency = 0.0376
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_eua22"]
+noise = SubResource("FastNoiseLite_2gqyv")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hcc8o"]
+render_priority = 0
+shader = ExtResource("3_qbr34")
+shader_parameter/albedo_texture = SubResource("NoiseTexture2D_eua22")
+shader_parameter/rim_color = Color(1, 0.4, 0, 1)
+shader_parameter/rim_size = 0.2570000122075
 
 [node name="DEV_Sandbox" type="Node3D" unique_id=996762852]
 
@@ -44,9 +60,9 @@ size = Vector3(2, 1, 2)
 material = ExtResource("2_54f7j")
 
 [node name="mBox16" type="CSGBox3D" parent="." unique_id=2095263993]
-transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.5, -14.5)
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, -7.75, 0.5, -17.5)
 use_collision = true
-size = Vector3(2, 1, 2)
+size = Vector3(5, 1, 8)
 material = ExtResource("2_54f7j")
 
 [node name="mBox19" type="CSGBox3D" parent="." unique_id=393324033]
@@ -175,6 +191,25 @@ use_collision = true
 size = Vector3(2, 4, 2)
 material = ExtResource("2_54f7j")
 
+[node name="mBox24" type="CSGBox3D" parent="." unique_id=1822909961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 2.5, -14.5)
+use_collision = true
+size = Vector3(2, 5, 2)
+material = ExtResource("2_54f7j")
+
+[node name="mBox25" type="CSGBox3D" parent="." unique_id=1510255017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 3, -14.5)
+use_collision = true
+size = Vector3(2, 6, 2)
+material = ExtResource("2_54f7j")
+
 [node name="DEV_Target" type="MeshInstance3D" parent="." unique_id=517357255]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = SubResource("BoxMesh_54f7j")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1324749340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 0)
+use_collision = true
+radius = 2.0
+radial_segments = 8
+material = SubResource("ShaderMaterial_hcc8o")

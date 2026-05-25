@@ -4,7 +4,7 @@ extends Node3D
 @export var Source: CharacterBody3D
 
 var SprintGrace : float = 0.5
-var SprintTimer : float = 0.0
+var SprintTimer : float
 
 func _physics_process(delta: float) -> void:
 	if Source.isVaulting or Source.isSliding:

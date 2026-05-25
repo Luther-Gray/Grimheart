@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var Attribute : Attributes
 @export var Stat : Stats
 @export var Vitals : Core
+@export var Status : StatusEffects
 @export var Settings : GameSettings
 
 @onready var PlayerCollision: CollisionShape3D = $PlayerCollision
@@ -13,7 +14,7 @@ extends CharacterBody3D
 #// Global Speed - This is modified by Stat
 var MoveSpeed : float
 var Acceleration : float = 20.0
-var Deceleration : float = 15.0
+var Deceleration : float = 45.0
 var AirControl : float = 0.25
 var Influence : float
 #// State Flags
@@ -30,11 +31,14 @@ var isCrouched : bool = false
 var isSliding : bool = false
 var isWallRunning : bool = false
 
+func _ready() -> void:
+	MoveSpeed = Stat.WalkSpeed
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		if !isHanging and !isClambering and !isVaulting:
+		if !isHanging and !isClambering:
 			velocity += get_gravity() * delta
-	if !isHanging and !isClambering:
+	if !isHanging and !isVaulting and !isClambering and !Status.Stunned:
 		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
 		var Direction := (transform.basis * Vector3(InputDir.x, 0, InputDir.y)).normalized()
 		### Momentum Stuff

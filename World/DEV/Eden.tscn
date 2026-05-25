@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dkafy1gcu6u7y"]
+
+[ext_resource type="Shader" uid="uid://cjpxkabjyf4b7" path="res://Shaders/MarchingTerrain.gdshader" id="1_6sucs"]
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_375xn"]
+_shader_parameters = {
+&"flat_terrain_normals": false,
+&"shader_uniforms": null,
+&"shader_uniforms::general": null,
+&"step_height": 1.0,
+&"stepped_terrain": false
+}
+texture_filtering = 2
+shader_override_enabled = true
+shader_override = ExtResource("1_6sucs")
+show_checkered = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xm5g"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+metadata/terrain3d_generated_material = true
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_a2cxj"]
+generated_type = 1
+height_offset = 0.5
+density = 10.0
+material_override = SubResource("StandardMaterial3D_6xm5g")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_lj48d"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_a2cxj")])
+
+[node name="Eden" type="Node3D" unique_id=485885023]
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=485404428]
+data_directory = "res://World/Eden_TerrainData"
+material = SubResource("Terrain3DMaterial_375xn")
+assets = SubResource("Terrain3DAssets_lj48d")
+vertex_spacing = 6.6
+cast_shadows = 0
+displacement_sharpness = 0.5
+show_checkered = true
+top_level = true
+metadata/_edit_lock_ = true

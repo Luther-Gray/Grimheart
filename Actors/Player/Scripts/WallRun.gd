@@ -5,6 +5,10 @@ extends Node3D
 
 @onready var WallL: RayCast3D = $"../WallRayL"
 @onready var WallR: RayCast3D = $"../WallRayR"
+@onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapecast"
+
+func _physics_process(_delta: float) -> void:
+	pass
 
 #// Physics
 func _wall_run_v(): #// Upwards scramble
