@@ -274,6 +274,9 @@ Settings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
 
+[node name="LeftArmIK" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 1667005145) index="44" unique_id=1387102007]
+settings/0/end_bone = 28
+
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
 texture_filter = 2

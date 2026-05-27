@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_xolmv")
 WalkSpeed = 3.0
-SprintSpeed = 8.0
-JumpStrength = 8.0
+SprintSpeed = 7.0
+JumpStrength = 7.0
 ClimbSpeed = 3.1
 metadata/_custom_type_script = "uid://dr7sulxtsdvf0"
