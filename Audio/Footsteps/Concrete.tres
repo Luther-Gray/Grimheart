@@ -1,8 +1,15 @@
 [gd_resource type="AudioStreamRandomizer" format=3 uid="uid://c54ckxi3wqro0"]
 
 [ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="1_lpvak"]
+[ext_resource type="AudioStream" uid="uid://hkal3vmilr5g" path="res://_AUDIOFILES/PavementTiles_Mono_02.wav" id="2_rbn43"]
+[ext_resource type="AudioStream" uid="uid://bohv4a3lt8ku5" path="res://_AUDIOFILES/PavementTiles_Mono_03.wav" id="3_mt6ma"]
+[ext_resource type="AudioStream" uid="uid://dm7nd0hjgku01" path="res://_AUDIOFILES/PavementTiles_Mono_04.wav" id="4_kdcjk"]
+[ext_resource type="AudioStream" uid="uid://b0brc28v8st4o" path="res://_AUDIOFILES/PavementTiles_Mono_05.wav" id="5_khwc4"]
 
 [resource]
-random_pitch = 1.005793
-streams_count = 1
-stream_0/stream = ExtResource("1_lpvak")
+streams_count = 5
+stream_0/stream = ExtResource("2_rbn43")
+stream_1/stream = ExtResource("1_lpvak")
+stream_2/stream = ExtResource("3_mt6ma")
+stream_3/stream = ExtResource("4_kdcjk")
+stream_4/stream = ExtResource("5_khwc4")

@@ -2,6 +2,8 @@
 extends Node
 class_name  AnimationManager
 
+signal FootstepContact
+
 @export var AnimTree : AnimationTree
 @export var Source: CharacterBody3D
 
@@ -11,6 +13,14 @@ var TargetMoveDirection : Vector2 = Vector2.ZERO
 var AnimationSpeed : int = 10
 var AnimOverride : bool = false
 var AnimPlayer : AnimationPlayer
+var PreviousFootstep : float = 0.0
+
+const FootstepPoints: Dictionary = {
+	"aWalkSpace": [0.1667, 0.5667],
+	"aSprint": [0.0667, 0.4333],
+	"aWallRunL": [0.0333, 0.3667],
+	"aWallRunR": [0.0333, 0.3667]
+}
 
 func _ready() -> void:
 	StateMachine = AnimTree.get("parameters/playback")
@@ -35,6 +45,15 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aSprint")
 	else:
 		StateMachine.travel("aIdle")
+	# Footstep Stuff
+	var CurrentAnimState : String = StateMachine.get_current_node()
+	var FootstepPosition : float = StateMachine.get_current_play_position()
+	
+	if CurrentAnimState in FootstepPoints:
+		for frame in FootstepPoints[CurrentAnimState]:
+			if PreviousFootstep < frame and FootstepPosition >= frame:
+				FootstepContact.emit()
+	PreviousFootstep = FootstepPosition
 		
 func _physics_process(delta: float) -> void:
 	TargetMoveDirection = Source.InputDir
