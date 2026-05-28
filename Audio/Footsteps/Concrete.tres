@@ -1,15 +1,21 @@
 [gd_resource type="AudioStreamRandomizer" format=3 uid="uid://c54ckxi3wqro0"]
 
-[ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="1_lpvak"]
-[ext_resource type="AudioStream" uid="uid://hkal3vmilr5g" path="res://_AUDIOFILES/PavementTiles_Mono_02.wav" id="2_rbn43"]
-[ext_resource type="AudioStream" uid="uid://bohv4a3lt8ku5" path="res://_AUDIOFILES/PavementTiles_Mono_03.wav" id="3_mt6ma"]
-[ext_resource type="AudioStream" uid="uid://dm7nd0hjgku01" path="res://_AUDIOFILES/PavementTiles_Mono_04.wav" id="4_kdcjk"]
-[ext_resource type="AudioStream" uid="uid://b0brc28v8st4o" path="res://_AUDIOFILES/PavementTiles_Mono_05.wav" id="5_khwc4"]
+[ext_resource type="AudioStream" uid="uid://b41l2gejt5wc1" path="res://_AUDIOFILES/Footsteps_Tile_Walk_01.wav" id="1_khwc4"]
+[ext_resource type="AudioStream" uid="uid://camotsj51mjko" path="res://_AUDIOFILES/Footsteps_Tile_Walk_02.wav" id="2_fsckq"]
+[ext_resource type="AudioStream" uid="uid://b6262fjde7g1m" path="res://_AUDIOFILES/Footsteps_Tile_Walk_03.wav" id="3_tfyib"]
+[ext_resource type="AudioStream" uid="uid://cpqmxtnhpmony" path="res://_AUDIOFILES/Footsteps_Tile_Walk_04.wav" id="4_uad5u"]
+[ext_resource type="AudioStream" uid="uid://blreiqm7gqb1e" path="res://_AUDIOFILES/Footsteps_Tile_Walk_05.wav" id="5_kae5q"]
+[ext_resource type="AudioStream" uid="uid://074kso0mv65e" path="res://_AUDIOFILES/Footsteps_Tile_Walk_06.wav" id="6_bq7f2"]
+[ext_resource type="AudioStream" uid="uid://0ehnous2so75" path="res://_AUDIOFILES/Footsteps_Tile_Walk_07.wav" id="7_y4bfq"]
+[ext_resource type="AudioStream" uid="uid://bsdq6xchwei7p" path="res://_AUDIOFILES/Footsteps_Tile_Walk_08.wav" id="8_ui2t2"]
 
 [resource]
-streams_count = 5
-stream_0/stream = ExtResource("2_rbn43")
-stream_1/stream = ExtResource("1_lpvak")
-stream_2/stream = ExtResource("3_mt6ma")
-stream_3/stream = ExtResource("4_kdcjk")
-stream_4/stream = ExtResource("5_khwc4")
+streams_count = 8
+stream_0/stream = ExtResource("1_khwc4")
+stream_1/stream = ExtResource("2_fsckq")
+stream_2/stream = ExtResource("3_tfyib")
+stream_3/stream = ExtResource("4_uad5u")
+stream_4/stream = ExtResource("5_kae5q")
+stream_5/stream = ExtResource("6_bq7f2")
+stream_6/stream = ExtResource("7_y4bfq")
+stream_7/stream = ExtResource("8_ui2t2")

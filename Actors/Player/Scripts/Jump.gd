@@ -2,6 +2,8 @@
 extends Node
 
 @export var Source: CharacterBody3D
+@export var HardLandingSound : AudioStream
+@export var AudioPlayer : AudioStreamPlayer3D
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 # Coyote Time
 var CoyoteTimer : float
@@ -44,6 +46,7 @@ func _jump_anim():
 		AnimManager._variant_travel("aJumpVariants", ["aLeapL", "aLeapR"].pick_random())
 		
 func _calc_fall(_delta: float) -> void:
+
 	if not Source.is_on_floor():
 		Source.isFalling = Source.velocity.y < 0
 		if !WasAirborne:
@@ -61,6 +64,10 @@ func _calc_fall(_delta: float) -> void:
 				var FallDamage: float = (FallDistance - FallDamageThreshold) * FallDamageMultiplier
 				Source.Vitals._vital_impact("Health", FallDamage)
 				AnimManager._override_travel("aLanding")
+				
+				if HardLandingSound:
+					AudioPlayer.stream = HardLandingSound
+					AudioPlayer.play()
 				Source.Status._stunned(FallStunDuration)
 				Source.velocity = Vector3.ZERO
 			else:

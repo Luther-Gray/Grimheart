@@ -16,14 +16,17 @@
 [ext_resource type="Script" uid="uid://d0ee1lb8ej21l" path="res://Actors/Player/Scripts/Jump.gd" id="12_ujyek"]
 [ext_resource type="Script" uid="uid://dg34oqkorvqld" path="res://Actors/Player/Scripts/Crouch.gd" id="12_upr3p"]
 [ext_resource type="Script" uid="uid://df6mjfy4sxbco" path="res://Actors/Player/Scripts/Clamber.gd" id="14_fllei"]
+[ext_resource type="AudioStream" uid="uid://fwkwa4xqxtg8" path="res://_AUDIOFILES/felixl-h__bones-breaking08.wav" id="15_g6ejb"]
 [ext_resource type="Script" uid="uid://dlag7fuw644b3" path="res://Actors/Player/Scripts/Slide.gd" id="15_m1t7r"]
 [ext_resource type="Script" uid="uid://bgcitffp4pue4" path="res://Actors/Player/Scripts/WallRun.gd" id="15_n45d6"]
 [ext_resource type="Script" uid="uid://cpq2cbnbkbeqp" path="res://Actors/Player/Scripts/Vault.gd" id="17_k8e2g"]
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
-[ext_resource type="AudioStream" uid="uid://d0y3mnk8r0yvl" path="res://_AUDIOFILES/Linoleum_Mono_04.wav" id="18_7m1i7"]
+[ext_resource type="AudioStream" uid="uid://com6n53ywogxw" path="res://_AUDIOFILES/BodyFallHard-004.wav" id="18_hdio0"]
 [ext_resource type="Script" uid="uid://bp1dxvx1vdbpq" path="res://Actors/Player/Scripts/Footsteps.gd" id="18_iwmb3"]
 [ext_resource type="AudioStream" uid="uid://c54ckxi3wqro0" path="res://Audio/Footsteps/Concrete.tres" id="18_vnq5c"]
 [ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="20_s8ljq"]
+[ext_resource type="AudioStream" uid="uid://g7gshy4js70s" path="res://_AUDIOFILES/CatchHold-006.wav" id="20_yw7as"]
+[ext_resource type="AudioStream" uid="uid://bwtikwghjjf2v" path="res://_AUDIOFILES/BodyFallHard-002.wav" id="21_hdio0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
 radius = 0.4
@@ -276,34 +279,34 @@ Settings = ExtResource("8_6e37q")
 [node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
 
 [node name="Neck" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="6" unique_id=1394379597]
-transform = Transform3D(0.74934053, -0.021746885, 0.6618277, -0.008537479, 0.9990602, 0.042494327, -0.6621299, -0.037493065, 0.74845064, 0.0027540217, 1.3253212, -0.0010295124)
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
 
 [node name="NeckOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="7" unique_id=1695114722]
-transform = Transform3D(0.74934053, -0.021746885, 0.6618277, -0.008537479, 0.9990602, 0.042494327, -0.6621299, -0.037493065, 0.74845064, 0.0027540217, 1.3253212, -0.0010295124)
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
 
 [node name="Head" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="8" unique_id=1181979938]
-transform = Transform3D(0.9978466, -0.019026976, -0.06277069, 0.024011124, 0.99653536, 0.07962899, 0.061038088, -0.080964714, 0.9948463, 0.00027453154, 1.5449, -0.014372544)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
 [node name="Ear_L" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="9" unique_id=1671661711]
-transform = Transform3D(0.9353354, -0.3238669, -0.14233045, 0.121855564, -0.0827565, 0.9890918, -0.3321129, -0.9424764, -0.03794009, -0.13604997, 1.510347, -0.006150939)
+transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5128847, -0.0034645018)
 
 [node name="Ear_R" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="10" unique_id=684571620]
-transform = Transform3D(0.89267087, 0.439852, 0.09833126, -0.07786835, -0.06437918, 0.9948829, 0.4439317, -0.8957599, -0.023218859, 0.12586232, 1.5166495, 0.009870186)
+transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.514281, 0.00798608)
 
 [node name="HeadOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="11" unique_id=1927401940]
-transform = Transform3D(0.9978466, -0.019026976, -0.06277069, 0.024011124, 0.99653536, 0.07962899, 0.061038088, -0.080964714, 0.9948463, 0.00027453154, 1.5449, -0.014372544)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
 [node name="Camera" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="12" unique_id=1235344990]
-transform = Transform3D(0.9978466, -0.019026976, -0.06277069, 0.024011124, 0.99653536, 0.07962899, 0.061038088, -0.080964714, 0.9948463, -0.0039318083, 1.505652, -0.01405026)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, -0.0019224535, 1.505758, -0.013684949)
 
 [node name="FlatTop" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="13" unique_id=430744207]
-transform = Transform3D(0.9978466, -0.019026976, -0.06277069, 0.024011124, 0.99653536, 0.07962899, 0.061038088, -0.080964714, 0.9948463, -0.0021889661, 1.6070362, -0.005444017)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
 
 [node name="Strand" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="14" unique_id=1963235666]
-transform = Transform3D(0.019026855, 0.8533918, 0.52092254, -0.99653536, -0.026004666, 0.07900042, 0.08096474, -0.5206209, 0.8499403, -0.054929424, 1.5761166, -0.18063286)
+transform = Transform3D(0.0018878075, 0.84354496, 0.53705525, -0.9969255, -0.040481772, 0.06708845, 0.078333065, -0.5355307, 0.8408749, -0.05449909, 1.5775934, -0.17918769)
 
 [node name="FlatTopOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="15" unique_id=1139648075]
-transform = Transform3D(0.9978466, -0.019026976, -0.06277069, 0.024011124, 0.99653536, 0.07962899, 0.061038088, -0.080964714, 0.9948463, -0.0021889661, 1.6070362, -0.005444017)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -383,9 +386,11 @@ Source = NodePath("..")
 script = ExtResource("12_8np4b")
 Source = NodePath("..")
 
-[node name="Jump" type="Node3D" parent="." unique_id=1934262400 node_paths=PackedStringArray("Source")]
+[node name="Jump" type="Node3D" parent="." unique_id=1934262400 node_paths=PackedStringArray("Source", "AudioPlayer")]
 script = ExtResource("12_ujyek")
 Source = NodePath("..")
+HardLandingSound = ExtResource("15_g6ejb")
+AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]
 script = ExtResource("12_upr3p")
@@ -400,12 +405,15 @@ CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 [node name="Vault" type="Node3D" parent="." unique_id=1735850314 node_paths=PackedStringArray("Source", "AudioPlayer")]
 script = ExtResource("17_k8e2g")
 Source = NodePath("..")
-ActionSound = ExtResource("18_7m1i7")
+VaultSound = ExtResource("18_hdio0")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
-[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "IK_ArmL", "IK_ArmR", "HandTargetL", "HandTargetR")]
+[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "AudioPlayer", "IK_ArmL", "IK_ArmR", "HandTargetL", "HandTargetR")]
 script = ExtResource("14_fllei")
 Source = NodePath("..")
+GrabLedgeSound = ExtResource("20_yw7as")
+ClamberSound = ExtResource("21_hdio0")
+AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 IK_ArmL = NodePath("../Clyde/Skeleton3D/LeftArmIK")
 IK_ArmR = NodePath("../Clyde/Skeleton3D/RightArmIK")
 HandTargetL = NodePath("../Clyde/IKTarget_L")
@@ -419,6 +427,7 @@ ConcreteSteps = ExtResource("18_vnq5c")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Footsteps" unique_id=549068849]
 stream = ExtResource("20_s8ljq")
+volume_db = -0.5
 
 [node name="WallRun" type="Node3D" parent="." unique_id=1675950725 node_paths=PackedStringArray("Source")]
 script = ExtResource("15_n45d6")

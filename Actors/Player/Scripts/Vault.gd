@@ -2,7 +2,7 @@
 extends Node3D
 
 @export var Source: CharacterBody3D
-@export var ActionSound : AudioStream
+@export var VaultSound : AudioStream
 @export var AudioPlayer : AudioStreamPlayer3D
 @onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
@@ -30,8 +30,8 @@ func _detect_ledge():
 
 #// Vault
 func _vault():
-	if ActionSound:
-		AudioPlayer.stream = ActionSound
+	if VaultSound:
+		AudioPlayer.stream = VaultSound
 		AudioPlayer.play()
 	AnimManager._override_travel("aVault")
 		# Speed Boost whenever you successfully vault

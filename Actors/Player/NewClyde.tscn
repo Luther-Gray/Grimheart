@@ -40,20 +40,20 @@ transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.
 [node name="TorsoOutline" parent="Skeleton3D/TorsoOutline" index="0" unique_id=241004926 groups=["Outline"]]
 
 [node name="Neck" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="6" unique_id=1394379597 groups=["PlayerSkin"]]
-transform = Transform3D(0.70974606, 0.0357306, 0.7035509, -0.04730416, 0.998876, -0.003008293, -0.7028676, -0.031145763, 0.7106385, -0.00083832117, 1.3253326, -0.0014262188)
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
 
 [node name="Neck" parent="Skeleton3D/Neck" index="0" unique_id=1525942505 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
 [node name="NeckOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="7" unique_id=1695114722 groups=["Outline"]]
-transform = Transform3D(0.70974606, 0.0357306, 0.7035509, -0.04730416, 0.998876, -0.003008293, -0.7028676, -0.031145763, 0.7106385, -0.00083832117, 1.3253326, -0.0014262188)
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
 
 [node name="NeckOutline" parent="Skeleton3D/NeckOutline" index="0" unique_id=1827056697 groups=["Outline"]]
 layers = 2
 
 [node name="Head" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="8" unique_id=1181979938 groups=["PlayerSkin"]]
-transform = Transform3D(0.99935186, 0.035887677, -0.0028180536, -0.035576276, 0.996559, 0.074862465, 0.0054949783, -0.07471369, 0.99718994, 0.009025172, 1.5447776, -0.013494318)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
 [node name="CameraMarker" type="Marker3D" parent="Skeleton3D/Head" index="0" unique_id=977741486]
 transform = Transform3D(0.999034, 0.0053197416, 0.04362505, -0.00188793, 0.9969254, -0.078333, -0.04390762, 0.07817497, 0.99597174, -0.0027969182, 0.0050228834, -0.16385442)
@@ -63,44 +63,44 @@ layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
 [node name="Ear_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="9" unique_id=1671661711 groups=["PlayerSkin"]]
-transform = Transform3D(0.92113537, -0.37983194, -0.085072495, 0.06908651, -0.05554969, 0.9960629, -0.3830623, -0.9233862, -0.024927504, -0.12845114, 1.5182827, 0.0021306644)
+transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5128847, -0.0034645018)
 
 [node name="Ear_L" parent="Skeleton3D/Ear_L" index="0" unique_id=332198720 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
 [node name="Ear_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="10" unique_id=684571620 groups=["PlayerSkin"]]
-transform = Transform3D(0.90962845, 0.385039, 0.15595227, -0.13426052, -0.082778595, 0.98748255, 0.3931288, -0.9191806, -0.023602225, 0.13385624, 1.5089446, 0.003572973)
+transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.514281, 0.00798608)
 
 [node name="Ear_R" parent="Skeleton3D/Ear_R" index="0" unique_id=996939715 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
 [node name="HeadOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="11" unique_id=1927401940 groups=["Outline"]]
-transform = Transform3D(0.99935186, 0.035887677, -0.0028180536, -0.035576276, 0.996559, 0.074862465, 0.0054949783, -0.07471369, 0.99718994, 0.009025172, 1.5447776, -0.013494318)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
 
 [node name="HeadOutline" parent="Skeleton3D/HeadOutline" index="0" unique_id=1064943631 groups=["Outline"]]
 layers = 2
 
 [node name="Camera" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="12" unique_id=1235344990]
-transform = Transform3D(0.99935186, 0.035887677, -0.0028180536, -0.035576276, 0.996559, 0.074862465, 0.0054949783, -0.07471369, 0.99718994, 0.002513945, 1.5058459, -0.01313776)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, -0.0019224535, 1.505758, -0.013684949)
 
 [node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="13" unique_id=430744207]
-transform = Transform3D(0.99935186, 0.035887677, -0.0028180536, -0.035576276, 0.996559, 0.074862465, 0.0054949783, -0.07471369, 0.99718994, 0.010762725, 1.6068739, -0.004126769)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
 
 [node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=807109341]
 layers = 2
 surface_material_override/0 = ExtResource("3_a35ie")
 
 [node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="14" unique_id=1963235666]
-transform = Transform3D(-0.035887796, 0.82023746, 0.5708962, -0.996559, -0.07208184, 0.040917993, 0.07471372, -0.5674634, 0.82000184, -0.05333024, 1.5805978, -0.17626153)
+transform = Transform3D(0.0018878075, 0.84354496, 0.53705525, -0.9969255, -0.040481772, 0.06708845, 0.078333065, -0.5355307, 0.8408749, -0.05449909, 1.5775934, -0.17918769)
 
 [node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=1401858105]
 layers = 2
 surface_material_override/0 = ExtResource("3_a35ie")
 
 [node name="FlatTopOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(340611441) index="15" unique_id=1139648075 groups=["Outline"]]
-transform = Transform3D(0.99935186, 0.035887677, -0.0028180536, -0.035576276, 0.996559, 0.074862465, 0.0054949783, -0.07471369, 0.99718994, 0.010762725, 1.6068739, -0.004126769)
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
 
 [node name="FlatTopOutline" parent="Skeleton3D/FlatTopOutline" index="0" unique_id=525948201 groups=["Outline"]]
 layers = 2

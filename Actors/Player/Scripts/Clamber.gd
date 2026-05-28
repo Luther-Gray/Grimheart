@@ -2,6 +2,9 @@
 extends Node3D
 
 @export var Source: CharacterBody3D
+@export var GrabLedgeSound : AudioStream
+@export var ClamberSound : AudioStream
+@export var AudioPlayer : AudioStreamPlayer3D
 @onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
@@ -62,6 +65,9 @@ func _detect_ledge():
 		
 #// Ledge Grab
 func _grab_ledge():
+	if GrabLedgeSound:
+		AudioPlayer.stream = GrabLedgeSound
+		AudioPlayer.play()
 	AnimManager._override_travel("aHang")
 	Source.velocity = Vector3.ZERO
 	Source.isHanging = true
@@ -95,6 +101,9 @@ func _release_ledge():
 
 #// Ledge Pull Up
 func _clamber_ledge():
+	if ClamberSound:
+		AudioPlayer.stream = ClamberSound
+		AudioPlayer.play()
 	IK_ArmL.active = false
 	IK_ArmR.active = false
 	Jump.WasAirborne = false
