@@ -1,7 +1,8 @@
 @icon("res://addons/IconGodotNode/node_3D/icon_cell.png")
 extends Node3D
 
-@onready var CrouchRay: RayCast3D = $"../PlayerCollision/CameraPivot/CrouchRaycast"
+@onready var CrouchRay: RayCast3D = $"../CrouchRaycast"
+
 
 @export var Source: CharacterBody3D
 @export var CameraPivot: Node3D

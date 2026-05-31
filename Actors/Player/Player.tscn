@@ -23,12 +23,13 @@
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
 [ext_resource type="AudioStream" uid="uid://com6n53ywogxw" path="res://_AUDIOFILES/BodyFallHard-004.wav" id="18_hdio0"]
 [ext_resource type="Script" uid="uid://bp1dxvx1vdbpq" path="res://Actors/Player/Scripts/Footsteps.gd" id="18_iwmb3"]
+[ext_resource type="AudioStream" uid="uid://v868jy8klibs" path="res://_AUDIOFILES/Squish - Skin Slides Slow Loud IN-002.wav" id="18_r3pko"]
 [ext_resource type="AudioStream" uid="uid://c54ckxi3wqro0" path="res://Audio/Footsteps/Concrete.tres" id="18_vnq5c"]
 [ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="20_s8ljq"]
 [ext_resource type="AudioStream" uid="uid://g7gshy4js70s" path="res://_AUDIOFILES/CatchHold-006.wav" id="20_yw7as"]
 [ext_resource type="AudioStream" uid="uid://bwtikwghjjf2v" path="res://_AUDIOFILES/BodyFallHard-002.wav" id="21_hdio0"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpi2y"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6ejb"]
 radius = 0.4
 height = 1.7
 
@@ -268,6 +269,8 @@ graph_offset = Vector2(163.77344, -233.52344)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_r3pko"]
+
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
 script = ExtResource("1_yqfyh")
 Attribute = ExtResource("2_rsi04")
@@ -277,36 +280,7 @@ Status = ExtResource("5_704ek")
 Settings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
-
-[node name="Neck" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="6" unique_id=1394379597]
-transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
-
-[node name="NeckOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="7" unique_id=1695114722]
-transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.0016324259, 1.3253008, -0.001196905)
-
-[node name="Head" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="8" unique_id=1181979938]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
-
-[node name="Ear_L" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="9" unique_id=1671661711]
-transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5128847, -0.0034645018)
-
-[node name="Ear_R" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="10" unique_id=684571620]
-transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.514281, 0.00798608)
-
-[node name="HeadOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="11" unique_id=1927401940]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
-
-[node name="Camera" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="12" unique_id=1235344990]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, -0.0019224535, 1.505758, -0.013684949)
-
-[node name="FlatTop" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="13" unique_id=430744207]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
-
-[node name="Strand" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="14" unique_id=1963235666]
-transform = Transform3D(0.0018878075, 0.84354496, 0.53705525, -0.9969255, -0.040481772, 0.06708845, 0.078333065, -0.5355307, 0.8408749, -0.05449909, 1.5775934, -0.17918769)
-
-[node name="FlatTopOutline" parent="Clyde/Skeleton3D" parent_id_path=PackedInt32Array(962298241, 340611441) index="15" unique_id=1139648075]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.0048779515)
+visible = false
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -314,7 +288,7 @@ texture_filter = 2
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=2117931213]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
-shape = SubResource("CapsuleShape3D_qpi2y")
+shape = SubResource("CapsuleShape3D_g6ejb")
 debug_color = Color(0, 0.5176471, 0.21960784, 1)
 
 [node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "CameraMarker")]
@@ -334,9 +308,6 @@ fov = 90.0
 [node name="CameraRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=283864831]
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 0, 0, -0.1)
 debug_shape_custom_color = Color(0.68630785, 0.3100806, 1, 1)
-
-[node name="CrouchRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=2101530425]
-transform = Transform3D(1, -1.7534032e-07, 1.8626451e-09, -1.7534032e-07, -1, 8.742278e-08, 1.8626299e-09, -8.742278e-08, -1, -3.2325587e-11, 0.3346647, 0.2)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
 root_node = NodePath("../Clyde")
@@ -364,12 +335,18 @@ script = ExtResource("10_lxc4y")
 
 [node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
 transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.8000001)
+visible = false
 hit_from_inside = true
 
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 0.9, 7.450581e-09)
+visible = false
 shape = SubResource("BoxShape3D_qhy2x")
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
+
+[node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=2101530425]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.7, 0)
+hit_from_inside = true
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
 transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
@@ -397,10 +374,12 @@ script = ExtResource("12_upr3p")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 
-[node name="Slide" type="Node3D" parent="." unique_id=956557122 node_paths=PackedStringArray("Source", "CameraPivot")]
+[node name="Slide" type="Node3D" parent="." unique_id=956557122 node_paths=PackedStringArray("Source", "CameraPivot", "AudioPlayer")]
 script = ExtResource("15_m1t7r")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
+SlideSound = ExtResource("18_r3pko")
+AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Vault" type="Node3D" parent="." unique_id=1735850314 node_paths=PackedStringArray("Source", "AudioPlayer")]
 script = ExtResource("17_k8e2g")
@@ -434,6 +413,7 @@ script = ExtResource("15_n45d6")
 Source = NodePath("..")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
+visible = false
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
@@ -454,4 +434,10 @@ transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, 
 
 [node name="Weapon" type="Node3D" parent="." unique_id=1169381619]
 
-[editable path="Clyde"]
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1112993677]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 1, 0)
+shape = SubResource("SphereShape3D_r3pko")
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1477151922]
+current = true

@@ -8,7 +8,8 @@ extends Node3D
 @onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapecast"
 
 func _physics_process(_delta: float) -> void:
-	pass
+	if Source.isFalling:
+		pass
 
 #// Physics
 func _wall_run_v(): #// Upwards scramble

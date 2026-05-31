@@ -10,7 +10,7 @@ signal FootstepContact
 var StateMachine : AnimationNodeStateMachinePlayback
 var CurrentMoveDirection : Vector2 = Vector2.ZERO
 var TargetMoveDirection : Vector2 = Vector2.ZERO
-var AnimationSpeed : int = 10
+var AnimationSpeed : int = 1 # Influences the Animation Speed, right now, this is for aWalkSpace.
 var AnimOverride : bool = false
 var AnimPlayer : AnimationPlayer
 var PreviousFootstep : float = 0.0
@@ -37,10 +37,10 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aIdleArmed")
 	elif Source.isHanging:
 		StateMachine.travel("aHang")
-	elif Source.isMoving and !Source.isSprinting:
-		StateMachine.travel("aWalkSpace")
 	elif Source.isMoving and Source.isCrouched:
 		pass
+	elif Source.isMoving and !Source.isSprinting:
+		StateMachine.travel("aWalkSpace")
 	elif Source.isSprinting:
 		StateMachine.travel("aSprint")
 	else:
