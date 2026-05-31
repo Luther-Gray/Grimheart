@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://v868jy8klibs"
+path="res://.godot/imported/Squish - Skin Slides Slow Loud IN-002.wav-d30874293dc0c33c9df5ee23c51a5721.sample"
+
+[deps]
+
+source_file="res://_AUDIOFILES/Squish - Skin Slides Slow Loud IN-002.wav"
+dest_files=["res://.godot/imported/Squish - Skin Slides Slow Loud IN-002.wav-d30874293dc0c33c9df5ee23c51a5721.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
