@@ -23,7 +23,6 @@ config/icon="uid://cpdakj60wqbny"
 
 [autoload]
 
-Debug="*uid://12um0f5avgwo"
 InputHelper="*uid://dmlflxtn83ymf"
 
 [display]

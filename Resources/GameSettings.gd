@@ -10,7 +10,7 @@ class_name GameSettings
 @export_range(0,100) var SwaySpeed : int =  5
 @export_range(0, 20) var CameraSmooth : float = 10.0
 @export_category("Toggle Controls")
-@export var CrouchToggle : bool = false
+@export var CrouchToggle : bool = true
 @export var AimToggle : bool = false
-@export var SprintToggle : bool = false
+@export var SprintToggle : bool = true
 @export var InvertMouseToggle : bool = false

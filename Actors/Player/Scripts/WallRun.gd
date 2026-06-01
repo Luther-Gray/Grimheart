@@ -7,16 +7,26 @@ extends Node3D
 @onready var WallR: RayCast3D = $"../WallRayR"
 @onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapecast"
 
+var WallRunTimer : float = 0.0
+var WallRunDuration : float = 5.0 # Replace this with stamina?
+
 func _physics_process(_delta: float) -> void:
 	if Source.isFalling:
-		pass
+		if WallR.is_colliding():
+			_wall_run_r()
+		elif WallL.is_colliding():
+			_wall_run_l()
+	if WallRunTimer <= 0.0:
+		_detatch_wall()
 
-#// Physics
+#// Physics - Wallruns are seperated for extra logic. Heavy 1 Handed Weapons. Broken Arms. Etc.
 func _wall_run_v(): #// Upwards scramble
-	pass
-func _wall_run_h(): #// Wallrun as long as stamina allows
-	pass
+	Source.isWallRunning = true
+func _wall_run_r(): #// Wallrun as long as stamina allows | RIGHT
+	Source.isWallRunning = true
+func _wall_run_l(): #// Wallrun as long as stamina allows | LEFT
+	Source.isWallRunning = true
 func _tic_tac(): #// Jump from wall
 	pass
 func _detatch_wall(): #// Lets go of wall
-	pass
+	Source.isWallRunning = false

@@ -3,7 +3,6 @@ extends Node3D
 
 @onready var CrouchRay: RayCast3D = $"../CrouchRaycast"
 
-
 @export var Source: CharacterBody3D
 @export var CameraPivot: Node3D
 
@@ -28,7 +27,6 @@ func _physics_process(_delta: float) -> void:
 			_release_crouch()
 
 func _toggle_crouch():
-	print(CrouchRay.is_colliding())
 	if !Source.isCrouched:
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition

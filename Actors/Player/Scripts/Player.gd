@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		if !isHanging and !isClambering:
+		if !isHanging and !isClambering and !isWallRunning:
 			velocity += get_gravity() * delta
 	if !isHanging and !isVaulting and !isClambering and !Status.Stunned:
 		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")

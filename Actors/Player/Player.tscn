@@ -47,7 +47,7 @@ animation = &"aIdle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fllei"]
 animation = &"aIdleArmed"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vnq5c"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r3pko"]
 animation = &"aJump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_704ek"]
@@ -59,29 +59,30 @@ animation = &"aLeapR"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kr5aq"]
 xfade_time = 0.2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_emuwr"]
-xfade_time = 0.2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ia8ke"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f6sss"]
 xfade_time = 0.2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4sko0"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0ieod"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_emuwr"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4sko0"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jhh7x"]
 states/End/position = Vector2(642.8281, 101.14005)
-states/aJump/node = SubResource("AnimationNodeAnimation_vnq5c")
-states/aJump/position = Vector2(404.71182, 99.56077)
+states/aJump/node = SubResource("AnimationNodeAnimation_r3pko")
+states/aJump/position = Vector2(398.556, 101.307396)
 states/aLeapL/node = SubResource("AnimationNodeAnimation_704ek")
 states/aLeapL/position = Vector2(405.82813, 34.786453)
 states/aLeapR/node = SubResource("AnimationNodeAnimation_s8ljq")
 states/aLeapR/position = Vector2(412.5143, 161.88411)
-transitions = ["Start", "aLeapL", SubResource("AnimationNodeStateMachineTransition_kr5aq"), "Start", "aJump", SubResource("AnimationNodeStateMachineTransition_emuwr"), "Start", "aLeapR", SubResource("AnimationNodeStateMachineTransition_ia8ke"), "aLeapL", "End", SubResource("AnimationNodeStateMachineTransition_f6sss"), "aJump", "End", SubResource("AnimationNodeStateMachineTransition_4sko0"), "aLeapR", "End", SubResource("AnimationNodeStateMachineTransition_0ieod")]
+transitions = ["Start", "aLeapL", SubResource("AnimationNodeStateMachineTransition_kr5aq"), "Start", "aLeapR", SubResource("AnimationNodeStateMachineTransition_ia8ke"), "aLeapL", "End", SubResource("AnimationNodeStateMachineTransition_f6sss"), "aLeapR", "End", SubResource("AnimationNodeStateMachineTransition_0ieod"), "Start", "aJump", SubResource("AnimationNodeStateMachineTransition_emuwr"), "aJump", "End", SubResource("AnimationNodeStateMachineTransition_4sko0")]
 graph_offset = Vector2(46.253906, -235.63281)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7m1i7"]
@@ -280,7 +281,6 @@ Status = ExtResource("5_704ek")
 Settings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
-visible = false
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -335,12 +335,10 @@ script = ExtResource("10_lxc4y")
 
 [node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
 transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.8000001)
-visible = false
 hit_from_inside = true
 
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 0.9, 7.450581e-09)
-visible = false
 shape = SubResource("BoxShape3D_qhy2x")
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
@@ -413,7 +411,6 @@ script = ExtResource("15_n45d6")
 Source = NodePath("..")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
-visible = false
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
@@ -440,4 +437,3 @@ shape = SubResource("SphereShape3D_r3pko")
 spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1477151922]
-current = true

@@ -12,9 +12,10 @@ extends Node3D
 var InitPlayerHeight : float = 1.7
 var InitColPosition : float = 0.85
 var InitMarkerPos : float = 0.14
-var TargetPlayerHeight : float = 0.7
+var TargetPlayerHeight : float = 1
 var TargetColPosition : float = 0.5
-var TargetMarkerPos : float = -1
+var TargetMarkerPos : float = 0.0
+var EndTargetMarkerPos : float = 0.0
 
 #// Slide Values
 var SlideTimer : float = 0.0
@@ -50,6 +51,7 @@ func _slide():
 	SlideTimer = SlideDuration
 	Source.PlayerCollision.shape.height = TargetPlayerHeight
 	Source.PlayerCollision.position.y = TargetColPosition
+	CameraPivot.CameraMarker.position.y = TargetMarkerPos
 	Source.isSliding = true
 	Source.isCrouched = true
 	var SlideDirection = -Source.global_transform.basis.z
@@ -60,9 +62,14 @@ func _slide():
 func _end_slide():
 	Source.isSliding = false
 	AnimManager.AnimOverride = false
+	Source.isSprinting = false
 	if !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
+		CameraPivot.CameraMarker.position.y = InitMarkerPos
 		Source.isCrouched = false
 	else:
+		Source.PlayerCollision.shape.height = TargetPlayerHeight
+		Source.PlayerCollision.position.y = TargetColPosition
+		CameraPivot.CameraMarker.position.y = EndTargetMarkerPos
 		Source.isCrouched = true

@@ -13,6 +13,11 @@ func _input(event: InputEvent) -> void:
 		visible = !visible
 
 func _process(_delta: float) -> void:
+	if !visible:
+		return
+	if !is_instance_valid(Source):
+		push_warning("Debug: Source is null or free.")
+		return
 	if visible:
 		_add_debug("FPS", int(Performance.get_monitor(Performance.TIME_FPS)), 0)
 		_add_debug("Draw Calls", int(Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)), 1)
@@ -20,6 +25,9 @@ func _process(_delta: float) -> void:
 		_add_debug("Fall State", Source.isFalling, 3)
 		_add_debug("Hang State", Source.isHanging, 4)
 		_add_debug("Sprint State", Source.isSprinting, 5)
+		_add_debug("Slide State", Source.isSliding, 6)
+		_add_debug("Vault State", Source.isVaulting, 7)
+		_add_debug("Crouch State", Source.isCrouched, 8)
 
 func _add_debug(MetricName: String, Metric, ListOrder: int):
 	var DebugLabel = property_container.find_child(MetricName, true, false)
