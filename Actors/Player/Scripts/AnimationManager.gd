@@ -10,7 +10,7 @@ signal FootstepContact
 var StateMachine : AnimationNodeStateMachinePlayback
 var CurrentMoveDirection : Vector2 = Vector2.ZERO
 var TargetMoveDirection : Vector2 = Vector2.ZERO
-var AnimationSpeed : int = 1 # Influences the Animation Speed, right now, this is for aWalkSpace.
+var AnimationSpeed : int = 10 # Influences the Animation Speed, right now, this is for aWalkSpace.
 var AnimOverride : bool = false
 var AnimPlayer : AnimationPlayer
 var PreviousFootstep : float = 0.0
@@ -43,6 +43,8 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aWalkSpace")
 	elif Source.isSprinting:
 		StateMachine.travel("aSprint")
+	elif Source.isCrouched and !Source.isMoving:
+		StateMachine.travel("aCrouchIdle")
 	else:
 		StateMachine.travel("aIdle")
 	# Footstep Stuff
@@ -58,7 +60,7 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
-	AnimTree.set("parameters/aWalkSpace/blend_position", CurrentMoveDirection)
+	AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	
 #// Helper Method for One Shot Animations
 func _one_shot(Anim: String) -> void:
