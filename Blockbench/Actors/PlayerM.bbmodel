@@ -14940,7 +14940,7 @@
 			"override": false,
 			"length": 2.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"group_name": "",
 			"scope": 0,
 			"anim_time_update": "",

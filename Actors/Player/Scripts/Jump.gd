@@ -46,9 +46,10 @@ func _jump_anim():
 		AnimManager._variant_travel("aJumpVariants", ["aLeapL", "aLeapR"].pick_random())
 		
 func _calc_fall(_delta: float) -> void:
-
 	if not Source.is_on_floor():
 		Source.isFalling = Source.velocity.y < 0
+		if Source.isFalling and AnimManager.AnimOverride:
+			AnimManager.AnimOverride = false
 		if !WasAirborne:
 			FallPeak = Source.global_position.y
 			WasAirborne = true

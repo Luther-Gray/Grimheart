@@ -37,6 +37,8 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aIdleArmed")
 	elif Source.isHanging:
 		StateMachine.travel("aHang")
+	elif Source.isFalling:
+		StateMachine.travel("aFall")
 	elif Source.isMoving and Source.isCrouched:
 		pass
 	elif Source.isMoving and !Source.isSprinting:

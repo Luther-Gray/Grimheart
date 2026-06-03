@@ -11,9 +11,11 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("SYS_Debug"):
 		visible = !visible
+		get_tree().debug_collisions_hint = true
 
 func _process(_delta: float) -> void:
 	if !visible:
+		get_tree().debug_collisions_hint = false
 		return
 	if !is_instance_valid(Source):
 		push_warning("Debug: Source is null or free.")

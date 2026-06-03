@@ -9,10 +9,8 @@ extends Node3D
 #// Crouch Values
 var InitPlayerHeight : float = 1.7
 var InitColPosition : float = 0.85
-var InitMarkerPos : float = 0.14
 var TargetPlayerHeight : float = 0.95
 var TargetColPosition : float = 0.5
-var TargetMarkerPos : float = -1
 
 func _physics_process(_delta: float) -> void:
 	if Source.isSliding:
@@ -30,24 +28,22 @@ func _toggle_crouch():
 	if !Source.isCrouched:
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
-		CameraPivot.CameraMarker.position.y = TargetMarkerPos
 		Source.isCrouched = true
 	elif Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-		CameraPivot.CameraMarker.position.y = InitMarkerPos
+
 		Source.isCrouched = false
 
 func _hold_crouch():
 	if !Source.isCrouched:
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
-		CameraPivot.CameraMarker.position.y = TargetMarkerPos
 		Source.isCrouched = true
 		
 func _release_crouch():
 	if Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-		CameraPivot.CameraMarker.position.y = InitMarkerPos
+
 		Source.isCrouched = false
