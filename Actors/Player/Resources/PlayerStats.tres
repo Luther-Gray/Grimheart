@@ -8,4 +8,5 @@ WalkSpeed = 3.0
 SprintSpeed = 7.0
 JumpStrength = 7.0
 ClimbSpeed = 3.1
+CrouchSpeed = 1.5
 metadata/_custom_type_script = "uid://dr7sulxtsdvf0"

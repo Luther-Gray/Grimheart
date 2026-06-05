@@ -53,7 +53,7 @@ func _slide():
 	Source.PlayerCollision.position.y = TargetColPosition
 	CameraPivot.CameraMarker.position.y = TargetMarkerPos
 	Source.isSliding = true
-	Source.isCrouched = true
+	Source.isCrouched = true # Adding Crouch True here for extra functions tied to "crouched" abilities like sneak attacks.
 	var SlideDirection = -Source.global_transform.basis.z
 	Source.velocity += SlideDirection * SlideBoost
 	AnimManager._override_travel("aSlide")
@@ -63,13 +63,15 @@ func _end_slide():
 	Source.isSliding = false
 	AnimManager.AnimOverride = false
 	Source.isSprinting = false
-	if !CrouchRay.is_colliding():
+	if !CrouchRay.is_colliding(): # If the Slide Ends and nothing is above you
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
 		CameraPivot.CameraMarker.position.y = InitMarkerPos
+		Source.MoveSpeed = Source.Stat.WalkSpeed
 		Source.isCrouched = false
-	else:
+	else: # If the Slide Ends and you are under something -
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
 		CameraPivot.CameraMarker.position.y = EndTargetMarkerPos
+		Source.MoveSpeed = Source.Stat.CrouchSpeed
 		Source.isCrouched = true

@@ -10,6 +10,7 @@ class_name Stats
 @export var PhysicalAttack : float
 @export var PhysicalDefense : float
 @export var ClimbSpeed : float
+@export var CrouchSpeed : float
 
 func _boost_stat(Stat: String, Amount: float, Duration: float, Scene: SceneTree) -> void:
 	if Stat:

@@ -17,6 +17,7 @@ var PreviousFootstep : float = 0.0
 
 const FootstepPoints: Dictionary = {
 	"aWalkSpace": [0.1667, 0.5667],
+	"aCrouchSpace": [0.1667, 0.7],
 	"aSprint": [0.0667, 0.4333],
 	"aWallRunL": [0.0333, 0.3667],
 	"aWallRunR": [0.0333, 0.3667]
@@ -39,13 +40,13 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aHang")
 	elif Source.isFalling:
 		StateMachine.travel("aFall")
-	elif Source.isMoving and Source.isCrouched:
-		pass
-	elif Source.isMoving and !Source.isSprinting:
-		StateMachine.travel("aWalkSpace")
 	elif Source.isSprinting:
 		StateMachine.travel("aSprint")
-	elif Source.isCrouched and !Source.isMoving:
+	elif Source.isMoving and Source.isCrouched:   # more specific first
+		StateMachine.travel("aCrouchSpace")
+	elif Source.isMoving:
+		StateMachine.travel("aWalkSpace")
+	elif Source.isCrouched:
 		StateMachine.travel("aCrouchIdle")
 	else:
 		StateMachine.travel("aIdle")
@@ -62,7 +63,10 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
-	AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
+	if !Source.isCrouched:
+		AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
+	elif Source.isCrouched:
+		AnimTree.set("parameters/aCrouchSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	
 #// Helper Method for One Shot Animations
 func _one_shot(Anim: String) -> void:

@@ -16,10 +16,10 @@ func _physics_process(_delta: float) -> void:
 	if Source.isSliding:
 		return
 	if Source.Settings.CrouchToggle:
-		if Input.is_action_just_pressed("MV_Crouch") and !Source.isHanging:
+		if Input.is_action_just_pressed("MV_Crouch") and !Source.isHanging and !Source.isSprinting:
 			_toggle_crouch()
 	elif !Source.Settings.CrouchToggle:
-		if Input.is_action_pressed("MV_Crouch")  and !Source.isHanging:
+		if Input.is_action_pressed("MV_Crouch")  and !Source.isHanging and !Source.isSprinting:
 			_hold_crouch()
 		else:
 			_release_crouch()
@@ -29,21 +29,23 @@ func _toggle_crouch():
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
 		Source.isCrouched = true
+		Source.MoveSpeed = Source.Stat.CrouchSpeed
 	elif Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-
 		Source.isCrouched = false
+		Source.MoveSpeed = Source.Stat.WalkSpeed
 
 func _hold_crouch():
 	if !Source.isCrouched:
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
 		Source.isCrouched = true
+		Source.MoveSpeed = Source.Stat.CrouchSpeed
 		
 func _release_crouch():
 	if Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-
+		Source.MoveSpeed = Source.Stat.WalkSpeed
 		Source.isCrouched = false

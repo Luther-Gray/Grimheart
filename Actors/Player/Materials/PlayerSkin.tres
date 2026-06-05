@@ -3,9 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d1uryjkfvp0f2" path="res://PlayerFiles/PlayerTexture.png" id="1_o0rrp"]
 
 [resource]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
+transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("1_o0rrp")
 texture_filter = 2
