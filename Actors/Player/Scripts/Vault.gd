@@ -6,6 +6,7 @@ extends Node3D
 @export var AudioPlayer : AudioStreamPlayer3D
 @onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
+@onready var LedgeRay: RayCast3D = $"../LedgeCeilingRaycast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var DEV_Target: MeshInstance3D = $"../../DEV_Target"
 
@@ -14,9 +15,7 @@ func _physics_process(_delta: float) -> void:
 		_detect_ledge()
 
 func _detect_ledge():
-	if !ClamberCast.is_colliding():
-		return
-	if !ClamberTarget.is_colliding():
+	if !ClamberCast.is_colliding() or LedgeRay.is_colliding() or !ClamberTarget.is_colliding():
 		return
 	var TargetTopSurface = ClamberTarget.get_collision_point().y
 	var HeightDiff = TargetTopSurface - Source.global_position.y

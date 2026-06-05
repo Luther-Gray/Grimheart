@@ -36,7 +36,7 @@ class_name Core
 @export var Hunger : int
 @export var MaxHunger: int
 @export_subgroup("Calories")
-@export var Protiens : int
+@export var Proteins : int
 @export var Fats : int
 @export var Carbs : int
 @export_subgroup("Fatigue")
