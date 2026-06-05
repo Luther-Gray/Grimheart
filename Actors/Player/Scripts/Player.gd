@@ -14,7 +14,7 @@ extends CharacterBody3D
 #// Global Speed - This is modified by Stat
 var MoveSpeed : float
 var Acceleration : float = 20.0
-var Deceleration : float = 45.0
+var Deceleration : float = 145.0
 var AirControl : float = 0.25
 var Influence : float
 #// State Flags

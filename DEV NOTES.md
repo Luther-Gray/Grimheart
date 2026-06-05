@@ -1,14 +1,25 @@
+# Code Architecture
+Grimheart is an Open Source game. It is not meant to be developed with the tightest tolerances and efficiencies. The project should be accessible to brand new developers just as it is accessible to seniors.
+
+Do not refactor what is not broken, and if you do, you must first walk a non-programmer through what you're planning on doing. If they cannot keep up, take that as a sign that your refactor is not making things better.
+
+As much as is possible, I abstract what I can into components. Not because they should be re-used (though they often can), but because it's easier to read for newbies.
+
+If a component is running up on 200 lines, deeply consider spliting the component into multiple parts. At 300 lines, that's a red light saying "It's too much."
+
+# Auteur Structure & Forks
+This project, Grimheart, is not design by committee or a democratic project, it is an Auteur project. Anything that goes wrong is my fault but that also means nothing gets to the final merge without my say-so.
+
+I understand that this may be over the line for some developers, and for that reason I highly encourage and invite people who disagree with my methodology and practices to fork the project.
+
+ If you choose to fork, I will answer any questions you have about the intent of a system, but I will not leak any secrets that my own team and players are not privy to. Forks have the potential to be considered canon as long as the correct quality guidelines are met. After I leave this project to work on [Redacted], the choices of what qualifies as canon or lore will be up to the community and developers remaining. You all have my blessing.
+
 # Add-Ons Explained
-Terrain3D as the logical choice for Terrain Streaming, Clipmaps, and large world sizes on limited hardware.
-OWDB handles massive zombie populations with ease.
-[GDE GoZen](https://github.com/VoylinsGamedevJourney/gde_gozen) is for extended video format support. If players want to play shrek using OGV, not only do they have to "convert" the mp4 to this obscure format, but it's lacks in many ways to WEBM or other formats.
+### Terrain3D
+Terrain3D is the logical choice for Terrain Sculpting, Clipmaps, and large world sizes on limited hardware.
 
-# Raycasts
-The player has 8 Rays in total. One for the 4 cardinal directions coming out of their body, one that points up, one down, one for the camera and the last is a shapecast that stays infront of them. The 4 Cardinal Directions and Ray going up are part of the temperature system. If 4/5 are colliding, the player is insulated.
-
-# Player ParkourDriver
-In the PlayerScene, there's an obtuse Skeleton3D node called the ParkourDriver. Since the player isn't using a skinned mesh or armature/rig, if we still want IK functionality we have to make a "Shadow Skeleton" to force those behaviors. The ParkourDriver exists to be moved at runtime to snap the player's limbs during certain animations. In most cases, these animatons are parkour related.
-
+### OWDB
+OWDB is the World Streaming solution. Within a radius, the world, enemies, and AI are processed. Outside of the bubble, they are either static/hibernating or processing on a very low and barebones level.
 # Bugs
 
 
