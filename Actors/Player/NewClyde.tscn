@@ -45,7 +45,7 @@ transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0
 [node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(81259942) index="7" unique_id=1488079465]
 transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.004877951)
 
-[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=1766608708]
+[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=1766608708 groups=["PlayerHair"]]
 layers = 2
 surface_material_override/0 = ExtResource("3_a35ie")
 
@@ -58,7 +58,7 @@ layers = 2
 [node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(81259942) index="9" unique_id=976854460]
 transform = Transform3D(-0.13113064, 0.60948247, 0.78187984, -0.99077684, -0.053400565, -0.124538854, -0.034151435, -0.7909992, 0.61086345, -0.054648105, 1.5840685, -0.17656484)
 
-[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=1914724025]
+[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=1914724025 groups=["PlayerHair"]]
 layers = 2
 surface_material_override/0 = ExtResource("3_a35ie")
 
