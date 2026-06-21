@@ -41,14 +41,14 @@ func _process(_delta: float) -> void:
 	else:
 		StateMachine.travel("aIdle")
 
-		
 func _physics_process(delta: float) -> void:
+	print(-CurrentMoveDirection.y)
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
 	if !Source.isCrouched:
 		AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	elif Source.isCrouched:
-		AnimTree.set("parameters/aCrouchSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
+		AnimTree.set("parameters/aCrouchSpace/blend_position", CurrentMoveDirection.y)
 	
 #// Helper Method for One Shot Animations
 func _one_shot(Anim: String) -> void:
