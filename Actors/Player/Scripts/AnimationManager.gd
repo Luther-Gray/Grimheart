@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 	if !Source.isCrouched:
 		AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	elif Source.isCrouched:
-		AnimTree.set("parameters/aCrouchSpace/blend_position", CurrentMoveDirection.y)
+		AnimTree.set("parameters/aCrouchSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	
 #// Helper Method for One Shot Animations
 func _one_shot(Anim: String) -> void:
