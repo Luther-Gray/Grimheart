@@ -15,13 +15,18 @@ const FallDamageThreshold : float = 3.0
 const FallDamageMultiplier : float = 3.0
 var FallStunDuration : float = 0.3
 var FallStunTimer : float
+# Roll Window
+var RollWindow : float = 0.0
+var RollTimer: float = 0.0
 # Variable Jump Height
 var WasAirborne : bool = false
 var VariableJumpMult : float = 0.35
 
 func _physics_process(delta: float) -> void:
+	_roll_buffer(delta)
 	_calc_fall(delta)
 	_fall_stun(delta)
+	_roll_timer(delta)
 	
 	if !Source.Status.Stunned:
 		_jump(delta)
@@ -61,16 +66,19 @@ func _calc_fall(_delta: float) -> void:
 		if WasAirborne:
 			WasAirborne = false
 			FallDistance = abs(FallPeak - Source.global_position.y)
-			if FallDistance >= FallDamageThreshold:
+			if FallDistance >= FallDamageThreshold and RollWindow <= 0.0:
 				var FallDamage: float = (FallDistance - FallDamageThreshold) * FallDamageMultiplier
 				Source.Vitals._vital_impact("Health", FallDamage)
 				AnimManager._override_travel("aLanding")
-				
 				if HardLandingSound:
 					AudioPlayer.stream = HardLandingSound
 					AudioPlayer.play()
 				Source.Status._stunned(FallStunDuration)
 				Source.velocity = Vector3.ZERO
+			elif FallDistance >= FallDamageThreshold and RollWindow > 0.0:
+				RollWindow = 0.0
+				RollTimer = AnimManager._get_anim_length("aRoll")
+				AnimManager._override_travel("aRoll")
 			else:
 				AnimManager.AnimOverride = false
 				
@@ -81,3 +89,14 @@ func _fall_stun(delta):
 			Source.Status.StunTimer = 0.0
 			Source.Status.Stunned = false
 			AnimManager.AnimOverride = false
+func _roll_buffer(delta):
+	if Input.is_action_just_pressed("MV_Sprint"):
+		RollWindow = AnimManager._get_anim_length("aRoll")
+	elif RollWindow > 0.0:
+		RollWindow -= delta
+func _roll_timer(delta):
+	if RollTimer > 0.0:
+		RollTimer -= delta
+	if RollTimer <= 0.0:
+		RollTimer = 0.0
+		AnimManager.AnimOverride = false

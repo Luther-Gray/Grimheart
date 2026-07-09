@@ -24,9 +24,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if AnimOverride:
 		return
-	if Source.isUnsheathed:
-		StateMachine.travel("aIdleArmed")
-	elif Source.isHanging:
+	if Source.isHanging:
 		StateMachine.travel("aHang")
 	elif Source.isFalling:
 		StateMachine.travel("aFall")

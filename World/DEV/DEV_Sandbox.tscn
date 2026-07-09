@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://c33ygtmn7gujp" path="res://Actors/Player/Player.tscn" id="1_5gpxj"]
 [ext_resource type="Material" uid="uid://5vsa436i7wto" path="res://World/DEV/matDevGrid.tres" id="2_54f7j"]
 [ext_resource type="Shader" uid="uid://c1g10jl64nsdm" path="res://Shaders/Vagabond.gdshader" id="3_qbr34"]
-[ext_resource type="PackedScene" uid="uid://comi6f4nuspxd" path="res://Vehicle/AdamCo/Tire.tscn" id="4_2gqyv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4qx6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -230,6 +229,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1.5, -3.5)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=30069323]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
 shape = SubResource("BoxShape3D_qbr34")
-
-[node name="Tire" parent="." unique_id=1934449855 instance=ExtResource("4_2gqyv")]
-transform = Transform3D(-5.9604645e-08, 1, 0, -1, -5.9604645e-08, 0, 0, 0, 1, 3, 0.17045954, 0)
