@@ -3,6 +3,7 @@ extends Node
 
 @export var Source: CharacterBody3D
 @export var HardLandingSound : AudioStream
+@export var RollSound : AudioStream
 @export var AudioPlayer : AudioStreamPlayer3D
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 # Coyote Time
@@ -76,8 +77,12 @@ func _calc_fall(_delta: float) -> void:
 				Source.Status._stunned(FallStunDuration)
 				Source.velocity = Vector3.ZERO
 			elif FallDistance >= FallDamageThreshold and RollWindow > 0.0:
+				if HardLandingSound:
+					AudioPlayer.stream = RollSound
+					AudioPlayer.play()
 				RollWindow = 0.0
 				RollTimer = AnimManager._get_anim_length("aRoll")
+				Source.isSprinting = true
 				AnimManager._override_travel("aRoll")
 			else:
 				AnimManager.AnimOverride = false

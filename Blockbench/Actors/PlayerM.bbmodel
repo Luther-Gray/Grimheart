@@ -13511,7 +13511,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": false
+			"primary_selected": true
 		},
 		{
 			"name": "bTorsoMid",
@@ -13626,7 +13626,7 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": true
+			"primary_selected": false
 		},
 		{
 			"name": "bHair",
@@ -52516,13 +52516,13 @@
 							"channel": "rotation",
 							"data_points": [
 								{
-									"x": "-20.1091",
+									"x": "24.8909",
 									"y": "-0.266",
 									"z": "-3.5712"
 								}
 							],
 							"uuid": "b54e505d-5a11-99cb-a2c6-05207790a867",
-							"time": 0.33333,
+							"time": 0.29167,
 							"color": -1,
 							"interpolation": "catmullrom"
 						},
@@ -52580,13 +52580,13 @@
 							"channel": "rotation",
 							"data_points": [
 								{
-									"x": "-60",
+									"x": "-6.94",
 									"y": "0",
 									"z": "0"
 								}
 							],
-							"uuid": "bab49e96-ac51-5aca-77a4-997ea7b6b5bd",
-							"time": 0.375,
+							"uuid": "cf3bc34e-9d8e-0098-9051-dc27ddacab5a",
+							"time": 0.33333,
 							"color": -1,
 							"interpolation": "catmullrom"
 						}
@@ -53021,6 +53021,20 @@
 							"time": 0.66667,
 							"color": -1,
 							"interpolation": "catmullrom"
+						},
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "32.8369",
+									"y": "-17.4951",
+									"z": "2.2716"
+								}
+							],
+							"uuid": "17a4589d-9668-9cfa-6abf-d45d17bb06a3",
+							"time": 0.33333,
+							"color": -1,
+							"interpolation": "catmullrom"
 						}
 					]
 				},
@@ -53085,6 +53099,20 @@
 							"time": 0.54167,
 							"color": -1,
 							"interpolation": "catmullrom"
+						},
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-7.13",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "747dd058-8097-8044-7382-ac62a7f313c6",
+							"time": 0.33333,
+							"color": -1,
+							"interpolation": "catmullrom"
 						}
 					]
 				},
@@ -53119,6 +53147,20 @@
 							],
 							"uuid": "8d4e4c31-1c18-56ef-cd58-06ae887f65a5",
 							"time": 0.25,
+							"color": -1,
+							"interpolation": "catmullrom"
+						},
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "2.5",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "56f4ed56-9c42-e097-bf45-5f8a68d2301b",
+							"time": 0.33333,
 							"color": -1,
 							"interpolation": "catmullrom"
 						}

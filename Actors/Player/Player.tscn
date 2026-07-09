@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://fwkwa4xqxtg8" path="res://_AUDIOFILES/felixl-h__bones-breaking08.wav" id="15_g6ejb"]
 [ext_resource type="Script" uid="uid://dlag7fuw644b3" path="res://Actors/Player/Scripts/Slide.gd" id="15_m1t7r"]
 [ext_resource type="Script" uid="uid://bgcitffp4pue4" path="res://Actors/Player/Scripts/WallRun.gd" id="15_n45d6"]
+[ext_resource type="AudioStream" uid="uid://b6d8icmqiemk4" path="res://_AUDIOFILES/BodyFallHard-001.wav" id="16_j53hc"]
 [ext_resource type="Script" uid="uid://cpq2cbnbkbeqp" path="res://Actors/Player/Scripts/Vault.gd" id="17_k8e2g"]
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
 [ext_resource type="AudioStream" uid="uid://com6n53ywogxw" path="res://_AUDIOFILES/BodyFallHard-004.wav" id="18_hdio0"]
@@ -454,6 +455,7 @@ Source = NodePath("..")
 script = ExtResource("12_ujyek")
 Source = NodePath("..")
 HardLandingSound = ExtResource("15_g6ejb")
+RollSound = ExtResource("16_j53hc")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]

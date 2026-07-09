@@ -31,3 +31,5 @@ OWDB is the World Streaming solution. Within a radius, the world, enemies, and A
 
 
 # TODO
+- Ledge Grab is inconsistent & has wonky detection.
+- The vault ends and stops you from moving. That feels like trash.
