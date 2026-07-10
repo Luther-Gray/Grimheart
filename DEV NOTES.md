@@ -15,7 +15,13 @@ I understand that this may be over the line for some developers, and for that re
 If you choose to fork, I will answer any questions you have about the intent of a system, but I will not leak any secrets that my own team and players are not privy to. Forks have the potential to be considered canon as long as the correct quality guidelines are met. After I leave this project to work on [Redacted], the choices of what qualifies as canon or lore will be up to the community and developers remaining. You all have my blessing.
 
 # Stance on AI-Usage
-AI is not permitted in Grimheart outside of understanding code. AI can only tell you what it has been trained on. Anything brand new or anything outside of that training is something AI simply cannot create or generate. Yes, that includes ideas. AI is no good for ideas unless you're trying to fact-check things in our real world, and even those facts need to be verified by hand.
+When using AI for code, usage should generally be limited outside of learning.
+
+To be extremely clear: **If you attempt to push AI Slop into the codebase, and you can't even explain to me what your slop does or why we need it, I will remove you from Grimheart**
+
+And outside of code, AI has no valid use-case and is not permitted in any case. No, there are no exceptions. Yes I have considered gray areas. The answer is still no. 
+
+AI can only tell you what it has been trained on. Anything brand new or anything outside of that training is something AI simply cannot create or generate. Yes, that includes ideas. AI is no good for ideas unless you're trying to fact-check things in our real world, and even those facts need to be verified by hand.
 
 Grimheart is not a newborn game that is absent of influence, but it is original and bizarre with fresh and innovative ideas. The goals and philosophy of Grimheart's development are incompatible with the incentives provided by AI.
 
