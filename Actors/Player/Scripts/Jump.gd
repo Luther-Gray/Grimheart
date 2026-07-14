@@ -5,6 +5,7 @@ extends Node
 @export var HardLandingSound : AudioStream
 @export var RollSound : AudioStream
 @export var AudioPlayer : AudioStreamPlayer3D
+@export var CameraPivot : Node3D
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 # Coyote Time
 var CoyoteTimer : float
@@ -77,13 +78,7 @@ func _calc_fall(_delta: float) -> void:
 				Source.Status._stunned(FallStunDuration)
 				Source.velocity = Vector3.ZERO
 			elif FallDistance >= FallDamageThreshold and RollWindow > 0.0:
-				if HardLandingSound:
-					AudioPlayer.stream = RollSound
-					AudioPlayer.play()
-				RollWindow = 0.0
-				RollTimer = AnimManager._get_anim_length("aRoll")
-				Source.isSprinting = true
-				AnimManager._override_travel("aRoll")
+				_roll()
 			else:
 				AnimManager.AnimOverride = false
 				
@@ -94,6 +89,15 @@ func _fall_stun(delta):
 			Source.Status.StunTimer = 0.0
 			Source.Status.Stunned = false
 			AnimManager.AnimOverride = false
+func _roll():
+	if RollSound:
+		AudioPlayer.stream = RollSound
+		AudioPlayer.play()
+	RollWindow = 0.0
+	RollTimer = AnimManager._get_anim_length("aRoll")
+	Source.isSprinting = true
+	CameraPivot._force_camera(true)
+	AnimManager._override_travel("aRoll")
 func _roll_buffer(delta):
 	if Input.is_action_just_pressed("MV_Sprint"):
 		RollWindow = AnimManager._get_anim_length("aRoll")
@@ -105,3 +109,5 @@ func _roll_timer(delta):
 	if RollTimer <= 0.0:
 		RollTimer = 0.0
 		AnimManager.AnimOverride = false
+		if CameraPivot.isCameraForced:
+					CameraPivot._force_camera(false)

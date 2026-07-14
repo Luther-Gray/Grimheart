@@ -31,7 +31,6 @@ func _physics_process(_delta: float) -> void:
 		var RootMotion = AnimManager.AnimTree.get_root_motion_position()
 		Source.global_position += (Source.global_transform.basis * RootMotion) * ClamberBoost
 		Source.velocity = Vector3.ZERO
-		print(Source.velocity)
 		return
 	if Source.isHanging:
 		var _LedgeInput = Input.get_axis("MV_Left", "MV_Right")

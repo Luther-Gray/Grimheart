@@ -50,6 +50,7 @@ directional_shadow_mode = 0
 environment = SubResource("Environment_t812m")
 
 [node name="Player" parent="." unique_id=247372515 instance=ExtResource("1_5gpxj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -3)
 
 [node name="mFloor" type="CSGBox3D" parent="." unique_id=910348634]
 use_collision = true

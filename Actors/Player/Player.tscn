@@ -378,12 +378,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8479981, 0)
 shape = SubResource("CapsuleShape3D_g6ejb")
 debug_color = Color(0, 0.5176471, 0.21960784, 1)
 
-[node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "CameraMarker")]
+[node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "CameraMarker", "PlayerMesh")]
 transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6, -0.199)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
 CameraMarker = NodePath("../../Clyde/Skeleton3D/Head/CameraMarker")
 Settings = ExtResource("8_6e37q")
+PlayerMesh = NodePath("../../Clyde")
 metadata/_edit_pinned_properties_ = [&"Player"]
 
 [node name="DEV_Camera" type="Camera3D" parent="PlayerCollision/CameraPivot" unique_id=2143699930]
@@ -451,12 +452,13 @@ Source = NodePath("..")
 script = ExtResource("12_8np4b")
 Source = NodePath("..")
 
-[node name="Jump" type="Node3D" parent="." unique_id=1934262400 node_paths=PackedStringArray("Source", "AudioPlayer")]
+[node name="Jump" type="Node3D" parent="." unique_id=1934262400 node_paths=PackedStringArray("Source", "AudioPlayer", "CameraPivot")]
 script = ExtResource("12_ujyek")
 Source = NodePath("..")
 HardLandingSound = ExtResource("15_g6ejb")
 RollSound = ExtResource("16_j53hc")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
+CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 
 [node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]
 script = ExtResource("12_upr3p")

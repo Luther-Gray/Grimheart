@@ -9,7 +9,10 @@ extends Node3D
 @export var CameraMarker : Marker3D
 @onready var CameraPivot: Node3D = self
 @export var Settings : Resource
+@export var PlayerMesh : Node3D
 var isMouseCaptured = true
+var isCameraForced = false
+var oldRotation : Vector3
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -18,7 +21,7 @@ func _ready() -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 #// Mouse Look
-	if event is InputEventMouseMotion and isMouseCaptured:
+	if event is InputEventMouseMotion and isMouseCaptured and !isCameraForced:
 # Left & Right Mouse Look (When on Ledge)
 		if Player.isHanging:
 			CameraPivot.rotation.y -= deg_to_rad(event.relative.x * Settings.MouseSensitivity)
@@ -33,6 +36,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func _process(delta: float) -> void:
 	### Camera Sway
+	if isCameraForced:
+		return
 	if Player.InputDir.x > 0 :
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), Settings.SwaySpeed * delta)
 	elif Player.InputDir.x < 0 :
@@ -41,25 +46,19 @@ func _process(delta: float) -> void:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
 
 func _physics_process(delta: float) -> void:
-	### Prevent Camera from clipping into wall.
-	var CameraTarget = CameraMarker.global_position
-	var WorldSpace = get_world_3d().direct_space_state
-	var RayQuery = PhysicsRayQueryParameters3D.create(
-		Player.global_position,
-		CameraTarget
-	)
-	RayQuery.exclude = [Player]
-	var IntersectionResult = WorldSpace.intersect_ray(RayQuery)
-	if IntersectionResult:
-		var Buffer = (CameraTarget - Player.global_position).normalized()
-		CameraTarget = IntersectionResult.position - Buffer * 0.05
 ### Head Bobbing
 	global_position = global_position.lerp(CameraMarker.global_position, delta * Settings.CameraSmooth)
+### Camera Rotation Locking
+	if isCameraForced:
+		var targetRotation := CameraMarker.global_transform.basis.get_rotation_quaternion()
+		global_transform.basis = Basis(global_transform.basis.get_rotation_quaternion().slerp(targetRotation.normalized(), delta * Settings.CameraSmooth))
 
-func _pause_camera():
-	isMouseCaptured = false
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
-func _resume_camera():
-	isMouseCaptured = true
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+func _force_camera(flag : bool) -> void:
+	isCameraForced = flag
+	if isCameraForced:
+		PlayerMesh.visible = false
+		oldRotation = CameraPivot.rotation
+	else: 
+		PlayerMesh.visible = true
+		print(oldRotation)
+		CameraPivot.rotation = Vector3(oldRotation.x, oldRotation.y, 0.0)

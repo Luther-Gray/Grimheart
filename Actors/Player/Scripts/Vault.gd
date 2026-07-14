@@ -25,7 +25,6 @@ func _detect_ledge():
 			_vault()
 	else: # Too Tall - Ignore
 		return
-		
 
 #// Vault
 func _vault():
@@ -52,7 +51,6 @@ func _vault():
 	VaultTween.tween_property(Source, "global_position:y", VaultTarget, 0.01)
 	VaultTween.tween_property(Source, "global_position:x", Source.global_position.x + VaultDirection.x * VaultBoost, 0.5)
 	VaultTween.tween_property(Source, "global_position:z", Source.global_position.z + VaultDirection.z * VaultBoost, 0.3)
-	VaultTween.set_parallel(false)
 	
 	VaultTween.tween_callback(func():
 		if CastObject:
@@ -61,4 +59,3 @@ func _vault():
 		Source.isVaulting = false
 		
 		)
-	print("Vault")
