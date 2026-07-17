@@ -1,21 +1,48 @@
-MIT License
+================================================================================
+                    DUAL LICENSE NOTICE
+================================================================================
+Copyright (C) 2026 [Luther Gray]
 
-Copyright (c) 2024 Luther Gray
+This project is licensed under a split-license model. The code and the visual/audio
+assets of this game are governed by separate licenses to ensure the code remains
+open and copyleft, while protecting the creative assets from commercial exploitation.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+--------------------------------------------------------------------------------
+1. CODE & SOFTWARE LICENSE
+--------------------------------------------------------------------------------
+All software, scripts, code, and programming logic—including but not limited to
+all .gd files, .cs files, shader files (.gdshader), and engine configuration
+structures—are licensed under the GNU Affero General Public License, Version 3.0 (AGPLv3).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Under this license, you are free to copy, modify, and distribute this software,
+provided that any derivative works or modifications are also licensed under
+the AGPLv3 and their complete source code is made publicly available. If you
+run a modified version of this software on a network server, you must make the
+modified source code available to the users of that server.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The full legal text of this license can be found in: LICENSE-CODE
+
+--------------------------------------------------------------------------------
+2. CREATIVE ASSETS LICENSE
+--------------------------------------------------------------------------------
+All creative, artistic, audio, and narrative assets—including but not limited to
+all .png, .jpg, .svg, .gltf, .fbx, .blend, .bbmodel, .aseprite, .wav, .ogg, .owdb, .mp3 files, game maps, concept art, dialogue scripts, lore documents, and design documents—are licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+
+Under this license, you are free to share, copy, modify, and adapt these assets,
+provided that your use is strictly Non-Commercial and any derivative works
+are shared under the exact same CC BY-NC-SA 4.0 license.
+
+EXCLUSIONS:
+Font files (.ttf, .otf) included in this repository are NOT covered by this
+Creative Commons license. They remain licensed under their respective original
+licenses (e.g., SIL Open Font License).
+
+ATTRIBUTION WAIVER:
+The original author hereby WAIVES the "Attribution" (BY) requirement of this
+license. You are not required to provide credit, attribution, or link back to
+the original creator to use, distribute, or modify these assets, provided you
+strictly adhere to the Non-Commercial (NC) and ShareAlike (SA) terms.
+
+The full legal text of this license can be found in: LICENSE-ASSETS
+================================================================================
