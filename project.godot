@@ -195,7 +195,9 @@ SYS_Perspective={
 [layer_names]
 
 3d_render/layer_1="World"
-3d_render/layer_2="Player's Head"
+3d_render/layer_2="First Person Exclusions"
+3d_physics/layer_2="VaultObject"
+3d_physics/layer_3="ClamberObject"
 
 [physics]
 

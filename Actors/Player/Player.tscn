@@ -353,13 +353,14 @@ states/aWalkSpace/position = Vector2(790.81506, 141.354)
 states/root_aClamber/node = SubResource("AnimationNodeAnimation_m1t7r")
 states/root_aClamber/position = Vector2(389.26093, 347.43573)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "root_aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "root_aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aSprint", "aSlide", SubResource("AnimationNodeStateMachineTransition_3mvtf"), "aFall", "aLanding", SubResource("AnimationNodeStateMachineTransition_m46g3"), "aLanding", "aIdle", SubResource("AnimationNodeStateMachineTransition_7cy04"), "aLanding", "aSprint", SubResource("AnimationNodeStateMachineTransition_stvej"), "aLanding", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_m0e8k"), "aIdle", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_wqyix"), "aCrouchIdle", "aIdle", SubResource("AnimationNodeStateMachineTransition_vy72i"), "aSlide", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_jhh7x"), "aWalkSpace", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_c2opx"), "aIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_v8mwv"), "aCrouchSpace", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_hdyga"), "aCrouchSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_e3tbv"), "aCrouchIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_peq40"), "aCrouchSpace", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_d8b1y"), "aFall", "aRoll", SubResource("AnimationNodeStateMachineTransition_06dkf"), "aRoll", "aIdle", SubResource("AnimationNodeStateMachineTransition_yln03"), "aRoll", "aSprint", SubResource("AnimationNodeStateMachineTransition_7x427"), "aRoll", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_ymlwl")]
-graph_offset = Vector2(-244.19531, -64.49924)
+graph_offset = Vector2(-435.41406, -221.3508)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_r3pko"]
 
 [node name="Player" type="CharacterBody3D" unique_id=247372515]
+collision_mask = 3
 script = ExtResource("1_yqfyh")
 Attribute = ExtResource("2_rsi04")
 Stat = ExtResource("3_kkbrm")
@@ -368,6 +369,7 @@ Status = ExtResource("5_704ek")
 Settings = ExtResource("8_6e37q")
 
 [node name="Clyde" parent="." unique_id=962298241 instance=ExtResource("6_lxc4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002579242, 0)
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
@@ -395,6 +397,7 @@ fov = 90.0
 
 [node name="CameraRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=283864831]
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 0, 0, -0.1)
+visible = false
 debug_shape_custom_color = Color(0.68630785, 0.3100806, 1, 1)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
@@ -422,26 +425,31 @@ grow_vertical = 2
 script = ExtResource("10_lxc4y")
 
 [node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
-transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.8000001)
+transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.74875927)
 hit_from_inside = true
 
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 0.5, 0)
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
 shape = SubResource("BoxShape3D_qhy2x")
+collision_mask = 3
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=2101530425]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.7, 0)
+visible = false
 hit_from_inside = true
 
 [node name="LedgeCeilingRaycast" type="RayCast3D" parent="." unique_id=1849962629]
 transform = Transform3D(1, 0, 0, 0, -0.7071068, -0.7071067, 0, 0.7071067, -0.7071068, 0, 1.6, -0.3)
+visible = false
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
 transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
+visible = false
 
 [node name="WallRayR" type="RayCast3D" parent="." unique_id=36886257]
 transform = Transform3D(-3.7855173e-08, 0.43301272, -0.50000006, -1, -2.1855694e-08, 0, -2.1855694e-08, 0.25000003, 0.86602545, -0.40000004, 1.5, 0)
+visible = false
 
 [node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
 script = ExtResource("6_l6vkj")
@@ -499,9 +507,11 @@ ConcreteSteps = ExtResource("18_vnq5c")
 stream = ExtResource("20_s8ljq")
 volume_db = -0.5
 
-[node name="WallRun" type="Node3D" parent="." unique_id=1675950725 node_paths=PackedStringArray("Source")]
+[node name="WallRun" type="Node3D" parent="." unique_id=1675950725 node_paths=PackedStringArray("Source", "CameraPivot", "AudioPlayer")]
 script = ExtResource("15_n45d6")
 Source = NodePath("..")
+CameraPivot = NodePath("../PlayerCollision/CameraPivot")
+AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
 visible = false
@@ -527,6 +537,7 @@ transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, 
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1112993677]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1, 0)
+visible = false
 shape = SubResource("SphereShape3D_r3pko")
 spring_length = 3.0
 

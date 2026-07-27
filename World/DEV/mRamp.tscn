@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ceeq5n1qto021"]
+
+[ext_resource type="PackedScene" uid="uid://c8afjk745gs51" path="res://World/DEV/Ramp.gltf" id="1_iyrmy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_meq2m"]
+points = PackedVector3Array(0.47714648, 1, 0.47714648, -0.9854806, 0, -0.9854806, -0.9854806, 0, 0.9854806, 0.9854806, 0, -0.9854806, 0.9854806, 0, 0.9854806, -0.47695965, 1, -0.47714648, -0.5124337, 0.9751325, 0.5124337, 0.5124337, 0.9751325, -0.5124337, -0.9644505, 0.07109908, -0.9644505, 0.9644505, 0.07109908, 0.9644505, 0.9644505, 0.07109908, -0.9644505, -0.9644505, 0.07109908, 0.9644505, -0.5124337, 0.9751325, -0.5124337, 0.5124337, 0.9751325, 0.5124337, -0.47695965, 1, 0.47714648, 0.47714648, 1, -0.47714648)
+
+[node name="blockbench_export" unique_id=348084366 instance=ExtResource("1_iyrmy")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=289573196]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=205337278]
+shape = SubResource("ConvexPolygonShape3D_meq2m")
