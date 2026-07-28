@@ -8,18 +8,19 @@ extends Node3D
 @onready var LedgeRay: RayCast3D = $"../LedgeCeilingRaycast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var DEV_Target: MeshInstance3D = $"../../DEV_Target"
+@onready var VaultRaycast: RayCast3D = $VaultRaycast
 
 const VaultLayer : int = 2
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_pressed("MV_Jump"):
+	if Input.is_action_pressed("MV_Jump") and Source.isSprinting:
 		_can_vault()
 
 func _can_vault():
-	if !ClamberCast.is_colliding():
+	if !VaultRaycast.is_colliding():
 		return
-	if ClamberCast.get_collision_mask_value(VaultLayer):
-		if Input.is_action_pressed("MV_Forward") and Source.is_on_floor() and Source.isSprinting:
+	if VaultRaycast.get_collision_mask_value(VaultLayer):
+		if Input.is_action_pressed("MV_Forward") and Source.is_on_floor():
 			_vault()
 	else:
 		return

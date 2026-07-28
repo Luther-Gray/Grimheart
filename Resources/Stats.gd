@@ -22,4 +22,4 @@ func _alter_stat(Stat: String, Amount: float, Duration: float, Scene: SceneTree)
 		# Restore Original Stat
 		set(Stat, get(Stat) - Amount)
 	else:
-		print("No Stat Found")
+		print_debug("No Stat Found")

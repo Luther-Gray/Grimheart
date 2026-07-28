@@ -15,7 +15,7 @@ func _on_resume() -> void:
 
 
 func _on_options() -> void:
-	print("Options Here!")
+	print_debug("Options Here!")
 
 
 func _on_quit() -> void:

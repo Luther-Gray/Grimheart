@@ -397,7 +397,6 @@ fov = 90.0
 
 [node name="CameraRaycast" type="RayCast3D" parent="PlayerCollision/CameraPivot" unique_id=283864831]
 transform = Transform3D(1, -2.7939677e-09, 8.1418805e-17, 0, -6.556708e-08, -1, 1.8626451e-09, 1.5, -4.371139e-08, 0, 0, -0.1)
-visible = false
 debug_shape_custom_color = Color(0.68630785, 0.3100806, 1, 1)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1625244305]
@@ -431,25 +430,20 @@ hit_from_inside = true
 [node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
 shape = SubResource("BoxShape3D_qhy2x")
-collision_mask = 3
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=2101530425]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.7, 0)
-visible = false
 hit_from_inside = true
 
 [node name="LedgeCeilingRaycast" type="RayCast3D" parent="." unique_id=1849962629]
 transform = Transform3D(1, 0, 0, 0, -0.7071068, -0.7071067, 0, 0.7071067, -0.7071068, 0, 1.6, -0.3)
-visible = false
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
 transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
-visible = false
 
 [node name="WallRayR" type="RayCast3D" parent="." unique_id=36886257]
 transform = Transform3D(-3.7855173e-08, 0.43301272, -0.50000006, -1, -2.1855694e-08, 0, -2.1855694e-08, 0.25000003, 0.86602545, -0.40000004, 1.5, 0)
-visible = false
 
 [node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimTree", "Source")]
 script = ExtResource("6_l6vkj")
@@ -485,6 +479,11 @@ script = ExtResource("17_k8e2g")
 Source = NodePath("..")
 VaultSound = ExtResource("18_hdio0")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
+
+[node name="VaultRaycast" type="RayCast3D" parent="Vault" unique_id=289577030]
+transform = Transform3D(1, 0, 0, 0, -4.506182e-08, -1.0000001, 0, 0.53999996, -8.344783e-08, 0, 0.80000013, -0.24875927)
+collision_mask = 2
+hit_from_inside = true
 
 [node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "AudioPlayer", "IK_ArmL", "IK_ArmR", "HandTargetL", "HandTargetR")]
 script = ExtResource("14_fllei")

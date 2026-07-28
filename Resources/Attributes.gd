@@ -57,9 +57,9 @@ var SleepEarnings : int
 func _grant_xp(Attr: String, XP: float) -> void:
 	if AttributeXP.has(Attr) and NextAttributeXP.has(Attr):
 		AttributeXP[Attr] += XP # Add to that Stat's XP
-		print(AttributeXP[Attr])
+		print_debug(AttributeXP[Attr])
 	else:
-		print("Tried to grant XP to unknown Attribute: ", Attr)
+		print_debug("Tried to grant XP to unknown Attribute: ", Attr)
 
 # When you sleep, run this function to Level Up
 func _check_level():
@@ -68,7 +68,7 @@ func _check_level():
 		if not (AttributeXP.has(Key) and NextAttributeXP.has(Key)):
 			continue
 		while AttributeXP[Key] >= NextAttributeXP[Key] and SleepEarnings < SLEEP_CAP:
-			print("Leveling up: ", Key)
+			print_debug("Leveling up: ", Key)
 			set(Key, get(Key) + 1)
 			SleepEarnings += 1
 			NextAttributeXP[Key] = int(round(NextAttributeXP[Key] * 1.5))

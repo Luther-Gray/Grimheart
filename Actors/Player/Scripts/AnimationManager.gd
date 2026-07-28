@@ -40,7 +40,6 @@ func _process(_delta: float) -> void:
 		StateMachine.travel("aIdle")
 
 func _physics_process(delta: float) -> void:
-	print(-CurrentMoveDirection.y)
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
 	if !Source.isCrouched:

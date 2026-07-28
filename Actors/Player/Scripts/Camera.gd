@@ -12,7 +12,13 @@ extends Node3D
 @export var PlayerMesh : Node3D
 var isMouseCaptured = true
 var isCameraForced = false
-var oldRotation : Vector3
+var isLookingBack = false
+var ChaseCamAngle : float = 150.0
+var ChaseCamSpeed : float = 18.0
+var ChaseCamTilt : float = 0.2
+var ChaseCamSlide : float = -1.2
+var ChaseCamYaw : float = 0.0
+var OldRotation : Vector3
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -33,17 +39,34 @@ func _unhandled_input(event: InputEvent) -> void:
 		CameraPivot.rotation.x -= deg_to_rad(event.relative.y * Settings.MouseSensitivity)
 #Clamp how far up and down the player can look.
 		CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+#// Look Back
+	if Input.is_action_just_pressed("LOOK_Back"):
+		ChaseCamYaw = CameraPivot.rotation.y
+		isLookingBack = true
+	elif Input.is_action_just_released("LOOK_Back"):
+		isLookingBack = false
 		
 func _process(delta: float) -> void:
-	### Camera Sway
+### Camera Sway
 	if isCameraForced:
 		return
+	if isLookingBack:
+		pass
 	if Player.InputDir.x > 0 :
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), Settings.SwaySpeed * delta)
 	elif Player.InputDir.x < 0 :
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(Settings.SwayAmount),Settings.SwaySpeed * delta)
 	else:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
+### Chase Cam (Looking Backwards)
+	if isLookingBack:
+		var ChaseCamTarget := ChaseCamYaw + deg_to_rad(ChaseCamAngle)
+		CameraPivot.rotation.y = lerp_angle(CameraPivot.rotation.y, ChaseCamTarget, ChaseCamSpeed * delta)
+		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, ChaseCamTilt, ChaseCamSpeed * delta)
+		CameraPivot.position.x = lerp(CameraPivot.position.x, ChaseCamSlide, ChaseCamSpeed * delta)
+	else:
+		CameraPivot.rotation.y = lerp_angle(CameraPivot.rotation.y, ChaseCamYaw, ChaseCamSpeed * delta)
+		CameraPivot.position.x = lerp(CameraPivot.position.x, 0.0, ChaseCamSpeed * delta)
 
 func _physics_process(delta: float) -> void:
 ### Head Bobbing
@@ -57,8 +80,7 @@ func _force_camera(flag : bool) -> void:
 	isCameraForced = flag
 	if isCameraForced:
 		PlayerMesh.visible = false
-		oldRotation = CameraPivot.rotation
+		OldRotation = CameraPivot.rotation
 	else: 
 		PlayerMesh.visible = true
-		print(oldRotation)
-		CameraPivot.rotation = Vector3(oldRotation.x, oldRotation.y, 0.0)
+		CameraPivot.rotation = Vector3(OldRotation.x, OldRotation.y, 0.0)

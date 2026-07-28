@@ -11,7 +11,7 @@ extends Node3D
 #// Crouch Values
 var InitPlayerHeight : float = 1.7
 var InitColPosition : float = 0.85
-var InitMarkerPos : float = 0.14
+var InitMarkerPos : float = 0.0
 var TargetPlayerHeight : float = 0.95
 var TargetColPosition : float = 0.5
 var TargetMarkerPos : float = 0.0

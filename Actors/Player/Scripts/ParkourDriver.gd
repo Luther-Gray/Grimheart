@@ -30,4 +30,4 @@ func _build_parkour_bones():
 	add_bone("Hand.R")
 	set_bone_parent(find_bone("Hand.R"), find_bone("LowerArm.R"))
 	
-	print("Bones added: ", get_bone_count())
+	print_debug("Bones added: ", get_bone_count())
