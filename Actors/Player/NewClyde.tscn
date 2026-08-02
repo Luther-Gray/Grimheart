@@ -6,514 +6,514 @@
 
 [node name="Clyde" unique_id=962298241 instance=ExtResource("1_3o2hb")]
 
-[node name="Hips" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="0" unique_id=723025463 groups=["PlayerSkin"]]
-transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7190587, -0.012782706)
+[node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="0" unique_id=2094286216]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6117573, -0.004877951)
 
-[node name="Hips" parent="Skeleton3D/Hips" index="0" unique_id=787797981 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="HipsOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="1" unique_id=443786107 groups=["Outline"]]
-transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7190587, -0.012782706)
-
-[node name="HipsOutline" parent="Skeleton3D/HipsOutline" index="0" unique_id=1211591870 groups=["Outline"]]
-
-[node name="MidTorso" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="2" unique_id=1378309383 groups=["PlayerSkin"]]
-transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9374274, 0.00022134755)
-
-[node name="MidTorso" parent="Skeleton3D/MidTorso" index="0" unique_id=57947685 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="MidTorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="3" unique_id=1614757326 groups=["Outline"]]
-transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9374274, 0.00022134755)
-
-[node name="MidTorsoOutline" parent="Skeleton3D/MidTorsoOutline" index="0" unique_id=155533110 groups=["Outline"]]
-
-[node name="Torso" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="4" unique_id=1776593715 groups=["PlayerSkin"]]
-transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2308728, -0.014564589)
-
-[node name="Torso" parent="Skeleton3D/Torso" index="0" unique_id=1688420815 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="TorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="5" unique_id=982460756 groups=["Outline"]]
-transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2308728, -0.014564589)
-
-[node name="TorsoOutline" parent="Skeleton3D/TorsoOutline" index="0" unique_id=776544989 groups=["Outline"]]
-
-[node name="Neck" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="6" unique_id=800299767 groups=["PlayerSkin"]]
-transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.001632426, 1.3253008, -0.0011969046)
-
-[node name="Neck" parent="Skeleton3D/Neck" index="0" unique_id=1797969872 groups=["PlayerSkin"]]
+[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=1757203736 groups=["PlayerHair"]]
 layers = 2
-surface_material_override/0 = ExtResource("2_fg5ag")
+surface_material_override/0 = ExtResource("3_a35ie")
 
-[node name="NeckOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="7" unique_id=1881585317 groups=["Outline"]]
-transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.001632426, 1.3253008, -0.0011969046)
+[node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="1" unique_id=72739749]
+transform = Transform3D(-0.13113064, 0.60948247, 0.78187984, -0.99077684, -0.053400565, -0.124538854, -0.034151435, -0.7909992, 0.61086345, -0.054648105, 1.5887561, -0.17656484)
 
-[node name="NeckOutline" parent="Skeleton3D/NeckOutline" index="0" unique_id=744547181 groups=["Outline"]]
+[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=929277065 groups=["PlayerHair"]]
+layers = 2
+surface_material_override/0 = ExtResource("3_a35ie")
+
+[node name="FlatTopOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="2" unique_id=1023058132 groups=["Outline"]]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6117573, -0.004877951)
+
+[node name="FlatTopOutline" parent="Skeleton3D/FlatTopOutline" index="0" unique_id=786064234 groups=["Outline"]]
 layers = 2
 
-[node name="Head" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="8" unique_id=1652585968 groups=["PlayerSkin"]]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
+[node name="Head" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="3" unique_id=1616050569 groups=["PlayerSkin"]]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5496094, -0.013990739)
 
 [node name="CameraMarker" type="Marker3D" parent="Skeleton3D/Head" index="0" unique_id=977741486]
 transform = Transform3D(0.999034, 0.0053197416, 0.043625053, -0.0018879304, 0.9969254, -0.07833299, -0.04390762, 0.07817497, 0.9959717, -0.0033288938, -0.09466958, -0.17167193)
 
-[node name="Head" parent="Skeleton3D/Head" index="1" unique_id=2085198081 groups=["PlayerSkin"]]
+[node name="Head" parent="Skeleton3D/Head" index="1" unique_id=1078716911 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Ear_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="9" unique_id=1988650594 groups=["PlayerSkin"]]
-transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5128847, -0.0034645014)
+[node name="Ear_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="4" unique_id=1424375125 groups=["PlayerSkin"]]
+transform = Transform3D(0.9315032, -0.34174845, -0.124538995, 0.10533729, -0.074260294, 0.99165994, -0.34814656, -0.93685305, -0.033174835, -0.13377239, 1.5175723, -0.0034645014)
 
-[node name="Ear_L" parent="Skeleton3D/Ear_L" index="0" unique_id=1818334151 groups=["PlayerSkin"]]
+[node name="Ear_L" parent="Skeleton3D/Ear_L" index="0" unique_id=1891680591 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Ear_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="10" unique_id=1953641543 groups=["PlayerSkin"]]
-transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.514281, 0.007986081)
+[node name="Ear_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="5" unique_id=183401302 groups=["PlayerSkin"]]
+transform = Transform3D(0.89867806, 0.42287913, 0.11640907, -0.09559178, -0.070188746, 0.992943, 0.42806545, -0.9034639, -0.022653304, 0.12845153, 1.5189686, 0.007986081)
 
-[node name="Ear_R" parent="Skeleton3D/Ear_R" index="0" unique_id=107933033 groups=["PlayerSkin"]]
+[node name="Ear_R" parent="Skeleton3D/Ear_R" index="0" unique_id=974271656 groups=["PlayerSkin"]]
 layers = 2
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="HeadOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="11" unique_id=903632824 groups=["Outline"]]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5449219, -0.013990739)
+[node name="HeadOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="6" unique_id=1004547969 groups=["Outline"]]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.003007308, 1.5496094, -0.013990739)
 
-[node name="HeadOutline" parent="Skeleton3D/HeadOutline" index="0" unique_id=1622665854 groups=["Outline"]]
+[node name="HeadOutline" parent="Skeleton3D/HeadOutline" index="0" unique_id=1982591110 groups=["Outline"]]
 layers = 2
 
-[node name="FlatTop" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="12" unique_id=51300549]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.004877951)
+[node name="camera" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="7" unique_id=1362673550]
+transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0011588504, 1.5170656, -0.013164459)
 
-[node name="FlatTop" parent="Skeleton3D/FlatTop" index="0" unique_id=785518626 groups=["PlayerHair"]]
+[node name="Neck" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="8" unique_id=85521966 groups=["PlayerSkin"]]
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.001632426, 1.3299884, -0.0011969046)
+
+[node name="Neck" parent="Skeleton3D/Neck" index="0" unique_id=1762980151 groups=["PlayerSkin"]]
 layers = 2
-surface_material_override/0 = ExtResource("3_a35ie")
+surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Strand" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="13" unique_id=1353862275]
-transform = Transform3D(-0.13113064, 0.60948247, 0.78187984, -0.99077684, -0.053400565, -0.124538854, -0.034151435, -0.7909992, 0.61086345, -0.054648105, 1.5840685, -0.17656484)
+[node name="NeckOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="9" unique_id=1581728166 groups=["Outline"]]
+transform = Transform3D(0.7373832, -0.0038013542, 0.6754641, -0.020715095, 0.99938655, 0.028238341, -0.67515707, -0.034814782, 0.73685205, 0.001632426, 1.3299884, -0.0011969046)
 
-[node name="Strand" parent="Skeleton3D/Strand" index="0" unique_id=478917159 groups=["PlayerHair"]]
-layers = 2
-surface_material_override/0 = ExtResource("3_a35ie")
-
-[node name="FlatTopOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="14" unique_id=1435841597 groups=["Outline"]]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0018567911, 1.6070697, -0.004877951)
-
-[node name="FlatTopOutline" parent="Skeleton3D/FlatTopOutline" index="0" unique_id=1123286592 groups=["Outline"]]
+[node name="NeckOutline" parent="Skeleton3D/NeckOutline" index="0" unique_id=1848359554 groups=["Outline"]]
 layers = 2
 
-[node name="camera" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="15" unique_id=1818977815]
-transform = Transform3D(0.99903387, -0.0018879279, -0.043907613, 0.0053197406, 0.9969255, 0.07817499, 0.04362501, -0.07833304, 0.99597234, 0.0011588504, 1.5123781, -0.013164459)
+[node name="IndexTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="10" unique_id=214998352 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.65263957, -0.06926042)
 
-[node name="UpperArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="16" unique_id=947773445 groups=["PlayerSkin"]]
-transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1898756, -0.016779983)
+[node name="IndexTip_L" parent="Skeleton3D/IndexTip_L" index="0" unique_id=1843181674 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="UpperArm_L" parent="Skeleton3D/UpperArm_L" index="0" unique_id=1953200058 groups=["PlayerSkin"]]
+[node name="IndexTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="11" unique_id=132181601 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.65263957, -0.06926042)
+
+[node name="IndexTip_LOutline" parent="Skeleton3D/IndexTip_LOutline" index="0" unique_id=1018741994 groups=["Outline"]]
+
+[node name="Index_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="12" unique_id=1809954144 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6947628, -0.06935491)
+
+[node name="Index_L" parent="Skeleton3D/Index_L" index="0" unique_id=2082988277 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Index_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="13" unique_id=548599700 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6947628, -0.06935491)
+
+[node name="Index_LOutline" parent="Skeleton3D/Index_LOutline" index="0" unique_id=147592561 groups=["Outline"]]
+
+[node name="MiddleTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="14" unique_id=29877244 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.64854085, -0.06008158)
+
+[node name="MiddleTip_L" parent="Skeleton3D/MiddleTip_L" index="0" unique_id=991051935 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="MiddleTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="15" unique_id=81889543 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.64854085, -0.06008158)
+
+[node name="MiddleTip_LOutline" parent="Skeleton3D/MiddleTip_LOutline" index="0" unique_id=31369778 groups=["Outline"]]
+
+[node name="Middle_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="16" unique_id=903295601 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.6937843, -0.060183063)
+
+[node name="Middle_L" parent="Skeleton3D/Middle_L" index="0" unique_id=1648084295 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Middle_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="17" unique_id=880252284 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.6937843, -0.060183063)
+
+[node name="Middle_LOutline" parent="Skeleton3D/Middle_LOutline" index="0" unique_id=1653010095 groups=["Outline"]]
+
+[node name="RingTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="18" unique_id=352208466 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.6479687, -0.044816483)
+
+[node name="RingTip_L" parent="Skeleton3D/RingTip_L" index="0" unique_id=618432358 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="RingTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="19" unique_id=509647483 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.6479687, -0.044816483)
+
+[node name="RingTip_LOutline" parent="Skeleton3D/RingTip_LOutline" index="0" unique_id=134518258 groups=["Outline"]]
+
+[node name="Ring_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="20" unique_id=38299904 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.69321215, -0.044917967)
+
+[node name="Ring_L" parent="Skeleton3D/Ring_L" index="0" unique_id=293815519 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Ring_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="21" unique_id=225215980 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.69321215, -0.044917967)
+
+[node name="Ring_LOutline" parent="Skeleton3D/Ring_LOutline" index="0" unique_id=221106648 groups=["Outline"]]
+
+[node name="PinkyTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="22" unique_id=408296546 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.66143763, -0.029582882)
+
+[node name="PinkyTip_L" parent="Skeleton3D/PinkyTip_L" index="0" unique_id=1878763232 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="PinkyTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="23" unique_id=895949069 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.66143763, -0.029582882)
+
+[node name="PinkyTip_LOutline" parent="Skeleton3D/PinkyTip_LOutline" index="0" unique_id=976232694 groups=["Outline"]]
+
+[node name="Pinky_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="24" unique_id=1406427679 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.69576025, -0.029659871)
+
+[node name="Pinky_L" parent="Skeleton3D/Pinky_L" index="0" unique_id=1323023281 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Pinky_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="25" unique_id=798131711 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.69576025, -0.029659871)
+
+[node name="Pinky_LOutline" parent="Skeleton3D/Pinky_LOutline" index="0" unique_id=1970588807 groups=["Outline"]]
+
+[node name="ThumbTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="26" unique_id=11258861 groups=["PlayerSkin"]]
+transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.7236125, -0.0598442)
+
+[node name="ThumbTip_L" parent="Skeleton3D/ThumbTip_L" index="0" unique_id=686077131 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="ThumbTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="27" unique_id=556303738 groups=["Outline"]]
+transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.7236125, -0.0598442)
+
+[node name="ThumbTip_LOutline" parent="Skeleton3D/ThumbTip_LOutline" index="0" unique_id=606097470 groups=["Outline"]]
+
+[node name="Thumb_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="28" unique_id=1743423433 groups=["PlayerSkin"]]
+transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.75277853, -0.06781994)
+
+[node name="Thumb_L" parent="Skeleton3D/Thumb_L" index="0" unique_id=1865052805 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Thumb_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="29" unique_id=1046808234 groups=["Outline"]]
+transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.75277853, -0.06781994)
+
+[node name="Thumb_LOutline" parent="Skeleton3D/Thumb_LOutline" index="0" unique_id=805832420 groups=["Outline"]]
+
+[node name="Hand_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="30" unique_id=370217322 groups=["PlayerSkin"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.7535562, -0.049216427)
+
+[node name="Hand_L" parent="Skeleton3D/Hand_L" index="0" unique_id=121106626 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="Hand_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="31" unique_id=884445907 groups=["Outline"]]
+transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.7535562, -0.049216427)
+
+[node name="Hand_LOutline" parent="Skeleton3D/Hand_LOutline" index="0" unique_id=168479613 groups=["Outline"]]
+
+[node name="LowerArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="32" unique_id=800765252 groups=["PlayerSkin"]]
+transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.9301504, -0.03528689)
+
+[node name="LowerArm_L" parent="Skeleton3D/LowerArm_L" index="0" unique_id=1156284060 groups=["PlayerSkin"]]
+surface_material_override/0 = ExtResource("2_fg5ag")
+
+[node name="LowerArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="33" unique_id=929700367 groups=["Outline"]]
+transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.9301504, -0.03528689)
+
+[node name="LowerArm_LOutline" parent="Skeleton3D/LowerArm_LOutline" index="0" unique_id=1281243785 groups=["Outline"]]
+
+[node name="UpperArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="34" unique_id=313273132 groups=["PlayerSkin"]]
+transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1945632, -0.016779983)
+
+[node name="UpperArm_L" parent="Skeleton3D/UpperArm_L" index="0" unique_id=1367138731 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
 [node name="ElbowTarget_L" type="Marker3D" parent="Skeleton3D/UpperArm_L" index="1" unique_id=779303182]
 transform = Transform3D(0.9997236, -0.019498795, 0.013131455, 0.022254914, 0.9649594, -0.2614553, -0.007573247, 0.26167506, 0.9651268, -0.1791485, 0.05373448, 0.071232855)
 
-[node name="UpperArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="17" unique_id=2085291357 groups=["Outline"]]
-transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1898756, -0.016779983)
+[node name="UpperArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="35" unique_id=1006148068 groups=["Outline"]]
+transform = Transform3D(0.07915172, 0.13745108, -0.98734105, 0.9952739, 0.044998914, 0.08605218, 0.05625728, -0.9894859, -0.13323978, -0.17866261, 1.1945632, -0.016779983)
 
-[node name="UpperArm_LOutline" parent="Skeleton3D/UpperArm_LOutline" index="0" unique_id=724087713 groups=["Outline"]]
+[node name="UpperArm_LOutline" parent="Skeleton3D/UpperArm_LOutline" index="0" unique_id=1700325503 groups=["Outline"]]
 
-[node name="LowerArm_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="18" unique_id=1660490623 groups=["PlayerSkin"]]
-transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
+[node name="ThumbTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="36" unique_id=437847947 groups=["PlayerSkin"]]
+transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.7261744, -0.0791595)
 
-[node name="LowerArm_L" parent="Skeleton3D/LowerArm_L" index="0" unique_id=285517185 groups=["PlayerSkin"]]
+[node name="ThumbTip_R" parent="Skeleton3D/ThumbTip_R" index="0" unique_id=2044854853 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="LowerArm_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="19" unique_id=305957925 groups=["Outline"]]
-transform = Transform3D(0.044383787, 0.13935718, -0.9892471, 0.99559283, 0.07571625, 0.055334844, 0.08261342, -0.98734325, -0.13538244, -0.19498637, 0.92546284, -0.03528689)
+[node name="ThumbTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="37" unique_id=1885894890 groups=["Outline"]]
+transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.7261744, -0.0791595)
 
-[node name="LowerArm_LOutline" parent="Skeleton3D/LowerArm_LOutline" index="0" unique_id=204634317 groups=["Outline"]]
+[node name="ThumbTip_ROutline" parent="Skeleton3D/ThumbTip_ROutline" index="0" unique_id=1255477543 groups=["Outline"]]
 
-[node name="Hand_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="20" unique_id=294760844 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.74886864, -0.049216427)
+[node name="Thumb_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="38" unique_id=425801406 groups=["PlayerSkin"]]
+transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7562177, -0.07061593)
 
-[node name="Hand_L" parent="Skeleton3D/Hand_L" index="0" unique_id=801040156 groups=["PlayerSkin"]]
+[node name="Thumb_R" parent="Skeleton3D/Thumb_R" index="0" unique_id=82287925 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Hand_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="21" unique_id=821457350 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2009192, 0.74886864, -0.049216427)
+[node name="Thumb_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="39" unique_id=394677074 groups=["Outline"]]
+transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7562177, -0.07061593)
 
-[node name="Hand_LOutline" parent="Skeleton3D/Hand_LOutline" index="0" unique_id=540150330 groups=["Outline"]]
+[node name="Thumb_ROutline" parent="Skeleton3D/Thumb_ROutline" index="0" unique_id=824323996 groups=["Outline"]]
 
-[node name="Index_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="22" unique_id=1276238643 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6900753, -0.06935491)
+[node name="IndexTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="40" unique_id=884797718 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.6554389, -0.0624687)
 
-[node name="Index_L" parent="Skeleton3D/Index_L" index="0" unique_id=1954054885 groups=["PlayerSkin"]]
+[node name="IndexTip_R" parent="Skeleton3D/IndexTip_R" index="0" unique_id=115676612 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Index_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="23" unique_id=286278978 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18289033, 0.6900753, -0.06935491)
+[node name="IndexTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="41" unique_id=1340907301 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.6554389, -0.0624687)
 
-[node name="Index_LOutline" parent="Skeleton3D/Index_LOutline" index="0" unique_id=871348988 groups=["Outline"]]
+[node name="IndexTip_ROutline" parent="Skeleton3D/IndexTip_ROutline" index="0" unique_id=1503243145 groups=["Outline"]]
 
-[node name="IndexTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="24" unique_id=1726188941 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.647952, -0.06926042)
+[node name="Index_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="42" unique_id=795188685 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.6975797, -0.060540378)
 
-[node name="IndexTip_L" parent="Skeleton3D/IndexTip_L" index="0" unique_id=666156013 groups=["PlayerSkin"]]
+[node name="Index_R" parent="Skeleton3D/Index_R" index="0" unique_id=2127714721 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="IndexTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="25" unique_id=1263424282 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.18056482, 0.647952, -0.06926042)
+[node name="Index_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="43" unique_id=1512925699 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.6975797, -0.060540378)
 
-[node name="IndexTip_LOutline" parent="Skeleton3D/IndexTip_LOutline" index="0" unique_id=2078689785 groups=["Outline"]]
+[node name="Index_ROutline" parent="Skeleton3D/Index_ROutline" index="0" unique_id=461712093 groups=["Outline"]]
 
-[node name="Middle_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="26" unique_id=1195311118 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.68909675, -0.060183063)
-
-[node name="Middle_L" parent="Skeleton3D/Middle_L" index="0" unique_id=634271441 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="Middle_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="27" unique_id=1699560234 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20098777, 0.68909675, -0.060183063)
-
-[node name="Middle_LOutline" parent="Skeleton3D/Middle_LOutline" index="0" unique_id=778247836 groups=["Outline"]]
-
-[node name="MiddleTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="28" unique_id=331241018 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.6438533, -0.06008158)
-
-[node name="MiddleTip_L" parent="Skeleton3D/MiddleTip_L" index="0" unique_id=1329988922 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="MiddleTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="29" unique_id=864328709 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.19849001, 0.6438533, -0.06008158)
-
-[node name="MiddleTip_LOutline" parent="Skeleton3D/MiddleTip_LOutline" index="0" unique_id=326251953 groups=["Outline"]]
-
-[node name="Ring_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="30" unique_id=1372080415 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.6885246, -0.044917967)
-
-[node name="Ring_L" parent="Skeleton3D/Ring_L" index="0" unique_id=1264336145 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="Ring_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="31" unique_id=1431613452 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.21197201, 0.6885246, -0.044917967)
-
-[node name="Ring_LOutline" parent="Skeleton3D/Ring_LOutline" index="0" unique_id=776267838 groups=["Outline"]]
-
-[node name="RingTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="32" unique_id=805985923 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.64328116, -0.044816483)
-
-[node name="RingTip_L" parent="Skeleton3D/RingTip_L" index="0" unique_id=103566471 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="RingTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="33" unique_id=1307001270 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.20947425, 0.64328116, -0.044816483)
-
-[node name="RingTip_LOutline" parent="Skeleton3D/RingTip_LOutline" index="0" unique_id=1234384895 groups=["Outline"]]
-
-[node name="Pinky_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="34" unique_id=1314706900 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.6910727, -0.029659871)
-
-[node name="Pinky_L" parent="Skeleton3D/Pinky_L" index="0" unique_id=1943836738 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="Pinky_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="35" unique_id=360586732 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.2231285, 0.6910727, -0.029659871)
-
-[node name="Pinky_LOutline" parent="Skeleton3D/Pinky_LOutline" index="0" unique_id=490550067 groups=["Outline"]]
-
-[node name="PinkyTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="36" unique_id=1571558713 groups=["PlayerSkin"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.6567501, -0.029582882)
-
-[node name="PinkyTip_L" parent="Skeleton3D/PinkyTip_L" index="0" unique_id=1586117053 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="PinkyTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="37" unique_id=1505473014 groups=["Outline"]]
-transform = Transform3D(-0.05512304, -0.7587424, -0.6490544, 0.99847704, -0.043345865, -0.03412765, -0.0022396836, -0.64994717, 0.75997627, -0.22123364, 0.6567501, -0.029582882)
-
-[node name="PinkyTip_LOutline" parent="Skeleton3D/PinkyTip_LOutline" index="0" unique_id=1007360651 groups=["Outline"]]
-
-[node name="Thumb_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="38" unique_id=908523587 groups=["PlayerSkin"]]
-transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.748091, -0.06781994)
-
-[node name="Thumb_L" parent="Skeleton3D/Thumb_L" index="0" unique_id=830449246 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="Thumb_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="39" unique_id=979240725 groups=["Outline"]]
-transform = Transform3D(-0.5245225, 0.72687984, -0.44330788, 0.84582865, 0.38543147, -0.36880398, -0.09721133, -0.56840855, -0.8169833, -0.16281497, 0.748091, -0.06781994)
-
-[node name="Thumb_LOutline" parent="Skeleton3D/Thumb_LOutline" index="0" unique_id=766796568 groups=["Outline"]]
-
-[node name="ThumbTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="40" unique_id=1949348992 groups=["PlayerSkin"]]
-transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.71892494, -0.0598442)
-
-[node name="ThumbTip_L" parent="Skeleton3D/ThumbTip_L" index="0" unique_id=1945955757 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="ThumbTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="41" unique_id=1795927003 groups=["Outline"]]
-transform = Transform3D(-0.20643067, 0.8722755, -0.44330788, 0.928942, 0.03240761, -0.36880398, -0.3073321, -0.48793983, -0.8169833, -0.15324938, 0.71892494, -0.0598442)
-
-[node name="ThumbTip_LOutline" parent="Skeleton3D/ThumbTip_LOutline" index="0" unique_id=2109371816 groups=["Outline"]]
-
-[node name="UpperArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="42" unique_id=847048607 groups=["PlayerSkin"]]
-transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
-
-[node name="UpperArm_R" parent="Skeleton3D/UpperArm_R" index="0" unique_id=1690058012 groups=["PlayerSkin"]]
-surface_material_override/0 = ExtResource("2_fg5ag")
-
-[node name="ElbowTarget_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" index="1" unique_id=1225593278]
-transform = Transform3D(0.99999714, -0.002207905, 0.0014940351, 0.002216339, 0.99998116, -0.005764067, -0.0014814138, 0.005767405, 0.99998254, 0.18339658, 0.040784776, 0.06887013)
-
-[node name="UpperArm_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="43" unique_id=1157343047 groups=["Outline"]]
-transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.1917654, -0.0014254088)
-
-[node name="UpperArm_ROutline" parent="Skeleton3D/UpperArm_ROutline" index="0" unique_id=2017019618 groups=["Outline"]]
-
-[node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="44" unique_id=1387102007]
+[node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="44" unique_id=1387102007]
 active = false
 setting_count = 1
 settings/0/target_node = NodePath("../../IKTarget_L")
 settings/0/pole_node = NodePath("../UpperArm_L/ElbowTarget_L")
 settings/0/root_bone_name = "bUpperArm.L"
-settings/0/root_bone = 23
+settings/0/root_bone = 17
 settings/0/middle_bone_name = "bLowerArm.L"
-settings/0/middle_bone = 26
+settings/0/middle_bone = 18
 settings/0/pole_direction = 0
 settings/0/end_bone_name = "bHand.L"
-settings/0/end_bone = 29
+settings/0/end_bone = 19
 settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
 
-[node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="45" unique_id=5905828]
+[node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="45" unique_id=5905828]
 active = false
 setting_count = 1
 settings/0/target_node = NodePath("../../IKTarget_R")
 settings/0/pole_node = NodePath("../UpperArm_R/ElbowTarget_R")
 settings/0/root_bone_name = "bUpperArm.R"
-settings/0/root_bone = 63
+settings/0/root_bone = 57
 settings/0/middle_bone_name = "bLowerArm.R"
-settings/0/middle_bone = 66
+settings/0/middle_bone = 58
 settings/0/pole_direction = 0
 settings/0/end_bone_name = "bHand.R"
-settings/0/end_bone = 69
+settings/0/end_bone = 59
 settings/0/use_virtual_end = false
 settings/0/extend_end_bone = false
 
-[node name="LowerArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="46" unique_id=975188692 groups=["PlayerSkin"]]
-transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
+[node name="MiddleTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="46" unique_id=2056184513 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6515297, -0.04908493)
 
-[node name="LowerArm_R" parent="Skeleton3D/LowerArm_R" index="0" unique_id=431202334 groups=["PlayerSkin"]]
+[node name="MiddleTip_R" parent="Skeleton3D/MiddleTip_R" index="0" unique_id=467505061 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="LowerArm_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="47" unique_id=1394474964 groups=["Outline"]]
-transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.9276549, -0.019012356)
+[node name="MiddleTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="47" unique_id=1106286502 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6515297, -0.04908493)
 
-[node name="LowerArm_ROutline" parent="Skeleton3D/LowerArm_ROutline" index="0" unique_id=1846055736 groups=["Outline"]]
+[node name="MiddleTip_ROutline" parent="Skeleton3D/MiddleTip_ROutline" index="0" unique_id=748189292 groups=["Outline"]]
 
-[node name="Hand_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="48" unique_id=1455393120 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7513087, -0.0344421)
+[node name="Middle_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="48" unique_id=1576269571 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.696792, -0.04701377)
 
-[node name="Hand_R" parent="Skeleton3D/Hand_R" index="0" unique_id=1067745881 groups=["PlayerSkin"]]
+[node name="Middle_R" parent="Skeleton3D/Middle_R" index="0" unique_id=1063143409 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Hand_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="49" unique_id=1242595105 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7513087, -0.0344421)
+[node name="Middle_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="49" unique_id=447470544 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.696792, -0.04701377)
 
-[node name="Hand_ROutline" parent="Skeleton3D/Hand_ROutline" index="0" unique_id=257388719 groups=["Outline"]]
+[node name="Middle_ROutline" parent="Skeleton3D/Middle_ROutline" index="0" unique_id=990086264 groups=["Outline"]]
 
-[node name="Thumb_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="50" unique_id=1786978652 groups=["PlayerSkin"]]
-transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7515302, -0.07061593)
+[node name="RingTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="50" unique_id=806510856 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.6506514, -0.031515695)
 
-[node name="Thumb_R" parent="Skeleton3D/Thumb_R" index="0" unique_id=1161132882 groups=["PlayerSkin"]]
+[node name="RingTip_R" parent="Skeleton3D/RingTip_R" index="0" unique_id=249016517 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Thumb_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="51" unique_id=114888135 groups=["Outline"]]
-transform = Transform3D(-0.34596688, -0.5719275, 0.7437785, -0.82209164, 0.5668383, 0.053475387, -0.45218605, -0.5929532, -0.6662841, 0.18221541, 0.7515302, -0.07061593)
+[node name="RingTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="51" unique_id=883436447 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.6506514, -0.031515695)
 
-[node name="Thumb_ROutline" parent="Skeleton3D/Thumb_ROutline" index="0" unique_id=618101028 groups=["Outline"]]
+[node name="RingTip_ROutline" parent="Skeleton3D/RingTip_ROutline" index="0" unique_id=1596918156 groups=["Outline"]]
 
-[node name="ThumbTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="52" unique_id=938382430 groups=["PlayerSkin"]]
-transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.72148687, -0.0791595)
+[node name="Ring_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="52" unique_id=388374217 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6959137, -0.029444532)
 
-[node name="ThumbTip_R" parent="Skeleton3D/ThumbTip_R" index="0" unique_id=1909356634 groups=["PlayerSkin"]]
+[node name="Ring_R" parent="Skeleton3D/Ring_R" index="0" unique_id=802661684 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="ThumbTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="53" unique_id=1538967222 groups=["Outline"]]
-transform = Transform3D(-0.10076451, -0.6607879, 0.7437785, -0.9764333, 0.20908943, 0.053475387, -0.19085203, -0.72086143, -0.6662841, 0.17672202, 0.72148687, -0.0791595)
+[node name="Ring_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="53" unique_id=1366124786 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6959137, -0.029444532)
 
-[node name="ThumbTip_ROutline" parent="Skeleton3D/ThumbTip_ROutline" index="0" unique_id=780003837 groups=["Outline"]]
+[node name="Ring_ROutline" parent="Skeleton3D/Ring_ROutline" index="0" unique_id=1832903423 groups=["Outline"]]
 
-[node name="Index_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="54" unique_id=481411733 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.69289213, -0.060540378)
+[node name="PinkyTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="54" unique_id=1653695439 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.6638199, -0.013303682)
 
-[node name="Index_R" parent="Skeleton3D/Index_R" index="0" unique_id=1829993920 groups=["PlayerSkin"]]
+[node name="PinkyTip_R" parent="Skeleton3D/PinkyTip_R" index="0" unique_id=1810180116 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Index_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="55" unique_id=1726538413 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20109732, 0.69289213, -0.060540378)
+[node name="PinkyTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="55" unique_id=640391235 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.6638199, -0.013303682)
 
-[node name="Index_ROutline" parent="Skeleton3D/Index_ROutline" index="0" unique_id=488277621 groups=["Outline"]]
+[node name="PinkyTip_ROutline" parent="Skeleton3D/PinkyTip_ROutline" index="0" unique_id=1908801233 groups=["Outline"]]
 
-[node name="IndexTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="56" unique_id=1498595931 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.65075135, -0.0624687)
+[node name="Pinky_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="56" unique_id=1874550299 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.69815683, -0.011732456)
 
-[node name="IndexTip_R" parent="Skeleton3D/IndexTip_R" index="0" unique_id=1866795820 groups=["PlayerSkin"]]
+[node name="Pinky_R" parent="Skeleton3D/Pinky_R" index="0" unique_id=1850590949 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="IndexTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="57" unique_id=301537756 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.20062749, 0.65075135, -0.0624687)
+[node name="Pinky_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="57" unique_id=253682916 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.69815683, -0.011732456)
 
-[node name="IndexTip_ROutline" parent="Skeleton3D/IndexTip_ROutline" index="0" unique_id=342779995 groups=["Outline"]]
+[node name="Pinky_ROutline" parent="Skeleton3D/Pinky_ROutline" index="0" unique_id=343627579 groups=["Outline"]]
 
-[node name="Middle_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="58" unique_id=587292014 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.69210446, -0.04701377)
+[node name="Hand_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="58" unique_id=264905666 groups=["PlayerSkin"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7559962, -0.0344421)
 
-[node name="Middle_R" parent="Skeleton3D/Middle_R" index="0" unique_id=787049471 groups=["PlayerSkin"]]
+[node name="Hand_R" parent="Skeleton3D/Hand_R" index="0" unique_id=1935032513 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Middle_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="59" unique_id=1039786542 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21623033, 0.69210446, -0.04701377)
+[node name="Hand_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="59" unique_id=26083459 groups=["Outline"]]
+transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.2107745, 0.7559962, -0.0344421)
 
-[node name="Middle_ROutline" parent="Skeleton3D/Middle_ROutline" index="0" unique_id=1504019871 groups=["Outline"]]
+[node name="Hand_ROutline" parent="Skeleton3D/Hand_ROutline" index="0" unique_id=1773217865 groups=["Outline"]]
 
-[node name="MiddleTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="60" unique_id=164029999 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6468422, -0.04908493)
+[node name="LowerArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="60" unique_id=634684377 groups=["PlayerSkin"]]
+transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.93234247, -0.019012356)
 
-[node name="MiddleTip_R" parent="Skeleton3D/MiddleTip_R" index="0" unique_id=1530418462 groups=["PlayerSkin"]]
+[node name="LowerArm_R" parent="Skeleton3D/LowerArm_R" index="0" unique_id=1777285849 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="MiddleTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="61" unique_id=1017214091 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.21572569, 0.6468422, -0.04908493)
+[node name="LowerArm_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="61" unique_id=536702573 groups=["Outline"]]
+transform = Transform3D(0.06753658, 0.11977604, 0.9905012, -0.9942487, 0.090783656, 0.056814168, -0.08311638, -0.98864156, 0.1252183, 0.1990023, 0.93234247, -0.019012356)
 
-[node name="MiddleTip_ROutline" parent="Skeleton3D/MiddleTip_ROutline" index="0" unique_id=1807120901 groups=["Outline"]]
+[node name="LowerArm_ROutline" parent="Skeleton3D/LowerArm_ROutline" index="0" unique_id=1425155832 groups=["Outline"]]
 
-[node name="Ring_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="62" unique_id=422894370 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6912261, -0.029444532)
+[node name="UpperArm_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="62" unique_id=494475360 groups=["PlayerSkin"]]
+transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.196453, -0.0014254088)
 
-[node name="Ring_R" parent="Skeleton3D/Ring_R" index="0" unique_id=757172673 groups=["PlayerSkin"]]
+[node name="UpperArm_R" parent="Skeleton3D/UpperArm_R" index="0" unique_id=35252336 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Ring_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="63" unique_id=1856156507 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22290523, 0.6912261, -0.029444532)
+[node name="ElbowTarget_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" index="1" unique_id=1225593278]
+transform = Transform3D(0.99999714, -0.002207905, 0.0014940351, 0.002216339, 0.99998116, -0.005764067, -0.0014814138, 0.005767405, 0.99998254, 0.18339658, 0.040784776, 0.06887013)
 
-[node name="Ring_ROutline" parent="Skeleton3D/Ring_ROutline" index="0" unique_id=890683801 groups=["Outline"]]
+[node name="UpperArm_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="63" unique_id=1895167062 groups=["Outline"]]
+transform = Transform3D(0.09432857, 0.122273505, 0.9880038, -0.99435014, 0.060101308, 0.087496504, -0.048681855, -0.9906751, 0.12725183, 0.17756878, 1.196453, -0.0014254088)
 
-[node name="RingTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="64" unique_id=1390083540 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.64596385, -0.031515695)
+[node name="UpperArm_ROutline" parent="Skeleton3D/UpperArm_ROutline" index="0" unique_id=534863942 groups=["Outline"]]
 
-[node name="RingTip_R" parent="Skeleton3D/RingTip_R" index="0" unique_id=215149993 groups=["PlayerSkin"]]
+[node name="Torso" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="64" unique_id=1261042041 groups=["PlayerSkin"]]
+transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2355603, -0.014564589)
+
+[node name="Torso" parent="Skeleton3D/Torso" index="0" unique_id=690048103 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="RingTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="65" unique_id=931917130 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22240059, 0.64596385, -0.031515695)
+[node name="TorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="65" unique_id=1055883373 groups=["Outline"]]
+transform = Transform3D(0.99903387, -0.0038013542, -0.04378347, 0.0053197406, 0.99938655, 0.034615308, 0.04362501, -0.034814782, 0.9984412, -0.0004203093, 1.2355603, -0.014564589)
 
-[node name="RingTip_ROutline" parent="Skeleton3D/RingTip_ROutline" index="0" unique_id=1656805597 groups=["Outline"]]
+[node name="TorsoOutline" parent="Skeleton3D/TorsoOutline" index="0" unique_id=644008579 groups=["Outline"]]
 
-[node name="Pinky_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="66" unique_id=2079317456 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.6934693, -0.011732456)
+[node name="MidTorso" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="66" unique_id=308054492 groups=["PlayerSkin"]]
+transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9421149, 0.00022134755)
 
-[node name="Pinky_R" parent="Skeleton3D/Pinky_R" index="0" unique_id=1903802168 groups=["PlayerSkin"]]
+[node name="MidTorso" parent="Skeleton3D/MidTorso" index="0" unique_id=2041668498 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Pinky_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="67" unique_id=1450916273 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22961494, 0.6934693, -0.011732456)
+[node name="MidTorsoOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="67" unique_id=872151049 groups=["Outline"]]
+transform = Transform3D(0.99904823, 7.8836456e-07, 0.043620184, 0.0022821971, 0.99862945, -0.052288003, -0.04356046, 0.052337784, 0.99767894, -0.00011063209, 0.9421149, 0.00022134755)
 
-[node name="Pinky_ROutline" parent="Skeleton3D/Pinky_ROutline" index="0" unique_id=288173199 groups=["Outline"]]
+[node name="MidTorsoOutline" parent="Skeleton3D/MidTorsoOutline" index="0" unique_id=1227681202 groups=["Outline"]]
 
-[node name="PinkyTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="68" unique_id=1937680417 groups=["PlayerSkin"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.65913236, -0.013303682)
+[node name="FootTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="68" unique_id=1698972500 groups=["PlayerSkin"]]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, 0.0024688076, -0.044362016)
 
-[node name="PinkyTip_R" parent="Skeleton3D/PinkyTip_R" index="0" unique_id=646292939 groups=["PlayerSkin"]]
+[node name="FootTip_L" parent="Skeleton3D/FootTip_L" index="0" unique_id=1705819069 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="PinkyTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="69" unique_id=835928824 groups=["Outline"]]
-transform = Transform3D(-0.011136871, 0.9021983, 0.43117806, -0.9988927, 0.0096731605, -0.04604035, -0.045708396, -0.4312135, 0.90109146, 0.22923212, 0.65913236, -0.013303682)
+[node name="FootTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="69" unique_id=496826290 groups=["Outline"]]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, 0.0024688076, -0.044362016)
 
-[node name="PinkyTip_ROutline" parent="Skeleton3D/PinkyTip_ROutline" index="0" unique_id=1118798697 groups=["Outline"]]
+[node name="FootTip_LOutline" parent="Skeleton3D/FootTip_LOutline" index="0" unique_id=1828491837 groups=["Outline"]]
 
-[node name="UpperLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="70" unique_id=680467202 groups=["Outline"]]
-transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.85711503, -0.00080565177)
+[node name="Foot_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="70" unique_id=1681443708 groups=["PlayerSkin"]]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0066004544, 0.09079312)
 
-[node name="UpperLeg_LOutline" parent="Skeleton3D/UpperLeg_LOutline" index="0" unique_id=976970463 groups=["Outline"]]
-
-[node name="UpperLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="71" unique_id=688732546 groups=["PlayerSkin"]]
-transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.85711503, -0.00080565177)
-
-[node name="UpperLeg_L" parent="Skeleton3D/UpperLeg_L" index="0" unique_id=162848240 groups=["PlayerSkin"]]
+[node name="Foot_L" parent="Skeleton3D/Foot_L" index="0" unique_id=428758569 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="LowerLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="72" unique_id=857216825 groups=["PlayerSkin"]]
-transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.09599081, 0.08959882)
+[node name="Foot_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="71" unique_id=924348945 groups=["Outline"]]
+transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0066004544, 0.09079312)
 
-[node name="LowerLeg_L" parent="Skeleton3D/LowerLeg_L" index="0" unique_id=906528539 groups=["PlayerSkin"]]
+[node name="Foot_LOutline" parent="Skeleton3D/Foot_LOutline" index="0" unique_id=1775761786 groups=["Outline"]]
+
+[node name="LowerLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="72" unique_id=2049048865 groups=["PlayerSkin"]]
+transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.100678265, 0.08959882)
+
+[node name="LowerLeg_L" parent="Skeleton3D/LowerLeg_L" index="0" unique_id=2067806062 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="LowerLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="73" unique_id=959976022 groups=["Outline"]]
-transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.09599081, 0.08959882)
+[node name="LowerLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="73" unique_id=676941272 groups=["Outline"]]
+transform = Transform3D(0.92375165, -0.005560996, 0.38295156, -0.041416343, 0.99258053, 0.114317715, -0.38074607, -0.12146163, 0.91666764, -0.075044565, 0.100678265, 0.08959882)
 
-[node name="LowerLeg_LOutline" parent="Skeleton3D/LowerLeg_LOutline" index="0" unique_id=1285534605 groups=["Outline"]]
+[node name="LowerLeg_LOutline" parent="Skeleton3D/LowerLeg_LOutline" index="0" unique_id=1752620627 groups=["Outline"]]
 
-[node name="Foot_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="74" unique_id=443003240 groups=["PlayerSkin"]]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0019129962, 0.09079312)
+[node name="UpperLeg_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="74" unique_id=463084242 groups=["Outline"]]
+transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.8618025, -0.00080565177)
 
-[node name="Foot_L" parent="Skeleton3D/Foot_L" index="0" unique_id=1790880701 groups=["PlayerSkin"]]
+[node name="UpperLeg_LOutline" parent="Skeleton3D/UpperLeg_LOutline" index="0" unique_id=1414155173 groups=["Outline"]]
+
+[node name="UpperLeg_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="75" unique_id=753190162 groups=["PlayerSkin"]]
+transform = Transform3D(0.92375165, 0.027836595, 0.381979, -0.041416343, 0.9987669, 0.027373608, -0.38074607, -0.04110659, 0.9237655, -0.07209264, 0.8618025, -0.00080565177)
+
+[node name="UpperLeg_L" parent="Skeleton3D/UpperLeg_L" index="0" unique_id=1693416211 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Foot_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="75" unique_id=127283054 groups=["Outline"]]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.07842885, 0.0019129962, 0.09079312)
+[node name="FootTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="76" unique_id=1320895167 groups=["PlayerSkin"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.010226462, -0.19576567)
 
-[node name="Foot_LOutline" parent="Skeleton3D/Foot_LOutline" index="0" unique_id=653571724 groups=["Outline"]]
-
-[node name="FootTip_L" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="76" unique_id=472520922 groups=["PlayerSkin"]]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, -0.0022186507, -0.044362016)
-
-[node name="FootTip_L" parent="Skeleton3D/FootTip_L" index="0" unique_id=88829556 groups=["PlayerSkin"]]
+[node name="FootTip_R" parent="Skeleton3D/FootTip_R" index="0" unique_id=1725877587 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="FootTip_LOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="77" unique_id=461737422 groups=["Outline"]]
-transform = Transform3D(0.90616834, 0.031316634, 0.42175603, -0.046363395, 0.9986, 0.025465533, -0.42036813, -0.0426301, 0.9063517, -0.14054225, -0.0022186507, -0.044362016)
+[node name="FootTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="77" unique_id=1628926287 groups=["Outline"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.010226462, -0.19576567)
 
-[node name="FootTip_LOutline" parent="Skeleton3D/FootTip_LOutline" index="0" unique_id=1454191718 groups=["Outline"]]
+[node name="FootTip_ROutline" parent="Skeleton3D/FootTip_ROutline" index="0" unique_id=260401253 groups=["Outline"]]
 
-[node name="UpperLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="78" unique_id=1267862034 groups=["PlayerSkin"]]
-transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.8619256, -0.028516524)
+[node name="Foot_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="78" unique_id=341897954 groups=["PlayerSkin"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.007396199, -0.04819598)
 
-[node name="UpperLeg_R" parent="Skeleton3D/UpperLeg_R" index="0" unique_id=86405601 groups=["PlayerSkin"]]
+[node name="Foot_R" parent="Skeleton3D/Foot_R" index="0" unique_id=1255212077 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="UpperLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="79" unique_id=1223535947 groups=["Outline"]]
-transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.8619256, -0.028516524)
+[node name="Foot_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="79" unique_id=54269901 groups=["Outline"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.007396199, -0.04819598)
 
-[node name="UpperLeg_ROutline" parent="Skeleton3D/UpperLeg_ROutline" index="0" unique_id=607740141 groups=["Outline"]]
+[node name="Foot_ROutline" parent="Skeleton3D/Foot_ROutline" index="0" unique_id=1081978721 groups=["Outline"]]
 
-[node name="LowerLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="80" unique_id=1374413949 groups=["PlayerSkin"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.0963096, -0.04600669)
+[node name="LowerLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="80" unique_id=1946369176 groups=["PlayerSkin"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.10099709, -0.04600669)
 
-[node name="LowerLeg_R" parent="Skeleton3D/LowerLeg_R" index="0" unique_id=1556388648 groups=["PlayerSkin"]]
+[node name="LowerLeg_R" parent="Skeleton3D/LowerLeg_R" index="0" unique_id=419425940 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="LowerLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="81" unique_id=1599190660 groups=["Outline"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.0963096, -0.04600669)
+[node name="LowerLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="81" unique_id=438906477 groups=["Outline"]]
+transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.10303022, 0.10099709, -0.04600669)
 
-[node name="LowerLeg_ROutline" parent="Skeleton3D/LowerLeg_ROutline" index="0" unique_id=643084337 groups=["Outline"]]
+[node name="LowerLeg_ROutline" parent="Skeleton3D/LowerLeg_ROutline" index="0" unique_id=1978745311 groups=["Outline"]]
 
-[node name="Foot_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="82" unique_id=1820939116 groups=["PlayerSkin"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.0027087107, -0.04819598)
+[node name="UpperLeg_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="82" unique_id=222068888 groups=["PlayerSkin"]]
+transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.86661315, -0.028516524)
 
-[node name="Foot_R" parent="Skeleton3D/Foot_R" index="0" unique_id=1296780199 groups=["PlayerSkin"]]
+[node name="UpperLeg_R" parent="Skeleton3D/UpperLeg_R" index="0" unique_id=584206928 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="Foot_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="83" unique_id=855285727 groups=["Outline"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.1056185, 0.0027087107, -0.04819598)
+[node name="UpperLeg_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="83" unique_id=879912256 groups=["Outline"]]
+transform = Transform3D(0.990718, -0.044808395, -0.12833528, 0.030916661, 0.99364156, -0.108261675, 0.13237028, 0.10328909, 0.985804, 0.0711236, 0.86661315, -0.028516524)
 
-[node name="Foot_ROutline" parent="Skeleton3D/Foot_ROutline" index="0" unique_id=1644488058 groups=["Outline"]]
+[node name="UpperLeg_ROutline" parent="Skeleton3D/UpperLeg_ROutline" index="0" unique_id=1002789534 groups=["Outline"]]
 
-[node name="FootTip_R" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="84" unique_id=2146465758 groups=["PlayerSkin"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
+[node name="Hips" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="84" unique_id=1324508535 groups=["PlayerSkin"]]
+transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7237462, -0.012782706)
 
-[node name="FootTip_R" parent="Skeleton3D/FootTip_R" index="0" unique_id=28171364 groups=["PlayerSkin"]]
+[node name="Hips" parent="Skeleton3D/Hips" index="0" unique_id=2027854910 groups=["PlayerSkin"]]
 surface_material_override/0 = ExtResource("2_fg5ag")
 
-[node name="FootTip_ROutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(381001546) index="85" unique_id=1409888219 groups=["Outline"]]
-transform = Transform3D(0.990718, -0.033452727, -0.13175224, 0.030916661, 0.9992961, -0.02124814, 0.13237028, 0.016977564, 0.99105495, 0.12451903, 0.005538974, -0.19576567)
+[node name="HipsOutline" parent="Skeleton3D" parent_id_path=PackedInt32Array(1087456090) index="85" unique_id=287275817 groups=["Outline"]]
+transform = Transform3D(0.9848076, 7.8836456e-07, 0.17364895, 0.009087626, 0.99862945, -0.051542785, -0.17341101, 0.052337784, 0.98345786, -4.9926595e-05, 0.7237462, -0.012782706)
 
-[node name="FootTip_ROutline" parent="Skeleton3D/FootTip_ROutline" index="0" unique_id=1412886195 groups=["Outline"]]
+[node name="HipsOutline" parent="Skeleton3D/HipsOutline" index="0" unique_id=641829355 groups=["Outline"]]
 
 [node name="IKTarget_R" type="Marker3D" parent="." index="2" unique_id=1454238775]
 top_level = true

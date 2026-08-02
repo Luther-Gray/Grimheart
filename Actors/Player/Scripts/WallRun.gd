@@ -7,8 +7,8 @@ extends Node3D
 @export var TicTacSound: AudioStream
 @export var AudioPlayer: AudioStreamPlayer3D
 
-var VerticalRunDuration : float = 0.4
-var VerticalScrambleSpeed : float = 20.0
+var VerticalRunDuration : float = 2.0
+var VerticalScrambleSpeed : float = 5.0
 var TicTacStrength : float = 4.0
 var TicTacAngle : float = 4.0
 
@@ -23,28 +23,32 @@ var WallNormal : Vector3
 func _physics_process(delta: float) -> void:
 	if Source.isWallRunning:
 		WallRunTimer -= delta
+		if !ClamberShapeCast.is_colliding():
+			_detatch_wall()
+			return
+		if Input.is_action_just_pressed("MV_Jump") and ClamberShapeCast.get_collider(0):
+			_tic_tac()
+			return
 		if WallRunTimer <= 0.0:
 			_detatch_wall()
 		return
+
 	if Input.is_action_just_pressed("MV_Jump") and Source.isSprinting and Source.is_on_floor() and ClamberShapeCast.get_collider(0):
 		_wall_run_v()
-	if Input.is_action_just_pressed("MV_Jump") and Source.isWallRunning and ClamberShapeCast.get_collider(0):
-		_tic_tac()
 
 #// Physics - Wallruns are seperated for extra conditionals. Heavy 1 Handed Weapons. Broken Arms. Etc.
 func _wall_run_v() -> void: #// Upwards scramble
 	if not ClamberShapeCast.is_colliding(): # Can you wallrun?
 		return
 	Source.isWallRunning = true
+	Source.isSprinting = false
 	WallNormal = ClamberShapeCast.get_collision_normal(0)
 	Source.velocity.x = -WallNormal.x * 1.5
 	Source.velocity.y = VerticalScrambleSpeed
 	Source.velocity.z = -WallNormal.z * 1.5
 	WallRunTimer = VerticalRunDuration
-	#if AnimManager:
-		#AnimManager._override_travel("aWallRunUp")
-	#else:
-		#return
+	if AnimManager:
+		AnimManager._override_travel("aWallRunUp")
 
 func _wall_run_r() -> void: #// Wallrun as long as stamina allows | RIGHT
 	pass
@@ -53,6 +57,8 @@ func _wall_run_l() -> void: #// Wallrun as long as stamina allows | LEFT
 	pass
 
 func _tic_tac() -> void: #// Jump from wall
+	if !ClamberShapeCast.is_colliding():
+		return
 	WallNormal = ClamberShapeCast.get_collision_normal(0)
 	Source.velocity = WallNormal * TicTacStrength
 	Source.velocity.y = TicTacAngle
@@ -61,3 +67,4 @@ func _tic_tac() -> void: #// Jump from wall
 
 func _detatch_wall() -> void: #// Lets go of wall
 	Source.isWallRunning = false
+	AnimManager.AnimOverride = false
