@@ -30,6 +30,7 @@ func _process(_delta: float) -> void:
 		_add_debug("Slide State", Source.isSliding, 6)
 		_add_debug("Vault State", Source.isVaulting, 7)
 		_add_debug("Crouch State", Source.isCrouched, 8)
+		_add_debug("Wall Running", Source.isWallRunning, 9)
 
 func _add_debug(MetricName: String, Metric, ListOrder: int):
 	var DebugLabel = property_container.find_child(MetricName, true, false)

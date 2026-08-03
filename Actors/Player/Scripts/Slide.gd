@@ -24,6 +24,7 @@ const SlideBoost : float = 2.0
 
 func _physics_process(delta: float) -> void:
 	if Source.isSliding:
+		AnimManager._override_travel("aSlide")
 		if Source.is_on_floor():
 			var FloorNormal = Source.get_floor_normal()
 			var SlideDirection = -Source.global_transform.basis.z
@@ -56,7 +57,6 @@ func _slide():
 	Source.isCrouched = true # Adding Crouch True here for extra functions tied to "crouched" abilities like sneak attacks.
 	var SlideDirection = -Source.global_transform.basis.z
 	Source.velocity += SlideDirection * SlideBoost
-	AnimManager._override_travel("aSlide")
 	
 
 func _end_slide():

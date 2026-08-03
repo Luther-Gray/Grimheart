@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="20_s8ljq"]
 [ext_resource type="AudioStream" uid="uid://g7gshy4js70s" path="res://_AUDIOFILES/CatchHold-006.wav" id="20_yw7as"]
 [ext_resource type="AudioStream" uid="uid://bwtikwghjjf2v" path="res://_AUDIOFILES/BodyFallHard-002.wav" id="21_hdio0"]
+[ext_resource type="AudioStream" uid="uid://c6ox4ke8pxaru" path="res://_AUDIOFILES/Tile_Mono_03.wav" id="29_jiph2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6ejb"]
 radius = 0.3
@@ -370,7 +371,7 @@ states/aWallRunUp/position = Vector2(956.7735, 404.60364)
 states/root_aClamber/node = SubResource("AnimationNodeAnimation_m1t7r")
 states/root_aClamber/position = Vector2(389.26093, 347.43573)
 transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aIdle", "aIdleArmed", SubResource("AnimationNodeStateMachineTransition_r3pko"), "aIdleArmed", "aIdle", SubResource("AnimationNodeStateMachineTransition_j53hc"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "root_aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "root_aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aSprint", "aSlide", SubResource("AnimationNodeStateMachineTransition_3mvtf"), "aFall", "aLanding", SubResource("AnimationNodeStateMachineTransition_m46g3"), "aLanding", "aIdle", SubResource("AnimationNodeStateMachineTransition_7cy04"), "aLanding", "aSprint", SubResource("AnimationNodeStateMachineTransition_stvej"), "aLanding", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_m0e8k"), "aIdle", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_wqyix"), "aCrouchIdle", "aIdle", SubResource("AnimationNodeStateMachineTransition_vy72i"), "aSlide", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_jhh7x"), "aWalkSpace", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_c2opx"), "aIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_v8mwv"), "aCrouchSpace", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_hdyga"), "aCrouchSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_e3tbv"), "aCrouchIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_peq40"), "aCrouchSpace", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_d8b1y"), "aFall", "aRoll", SubResource("AnimationNodeStateMachineTransition_06dkf"), "aRoll", "aIdle", SubResource("AnimationNodeStateMachineTransition_yln03"), "aRoll", "aSprint", SubResource("AnimationNodeStateMachineTransition_7x427"), "aRoll", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_ymlwl"), "aSprint", "aWallRunUp", SubResource("AnimationNodeStateMachineTransition_yt85l"), "aWallRunUp", "aFall", SubResource("AnimationNodeStateMachineTransition_t35ly"), "aWallRunUp", "root_aClamber", SubResource("AnimationNodeStateMachineTransition_fhqhq"), "aJumpVariants", "aWallRunUp", SubResource("AnimationNodeStateMachineTransition_okknf")]
-graph_offset = Vector2(-25.746094, -32.05002)
+graph_offset = Vector2(-83.58984, -211.33908)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
@@ -527,6 +528,7 @@ volume_db = -0.5
 script = ExtResource("15_n45d6")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
+WallRunSound = ExtResource("29_jiph2")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
@@ -557,4 +559,3 @@ shape = SubResource("SphereShape3D_r3pko")
 spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1477151922]
-current = true

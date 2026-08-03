@@ -7,7 +7,9 @@ extends Node3D
 @export var TicTacSound: AudioStream
 @export var AudioPlayer: AudioStreamPlayer3D
 
-var VerticalRunDuration : float = 2.0
+var WallRunTimer: float
+var WallNormal : Vector3
+var VerticalRunDuration : float = 0.8
 var VerticalScrambleSpeed : float = 5.0
 var TicTacStrength : float = 4.0
 var TicTacAngle : float = 4.0
@@ -17,12 +19,14 @@ var TicTacAngle : float = 4.0
 @onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapecast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var Jump: Node3D = $"../Jump"
-var WallRunTimer: float
-var WallNormal : Vector3
 
 func _physics_process(delta: float) -> void:
 	if Source.isWallRunning:
 		WallRunTimer -= delta
+		AnimManager._override_travel("aWallRunUp")
+		if WallRunSound:
+			AudioPlayer.stream = WallRunSound
+			AudioPlayer.play()
 		if !ClamberShapeCast.is_colliding():
 			_detatch_wall()
 			return
@@ -47,8 +51,7 @@ func _wall_run_v() -> void: #// Upwards scramble
 	Source.velocity.y = VerticalScrambleSpeed
 	Source.velocity.z = -WallNormal.z * 1.5
 	WallRunTimer = VerticalRunDuration
-	if AnimManager:
-		AnimManager._override_travel("aWallRunUp")
+
 
 func _wall_run_r() -> void: #// Wallrun as long as stamina allows | RIGHT
 	pass
@@ -63,7 +66,6 @@ func _tic_tac() -> void: #// Jump from wall
 	Source.velocity = WallNormal * TicTacStrength
 	Source.velocity.y = TicTacAngle
 	Jump.WasAirborne = true
-	print_debug("EJECT")
 
 func _detatch_wall() -> void: #// Lets go of wall
 	Source.isWallRunning = false

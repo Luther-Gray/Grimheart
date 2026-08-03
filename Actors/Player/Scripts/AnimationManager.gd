@@ -42,7 +42,7 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
-	if !Source.isCrouched:
+	if !Source.isCrouched and !Source.isWallRunning:
 		AnimTree.set("parameters/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	elif Source.isCrouched:
 		AnimTree.set("parameters/aCrouchSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
