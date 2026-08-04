@@ -52,9 +52,9 @@ func _process(delta: float) -> void:
 		return
 	if isLookingBack:
 		pass
-	if Player.InputDir.x > 0 :
+	if Player.InputDir.x > 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), Settings.SwaySpeed * delta)
-	elif Player.InputDir.x < 0 :
+	elif Player.InputDir.x < 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(Settings.SwayAmount),Settings.SwaySpeed * delta)
 	else:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)

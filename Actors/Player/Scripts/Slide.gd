@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 				return
 			else:
 				SlideTimer -= delta
-		if SlideTimer <= 0 or Input.is_action_just_pressed("MV_Jump"):
+		if SlideTimer <= 0 or Input.is_action_just_pressed("MV_Jump") or !Source.is_on_floor():
 			_end_slide()
 			return
 	if Source.Settings.CrouchToggle:
