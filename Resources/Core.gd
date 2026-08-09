@@ -23,12 +23,13 @@ class_name Core
 @export_subgroup("Stamina")
 @export var Stamina : int
 @export var MaxStamina : int
+@export var ExhaustRate : float
 @export_subgroup("Breath")
 @export var Breath : int
 @export var MaxBreath : int
 @export_subgroup("Heart")
 @export var Heart : int
-@export var HeartRate : int
+@export var HeartRate : float
 @export var MaxHeart : int
 @export_subgroup("Hunger")
 @export var Stomach : int

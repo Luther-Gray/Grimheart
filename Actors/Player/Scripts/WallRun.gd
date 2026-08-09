@@ -9,6 +9,7 @@ extends Node3D
 
 var WallRunTimer: float
 var WallNormal : Vector3
+var WallPadding : float = 1.8 ## WallPadding moves the player back slightly so they don't clip into the wall while scaling.
 var VerticalRunDuration : float = 0.8
 var VerticalScrambleSpeed : float = 5.0
 var TicTacStrength : float = 8.0
@@ -50,6 +51,7 @@ func _wall_run_v() -> void: #// Upwards scramble
 	Source.isWallRunning = true
 	Source.isSprinting = false
 	WallNormal = ClamberShapeCast.get_collision_normal(0)
+	Source.global_position.z = Source.global_position.z + WallPadding
 	Source.velocity.x = -WallNormal.x * 1.5
 	Source.velocity.y = VerticalScrambleSpeed
 	Source.velocity.z = -WallNormal.z * 1.5
@@ -72,5 +74,6 @@ func _tic_tac() -> void: #// Jump from wall
 	Jump.WasAirborne = true
 
 func _detatch_wall() -> void: #// Lets go of wall
+	Source.global_position.z = Source.global_position.z - WallPadding
 	Source.isWallRunning = false
 	AnimManager.AnimOverride = false
