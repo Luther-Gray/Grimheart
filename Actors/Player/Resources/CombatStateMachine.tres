@@ -1,0 +1,12 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://bd2gnt01um7br"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ieod"]
+animation = &"aIdleUnarmed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4gkb1"]
+xfade_time = 0.5
+
+[resource]
+states/aIdleUnarmed/node = SubResource("AnimationNodeAnimation_0ieod")
+states/aIdleUnarmed/position = Vector2(543.224, 101.57465)
+transitions = ["Start", "aIdleUnarmed", SubResource("AnimationNodeStateMachineTransition_4gkb1")]

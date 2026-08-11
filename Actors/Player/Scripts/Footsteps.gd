@@ -19,8 +19,8 @@ const FootstepPoints: Dictionary = {
 }
 
 func _process(_delta: float) -> void:
-	var CurrentAnimState: String = AnimManager.MovementMachine.get_current_node()
-	var FootstepPosition: float = AnimManager.MovementMachine.get_current_play_position()
+	var CurrentAnimState: String = AnimManager.MovementPlayback.get_current_node()
+	var FootstepPosition: float = AnimManager.MovementPlayback.get_current_play_position()
 
 	if CurrentAnimState in FootstepPoints:
 		for frame in FootstepPoints[CurrentAnimState]:

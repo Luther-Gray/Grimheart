@@ -5,12 +5,10 @@ extends Node3D
 @export var VaultSound : AudioStream
 @export var AudioPlayer : AudioStreamPlayer3D
 @onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
-@onready var LedgeRay: RayCast3D = $"../LedgeCeilingRaycast"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var DEV_Target: MeshInstance3D = $"../../DEV_Target"
 @onready var VaultRaycast: RayCast3D = $VaultRaycast
-
-const VaultLayer : int = 2
+const VaultLayer : int = 2 ## The collision layer that Vaulting can interact with.
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("MV_Jump") and Source.isSprinting:

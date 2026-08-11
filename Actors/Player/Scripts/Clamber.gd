@@ -28,7 +28,7 @@ var ClamberBoost : float = 10
 
 func _physics_process(_delta: float) -> void:
 	if Source.isClambering:
-		var RootMotion = AnimManager.AnimTree.get_root_motion_position()
+		var RootMotion = AnimManager.AnimationDirector.get_root_motion_position()
 		Source.global_position += (Source.global_transform.basis * RootMotion) * ClamberBoost
 		Source.velocity = Vector3.ZERO
 		return
@@ -87,7 +87,6 @@ func _grab_ledge():
 		IK_ArmR.active = true
 		AnimManager.AnimOverride = false)
 	DEV_Target.global_position = LedgeSurface
-	print("Ledge Grab")
 
 #// Ledge Release
 func _release_ledge():
@@ -96,7 +95,6 @@ func _release_ledge():
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
 	Source.velocity.y = -2.0
-	print("Let Go")
 
 #// Ledge Pull Up
 func _clamber_ledge():

@@ -14,6 +14,7 @@ var VerticalRunDuration : float = 0.8
 var VerticalScrambleSpeed : float = 5.0
 var TicTacStrength : float = 8.0
 var TicTacAngle : float = 4.0
+var TicTacSpeed : float = 10.0
 
 @onready var WallL: RayCast3D = $"../WallRayL"
 @onready var WallR: RayCast3D = $"../WallRayR"
@@ -32,7 +33,7 @@ func _physics_process(delta: float) -> void:
 			_detatch_wall()
 			return
 		if Input.is_action_just_pressed("MV_Jump") and ClamberShapeCast.get_collider(0):
-			_tic_tac()
+			_tic_tac(delta)
 			if TicTacSound:
 				AudioPlayer.stream = TicTacSound
 				AudioPlayer.play()
@@ -64,13 +65,14 @@ func _wall_run_r() -> void: #// Wallrun as long as stamina allows | RIGHT
 func _wall_run_l() -> void: #// Wallrun as long as stamina allows | LEFT
 	pass
 
-func _tic_tac() -> void: #// Jump from wall
+func _tic_tac(_delta : float) -> void: #// Jump from wall
 	AnimManager._override_travel("aTicTac")
 	if !ClamberShapeCast.is_colliding():
 		return
 	WallNormal = ClamberShapeCast.get_collision_normal(0)
 	Source.velocity = WallNormal * TicTacStrength
 	Source.velocity.y = TicTacAngle
+	Source.global_rotation.y += atan2(WallNormal.x, WallNormal.z)
 	Jump.WasAirborne = true
 
 func _detatch_wall() -> void: #// Lets go of wall
