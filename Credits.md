@@ -8,8 +8,5 @@ ProtonScatter - HungryProton | MIT
 # --- 3rd Party Assets ---
 ### Fonts
 Kubasta - Studio Zichy | CC0
-BitFantasy - Mitch (NB Pixel Font Bundle) | CC0
 ### Sound FX
 Nox Sounds - Essentials SFX | CC0
-
-- [ ] Check

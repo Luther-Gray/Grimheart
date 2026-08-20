@@ -143,9 +143,9 @@ size = Vector3(0.2, 7, 2)
 material = ExtResource("2_54f7j")
 
 [node name="mBox26" type="CSGBox3D" parent="." unique_id=1176102546]
-transform = Transform3D(-0.49999997, -0.86602545, -8.742277e-08, -0.86602545, 0.49999997, 0, 4.371139e-08, 7.571035e-08, -1, -21.660254, 6.5999994, -1.8999994)
+transform = Transform3D(-0.49999997, -0.86602545, -8.742277e-08, -0.86602545, 0.49999997, 0, 4.371139e-08, 7.571035e-08, -1, -21.660254, 6.5999994, 0.10000062)
 use_collision = true
-size = Vector3(0.2, 27, 10)
+size = Vector3(0.2, 27, 6)
 material = ExtResource("2_54f7j")
 
 [node name="mBox11" type="CSGBox3D" parent="." unique_id=1374168704]
