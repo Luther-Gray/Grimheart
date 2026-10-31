@@ -13494,7 +13494,7 @@
 			"rotation": [0, 0, 0],
 			"fov": 70,
 			"aspect_ratio": [16, 9],
-			"linked_preview": "main",
+			"linked_preview": "",
 			"camera_linked": false,
 			"visibility": true,
 			"export": true,
@@ -14940,7 +14940,7 @@
 			"override": false,
 			"length": 2.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"group_name": "",
 			"scope": 0,
 			"anim_time_update": "",
@@ -18780,6 +18780,12 @@
 				"fe5f5b45-2636-873d-82a8-f31c649d15b2": {
 					"name": "bWield.R",
 					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
 					"rotation_global": false,
 					"quaternion_interpolation": false
 				}
@@ -48585,6 +48591,24 @@
 							"interpolation": "catmullrom"
 						}
 					]
+				},
+				"1546dac4-3cd2-8f30-a9a0-be688ce9857e": {
+					"name": "bWield.L",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fe5f5b45-2636-873d-82a8-f31c649d15b2": {
+					"name": "bWield.R",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -75726,6 +75750,12 @@
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -79696,6 +79726,12 @@
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -81229,6 +81265,12 @@
 				"fe5f5b45-2636-873d-82a8-f31c649d15b2": {
 					"name": "bWield.R",
 					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
 					"rotation_global": false,
 					"quaternion_interpolation": false
 				}
@@ -83748,6 +83790,12 @@
 				"fe5f5b45-2636-873d-82a8-f31c649d15b2": {
 					"name": "bWield.R",
 					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ce01040f-489f-7161-4fc4-10bf70e765a1": {
+					"name": "camera",
+					"type": "camera",
 					"rotation_global": false,
 					"quaternion_interpolation": false
 				}
@@ -110475,7 +110523,7 @@
 			"override": false,
 			"length": 2.5,
 			"snapping": 24,
-			"selected": false,
+			"selected": true,
 			"group_name": "",
 			"scope": 0,
 			"anim_time_update": "",

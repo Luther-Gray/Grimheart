@@ -19,23 +19,21 @@ extends Node3D
 @export var HandTargetL: Marker3D
 @export var HandTargetR: Marker3D
 
+var ClamberGoal : Vector3
 
 # Ledge Grab
 @export_range(1.0, 3.0, 0.1) var LedgeYOffset : float = 1.4 # Higher Numbers mean Lower Down.
 @export_range(-1.0, 1.0, 0.1) var LedgeZOffset : float = -0.9 # Negative Moves away from Ledge.
-# Clamber Boost - Magic number to make the clamber actually go up. No idea why delta alone isn't enough.
-var ClamberBoost : float = 10
 
 func _physics_process(_delta: float) -> void:
 	if Source.isClambering:
 		var RootMotion = AnimManager.AnimationDirector.get_root_motion_position()
-		Source.global_position += (Source.global_transform.basis * RootMotion) * ClamberBoost
+		Source.global_position += Source.global_transform.basis * RootMotion
 		Source.velocity = Vector3.ZERO
 		return
 	if Source.isHanging:
 		var _LedgeInput = Input.get_axis("MV_Left", "MV_Right")
 		#_wall_check(LedgeInput)
-		
 		if Input.is_action_just_pressed("MV_Jump"):
 			_clamber_ledge()
 		elif Input.is_action_just_pressed("MV_Crouch"):
@@ -76,6 +74,7 @@ func _grab_ledge():
 	var WallRight = Vector3.UP.cross(WallNormal).normalized()
 	var HandOffset = Vector3(0, LedgeYOffset, LedgeZOffset)
 	var HangPos = LedgeSurface - (Source.global_transform.basis * HandOffset)
+	ClamberGoal = LedgeSurface - (WallNormal * 0.5) + Vector3(0, 0.05, 0) ## Move the Clamber to this Destination.
 	# Position Hand Markers
 	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)
 	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.01, 0)
@@ -110,6 +109,7 @@ func _clamber_ledge():
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
+		Source.global_position = ClamberGoal
 		Source.isClambering = false
 		AnimManager.AnimOverride = false)
 	

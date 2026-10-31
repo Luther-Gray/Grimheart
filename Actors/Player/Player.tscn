@@ -40,7 +40,7 @@ filter_enabled = true
 filters = ["Skeleton3D:bHand.L", "Skeleton3D:bHand.R", "Skeleton3D:bIndexFinger.L", "Skeleton3D:bIndexFinger.R", "Skeleton3D:bIndexFingerTip.L", "Skeleton3D:bIndexFingerTip.R", "Skeleton3D:bLowerArm.L", "Skeleton3D:bLowerArm.R", "Skeleton3D:bMiddleFinger.L", "Skeleton3D:bMiddleFinger.R", "Skeleton3D:bMiddleFingerTip.L", "Skeleton3D:bMiddleFingerTip.R", "Skeleton3D:bPinkyFinger.L", "Skeleton3D:bPinkyFinger.R", "Skeleton3D:bPinkyFingerTip.L", "Skeleton3D:bPinkyFingerTip.R", "Skeleton3D:bRingFinger.L", "Skeleton3D:bRingFinger.R", "Skeleton3D:bRingFingerTip.L", "Skeleton3D:bRingFingerTip.R", "Skeleton3D:bThumb.L", "Skeleton3D:bThumb.R", "Skeleton3D:bThumbTip.L", "Skeleton3D:bThumbTip.R", "Skeleton3D:bUpperArm.L", "Skeleton3D:bUpperArm.R"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jb54q"]
-graph_offset = Vector2(-1258.6666, -78.291664)
+graph_offset = Vector2(-535.6302, -132.34895)
 nodes/output/position = Vector2(293.33334, 106.666664)
 nodes/LocomotionStateMachine/node = ExtResource("9_rda0l")
 nodes/LocomotionStateMachine/position = Vector2(-320, 26.666666)
@@ -76,6 +76,7 @@ texture_filter = 2
 
 [node name="AnimationDirector" type="AnimationTree" parent="." unique_id=489775585]
 root_node = NodePath("../Clyde")
+callback_mode_process = 0
 tree_root = SubResource("AnimationNodeBlendTree_jb54q")
 anim_player = NodePath("../Clyde/AnimationPlayer")
 parameters/LocomotionStateMachine/aCrouchSpace/blend_position = Vector2(0, 0)
@@ -113,7 +114,6 @@ visible = false
 Source = NodePath("..")
 
 [node name="HUD" type="Control" parent="." unique_id=283725596]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,7 +181,7 @@ VaultSound = ExtResource("18_hdio0")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="VaultRaycast" type="RayCast3D" parent="Vault" unique_id=289577030]
-transform = Transform3D(1, 0, 0, 0, -4.506182e-08, -1.0000001, 0, 0.53999996, -8.344783e-08, 0, 0.80000013, -0.24875927)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.8, -0.25)
 collision_mask = 2
 hit_from_inside = true
 
@@ -215,7 +215,6 @@ TicTacSound = ExtResource("30_87ye5")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
-visible = false
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
