@@ -99,7 +99,7 @@ func _roll():
 	CameraPivot._force_camera(true)
 	AnimManager._override_travel("aRoll")
 func _roll_buffer(delta):
-	if Input.is_action_just_pressed("MV_Sprint"):
+	if Input.is_action_just_pressed("MV_Crouch"):
 		RollWindow = AnimManager._get_anim_length("aRoll")
 	elif RollWindow > 0.0:
 		RollWindow -= delta

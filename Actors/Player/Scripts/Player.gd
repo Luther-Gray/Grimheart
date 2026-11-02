@@ -55,5 +55,5 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, Deceleration * Influence * delta)
 			velocity.z = move_toward(velocity.z, 0, Deceleration * Influence * delta)
 			isMoving = false
-	if !isHanging and !isClambering:
+	if !isHanging and !isClambering and !isVaulting:
 		move_and_slide()
