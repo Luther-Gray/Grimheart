@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://e6h3xvpowdnj"]
+
+[ext_resource type="PackedScene" uid="uid://cp4ewu6ksd2ny" path="res://_GLTF/-Actors/PlayerHead.gltf" id="1_wwbr4"]
+
+[node name="ClydeHead" unique_id=434189547 instance=ExtResource("1_wwbr4")]
+
+[node name="bNeck" parent="bNeck/Skeleton3D" parent_id_path=PackedInt32Array(918488380) index="0" unique_id=1931535243]
+layers = 2
+
+[node name="CameraMarker" type="Marker3D" parent="." index="1" unique_id=799254931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4821562, -0.2)

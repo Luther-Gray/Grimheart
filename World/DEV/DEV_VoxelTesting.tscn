@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dohqtgd2hyv5i"]
 
-[ext_resource type="PackedScene" uid="uid://dya0qaj8j1cd" path="res://Actors/Player/NewClyde.tscn" id="1_crg0u"]
+[ext_resource type="PackedScene" uid="uid://dya0qaj8j1cd" path="res://Actors/Player/Meshes/NewClyde.tscn" id="1_crg0u"]
 [ext_resource type="Script" uid="uid://dir08dwocnjcb" path="res://Actors/Player/Scripts/Player.gd" id="1_xq1up"]
 [ext_resource type="Resource" uid="uid://36ixy4ngdwic" path="res://Actors/Player/Resources/PlayerAttributes.tres" id="2_kwnk0"]
 [ext_resource type="Resource" uid="uid://dmj2hsfgovph" path="res://Actors/Player/Resources/PlayerStats.tres" id="3_c6cyu"]
@@ -10,8 +10,8 @@
 [ext_resource type="AnimationNodeStateMachine" uid="uid://bd2gnt01um7br" path="res://Actors/Player/Resources/CombatStateMachine.tres" id="8_msjh8"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b1o11ep72iq22" path="res://Actors/Player/Resources/LocomotionStateMachine.tres" id="9_hmso2"]
 [ext_resource type="Script" uid="uid://vjylbctsl48n" path="res://Actors/Player/Scripts/Camera.gd" id="10_4nrx2"]
-[ext_resource type="PackedScene" uid="uid://70mpb30ysxto" path="res://Actors/Player/Menu.tscn" id="11_uk311"]
-[ext_resource type="PackedScene" uid="uid://12um0f5avgwo" path="res://Actors/Player/Debug.tscn" id="12_khv6t"]
+[ext_resource type="PackedScene" uid="uid://70mpb30ysxto" path="res://Actors/Player/UI/Menu.tscn" id="11_uk311"]
+[ext_resource type="PackedScene" uid="uid://12um0f5avgwo" path="res://Actors/Player/UI/Debug.tscn" id="12_khv6t"]
 [ext_resource type="Script" uid="uid://cc1x1nwmyyp3p" path="res://Actors/Player/Scripts/HUD.gd" id="13_etjqu"]
 [ext_resource type="Script" uid="uid://gu16dllt3tn1" path="res://Actors/Player/Scripts/AnimationManager.gd" id="14_bto5k"]
 [ext_resource type="Script" uid="uid://b7621lc8ogsnn" path="res://Actors/Player/Scripts/Combat.gd" id="15_ewpi0"]

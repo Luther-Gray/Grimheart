@@ -47,6 +47,8 @@ func _physics_process(delta: float) -> void:
 
 func _slide():
 	if SlideSound:
+		CameraPivot.CameraMarker.position.y = TargetMarkerPos + 0.3 ## Adds a little "bump" to the camera for the slide animation.
+		await get_tree().create_timer(0.35).timeout ## This delay will add "weight" to the slide
 		AudioPlayer.stream = SlideSound
 		AudioPlayer.play()
 	SlideTimer = SlideDuration

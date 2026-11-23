@@ -18,12 +18,6 @@ extends Node3D
 
 @onready var DEV_Target: MeshInstance3D = $"../../DEV_Target"
 
-#// IK Locations
-@export var IK_ArmL: TwoBoneIK3D
-@export var IK_ArmR: TwoBoneIK3D
-@export var HandTargetL: Marker3D
-@export var HandTargetR: Marker3D
-
 var ClamberGoal : Vector3
 
 # Ledge Grab
@@ -80,22 +74,15 @@ func _grab_ledge():
 	var HandOffset = Vector3(0, LedgeYOffset, LedgeZOffset)
 	var HangPos = LedgeSurface - (Source.global_transform.basis * HandOffset)
 	ClamberGoal = LedgeSurface - (WallNormal * 0.5) + Vector3(0, 0.05, 0) ## Move the Clamber to this Destination.
-	# Position Hand Markers
-	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)
-	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.01, 0)
 	var SnapTween = get_tree().create_tween()
 	SnapTween.tween_property(Source, "global_position", HangPos, 0.12)\
 		.set_trans(Tween.TRANS_SINE)
 	SnapTween.tween_callback(func():
-		IK_ArmL.active = true
-		IK_ArmR.active = true
 		AnimManager.AnimOverride = false)
 	DEV_Target.global_position = LedgeSurface
 
 #// Ledge Release
 func _release_ledge():
-	IK_ArmL.active = false
-	IK_ArmR.active = false
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
 	Source.velocity.y = -2.0
@@ -105,8 +92,6 @@ func _clamber_ledge():
 	if ClamberSound:
 		AudioPlayer.stream = ClamberSound
 		AudioPlayer.play()
-	IK_ArmL.active = false
-	IK_ArmR.active = false
 	Jump.WasAirborne = false
 	var ClamberTimer = AnimManager._get_anim_length("root_aClamber")
 	# Head Check

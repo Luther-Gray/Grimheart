@@ -51,6 +51,7 @@ func _jump_anim():
 		AnimManager._variant_travel("aJumpVariants", "aJump")
 	elif Source.isMoving:
 		AnimManager._variant_travel("aJumpVariants", ["aLeapL", "aLeapR"].pick_random())
+		AnimManager.AnimOverride = true
 		
 func _calc_fall(_delta: float) -> void:
 	if not Source.is_on_floor():
@@ -95,13 +96,13 @@ func _roll():
 		AudioPlayer.play()
 	RollWindow = 0.0
 	RollTimer = AnimManager._get_anim_length("aRoll")
-	if Source.isMoving:
-		Source.isSprinting = true
 	CameraPivot._force_camera(true)
 	AnimManager._override_travel("aRoll")
 func _roll_buffer(delta):
 	if Input.is_action_just_pressed("MV_Crouch"):
 		RollWindow = AnimManager._get_anim_length("aRoll")
+		if Source.isMoving:
+			Source.isSprinting = true
 	elif RollWindow > 0.0:
 		RollWindow -= delta
 func _roll_timer(delta):

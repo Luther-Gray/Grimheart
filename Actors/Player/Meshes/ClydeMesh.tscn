@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cji6jrv0v6lkj"]
+
+[ext_resource type="PackedScene" uid="uid://bavuqpkjjbf8j" path="res://_GLTF/-Actors/Player.gltf" id="1_vyvn3"]
+
+[node name="ClydeMesh" unique_id=1732224414 instance=ExtResource("1_vyvn3")]
+
+[node name="CameraMarker" type="Marker3D" parent="." index="1" unique_id=1186819505]
+transform = Transform3D(0.999034, 0.0053197416, 0.043625053, -0.0018879304, 0.9969254, -0.07833299, -0.04390762, 0.07817497, 0.9959717, -0.004280769, 1.4695898, -0.17417568)

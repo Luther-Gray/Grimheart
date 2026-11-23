@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c40tmtfm55dee"
-path="res://.godot/imported/BaseMale-VertexColor.gltf-1a674516489c6195c2736c946ea8efb1.scn"
+uid="uid://cp4ewu6ksd2ny"
+path="res://.godot/imported/PlayerHead.gltf-75e042191c0dd44573798cfd8305a79d.scn"
 
 [deps]
 
-source_file="res://_GLTF/-Actors/BaseMale-VertexColor.gltf"
-dest_files=["res://.godot/imported/BaseMale-VertexColor.gltf-1a674516489c6195c2736c946ea8efb1.scn"]
+source_file="res://_GLTF/-Actors/PlayerHead.gltf"
+dest_files=["res://.godot/imported/PlayerHead.gltf-75e042191c0dd44573798cfd8305a79d.scn"]
 
 [params]
 
@@ -36,8 +36,8 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=0
-materials/extract_format=0
+materials/extract=1
+materials/extract_format=2
 materials/extract_path=""
 _subresources={}
 gltf/naming_version=1
