@@ -22,9 +22,7 @@
 [ext_resource type="Script" uid="uid://dlag7fuw644b3" path="res://Actors/Player/Scripts/Slide.gd" id="15_m1t7r"]
 [ext_resource type="Script" uid="uid://bgcitffp4pue4" path="res://Actors/Player/Scripts/WallRun.gd" id="15_n45d6"]
 [ext_resource type="AudioStream" uid="uid://b6d8icmqiemk4" path="res://_AUDIOFILES/BodyFallHard-001.wav" id="16_j53hc"]
-[ext_resource type="Script" uid="uid://cpq2cbnbkbeqp" path="res://Actors/Player/Scripts/Vault.gd" id="17_k8e2g"]
 [ext_resource type="Script" uid="uid://e8dcwyhhanii" path="res://Actors/Player/Scripts/Temperature.gd" id="17_lxc4y"]
-[ext_resource type="AudioStream" uid="uid://com6n53ywogxw" path="res://_AUDIOFILES/BodyFallHard-004.wav" id="18_hdio0"]
 [ext_resource type="Script" uid="uid://bp1dxvx1vdbpq" path="res://Actors/Player/Scripts/Footsteps.gd" id="18_iwmb3"]
 [ext_resource type="AudioStream" uid="uid://v868jy8klibs" path="res://_AUDIOFILES/Squish - Skin Slides Slow Loud IN-002.wav" id="18_r3pko"]
 [ext_resource type="AudioStream" uid="uid://c54ckxi3wqro0" path="res://Audio/Footsteps/Concrete.tres" id="18_vnq5c"]
@@ -40,7 +38,7 @@ filter_enabled = true
 filters = ["Skeleton3D:bHand.L", "Skeleton3D:bHand.R", "Skeleton3D:bIndexFinger.L", "Skeleton3D:bIndexFinger.R", "Skeleton3D:bIndexFingerTip.L", "Skeleton3D:bIndexFingerTip.R", "Skeleton3D:bLowerArm.L", "Skeleton3D:bLowerArm.R", "Skeleton3D:bMiddleFinger.L", "Skeleton3D:bMiddleFinger.R", "Skeleton3D:bMiddleFingerTip.L", "Skeleton3D:bMiddleFingerTip.R", "Skeleton3D:bPinkyFinger.L", "Skeleton3D:bPinkyFinger.R", "Skeleton3D:bPinkyFingerTip.L", "Skeleton3D:bPinkyFingerTip.R", "Skeleton3D:bRingFinger.L", "Skeleton3D:bRingFinger.R", "Skeleton3D:bRingFingerTip.L", "Skeleton3D:bRingFingerTip.R", "Skeleton3D:bThumb.L", "Skeleton3D:bThumb.R", "Skeleton3D:bThumbTip.L", "Skeleton3D:bThumbTip.R", "Skeleton3D:bUpperArm.L", "Skeleton3D:bUpperArm.R"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jb54q"]
-graph_offset = Vector2(-535.6302, -132.34895)
+graph_offset = Vector2(-497.16666, -57.614582)
 nodes/output/position = Vector2(293.33334, 106.666664)
 nodes/LocomotionStateMachine/node = ExtResource("9_rda0l")
 nodes/LocomotionStateMachine/position = Vector2(-320, 26.666666)
@@ -76,6 +74,7 @@ texture_filter = 2
 
 [node name="AnimationDirector" type="AnimationTree" parent="." unique_id=489775585]
 root_node = NodePath("../Clyde")
+root_motion_track = NodePath("Skeleton3D:Root")
 callback_mode_process = 0
 tree_root = SubResource("AnimationNodeBlendTree_jb54q")
 anim_player = NodePath("../Clyde/AnimationPlayer")
@@ -122,18 +121,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_lxc4y")
 
-[node name="ClamberTargetRaycast" type="RayCast3D" parent="." unique_id=1101919216]
-transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.74875927)
-hit_from_inside = true
-
-[node name="ClamberShapecast" type="ShapeCast3D" parent="." unique_id=609641482]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
-shape = SubResource("BoxShape3D_qhy2x")
-debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
-
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=2101530425]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.7, 0)
 hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="ClamberProbe_H" type="RayCast3D" parent="." unique_id=1101919216]
+transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.6)
+hit_from_inside = true
+debug_shape_custom_color = Color(0.8063149, 0.021619853, 0.5658084, 1)
+debug_shape_thickness = 5
+
+[node name="ClamberProbe_C" type="RayCast3D" parent="." unique_id=2031000985]
+transform = Transform3D(1, 0, 0, 0, -0.84852815, -0.7071068, 0, 0.84852815, -0.7071067, 0, 1.6, -0.2)
+hit_from_inside = true
+debug_shape_custom_color = Color(0.8825093, 0.8282061, 0.42517468, 1)
+debug_shape_thickness = 5
+
+[node name="ClamberShapeCast" type="ShapeCast3D" parent="." unique_id=609641482]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
+shape = SubResource("BoxShape3D_qhy2x")
+debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
 transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
@@ -174,23 +182,17 @@ CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 SlideSound = ExtResource("18_r3pko")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
-[node name="Vault" type="Node3D" parent="." unique_id=1735850314 node_paths=PackedStringArray("Source", "AudioPlayer")]
-script = ExtResource("17_k8e2g")
-Source = NodePath("..")
-VaultSound = ExtResource("18_hdio0")
-AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
-
-[node name="VaultRaycast" type="RayCast3D" parent="Vault" unique_id=289577030]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.8, -0.25)
-collision_mask = 2
-hit_from_inside = true
-
-[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "AudioPlayer", "IK_ArmL", "IK_ArmR", "HandTargetL", "HandTargetR")]
+[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "Crouch", "AudioPlayer", "ClamberCast", "ClamberProbeCeiling", "ClamberProbeHeight", "CrouchProbe", "IK_ArmL", "IK_ArmR", "HandTargetL", "HandTargetR")]
 script = ExtResource("14_fllei")
 Source = NodePath("..")
+Crouch = NodePath("../Crouch")
 GrabLedgeSound = ExtResource("20_yw7as")
 ClamberSound = ExtResource("21_hdio0")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
+ClamberCast = NodePath("../ClamberShapeCast")
+ClamberProbeCeiling = NodePath("../ClamberProbe_C")
+ClamberProbeHeight = NodePath("../ClamberProbe_H")
+CrouchProbe = NodePath("../CrouchRaycast")
 IK_ArmL = NodePath("../Clyde/Skeleton3D/LeftArmIK")
 IK_ArmR = NodePath("../Clyde/Skeleton3D/RightArmIK")
 HandTargetL = NodePath("../Clyde/IKTarget_L")

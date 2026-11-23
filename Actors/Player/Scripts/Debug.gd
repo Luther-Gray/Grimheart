@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 		_add_debug("Hang State", Source.isHanging, 4)
 		_add_debug("Sprint State", Source.isSprinting, 5)
 		_add_debug("Slide State", Source.isSliding, 6)
-		_add_debug("Vault State", Source.isVaulting, 7)
+		_add_debug("Clamber State", Source.isClambering, 7)
 		_add_debug("Crouch State", Source.isCrouched, 8)
 		_add_debug("Wall Running", Source.isWallRunning, 9)
 

@@ -18,7 +18,8 @@ var TicTacSpeed : float = 10.0
 
 @onready var WallL: RayCast3D = $"../WallRayL"
 @onready var WallR: RayCast3D = $"../WallRayR"
-@onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapecast"
+@onready var ClamberShapeCast: ShapeCast3D = $"../ClamberShapeCast"
+@onready var ClamberProbeCeiling: RayCast3D = $"../ClamberProbe_C"
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var Jump: Node3D = $"../Jump"
 
@@ -43,11 +44,12 @@ func _physics_process(delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("MV_Jump") and Source.isSprinting and Source.is_on_floor() and ClamberShapeCast.get_collider(0):
-		_wall_run_v()
+		#_wall_run_v()
+		pass
 
 #// Physics - Wallruns are seperated for extra conditionals. Heavy 1 Handed Weapons. Broken Arms. Etc.
 func _wall_run_v() -> void: #// Upwards scramble
-	if not ClamberShapeCast.is_colliding(): # Can you wallrun?
+	if !ClamberShapeCast.is_colliding() or !ClamberProbeCeiling.is_colliding(): # Can you wallrun?
 		return
 	Source.isWallRunning = true
 	Source.isSprinting = false

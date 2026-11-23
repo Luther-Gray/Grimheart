@@ -29,6 +29,7 @@ func _toggle_crouch():
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
 		Source.isCrouched = true
+		Source.isSprinting = false
 		Source.MoveSpeed = Source.Stat.CrouchSpeed
 	elif Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
@@ -41,6 +42,7 @@ func _hold_crouch():
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
 		Source.isCrouched = true
+		Source.isSprinting = false
 		Source.MoveSpeed = Source.Stat.CrouchSpeed
 		
 func _release_crouch():

@@ -2,11 +2,16 @@
 extends Node3D
 
 @export var Source: CharacterBody3D
+@export var Crouch: Node3D
 @export var GrabLedgeSound : AudioStream
 @export var ClamberSound : AudioStream
+@export var VaultSound : AudioStream
 @export var AudioPlayer : AudioStreamPlayer3D
-@onready var ClamberTarget: RayCast3D = $"../ClamberTargetRaycast"
-@onready var ClamberCast: ShapeCast3D = $"../ClamberShapecast"
+@export var ClamberCast: ShapeCast3D
+@export var ClamberProbeCeiling: RayCast3D
+@export var ClamberProbeHeight: RayCast3D
+@export var CrouchProbe: RayCast3D
+
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var CameraPivot: Node3D = $"../PlayerCollision/CameraPivot"
 @onready var Jump : Node3D = $"../Jump"
@@ -46,9 +51,9 @@ func _physics_process(_delta: float) -> void:
 func _detect_ledge():
 	if !ClamberCast.is_colliding():
 		return
-	if !ClamberTarget.is_colliding():
+	if !ClamberProbeHeight.is_colliding():
 		return
-	var TargetTopSurface = ClamberTarget.get_collision_point().y
+	var TargetTopSurface = ClamberProbeHeight.get_collision_point().y
 	var HeightDiff = TargetTopSurface - Source.global_position.y
 	
 	#// Height Chart
@@ -69,7 +74,7 @@ func _grab_ledge():
 	Source.velocity = Vector3.ZERO
 	Source.isHanging = true
 	Jump.WasAirborne = false
-	var LedgeSurface = ClamberTarget.get_collision_point()
+	var LedgeSurface = ClamberProbeHeight.get_collision_point()
 	var WallNormal = ClamberCast.get_collision_normal(0)
 	var WallRight = Vector3.UP.cross(WallNormal).normalized()
 	var HandOffset = Vector3(0, LedgeYOffset, LedgeZOffset)
@@ -104,21 +109,46 @@ func _clamber_ledge():
 	IK_ArmR.active = false
 	Jump.WasAirborne = false
 	var ClamberTimer = AnimManager._get_anim_length("root_aClamber")
-	AnimManager._override_travel("root_aClamber")
+	# Head Check
+	if ClamberProbeCeiling.is_colliding():
+		AnimManager._override_travel("root_aClamberCrouch")
+		Crouch._toggle_crouch()
+	elif !ClamberProbeCeiling.is_colliding():
+		AnimManager._override_travel("root_aClamber")
 	Source.isClambering = true
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
+		
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
-		Source.global_position = ClamberGoal
+		print("Snap distance: ", Source.global_position.distance_to(ClamberGoal))
+		Source.global_position = Source.global_position.lerp(ClamberGoal, ClamberTimer)
 		Source.isClambering = false
 		AnimManager.AnimOverride = false)
-	
-# Move on Ledge
-func _wall_check(input_x: float) -> void:
-	if !ClamberCast.is_colliding():
-		_release_ledge()
+
+
+
+func _can_vault():
+	if !ClamberCast.is_colliding() or ClamberProbeCeiling:
 		return
-	var WallNormal = ClamberCast.get_collision_normal(0)
-	var LateralDirection = Vector3.UP.cross(WallNormal).normalized()
-	Source.velocity.x = LateralDirection.x * input_x * Source.Stat.ClimbSpeed
-	Source.velocity.z = LateralDirection.z * input_x * Source.Stat.ClimbSpeed
+	if Input.is_action_pressed("MV_Forward") and Source.is_on_floor():
+		_vault()
+	else:
+		return
+
+#// Vault
+func _vault():
+	print_debug("Vault Attempt @: ", ClamberProbeHeight)
+	# Sound
+	if VaultSound:
+		AudioPlayer.stream = VaultSound
+		AudioPlayer.play()
+	# Animation
+	AnimManager._override_travel("aVault")
+	# State Cleanup
+	Jump.WasAirborne = false
+	Source.isVaulting = true
+	
+	#VaultTween.tween_callback(func():
+		#AnimManager.AnimOverride = false
+		#Source.isVaulting = false
+		#)

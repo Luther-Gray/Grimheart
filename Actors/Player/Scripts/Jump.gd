@@ -95,7 +95,8 @@ func _roll():
 		AudioPlayer.play()
 	RollWindow = 0.0
 	RollTimer = AnimManager._get_anim_length("aRoll")
-	Source.isSprinting = true
+	if Source.isMoving:
+		Source.isSprinting = true
 	CameraPivot._force_camera(true)
 	AnimManager._override_travel("aRoll")
 func _roll_buffer(delta):
