@@ -96,7 +96,7 @@ PlayerMesh = NodePath("../../ClydeMesh")
 metadata/_edit_pinned_properties_ = [&"Player"]
 
 [node name="DEV_Camera" type="Camera3D" parent="PlayerCollision/CameraPivot" unique_id=2143699930]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000001, 0, 0, 0)
+transform = Transform3D(1, 0, 0, -1.7165613e-27, 1, 9.215718e-19, 0, 0, 1, -1.8626456e-10, 0, 0.10000001)
 cull_mask = 1048573
 current = true
 fov = 90.0

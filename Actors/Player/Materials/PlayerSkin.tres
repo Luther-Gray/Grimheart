@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b3mgy1axbneod"]
+
+[ext_resource type="Shader" uid="uid://c1g10jl64nsdm" path="res://Shaders/Vagabond.gdshader" id="1_euir0"]
+[ext_resource type="Texture2D" uid="uid://cd07ev8jotxmt" path="res://Actors/Player/Textures/Player_0.png" id="2_euir0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_euir0")
+shader_parameter/albedo_texture = ExtResource("2_euir0")
+shader_parameter/rim_color = Color(1, 0.4, 0, 1)
+shader_parameter/rim_size = 0.038000001805

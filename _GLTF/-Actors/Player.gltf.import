@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bavuqpkjjbf8j"
+uid="uid://by28o8n1dp5bh"
 path="res://.godot/imported/Player.gltf-82042dc108d0d39e3988de828a9ce37b.scn"
 
 [deps]
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/Player.gltf-82042dc108d0d39e3988de828a9ce37b.
 [params]
 
 nodes/root_type="Node3D"
-nodes/root_name="ClydeMesh"
+nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
 array_mesh/deduplicate_surfaces=true
@@ -26,7 +26,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=false
-meshes/light_baking=3
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=true
 skins/use_named_skins=true
@@ -37,8 +37,8 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
-materials/extract_format=2
-materials/extract_path="res://Actors/Player/Materials"
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "animations": {
 "aBoxingIdle": {
@@ -43216,39 +43216,6 @@ _subresources={
 "slice_99/save_to_file/path": "",
 "slice_99/start_frame": 0,
 "slices/amount": 0
-}
-},
-"materials": {
-"material_0": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Actors/Player/Materials/material_0.tres",
-"use_external/path": "uid://b7u3ekq6waoqg"
-},
-"material_1": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Actors/Player/Materials/material_1.tres",
-"use_external/path": "uid://csr88app21g5f"
-},
-"material_2": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Actors/Player/Materials/material_2.tres",
-"use_external/path": "uid://bt3eavdiyvx3d"
-},
-"material_3": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Actors/Player/Materials/material_3.tres",
-"use_external/path": "uid://bk14gsfjp6pww"
-}
-},
-"meshes": {
-"blockbench_export_mesh": {
-"generate/lightmap_uv": 0,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": true,
-"save_to_file/fallback_path": "",
-"save_to_file/path": ""
 }
 }
 }

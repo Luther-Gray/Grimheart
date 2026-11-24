@@ -22,9 +22,9 @@
 			"color": 1,
 			"origin": [-2.10144, 23.78735, 0.25879],
 			"rotation": [-87.11581, -6.92618, 40.17458],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -56,7 +56,7 @@
 			"color": 9,
 			"origin": [0.00018, 20.85485, 0.01441],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -197,7 +197,7 @@
 			"color": 9,
 			"origin": [0, 19.6025, -0.25],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -506,7 +506,7 @@
 			"color": 7,
 			"origin": [0, 15, 0],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -815,7 +815,7 @@
 			"color": 3,
 			"origin": [-1.13174, 1.49428, 0.23393],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -1094,7 +1094,7 @@
 			"color": 3,
 			"origin": [-1.12183, -0.00426, 0.22558],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -1412,7 +1412,7 @@
 			"color": 3,
 			"origin": [-1.11029, -0.00921, -2.15522],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -1592,9 +1592,9 @@
 			"color": 4,
 			"origin": [-0.0158, 22.59297, -1.24122],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1696,9 +1696,9 @@
 			"color": 4,
 			"origin": [-0.0158, 22.59297, -1.69122],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1831,9 +1831,9 @@
 			"color": 6,
 			"origin": [-0.06598, -0.75, 0.075],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1854,7 +1854,7 @@
 						"QReV": [11.5406, 23.31954],
 						"Lfp5": [1.68553, 17.71427]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["Lfp5", "QReV", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -1864,7 +1864,7 @@
 						"Lfp5": [1.68553, 17.71427],
 						"YO46": [1.51685, 6.004]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["YO46", "Lfp5", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -1874,7 +1874,7 @@
 						"YO46": [1.51685, 6.004],
 						"rtJH": [11.55992, 0]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["rtJH", "YO46", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -1884,7 +1884,7 @@
 						"rtJH": [11.55992, 0],
 						"wg4N": [21.5, 5.97087]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["wg4N", "rtJH", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -1894,7 +1894,7 @@
 						"wg4N": [21.5, 5.97087],
 						"COz6": [21.31526, 17.57505]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["COz6", "wg4N", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -1904,7 +1904,7 @@
 						"COz6": [21.31526, 17.57505],
 						"QReV": [11.5406, 23.31954]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["QReV", "COz6", "PnWB"],
 					"vertex_colors": {}
 				}
@@ -1917,9 +1917,9 @@
 			"color": 0,
 			"origin": [0.01523, 24.57185, 0.04006],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -4898,9 +4898,9 @@
 			"color": 0,
 			"origin": [0.01523, 24.57185, 0.04006],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -4934,7 +4934,7 @@
 						"sE8C": [85.9405, 41.91965],
 						"7EF8": [77.06053, 43.68769]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["7EF8", "sE8C", "00Oo", "qwJw"],
 					"vertex_colors": {
 						"7EF8": [0.98831, 0.97816, 0.97478],
@@ -4948,7 +4948,7 @@
 						"00Oo": [86.11495, 31.70373],
 						"qwJw": [76.9991, 31.67109]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["qwJw", "00Oo", "2B8b", "m5J3"],
 					"vertex_colors": {}
 				},
@@ -4959,7 +4959,7 @@
 						"8LHo": [101.64258, 23.25],
 						"fG90": [98.81261, 29.24545]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["fG90", "8LHo", "blNA", "XJxY"],
 					"vertex_colors": {}
 				},
@@ -4970,7 +4970,7 @@
 						"sE8C": [85.9405, 41.91965],
 						"XJxY": [92.08624, 31.48137]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["XJxY", "sE8C", "YePs", "fG90"],
 					"vertex_colors": {
 						"sE8C": [0.98831, 0.97816, 0.97478]
@@ -4983,7 +4983,7 @@
 						"blNA": [96.9326, 23.25],
 						"XJxY": [92.08624, 31.48137]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["XJxY", "blNA", "2B8b", "00Oo"],
 					"vertex_colors": {}
 				},
@@ -4993,7 +4993,7 @@
 						"sE8C": [85.9405, 41.91965],
 						"00Oo": [86.11495, 31.70373]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["00Oo", "sE8C", "XJxY"],
 					"vertex_colors": {
 						"sE8C": [0.98831, 0.97816, 0.97478]
@@ -5006,7 +5006,7 @@
 						"efs8": [68.02371, 31.475],
 						"vEiW": [67.88326, 23.25]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["vEiW", "efs8", "qwJw", "m5J3"],
 					"vertex_colors": {}
 				},
@@ -5017,7 +5017,7 @@
 						"kUKr": [68.20206, 41.91965],
 						"efs8": [68.02371, 31.475]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["efs8", "kUKr", "7EF8", "qwJw"],
 					"vertex_colors": {
 						"kUKr": [0.98831, 0.97816, 0.97478],
@@ -5031,7 +5031,7 @@
 						"kUKr": [68.20206, 41.91965],
 						"ZiPB": [58.76268, 40.09171]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["ZiPB", "kUKr", "ZTHb", "L8cJ"],
 					"vertex_colors": {
 						"kUKr": [0.98831, 0.97816, 0.97478]
@@ -5044,7 +5044,7 @@
 						"ZTHb": [62.06151, 31.49015],
 						"L8cJ": [55.05947, 29.20203]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["L8cJ", "ZTHb", "RxNT", "CmNh"],
 					"vertex_colors": {}
 				},
@@ -5055,7 +5055,7 @@
 						"RxNT": [57.20997, 23.25],
 						"vEiW": [67.88326, 23.25]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["vEiW", "RxNT", "ZTHb", "efs8"],
 					"vertex_colors": {}
 				},
@@ -5065,7 +5065,7 @@
 						"kUKr": [68.20206, 41.91965],
 						"ZTHb": [62.06151, 31.49015]
 					},
-					"texture": 3,
+					"texture": 2,
 					"vertices": ["ZTHb", "kUKr", "efs8"],
 					"vertex_colors": {
 						"kUKr": [0.98831, 0.97816, 0.97478]
@@ -5080,9 +5080,9 @@
 			"color": 6,
 			"origin": [0.06598, -0.75, 0.075],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -5103,7 +5103,7 @@
 						"Lfp5": [1.68553, 17.71427],
 						"QReV": [11.5406, 23.31954]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["QReV", "Lfp5", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -5113,7 +5113,7 @@
 						"YO46": [1.51685, 6.004],
 						"Lfp5": [1.68553, 17.71427]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["Lfp5", "YO46", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -5123,7 +5123,7 @@
 						"rtJH": [11.55992, 0],
 						"YO46": [1.51685, 6.004]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["YO46", "rtJH", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -5133,7 +5133,7 @@
 						"wg4N": [21.5, 5.97087],
 						"rtJH": [11.55992, 0]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["rtJH", "wg4N", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -5143,7 +5143,7 @@
 						"COz6": [21.31526, 17.57505],
 						"wg4N": [21.5, 5.97087]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["wg4N", "COz6", "PnWB"],
 					"vertex_colors": {}
 				},
@@ -5153,7 +5153,7 @@
 						"QReV": [11.5406, 23.31954],
 						"COz6": [21.31526, 17.57505]
 					},
-					"texture": 2,
+					"texture": 1,
 					"vertices": ["COz6", "QReV", "PnWB"],
 					"vertex_colors": {}
 				}
@@ -5166,9 +5166,9 @@
 			"color": 1,
 			"origin": [2.10144, 23.78735, 0.25879],
 			"rotation": [-87.11581, 6.92618, -40.17458],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -5200,7 +5200,7 @@
 			"color": 0,
 			"origin": [-11.59, 21.09367, 0],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -5567,7 +5567,7 @@
 			"color": 0,
 			"origin": [-11.69444, 21, -0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -5690,7 +5690,7 @@
 			"color": 0,
 			"origin": [-12.19444, 21, -0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -5813,7 +5813,7 @@
 			"color": 0,
 			"origin": [-12.54444, 21.125, -0.4],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -5936,7 +5936,7 @@
 			"color": 0,
 			"origin": [-13.21944, 21.125, -0.4],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6059,7 +6059,7 @@
 			"color": 0,
 			"origin": [-12.54444, 21.25, -0.1],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6182,7 +6182,7 @@
 			"color": 0,
 			"origin": [-13.26944, 21.25, -0.1],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6305,7 +6305,7 @@
 			"color": 0,
 			"origin": [-12.54444, 21.225, 0.2],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6428,7 +6428,7 @@
 			"color": 0,
 			"origin": [-13.26944, 21.225, 0.2],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6551,7 +6551,7 @@
 			"color": 0,
 			"origin": [-12.49444, 21.2, 0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6674,7 +6674,7 @@
 			"color": 0,
 			"origin": [-13.04444, 21.2, 0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -6797,7 +6797,7 @@
 			"color": 2,
 			"origin": [0.0024, 14.37268, 0.41469],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -7574,8 +7574,8 @@
 				"yZfWChQT": {
 					"uv": {
 						"q2dd": [9.21913, 19.87976],
-						"1ofI": [9.125, 19.5],
 						"OxMv": [9, 20],
+						"1ofI": [9.125, 19.5],
 						"Bzh1": [9.125, 19.75]
 					},
 					"texture": 0,
@@ -7681,7 +7681,7 @@
 			"color": 3,
 			"origin": [-1.13174, 1.49428, 0.23393],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -8014,7 +8014,7 @@
 			"color": 0,
 			"origin": [-4.5, 21.025, 0],
 			"rotation": [-45, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -8235,7 +8235,7 @@
 			"color": 0,
 			"origin": [-8.75, 21.025, 0],
 			"rotation": [-45, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -8402,9 +8402,9 @@
 			"color": 6,
 			"origin": [-1, 24.75, -2.1],
 			"rotation": [90, 0, -17.5],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -8436,9 +8436,9 @@
 			"color": 6,
 			"origin": [1, 24.75, -2.1],
 			"rotation": [90, 0, 17.5],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
-			"visibility": false,
+			"visibility": true,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -8470,7 +8470,7 @@
 			"color": 3,
 			"origin": [1.13174, 1.49428, 0.23393],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -8803,7 +8803,7 @@
 			"color": 3,
 			"origin": [1.13174, 1.49428, 0.23393],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -9082,7 +9082,7 @@
 			"color": 3,
 			"origin": [1.12183, -0.00426, 0.22558],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -9400,7 +9400,7 @@
 			"color": 3,
 			"origin": [1.11029, -0.00921, -2.15522],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -9580,7 +9580,7 @@
 			"color": 2,
 			"origin": [4.5, 21.025, 0],
 			"rotation": [-45, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -9801,7 +9801,7 @@
 			"color": 2,
 			"origin": [8.75, 21.025, 0],
 			"rotation": [-45, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -9968,7 +9968,7 @@
 			"color": 2,
 			"origin": [11.59, 21.09367, 0],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10335,7 +10335,7 @@
 			"color": 2,
 			"origin": [11.69444, 21, -0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10458,7 +10458,7 @@
 			"color": 2,
 			"origin": [12.19444, 21, -0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10581,7 +10581,7 @@
 			"color": 2,
 			"origin": [12.54444, 21.125, -0.4],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10704,7 +10704,7 @@
 			"color": 2,
 			"origin": [13.21944, 21.125, -0.4],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10827,7 +10827,7 @@
 			"color": 2,
 			"origin": [12.54444, 21.25, -0.1],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -10950,7 +10950,7 @@
 			"color": 2,
 			"origin": [13.26944, 21.25, -0.1],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -11073,7 +11073,7 @@
 			"color": 2,
 			"origin": [12.54444, 21.225, 0.2],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -11196,7 +11196,7 @@
 			"color": 2,
 			"origin": [13.26944, 21.225, 0.2],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -11319,7 +11319,7 @@
 			"color": 2,
 			"origin": [12.49444, 21.2, 0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -11442,7 +11442,7 @@
 			"color": 2,
 			"origin": [13.04444, 21.2, 0.5],
 			"rotation": [0, 0, 0],
-			"shading": "flat",
+			"shading": "smooth",
 			"export": true,
 			"visibility": true,
 			"locked": false,
@@ -11568,7 +11568,7 @@
 			"aspect_ratio": [16, 9],
 			"linked_preview": "split_screen_1",
 			"camera_linked": false,
-			"visibility": false,
+			"visibility": true,
 			"export": true,
 			"locked": false,
 			"scope": 0,
@@ -11598,7 +11598,7 @@
 			"mirror_uv": false,
 			"autouv": 0,
 			"isOpen": true,
-			"primary_selected": false
+			"primary_selected": true
 		},
 		{
 			"name": "bTorsoMid",
@@ -11653,7 +11653,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11722,7 +11722,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11837,7 +11837,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11860,7 +11860,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11883,7 +11883,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11906,7 +11906,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11929,7 +11929,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11952,7 +11952,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -13061,39 +13061,6 @@
 				}
 			],
 			"source": "data:image/png;base64,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"
-		},
-		{
-			"name": "tOutline",
-			"path": "",
-			"folder": "block",
-			"namespace": "",
-			"id": "2",
-			"group": "",
-			"scope": 0,
-			"width": 4,
-			"height": 4,
-			"uv_width": 4,
-			"uv_height": 4,
-			"particle": false,
-			"use_as_default": false,
-			"layers_enabled": false,
-			"sync_to_project": "",
-			"file_format": "png",
-			"render_mode": "default",
-			"render_sides": "front",
-			"wrap_mode": "limited",
-			"pbr_channel": "color",
-			"fps": 7,
-			"force_translucent": false,
-			"frame_time": 1,
-			"frame_order_type": "loop",
-			"frame_order": "",
-			"frame_interpolate": false,
-			"visible": true,
-			"internal": true,
-			"saved": false,
-			"uuid": "76d30711-561d-4074-1bd7-389bb0fc267d",
-			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVR4AYSIsQ0AAAiDiP//rHZqtyYwwACbanybPg4AAP//A6LNzAAAAAZJREFUAwDosAQFdPHNIgAAAABJRU5ErkJggg=="
 		},
 		{
 			"name": "tIris.png",
@@ -61960,7 +61927,7 @@
 			"override": false,
 			"length": 1.125,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"group_name": "AirPlay",
 			"scope": 0,
 			"anim_time_update": "",
@@ -106717,7 +106684,7 @@
 			"encoding": "ascii",
 			"scale": 16,
 			"embed_textures": true,
-			"armature": true,
+			"armature": false,
 			"animations": true,
 			"merge_armature": true
 		}

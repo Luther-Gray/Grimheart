@@ -1,41 +1,64 @@
 [gd_scene format=3 uid="uid://cji6jrv0v6lkj"]
 
-[ext_resource type="PackedScene" uid="uid://bavuqpkjjbf8j" path="res://_GLTF/-Actors/Player.gltf" id="1_vyvn3"]
+[ext_resource type="PackedScene" uid="uid://by28o8n1dp5bh" path="res://_GLTF/-Actors/Player.gltf" id="1_vyvn3"]
+[ext_resource type="Material" uid="uid://b3mgy1axbneod" path="res://Actors/Player/Materials/PlayerSkin.tres" id="2_y0ukx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y0ukx"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 0.85
+
+[sub_resource type="Sky" id="Sky_dqc4a"]
+sky_material = SubResource("ProceduralSkyMaterial_y0ukx")
+
+[sub_resource type="Environment" id="Environment_y0ukx"]
+background_mode = 2
+sky = SubResource("Sky_dqc4a")
+sdfgi_enabled = true
 
 [node name="ClydeMesh" unique_id=1732224414 instance=ExtResource("1_vyvn3")]
 
-[node name="Neck" parent="Skeleton3D/Neck" parent_id_path=PackedInt32Array(1722502222) index="0" unique_id=1022441697]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0" unique_id=408931328]
+environment = SubResource("Environment_y0ukx")
+
+[node name="Eyebrow_R" parent="Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(616813724) index="0" unique_id=1932666341]
 layers = 2
 
-[node name="Ear_L" parent="Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(595708232) index="0" unique_id=893514358]
+[node name="Eyebrow_L" parent="Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(509594112) index="0" unique_id=602095321]
 layers = 2
 
-[node name="Head" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(1009810202) index="0" unique_id=397449493]
+[node name="Iris_L" parent="Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(504398975) index="0" unique_id=23004069]
 layers = 2
 
-[node name="CameraMarker" type="Marker3D" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(1009810202) index="1" unique_id=1186819505]
-transform = Transform3D(0.999034, 0.0053197416, 0.043625053, -0.0018879304, 0.9969254, -0.07833299, -0.04390762, 0.07817497, 0.9959717, -0.005232644, -0.0661509, -0.17667943)
-
-[node name="Mouth" parent="Skeleton3D/Mouth" parent_id_path=PackedInt32Array(1830868762) index="0" unique_id=782476841]
+[node name="TongueTip" parent="Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(1624286529) index="0" unique_id=1406091191]
 layers = 2
 
-[node name="Ear_R" parent="Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(2026648605) index="0" unique_id=1851269302]
+[node name="Tongue" parent="Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1004636347) index="0" unique_id=632162338]
 layers = 2
 
-[node name="Eyebrow_R" parent="Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(1002367405) index="0" unique_id=2145886216]
+[node name="Iris_R" parent="Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(56916059) index="0" unique_id=644449200]
 layers = 2
 
-[node name="Eyebrow_L" parent="Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(1576755526) index="0" unique_id=73923570]
+[node name="Ear_L" parent="Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(997734759) index="0" unique_id=1855530410]
 layers = 2
 
-[node name="Iris_L" parent="Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(951824560) index="0" unique_id=629410730]
+[node name="Head" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(1504395859) index="0" unique_id=792647269]
 layers = 2
 
-[node name="Tongue" parent="Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1953201456) index="0" unique_id=1694424279]
+[node name="CameraMarker" type="Marker3D" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(1504395859) index="1" unique_id=1186819505]
+transform = Transform3D(0.999034, 0.0053197416, 0.043625053, -0.0018879304, 0.9969254, -0.07833299, -0.04390762, 0.07817497, 0.9959717, -0.007136394, -0.085381985, -0.18168694)
+
+[node name="Mouth" parent="Skeleton3D/Mouth" parent_id_path=PackedInt32Array(174699177) index="0" unique_id=1710869601]
 layers = 2
 
-[node name="TongueTip" parent="Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(820702604) index="0" unique_id=1117397430]
+[node name="Ear_R" parent="Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(275480982) index="0" unique_id=226630751]
 layers = 2
 
-[node name="Iris_R" parent="Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(727523935) index="0" unique_id=1805561858]
+[node name="Neck" parent="Skeleton3D/Neck" parent_id_path=PackedInt32Array(1821529421) index="0" unique_id=389863439]
 layers = 2
+
+[node name="UpperArm_R" parent="Skeleton3D/UpperArm_R" parent_id_path=PackedInt32Array(1091935541) index="0" unique_id=640409898]
+surface_material_override/0 = ExtResource("2_y0ukx")
+
+[node name="Torso" parent="Skeleton3D/Torso" parent_id_path=PackedInt32Array(417423880) index="0" unique_id=312648996]
+surface_material_override/0 = ExtResource("2_y0ukx")
