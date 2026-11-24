@@ -27,6 +27,7 @@ var isJumping : bool = false
 var isFalling : bool = false
 var isHanging : bool = false
 var isClambering : bool = false
+var isVaulting : bool = false
 var isCrouched : bool = false
 var isSliding : bool = false
 var isWallRunning : bool = false
@@ -55,5 +56,5 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, Deceleration * Influence * delta)
 			velocity.z = move_toward(velocity.z, 0, Deceleration * Influence * delta)
 			isMoving = false
-	if !isHanging and !isClambering:
+	if !isHanging:
 		move_and_slide()

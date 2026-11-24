@@ -47,6 +47,7 @@ func _jump(delta: float):
 		CoyoteTimer -= delta
 
 func _jump_anim():
+	var JumpAnimLength = AnimManager._get_anim_length("root_aClamber")
 	if !Source.isMoving:
 		AnimManager._variant_travel("aJumpVariants", "aJump")
 	elif Source.isMoving:

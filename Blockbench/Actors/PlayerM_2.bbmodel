@@ -24,7 +24,7 @@
 			"rotation": [-87.11581, -6.92618, 40.17458],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1594,7 +1594,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1698,7 +1698,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1833,7 +1833,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -1919,7 +1919,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -4900,7 +4900,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -5082,7 +5082,7 @@
 			"rotation": [0, 0, 0],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -5168,7 +5168,7 @@
 			"rotation": [-87.11581, 6.92618, -40.17458],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -7574,8 +7574,8 @@
 				"yZfWChQT": {
 					"uv": {
 						"q2dd": [9.21913, 19.87976],
-						"OxMv": [9, 20],
 						"1ofI": [9.125, 19.5],
+						"OxMv": [9, 20],
 						"Bzh1": [9.125, 19.75]
 					},
 					"texture": 0,
@@ -8404,7 +8404,7 @@
 			"rotation": [90, 0, -17.5],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -8438,7 +8438,7 @@
 			"rotation": [90, 0, 17.5],
 			"shading": "flat",
 			"export": true,
-			"visibility": true,
+			"visibility": false,
 			"locked": false,
 			"render_order": "default",
 			"scope": 0,
@@ -11568,7 +11568,7 @@
 			"aspect_ratio": [16, 9],
 			"linked_preview": "split_screen_1",
 			"camera_linked": false,
-			"visibility": true,
+			"visibility": false,
 			"export": true,
 			"locked": false,
 			"scope": 0,
@@ -11653,7 +11653,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11722,7 +11722,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11837,7 +11837,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11860,7 +11860,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11883,7 +11883,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11906,7 +11906,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11929,7 +11929,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -11952,7 +11952,7 @@
 			"locked": false,
 			"scope": 0,
 			"selected": false,
-			"visibility": true,
+			"visibility": false,
 			"_static": {
 				"properties": {},
 				"temp_data": {}
@@ -61960,7 +61960,7 @@
 			"override": false,
 			"length": 1.125,
 			"snapping": 24,
-			"selected": false,
+			"selected": true,
 			"group_name": "AirPlay",
 			"scope": 0,
 			"anim_time_update": "",
@@ -65671,6 +65671,12 @@
 							"interpolation": "catmullrom"
 						}
 					]
+				},
+				"84523d9f-e663-7725-7f7b-56745bcc96c6": {
+					"name": "camera",
+					"type": "camera",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},

@@ -39,3 +39,6 @@ OWDB is the World Streaming solution. Within a radius, the world, enemies, and A
 # TODO
 - Ledge Grab is inconsistent & has wonky detection.
 - Turning Back before the previous rotation is done will offset the camera. (Don't tap too fast.)
+- Slide needs to keep going even if you aren't holding forward anymore.
+- Roll isn't moving the camera correctly.
+- Looking Back doesn't reset to zero.

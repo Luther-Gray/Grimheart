@@ -7,10 +7,9 @@
 [ext_resource type="Resource" uid="uid://htv0epellk1l" path="res://Actors/Player/Resources/PlayerVitals.tres" id="4_qhy2x"]
 [ext_resource type="Resource" uid="uid://c6yb1ik0wd4e7" path="res://Actors/Player/Resources/PlayerStatus.tres" id="5_704ek"]
 [ext_resource type="Script" uid="uid://gu16dllt3tn1" path="res://Actors/Player/Scripts/AnimationManager.gd" id="6_l6vkj"]
+[ext_resource type="PackedScene" uid="uid://cji6jrv0v6lkj" path="res://Actors/Player/Meshes/ClydeMesh.tscn" id="7_aao0a"]
 [ext_resource type="Script" uid="uid://vjylbctsl48n" path="res://Actors/Player/Scripts/Camera.gd" id="7_kkbrm"]
-[ext_resource type="PackedScene" uid="uid://e6h3xvpowdnj" path="res://Actors/Player/Meshes/ClydeHead.tscn" id="7_rda0l"]
 [ext_resource type="Resource" uid="uid://8v38iuoo4o54" path="res://Actors/Player/Resources/PlayerSettings.tres" id="8_6e37q"]
-[ext_resource type="PackedScene" uid="uid://cg314275d31le" path="res://Actors/Player/Meshes/ClydeBody.tscn" id="8_l7nff"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://bd2gnt01um7br" path="res://Actors/Player/Resources/CombatStateMachine.tres" id="8_sg1wo"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b1o11ep72iq22" path="res://Actors/Player/Resources/LocomotionStateMachine.tres" id="9_rda0l"]
 [ext_resource type="Script" uid="uid://cc1x1nwmyyp3p" path="res://Actors/Player/Scripts/HUD.gd" id="10_lxc4y"]
@@ -30,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://d4n4ciqulnkr1" path="res://_AUDIOFILES/PavementTiles_Mono_01.wav" id="20_s8ljq"]
 [ext_resource type="AudioStream" uid="uid://g7gshy4js70s" path="res://_AUDIOFILES/CatchHold-006.wav" id="20_yw7as"]
 [ext_resource type="AudioStream" uid="uid://bwtikwghjjf2v" path="res://_AUDIOFILES/BodyFallHard-002.wav" id="21_hdio0"]
+[ext_resource type="AudioStream" uid="uid://ehiqjmj5k03u" path="res://_AUDIOFILES/GrappleHard-02.wav" id="26_rda0l"]
 [ext_resource type="AudioStream" uid="uid://c6ox4ke8pxaru" path="res://_AUDIOFILES/Tile_Mono_03.wav" id="29_jiph2"]
 [ext_resource type="AudioStream" uid="uid://hu2bnftjcyti" path="res://_AUDIOFILES/CatchHold-009.wav" id="30_87ye5"]
 [ext_resource type="Script" uid="uid://b7621lc8ogsnn" path="res://Actors/Player/Scripts/Combat.gd" id="32_aao0a"]
@@ -39,7 +39,6 @@ filter_enabled = true
 filters = ["Skeleton3D:bHand.L", "Skeleton3D:bHand.R", "Skeleton3D:bIndexFinger.L", "Skeleton3D:bIndexFinger.R", "Skeleton3D:bIndexFingerTip.L", "Skeleton3D:bIndexFingerTip.R", "Skeleton3D:bLowerArm.L", "Skeleton3D:bLowerArm.R", "Skeleton3D:bMiddleFinger.L", "Skeleton3D:bMiddleFinger.R", "Skeleton3D:bMiddleFingerTip.L", "Skeleton3D:bMiddleFingerTip.R", "Skeleton3D:bPinkyFinger.L", "Skeleton3D:bPinkyFinger.R", "Skeleton3D:bPinkyFingerTip.L", "Skeleton3D:bPinkyFingerTip.R", "Skeleton3D:bRingFinger.L", "Skeleton3D:bRingFinger.R", "Skeleton3D:bRingFingerTip.L", "Skeleton3D:bRingFingerTip.R", "Skeleton3D:bThumb.L", "Skeleton3D:bThumb.R", "Skeleton3D:bThumbTip.L", "Skeleton3D:bThumbTip.R", "Skeleton3D:bUpperArm.L", "Skeleton3D:bUpperArm.R"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jb54q"]
-graph_offset = Vector2(-518.8125, 219.13542)
 nodes/output/position = Vector2(293.33334, 106.666664)
 nodes/LocomotionStateMachine/node = ExtResource("9_rda0l")
 nodes/LocomotionStateMachine/position = Vector2(-320, 26.666666)
@@ -66,20 +65,18 @@ Vitals = ExtResource("4_qhy2x")
 Status = ExtResource("5_704ek")
 Settings = ExtResource("8_6e37q")
 
-[node name="ClydeHead" parent="." unique_id=434189547 instance=ExtResource("7_rda0l")]
-
-[node name="ClydeBody" parent="." unique_id=23987409 instance=ExtResource("8_l7nff")]
+[node name="ClydeMesh" parent="." unique_id=1732224414 instance=ExtResource("7_aao0a")]
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0, 0)
 texture_filter = 2
 
 [node name="AnimationDirector" type="AnimationTree" parent="." unique_id=489775585]
-root_node = NodePath("../ClydeBody")
+root_node = NodePath("../ClydeMesh")
 root_motion_track = NodePath("Skeleton3D:Root")
 callback_mode_process = 0
 tree_root = SubResource("AnimationNodeBlendTree_jb54q")
-anim_player = NodePath("../ClydeBody/AnimationPlayer")
+anim_player = NodePath("../ClydeMesh/AnimationPlayer")
 parameters/LocomotionStateMachine/aCrouchSpace/blend_position = Vector2(0, 0)
 parameters/LocomotionStateMachine/aWalkSpace/blend_position = Vector2(0, 0)
 parameters/StateMachineBlend/blend_amount = 0.0
@@ -90,12 +87,12 @@ shape = SubResource("CapsuleShape3D_g6ejb")
 debug_color = Color(0, 0.5176471, 0.21960784, 1)
 
 [node name="CameraPivot" type="Node3D" parent="PlayerCollision" unique_id=1906564157 node_paths=PackedStringArray("Player", "CameraMarker", "PlayerMesh")]
-transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.6, -0.199)
+transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.59999996, -0.3)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
-CameraMarker = NodePath("../../ClydeHead/CameraMarker")
+CameraMarker = NodePath("../../ClydeMesh/Skeleton3D/Head/CameraMarker")
 Settings = ExtResource("8_6e37q")
-PlayerMesh = NodePath("../../ClydeBody")
+PlayerMesh = NodePath("../../ClydeMesh")
 metadata/_edit_pinned_properties_ = [&"Player"]
 
 [node name="DEV_Camera" type="Camera3D" parent="PlayerCollision/CameraPivot" unique_id=2143699930]
@@ -128,6 +125,9 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1
 hit_from_inside = true
 debug_shape_thickness = 5
 
+[node name="VaultProbe" type="RayCast3D" parent="." unique_id=1226284393]
+transform = Transform3D(1, 0, 0, 0, 0.8099997, -3.973643e-08, 0, 3.2186502e-08, 0.99999994, 0, 1.4000001, -1.3000001)
+
 [node name="ClamberProbe_H" type="RayCast3D" parent="." unique_id=1101919216]
 transform = Transform3D(1, 0, 0, 0, 3, -3.9736435e-08, 0, 1.192093e-07, 1, 0, 2.4, -0.6)
 hit_from_inside = true
@@ -155,7 +155,7 @@ transform = Transform3D(-3.7855173e-08, 0.43301272, -0.50000006, -1, -2.1855694e
 script = ExtResource("6_l6vkj")
 AnimationDirector = NodePath("../AnimationDirector")
 Source = NodePath("..")
-AnimPlayer = NodePath("../ClydeBody/AnimationPlayer")
+AnimPlayer = NodePath("../ClydeMesh/AnimationPlayer")
 
 [node name="Combat" type="Node3D" parent="." unique_id=1777003875]
 script = ExtResource("32_aao0a")
@@ -172,10 +172,11 @@ RollSound = ExtResource("16_j53hc")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 
-[node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot")]
+[node name="Crouch" type="Node3D" parent="." unique_id=2104167629 node_paths=PackedStringArray("Source", "CameraPivot", "CameraMarker")]
 script = ExtResource("12_upr3p")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
+CameraMarker = NodePath("../ClydeMesh/Skeleton3D/Head/CameraMarker")
 
 [node name="Slide" type="Node3D" parent="." unique_id=956557122 node_paths=PackedStringArray("Source", "CameraPivot", "AudioPlayer")]
 script = ExtResource("15_m1t7r")
@@ -184,16 +185,18 @@ CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 SlideSound = ExtResource("18_r3pko")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
-[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "Crouch", "AudioPlayer", "ClamberCast", "ClamberProbeCeiling", "ClamberProbeHeight", "CrouchProbe")]
+[node name="Clamber" type="Node3D" parent="." unique_id=1904461739 node_paths=PackedStringArray("Source", "Crouch", "AudioPlayer", "ClamberCast", "ClamberProbeCeiling", "ClamberProbeHeight", "VaultProbeDepth", "CrouchProbe")]
 script = ExtResource("14_fllei")
 Source = NodePath("..")
 Crouch = NodePath("../Crouch")
 GrabLedgeSound = ExtResource("20_yw7as")
 ClamberSound = ExtResource("21_hdio0")
+VaultSound = ExtResource("26_rda0l")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 ClamberCast = NodePath("../ClamberShapeCast")
 ClamberProbeCeiling = NodePath("../ClamberProbe_C")
 ClamberProbeHeight = NodePath("../ClamberProbe_H")
+VaultProbeDepth = NodePath("../VaultProbe")
 CrouchProbe = NodePath("../CrouchRaycast")
 
 [node name="Footsteps" type="Node3D" parent="." unique_id=2102428877 node_paths=PackedStringArray("Source", "AnimManager")]
@@ -215,6 +218,7 @@ TicTacSound = ExtResource("30_87ye5")
 AudioPlayer = NodePath("../Footsteps/AudioStreamPlayer3D")
 
 [node name="Temperature" type="Node3D" parent="." unique_id=498142883]
+visible = false
 script = ExtResource("17_lxc4y")
 
 [node name="SkyRaycast" type="RayCast3D" parent="Temperature" unique_id=1923361296]
@@ -233,12 +237,10 @@ transform = Transform3D(-4.371139e-08, -5, 4.371139e-08, 0, -2.1855695e-07, -1, 
 [node name="TemperatureL" type="RayCast3D" parent="Temperature" unique_id=1908891275]
 transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, -1, -2.1855695e-07, 1.9106855e-15, -0.4, 1, 3.7252903e-08)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1112993677]
+[node name="3rdPersonCamera" type="SpringArm3D" parent="." unique_id=1112993677]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1, 0)
+visible = false
 shape = SubResource("SphereShape3D_r3pko")
 spring_length = 3.0
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1477151922]
-
-[editable path="ClydeHead"]
-[editable path="ClydeBody"]
+[node name="Camera3D" type="Camera3D" parent="3rdPersonCamera" unique_id=1477151922]
