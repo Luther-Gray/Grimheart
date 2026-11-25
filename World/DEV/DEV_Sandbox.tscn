@@ -349,15 +349,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -10)
 [node name="blockbench_export2" parent="." unique_id=1348084950 instance=ExtResource("5_eua22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -13.758818)
 
-[node name="blockbench_export5" parent="." unique_id=1696496727 instance=ExtResource("5_eua22")]
-transform = Transform3D(0.19999999, 0, 0, 0, -4.371139e-08, -0.39999998, 0, 1, -1.7484554e-08, 8.4, 0.10826351, -12.588338)
-
-[node name="blockbench_export6" parent="." unique_id=9816327 instance=ExtResource("5_eua22")]
-transform = Transform3D(0.19999999, 0, 0, 0, -4.371139e-08, -0.39999998, 0, 1, -1.7484554e-08, 9, 0.3082635, -12.588338)
-
-[node name="blockbench_export7" parent="." unique_id=56749933 instance=ExtResource("5_eua22")]
-transform = Transform3D(0.19999999, 0, 0, 0, -4.371139e-08, -0.39999998, 0, 1, -1.7484554e-08, 9.6, 0.5082635, -12.588338)
-
 [node name="blockbench_export3" parent="." unique_id=36650225 instance=ExtResource("5_eua22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 2, -13.758818)
 

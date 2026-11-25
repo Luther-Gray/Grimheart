@@ -14,7 +14,7 @@ var InitColPosition : float = 0.85
 var InitMarkerPos : float = 0.0
 var TargetPlayerHeight : float = 0.95
 var TargetColPosition : float = 0.5
-var TargetMarkerPos : float = 0.0
+var TargetMarkerPos : float = 0.3
 var EndTargetMarkerPos : float = 0.0
 
 #// Slide Values
@@ -47,14 +47,11 @@ func _physics_process(delta: float) -> void:
 
 func _slide():
 	if SlideSound:
-		CameraPivot.CameraMarker.position.y = TargetMarkerPos + 0.3 ## Adds a little "bump" to the camera for the slide animation.
-		await get_tree().create_timer(0.35).timeout ## This delay will add "weight" to the slide
 		AudioPlayer.stream = SlideSound
 		AudioPlayer.play()
 	SlideTimer = SlideDuration
 	Source.PlayerCollision.shape.height = TargetPlayerHeight
 	Source.PlayerCollision.position.y = TargetColPosition
-	CameraPivot.CameraMarker.position.y = TargetMarkerPos
 	Source.isSliding = true
 	Source.isCrouched = true # Adding Crouch True here for extra functions tied to "crouched" abilities like sneak attacks.
 	var SlideDirection = -Source.global_transform.basis.z

@@ -67,6 +67,9 @@ func _detect_ledge(): ## Is there a Ledge Here?
 		return
 	if !ClamberProbeHeight.is_colliding():
 		return
+	var TopNormal = ClamberProbeHeight.get_collision_normal()
+	if TopNormal.dot(Vector3.UP) < cos(Source.floor_max_angle):
+		return
 	var TargetTopSurface = ClamberProbeHeight.get_collision_point().y
 	var HeightDiff = TargetTopSurface - Source.global_position.y
 	if HeightDiff < 0.15:

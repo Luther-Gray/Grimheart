@@ -10,7 +10,6 @@ extends CharacterBody3D
 @export var Settings : GameSettings
 
 @onready var PlayerCollision: CollisionShape3D = $PlayerCollision
-@onready var StairCast: ShapeCast3D = $StairCast
 @onready var DEVDirection: Node3D = $DEV_DirectionPivot
 
 
@@ -63,14 +62,4 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	if isMoving: ## Dev Stuff
 		DEVDirection.rotation.y = atan2(-InputDir.x, -InputDir.y)
-		_handle_stairs(delta)
 		
-func _handle_stairs(delta : float): ## Stairs Handling
-	if !is_on_floor() or !isMoving:
-		return
-	StairCast.force_shapecast_update()
-	var StairTarget = StairCast.get_collision_point(0) ## Stair Detected, mayhaps? 🕵️‍♂️
-	var StairHeightCheck = StairTarget.y - global_position.y ## How tall is that stair compared to my position
-	if StairHeightCheck >= MaxStepHeight:
-		return
-	global_position.y += StairTarget.y

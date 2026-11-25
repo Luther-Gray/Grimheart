@@ -249,7 +249,7 @@ filter_enabled = true
 filters = ["Skeleton3D:bHand.L", "Skeleton3D:bHand.R", "Skeleton3D:bIndexFinger.L", "Skeleton3D:bIndexFinger.R", "Skeleton3D:bIndexFingerTip.L", "Skeleton3D:bIndexFingerTip.R", "Skeleton3D:bLowerArm.L", "Skeleton3D:bLowerArm.R", "Skeleton3D:bMiddleFinger.L", "Skeleton3D:bMiddleFinger.R", "Skeleton3D:bMiddleFingerTip.L", "Skeleton3D:bMiddleFingerTip.R", "Skeleton3D:bPinkyFinger.L", "Skeleton3D:bPinkyFinger.R", "Skeleton3D:bPinkyFingerTip.L", "Skeleton3D:bPinkyFingerTip.R", "Skeleton3D:bRingFinger.L", "Skeleton3D:bRingFinger.R", "Skeleton3D:bRingFingerTip.L", "Skeleton3D:bRingFingerTip.R", "Skeleton3D:bThumb.L", "Skeleton3D:bThumb.R", "Skeleton3D:bThumbTip.L", "Skeleton3D:bThumbTip.R", "Skeleton3D:bUpperArm.L", "Skeleton3D:bUpperArm.R"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jb54q"]
-graph_offset = Vector2(-1176, 127.635414)
+graph_offset = Vector2(-372, 34.666668)
 nodes/output/position = Vector2(293.33334, 106.666664)
 nodes/LocomotionStateMachine/node = ExtResource("9_rda0l")
 nodes/LocomotionStateMachine/position = Vector2(-320, 26.666666)
@@ -262,8 +262,6 @@ node_connections = [&"output", 0, &"StateMachineBlend", &"StateMachineBlend", 0,
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6ejb"]
 radius = 0.3
 height = 1.7
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_l7nff"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhy2x"]
 
@@ -309,37 +307,37 @@ Settings = ExtResource("8_6e37q")
 
 [node name="ClydeMesh" parent="." unique_id=1732224414 instance=ExtResource("7_aao0a")]
 
-[node name="Neck" parent="ClydeMesh/Skeleton3D/Neck" parent_id_path=PackedInt32Array(1732224414, 1511257997) index="0" unique_id=895927309]
+[node name="Neck" parent="ClydeMesh/Skeleton3D/Neck" parent_id_path=PackedInt32Array(1732224414, 680738986) index="0" unique_id=1755891377]
 mesh = SubResource("ArrayMesh_v2sq8")
 
-[node name="Ear_L" parent="ClydeMesh/Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(1732224414, 1032759471) index="0" unique_id=1216810829]
+[node name="Ear_L" parent="ClydeMesh/Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(1732224414, 1128639910) index="0" unique_id=2031336903]
 mesh = SubResource("ArrayMesh_esdv5")
 
-[node name="Head" parent="ClydeMesh/Skeleton3D/Head" parent_id_path=PackedInt32Array(1732224414, 9860391) index="0" unique_id=1288070527]
+[node name="Head" parent="ClydeMesh/Skeleton3D/Head" parent_id_path=PackedInt32Array(1732224414, 224119351) index="0" unique_id=2052163535]
 mesh = SubResource("ArrayMesh_e0qpn")
 
-[node name="Mouth" parent="ClydeMesh/Skeleton3D/Mouth" parent_id_path=PackedInt32Array(1732224414, 420853608) index="0" unique_id=1877667279]
+[node name="Mouth" parent="ClydeMesh/Skeleton3D/Mouth" parent_id_path=PackedInt32Array(1732224414, 324722659) index="0" unique_id=1214014265]
 mesh = SubResource("ArrayMesh_gibey")
 
-[node name="Ear_R" parent="ClydeMesh/Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(1732224414, 765947552) index="0" unique_id=299250744]
+[node name="Ear_R" parent="ClydeMesh/Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(1732224414, 1228441070) index="0" unique_id=823384874]
 mesh = SubResource("ArrayMesh_8n6hj")
 
-[node name="Eyebrow_R" parent="ClydeMesh/Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(1732224414, 654569048) index="0" unique_id=654674190]
+[node name="Eyebrow_R" parent="ClydeMesh/Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(1732224414, 511296650) index="0" unique_id=1846088773]
 mesh = SubResource("ArrayMesh_1nvgu")
 
-[node name="Eyebrow_L" parent="ClydeMesh/Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(1732224414, 973470121) index="0" unique_id=2035612765]
+[node name="Eyebrow_L" parent="ClydeMesh/Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(1732224414, 655901497) index="0" unique_id=150072305]
 mesh = SubResource("ArrayMesh_qbi7w")
 
-[node name="Iris_L" parent="ClydeMesh/Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(1732224414, 1510966504) index="0" unique_id=131430863]
+[node name="Iris_L" parent="ClydeMesh/Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(1732224414, 685898613) index="0" unique_id=170576034]
 mesh = SubResource("ArrayMesh_1rk10")
 
-[node name="Tongue" parent="ClydeMesh/Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1732224414, 1442456961) index="0" unique_id=1044762571]
+[node name="Tongue" parent="ClydeMesh/Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1732224414, 858107472) index="0" unique_id=2115366833]
 mesh = SubResource("ArrayMesh_nvrub")
 
-[node name="TongueTip" parent="ClydeMesh/Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(1732224414, 1107669549) index="0" unique_id=870765721]
+[node name="TongueTip" parent="ClydeMesh/Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(1732224414, 1267457574) index="0" unique_id=1868494856]
 mesh = SubResource("ArrayMesh_bnyyx")
 
-[node name="Iris_R" parent="ClydeMesh/Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(1732224414, 1428524040) index="0" unique_id=671144367]
+[node name="Iris_R" parent="ClydeMesh/Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(1732224414, 1535615722) index="0" unique_id=1399211645]
 mesh = SubResource("ArrayMesh_swjmd")
 
 [node name="DropShadow" type="Sprite3D" parent="." unique_id=304057527]
@@ -364,7 +362,7 @@ debug_color = Color(0, 0.5176471, 0.21960784, 1)
 transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.59999996, -0.3)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
-CameraMarker = NodePath("../../ClydeMesh/CameraMarker")
+CameraMarker = NodePath("../../ClydeMesh/Skeleton3D/Head/CameraMarker")
 Settings = ExtResource("8_6e37q")
 PlayerMesh = NodePath("../../ClydeMesh")
 metadata/_edit_pinned_properties_ = [&"Player"]
@@ -394,11 +392,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_lxc4y")
 
-[node name="StairCast" type="ShapeCast3D" parent="." unique_id=1653165536]
-transform = Transform3D(0.75, 0, 0, 0, 0.15, 0, 0, 0, 0.75, 0, 0.35, 0)
-shape = SubResource("CylinderShape3D_l7nff")
-debug_shape_custom_color = Color(0.80037045, 0.44224918, 0.069944955, 1)
-
 [node name="CrouchRaycast" type="RayCast3D" parent="." unique_id=2101530425]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.7, 0)
 hit_from_inside = true
@@ -420,15 +413,15 @@ debug_shape_custom_color = Color(0.8825093, 0.8282061, 0.42517468, 1)
 debug_shape_thickness = 5
 
 [node name="ClamberShapeCast" type="ShapeCast3D" parent="." unique_id=609641482]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
+transform = Transform3D(0.12, 0, 0, 0, -2.1855694e-08, -0.7, 0, 0.5, -3.059797e-08, 0, 1, 0)
 shape = SubResource("BoxShape3D_qhy2x")
 debug_shape_custom_color = Color(0.7807853, 0.28400952, 0.6742888, 1)
 
 [node name="WallRayL" type="RayCast3D" parent="." unique_id=2132038481]
-transform = Transform3D(-3.7855173e-08, -0.43301272, 0.50000006, 1, -2.1855694e-08, 0, 2.1855694e-08, 0.25000003, 0.86602545, 0.4, 1.5, 0)
+transform = Transform3D(-4.371139e-08, -0.5, 2.9802322e-08, 1, -2.1855694e-08, 0, 0, 1.4901161e-08, 1, 0.4, 1.5, 0)
 
 [node name="WallRayR" type="RayCast3D" parent="." unique_id=36886257]
-transform = Transform3D(-3.7855173e-08, 0.43301272, -0.50000006, -1, -2.1855694e-08, 0, -2.1855694e-08, 0.25000003, 0.86602545, -0.40000004, 1.5, 0)
+transform = Transform3D(-4.371139e-08, 0.5, -2.9802322e-08, -1, -2.1855694e-08, 0, 0, 1.4901161e-08, 1, -0.40000004, 1.5, 0)
 
 [node name="AnimCenter" type="Node" parent="." unique_id=878349900 node_paths=PackedStringArray("AnimationDirector", "Source", "AnimPlayer")]
 script = ExtResource("6_l6vkj")
@@ -455,7 +448,7 @@ CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 script = ExtResource("12_upr3p")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
-CameraMarker = NodePath("../ClydeMesh/CameraMarker")
+CameraMarker = NodePath("../ClydeMesh/Skeleton3D/Head/CameraMarker")
 
 [node name="Slide" type="Node3D" parent="." unique_id=956557122 node_paths=PackedStringArray("Source", "CameraPivot", "AudioPlayer")]
 script = ExtResource("15_m1t7r")
@@ -521,11 +514,12 @@ transform = Transform3D(-4.371139e-08, -5, 4.371139e-08, 0, -2.1855695e-07, -1, 
 transform = Transform3D(-4.371139e-08, 5, -4.371139e-08, 0, -2.1855695e-07, -1, -1, -2.1855695e-07, 1.9106855e-15, -0.4, 1, 3.7252903e-08)
 
 [node name="3rdPersonCamera" type="SpringArm3D" parent="." unique_id=1112993677]
-transform = Transform3D(0.9659258, -0.066987306, 0.25000003, 0, 0.9659259, 0.25881904, -0.258819, -0.25, 0.9330127, -0.4, 1, 0)
+transform = Transform3D(0.99999994, 0, 0, -7.196708e-09, 0.965926, 0.25881907, 2.9802322e-08, -0.25881904, 0.9659259, -0.4, 1, 0)
 shape = SubResource("SphereShape3D_r3pko")
 spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="3rdPersonCamera" unique_id=1477151922]
+fov = 90.0
 
 [node name="DEV_DirectionPivot" type="Node3D" parent="." unique_id=332306266]
 

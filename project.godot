@@ -27,8 +27,6 @@ InputHelper="*uid://dmlflxtn83ymf"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
 window/size/mode=2
 window/size/always_on_top=true
 window/stretch/mode="viewport"
@@ -39,7 +37,7 @@ window/physics_ticks_per_second=144
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/open-world-database/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/asset_placer/plugin.cfg", "res://addons/cosmo_tree_gen/plugin.cfg", "res://addons/open-world-database/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [filesystem]
 

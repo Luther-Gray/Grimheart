@@ -10,6 +10,11 @@ extends Node3D
 var WallRunTimer: float
 var WallNormal : Vector3
 var WallPadding : float = 1.8 ## WallPadding moves the player back slightly so they don't clip into the wall while scaling.
+enum WallType {
+	VERTICAL,
+	RIGHT,
+	LEFT
+}
 var VerticalRunDuration : float = 0.8
 var VerticalScrambleSpeed : float = 5.0
 var TicTacStrength : float = 8.0
@@ -26,7 +31,6 @@ var TicTacSpeed : float = 10.0
 func _physics_process(delta: float) -> void:
 	if Source.isWallRunning:
 		WallRunTimer -= delta
-		AnimManager._override_travel("aWallRunUp")
 		if WallRunSound:
 			AudioPlayer.stream = WallRunSound
 			AudioPlayer.play()
@@ -44,8 +48,9 @@ func _physics_process(delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("MV_Jump") and Source.isSprinting and Source.is_on_floor() and ClamberShapeCast.get_collider(0):
-		#_wall_run_v()
-		pass
+		_wall_run_v()
+	elif WallR.is_colliding() and Input.is_action_pressed("MV_Right"):
+		_wall_run_r()
 
 #// Physics - Wallruns are seperated for extra conditionals. Heavy 1 Handed Weapons. Broken Arms. Etc.
 func _wall_run_v() -> void: #// Upwards scramble
@@ -53,6 +58,7 @@ func _wall_run_v() -> void: #// Upwards scramble
 		return
 	Source.isWallRunning = true
 	Source.isSprinting = false
+	AnimManager._override_travel("aWallRunUp")
 	WallNormal = ClamberShapeCast.get_collision_normal(0)
 	Source.global_position.z = Source.global_position.z + WallPadding
 	Source.velocity.x = -WallNormal.x * 1.5
@@ -62,9 +68,17 @@ func _wall_run_v() -> void: #// Upwards scramble
 
 
 func _wall_run_r() -> void: #// Wallrun as long as stamina allows | RIGHT
+	AnimManager._override_travel("aWallRunRight")
+	if !WallR.is_colliding():
+		return
+	WallNormal = WallR.get_collision_normal()
+	Source.isWallRunning = true
+	Source.velocity = -WallNormal * Source.MoveSpeed
+	print("Wall Normal", WallNormal)
 	pass
 
 func _wall_run_l() -> void: #// Wallrun as long as stamina allows | LEFT
+	AnimManager._override_travel("aWallRunL")
 	pass
 
 func _tic_tac(_delta : float) -> void: #// Jump from wall

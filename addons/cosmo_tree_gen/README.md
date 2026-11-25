@@ -1,0 +1,110 @@
+![Cosmo Tree Gen](.github/images/render-logo.png)
+
+# Cosmo Tree Gen
+
+Procedural tree generator for Godot 4. Create and tweak trees live in the editor, save them as presets, and export them to glb/glTF with LODs and collisions.
+
+Also available on: [Godot Asset Store](https://store.godotengine.org/asset/cosmonaut-frog/cosmo-tree-gen/) - [Godot Asset Library](https://godotengine.org/asset-library/asset/5594)
+
+Mainly inspired by Dan Shiffman and EZTree.  
+
+_100% Human made. No AI was or ever will be used in this project._  
+
+## Showcase
+
+| Save and load presets fast | Randomize by seed |
+| :------------------------: | :---------------: |
+| ![presets](.github/images/example_presets.gif) | ![seed](.github/images/example_lean_wobble_seed.gif) |
+| **Live generation** | **Curve editor for fine changes** |
+| ![livegen](.github/images/example_leaf_size.gif) | ![curves](.github/images/example_curve.gif) |
+
+[More videos](https://www.youtube.com/@cosmonautfrogstudios/videos)
+
+## Features
+- Live generation and auto-updated in the editor.
+- Configurable tree parameters using custom Resources.
+- Trunk and branches.
+	- Multiple trunks per node, roots and broken branches by chance.
+	- Branch level length and leaf card size by curve.
+	- Optional flat shading for PSX/PS2 aesthetic.
+- Foliage.
+	- Icospheres, with configurable subdivisions level.
+	- Card leaves, configurable amount and double sided, with canopy normals and inner AO.
+	- Leaves shader with wind sway and limited mipmaps, so alpha scissor doesn't make distant leaves disappear.
+- Automatic collision generation.
+	- Three shape types: one convex shape per branch, one convex shape per branch segment, or a single trimesh.
+	- Covers branches up to a configurable level (0 = trunk only).
+	- Collision preview in the editor.
+	- Foliage collision: hull (covers all the foliage), spheres on each leaf/branch end.
+- Automatic LOD generation.
+	- LOD0, LOD1 and LOD2 MeshInstance3Ds can be generated with customizable ratios and distances.
+	- Billboard impostor baked on export as the last LOD, static or octahedral: 2 triangles and 1 draw call for distant trees. See [Impostor types](docs/exporting.md#impostor-types)
+	- The trunk is simplified and the rest of the tris budget goes to the leaves.
+	- Leaf cards are not simplified, fewer and bigger cards are kept instead.
+- Presets.
+	- 4 premade presets included (Ash, Bush, Low Poly Bush and Low Poly Tree)
+	- 7 more premade presets can be found in the `demo` folder.
+	- Can be saved as `CosmoTreePreset` resources.
+- Export as glb/glTF with LODs, impostor and collisions, optionally linking the materials in the .import file.
+- Exposed API for script generation, see [Batch Generation](docs/batch_generation.md).
+- Editor toolbar: load/save presets, randomize seed, export, and it shows draw calls and tris counter per tree.
+
+## Requirements
+Godot 4.6+ required. Developed in 4.6.2.stable.  
+
+## Installation
+Copy the `addons/cosmo_tree_gen/` folder into your project, enable it.  
+You can see more examples and presets in the `demo` folder.  
+
+## Usage
+Add a `CosmoTreeGen` node and pick a preset from the toolbar.  
+See [Getting Started](docs/getting_started.md) for the full walkthrough.
+
+## Documentation
+- [Getting Started](docs/getting_started.md)
+- [Parameters](docs/parameters.md)
+- [Settings](docs/settings.md)
+- [Exporting](docs/exporting.md)
+- [Batch Generation](docs/batch_generation.md)
+
+## Roadmap
+By priority.
+
+1. Add more low-poly foliage variations. (Pine, Boxes)
+1. Add a tree age slider. From sapling to old tree.
+1. Add min-max ranges to presets. It should define a species, from young to old.
+1. Hierarchical wind for trunk, branches and leaves.
+1. Shadow proxy. Low poly mesh for foliage with `SHADOWS_ONLY`.
+1. Bake tree in-place and make the node game-ready. So it can be used without extracting to `.glb`.
+1. Add stumps, fallen trunk and felled trees. From the same seed.
+1. Add flowers, fruits and mushrooms/fungus on the trunk/branches.
+1. Generate one texture atlas per bark+foliage to reduce 1 draw call.
+1. Make it compatible with older Godot versions.
+1. Preset gallery with preview.
+1. Branchlet texture generator.
+1. Graph editor.
+
+## Credits
+<details>
+<summary>Code, assets and references</summary>
+
+**Code**
+- Octahedral impostor shader: [godot-imposter](https://github.com/zhangjt93/godot-imposter) by Zhang Juntao,
+  a Godot 4 port of [Godot-Octahedral-Impostors](https://github.com/wojtekpil/Godot-Octahedral-Impostors) by wojtekpil and iFire (MIT).  
+  Modified to add backlight and mipmaps. License in `addons/cosmo_tree_gen/shaders/impostor_octahedral.gdshader`.
+
+**Assets**
+- Leaves: [60 CC0 vegetation textures](https://opengameart.org/content/60-cc0-vegetation-textures)
+- Bark: [ambientCG Bark014](https://ambientcg.com/view?id=Bark014)
+- Icosphere foliage: Made manually with GIMP.
+- Logo: Procreate + Inkscape, background rendered in Blender, font [Neuropol](https://www.dafont.com/es/neuropol.font).
+
+**References**
+- Icosphere: [lslabs](https://blog.lslabs.dev/posts/generating_icosphere_with_code), [schneide.blog](https://schneide.blog/2016/07/15/generating-an-icosphere-in-c/)
+- Trees/branching: [EZ-Tree](https://tympanus.net/codrops/2025/01/27/fractals-to-forests-creating-realistic-3d-trees-with-three-js/), [Coding Train](https://www.youtube.com/watch?v=MwLyeEWnMCY), [Algorithmic Botany](https://algorithmicbotany.org/)
+- Impostors: [ShaderBits: Octahedral Impostors](https://www.shaderbits.com/blog/octahedral-impostors), [IMP](https://github.com/MaxRoetzler/IMP)
+
+</details>
+
+## LICENSE
+Released under the [MIT License](LICENSE.md).
