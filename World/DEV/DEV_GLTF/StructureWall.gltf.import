@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8afjk745gs51"
-path="res://.godot/imported/Ramp.gltf-1563c212c2ddf1954db937a0c25528b2.scn"
+uid="uid://b5fyl78bwsc1v"
+path="res://.godot/imported/StructureWall.gltf-36955b20f49e7fa753ad84931830676e.scn"
 
 [deps]
 
-source_file="res://World/DEV/Ramp.gltf"
-dest_files=["res://.godot/imported/Ramp.gltf-1563c212c2ddf1954db937a0c25528b2.scn"]
+source_file="res://World/DEV/DEV_GLTF/StructureWall.gltf"
+dest_files=["res://.godot/imported/StructureWall.gltf-36955b20f49e7fa753ad84931830676e.scn"]
 
 [params]
 

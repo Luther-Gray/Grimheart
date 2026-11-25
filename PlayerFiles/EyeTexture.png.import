@@ -2,23 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgwpddcvxn4f0"
-path="res://.godot/imported/Player_2.png-cc0c6556759648343d98c997cddda126.ctex"
+uid="uid://b51l1oijivjqd"
+path="res://.godot/imported/EyeTexture.png-b158f1943c9ddbf6bc7380086cc33ae3.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "144c0e3b965d23e641f179dedd47f5c0"
 }
 
 [deps]
 
-source_file="res://Actors/Player/Textures/Player_2.png"
-dest_files=["res://.godot/imported/Player_2.png-cc0c6556759648343d98c997cddda126.ctex"]
+source_file="res://PlayerFiles/EyeTexture.png"
+dest_files=["res://.godot/imported/EyeTexture.png-b158f1943c9ddbf6bc7380086cc33ae3.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

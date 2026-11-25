@@ -90,7 +90,7 @@ debug_color = Color(0, 0.5176471, 0.21960784, 1)
 transform = Transform3D(1, -4.947651e-10, 1.8626451e-09, 4.947651e-10, 1, 0, -1.8626451e-09, 0, 1, 0, 0.59999996, -0.3)
 script = ExtResource("7_kkbrm")
 Player = NodePath("../..")
-CameraMarker = NodePath("../../ClydeMesh/Skeleton3D/Head/CameraMarker")
+CameraMarker = NodePath("../../ClydeMesh/CameraMarker")
 Settings = ExtResource("8_6e37q")
 PlayerMesh = NodePath("../../ClydeMesh")
 metadata/_edit_pinned_properties_ = [&"Player"]
@@ -176,7 +176,7 @@ CameraPivot = NodePath("../PlayerCollision/CameraPivot")
 script = ExtResource("12_upr3p")
 Source = NodePath("..")
 CameraPivot = NodePath("../PlayerCollision/CameraPivot")
-CameraMarker = NodePath("../ClydeMesh/Skeleton3D/Head/CameraMarker")
+CameraMarker = NodePath("../ClydeMesh/CameraMarker")
 
 [node name="Slide" type="Node3D" parent="." unique_id=956557122 node_paths=PackedStringArray("Source", "CameraPivot", "AudioPlayer")]
 script = ExtResource("15_m1t7r")

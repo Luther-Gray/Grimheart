@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bxsksu5tr7p5g"]
+
+[ext_resource type="PackedScene" uid="uid://daas24a7shc5v" path="res://World/DEV/DEV_GLTF/Wall.gltf" id="1_0iqit"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4v66v"]
+points = PackedVector3Array(1.5, 2, 0.25, 1.5, 2, -0.25, -1.5, 2, 0.25, 1.5, 0, 0.25, 1.5, 0, -0.25, -1.5, 2, -0.25, -1.5, 0, 0.25, -1.5, 0, -0.25)
+
+[node name="blockbench_export" unique_id=1348084950 instance=ExtResource("1_0iqit")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2077263457]
+shape = SubResource("ConvexPolygonShape3D_4v66v")

@@ -37,8 +37,8 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
-materials/extract_format=0
-materials/extract_path=""
+materials/extract_format=2
+materials/extract_path="res://Actors/Player/Materials"
 _subresources={
 "animations": {
 "aBoxingIdle": {
@@ -43216,6 +43216,23 @@ _subresources={
 "slice_99/save_to_file/path": "",
 "slice_99/start_frame": 0,
 "slices/amount": 0
+}
+},
+"materials": {
+"material_0": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Actors/Player/Materials/PlayerSkin.tres",
+"use_external/path": "uid://b3mgy1axbneod"
+},
+"material_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Actors/Player/Materials/PlayerEyes.tres",
+"use_external/path": "uid://cvd4o65lv03wn"
+},
+"material_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Actors/Player/Materials/material_2.material",
+"use_external/path": "uid://bnvmhr4j1buru"
 }
 }
 }

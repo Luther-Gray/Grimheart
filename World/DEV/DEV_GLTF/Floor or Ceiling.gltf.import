@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://be6torhtm456f"
-path="res://.godot/imported/Floor or Ceiling.gltf-9491177dbecd72f9513fdebc23d56e39.scn"
+path="res://.godot/imported/Floor or Ceiling.gltf-dd530a63fdc846040fb6efb969866d1c.scn"
 
 [deps]
 
-source_file="res://World/DEV/Floor or Ceiling.gltf"
-dest_files=["res://.godot/imported/Floor or Ceiling.gltf-9491177dbecd72f9513fdebc23d56e39.scn"]
+source_file="res://World/DEV/DEV_GLTF/Floor or Ceiling.gltf"
+dest_files=["res://.godot/imported/Floor or Ceiling.gltf-dd530a63fdc846040fb6efb969866d1c.scn"]
 
 [params]
 
