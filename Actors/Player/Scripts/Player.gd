@@ -10,13 +10,17 @@ extends CharacterBody3D
 @export var Settings : GameSettings
 
 @onready var PlayerCollision: CollisionShape3D = $PlayerCollision
+@onready var StairCast: ShapeCast3D = $StairCast
+@onready var DEVDirection: Node3D = $DEV_DirectionPivot
 
-#// Global Speed - This is modified by Stat
+
+#// Locomotion Tuning
 var MoveSpeed : float
 var Acceleration : float = 20.0
 var Deceleration : float = 145.0
 var AirControl : float = 0.25
 var Influence : float
+var MaxStepHeight : float = 0.4 ## Maximum Step Height
 
 #// State Flags
 var InputDir : Vector2 = Vector2.ZERO
@@ -47,7 +51,6 @@ func _physics_process(delta: float) -> void:
 			Influence = 1.0
 		else:
 			Influence = AirControl
-
 		if Direction:
 			velocity.x = move_toward(velocity.x, Direction.x * MoveSpeed, Acceleration * Influence * delta)
 			velocity.z = move_toward(velocity.z, Direction.z * MoveSpeed, Acceleration * Influence * delta)
@@ -58,3 +61,16 @@ func _physics_process(delta: float) -> void:
 			isMoving = false
 	if !isHanging:
 		move_and_slide()
+	if isMoving: ## Dev Stuff
+		DEVDirection.rotation.y = atan2(-InputDir.x, -InputDir.y)
+		_handle_stairs(delta)
+		
+func _handle_stairs(delta : float): ## Stairs Handling
+	if !is_on_floor() or !isMoving:
+		return
+	StairCast.force_shapecast_update()
+	var StairTarget = StairCast.get_collision_point(0) ## Stair Detected, mayhaps? 🕵️‍♂️
+	var StairHeightCheck = StairTarget.y - global_position.y ## How tall is that stair compared to my position
+	if StairHeightCheck >= MaxStepHeight:
+		return
+	global_position.y += StairTarget.y

@@ -15,6 +15,13 @@ extends Node3D
 @export var VaultProbeDepth : RayCast3D ## Checks how "Deep" something is. If this hits something, we likely should NOT be vaulting.
 @export var CrouchProbe: RayCast3D
 
+@export_category("IK Things")
+#// IK Locations
+@export var IK_ArmL: TwoBoneIK3D
+@export var IK_ArmR: TwoBoneIK3D
+@export var HandTargetL: Marker3D
+@export var HandTargetR: Marker3D
+
 @onready var AnimManager: AnimationManager = $"../AnimCenter"
 @onready var CameraPivot: Node3D = $"../PlayerCollision/CameraPivot"
 @onready var Jump : Node3D = $"../Jump"
@@ -27,17 +34,18 @@ extends Node3D
 @export_category("Clamber Tuning")
 @export var ClamberForce : float = 2.0 ## Substantially lower than the vault.
 @export var ClamberForwardBoost : float = 2.05 
-@export var ClamberCollisionHeight : float = 0.1 ## How Tall is the player when vaulting
+@export var ClamberHeightBoost : float = 0.5
+@export var ClamberCollisionHeight : float = 0.7 ## How Tall is the player when clambering
 @export var ClamberCrouchF : float = 1.0
 @export var ClamberCrouchBoost : float = 2.05
 @export var ClamberCrouchHeight : float = 0.95
 
 @export_category("Vault Tuning")
-@export var VaultForce : float = 7.5
-@export var VaultForwardBoost : float = 2.0
+@export var VaultForce : float = 8.5
+@export var VaultForwardBoost : float = 0.3
 @export var CollisionInitHeight : float = 1.7 ## Original Player Height (Should be 1.7)
-@export var VaultCollisionHeight : float = 0.5 ## How Tall is the player when vaulting
-@export var VaultHeightBoost : float = 1.0 ## Shrinking the height of the collision keeps it on the ground. We need to "pop" over the obstacle by moving the collision up.
+@export var VaultCollisionHeight : float = 0.4 ## How Tall is the player when vaulting
+@export var VaultHeightBoost : float = 0.1 ## Translates player over obstacle. We need to "pop" over the obstacle by moving the collision up.
 @export var VaultTimer : float = 0.25 ## Turns off the Vault State after acting.
 
 func _physics_process(_delta : float) -> void:
@@ -79,15 +87,24 @@ func _grab_ledge(): ## Ledge Grab Logic. Cannot Look or Move. Only Ascend or Dro
 	Source.isHanging = true
 	Jump.WasAirborne = false
 	var LedgeSurface = ClamberProbeHeight.get_collision_point()
+	var WallNormal = ClamberCast.get_collision_normal(0)
+	var WallRight = Vector3.UP.cross(WallNormal).normalized()
 	var HandOffset = Vector3(0, LedgeYOffset, LedgeZOffset)
 	var HangPos = LedgeSurface - (Source.global_transform.basis * HandOffset)
+	# Position Hand Markers
+	HandTargetL.global_position = LedgeSurface + (WallRight * -0.25) + Vector3(0, 0.01, 0)
+	HandTargetR.global_position = LedgeSurface + (WallRight * 0.25) + Vector3(0, 0.01, 0)
 	var SnapTween = get_tree().create_tween()
 	SnapTween.tween_property(Source, "global_position", HangPos, 0.12)\
 		.set_trans(Tween.TRANS_SINE)
 	SnapTween.tween_callback(func():
+		IK_ArmL.active = false
+		IK_ArmR.active = false
 		AnimManager.AnimOverride = false)
 		
 func _release_ledge():
+	IK_ArmL.active = false
+	IK_ArmR.active = false
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
 	Source.velocity.y = -2.0
@@ -97,12 +114,14 @@ func _clamber_ledge():
 		AudioPlayer.stream = ClamberSound
 		AudioPlayer.play()
 	Jump.WasAirborne = false
-	var ClamberTimer = AnimManager._get_anim_length("root_aClamber")
+	IK_ArmL.active = false
+	IK_ArmR.active = false
+	var ClamberTimer = AnimManager._get_anim_length("aClamber")
 	if ClamberProbeCeiling.is_colliding():
-		AnimManager._override_travel("root_aClamberCrouch")
+		AnimManager._override_travel("aClamberCrouch")
 		Crouch._toggle_crouch()
 	elif !ClamberProbeCeiling.is_colliding():
-		AnimManager._override_travel("root_aClamber")
+		AnimManager._override_travel("aClamber")
 	Source.isClambering = true
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
@@ -112,8 +131,8 @@ func _clamber_ledge():
 	Source.velocity.x = ClamberDirection.x * ClamberForwardBoost
 	Source.velocity.z = ClamberDirection.z * ClamberForwardBoost
 	Source.velocity.y = ClamberForce
-	Source.PlayerCollision.shape.height = VaultCollisionHeight ## Without this, can't clear a ledge 😬
-	Source.position.y = lerp(Source.position.y, Source.position.y + VaultHeightBoost, 1) ## And without this, I clip into the ledge's floor 😬
+	Source.PlayerCollision.shape.height = ClamberCollisionHeight ## Without this, can't clear a ledge 😬
+	Source.position.y = lerp(Source.position.y, Source.position.y + ClamberHeightBoost, 1) ## And without this, I clip into the ledge's floor 😬
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
 		_end_clamber())
 
@@ -124,10 +143,8 @@ func _end_clamber() -> void:
 
 func _can_vault():
 	if !ClamberCast.is_colliding() or ClamberProbeCeiling.is_colliding():
-		print("Vault Denied", ClamberCast, "VaultDepthCheck: ",VaultProbeDepth.is_colliding())
 		return
 	if !VaultProbeDepth.is_colliding() and ClamberCast.is_colliding():
-		print("Vault Attempt!")
 		_vault()
 	return
 
@@ -144,7 +161,7 @@ func _vault() -> void:
 	Source.velocity.z = VaultDirection.z * (Source.MoveSpeed + VaultForwardBoost)
 	Source.velocity.y = VaultForce
 	Source.PlayerCollision.shape.height = VaultCollisionHeight
-	Source.position.y = lerp(Source.position.y, VaultHeightBoost, 1)
+	Source.position.y = Source.position.y + VaultHeightBoost
 	get_tree().create_timer(VaultTimer).timeout.connect(_end_vault) ## Time out the vault to reset the state flags and player's height
 
 func _end_vault() -> void:

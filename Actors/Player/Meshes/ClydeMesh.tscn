@@ -4,38 +4,82 @@
 
 [node name="ClydeMesh" unique_id=1732224414 instance=ExtResource("1_vyvn3")]
 
-[node name="Eyebrow_R" parent="Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(1532110495) index="0" unique_id=516616185]
+[node name="Neck" parent="Skeleton3D/Neck" parent_id_path=PackedInt32Array(1511257997) index="0" unique_id=895927309]
 layers = 2
 
-[node name="Eyebrow_L" parent="Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(1984422518) index="0" unique_id=1451532149]
+[node name="Ear_L" parent="Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(1032759471) index="0" unique_id=1216810829]
 layers = 2
 
-[node name="Iris_L" parent="Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(325167870) index="0" unique_id=1807091620]
+[node name="Head" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(9860391) index="0" unique_id=1288070527]
 layers = 2
 
-[node name="TongueTip" parent="Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(1040626261) index="0" unique_id=766160410]
+[node name="Mouth" parent="Skeleton3D/Mouth" parent_id_path=PackedInt32Array(420853608) index="0" unique_id=1877667279]
 layers = 2
 
-[node name="Tongue" parent="Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1047161589) index="0" unique_id=1973222598]
+[node name="Ear_R" parent="Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(765947552) index="0" unique_id=299250744]
 layers = 2
 
-[node name="Iris_R" parent="Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(189514531) index="0" unique_id=315691759]
+[node name="Eyebrow_R" parent="Skeleton3D/Eyebrow_R" parent_id_path=PackedInt32Array(654569048) index="0" unique_id=654674190]
 layers = 2
 
-[node name="Ear_L" parent="Skeleton3D/Ear_L" parent_id_path=PackedInt32Array(1967533307) index="0" unique_id=1848953498]
+[node name="Eyebrow_L" parent="Skeleton3D/Eyebrow_L" parent_id_path=PackedInt32Array(973470121) index="0" unique_id=2035612765]
 layers = 2
 
-[node name="Head" parent="Skeleton3D/Head" parent_id_path=PackedInt32Array(630728483) index="0" unique_id=288143108]
+[node name="Iris_L" parent="Skeleton3D/Iris_L" parent_id_path=PackedInt32Array(1510966504) index="0" unique_id=131430863]
 layers = 2
 
-[node name="Mouth" parent="Skeleton3D/Mouth" parent_id_path=PackedInt32Array(96534700) index="0" unique_id=603371253]
+[node name="Tongue" parent="Skeleton3D/Tongue" parent_id_path=PackedInt32Array(1442456961) index="0" unique_id=1044762571]
 layers = 2
 
-[node name="Ear_R" parent="Skeleton3D/Ear_R" parent_id_path=PackedInt32Array(904618986) index="0" unique_id=1928662312]
+[node name="TongueTip" parent="Skeleton3D/TongueTip" parent_id_path=PackedInt32Array(1107669549) index="0" unique_id=870765721]
 layers = 2
 
-[node name="Neck" parent="Skeleton3D/Neck" parent_id_path=PackedInt32Array(1285451937) index="0" unique_id=1962793793]
+[node name="Iris_R" parent="Skeleton3D/Iris_R" parent_id_path=PackedInt32Array(1428524040) index="0" unique_id=671144367]
 layers = 2
+
+[node name="IKElbow_L" type="Marker3D" parent="Skeleton3D/UpperArm_L" parent_id_path=PackedInt32Array(1871014241) index="1" unique_id=1548327823]
+transform = Transform3D(0.70710677, 0.7071068, -6.172261e-09, -0.49999994, 0.50000006, -0.7071068, -0.5000002, 0.4999999, 0.70710677, -0.2, -0.075, -0.075)
+
+[node name="IKElbow_R" type="Marker3D" parent="Skeleton3D/UpperArm_R" parent_id_path=PackedInt32Array(1795505176) index="1" unique_id=86162871]
+transform = Transform3D(0.70710677, -0.7071068, 6.172261e-09, 0.49999997, 0.50000006, -0.7071068, 0.5000002, 0.49999994, 0.70710677, 0.2, -0.075, -0.075)
+
+[node name="LeftArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(328643042) index="48" unique_id=113435635]
+active = false
+setting_count = 1
+settings/0/target_node = NodePath("../../IKTarget_L")
+settings/0/pole_node = NodePath("../UpperArm_L/IKElbow_L")
+settings/0/root_bone_name = "bUpperArm.L"
+settings/0/root_bone = 28
+settings/0/middle_bone_name = "bLowerArm.L"
+settings/0/middle_bone = 30
+settings/0/pole_direction = 0
+settings/0/end_bone_name = "bHand.L"
+settings/0/end_bone = 32
+settings/0/use_virtual_end = false
+settings/0/extend_end_bone = true
+settings/0/end_bone/direction = 6
+settings/0/end_bone/length = 0.0
+
+[node name="RightArmIK" type="TwoBoneIK3D" parent="Skeleton3D" parent_id_path=PackedInt32Array(328643042) index="49" unique_id=1309831163]
+active = false
+setting_count = 1
+settings/0/target_node = NodePath("../../IKTarget_R")
+settings/0/pole_node = NodePath("../UpperArm_R/IKElbow_R")
+settings/0/root_bone_name = "bUpperArm.R"
+settings/0/root_bone = 55
+settings/0/middle_bone_name = "bLowerArm.R"
+settings/0/middle_bone = 57
+settings/0/pole_direction = 0
+settings/0/end_bone_name = "bHand.R"
+settings/0/end_bone = 59
+settings/0/use_virtual_end = false
+settings/0/extend_end_bone = true
+settings/0/end_bone/direction = 6
+settings/0/end_bone/length = 0.0
 
 [node name="CameraMarker" type="Marker3D" parent="." index="1" unique_id=1186819505]
 transform = Transform3D(0.999034, 0.0053197416, 0.043625053, -0.0018879304, 0.9969254, -0.07833299, -0.04390762, 0.07817497, 0.9959717, -0.007136394, 1.5028508, -0.21447808)
+
+[node name="IKTarget_R" type="Marker3D" parent="." index="3" unique_id=1307304490]
+
+[node name="IKTarget_L" type="Marker3D" parent="." index="4" unique_id=1168573546]
