@@ -1,8 +1,20 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://5vsa436i7wto"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://5vsa436i7wto"]
 
 [ext_resource type="Texture2D" uid="uid://cvyhvw5luow01" path="res://World/DEV/Checkerboard.png" id="1_ay5bg"]
+[ext_resource type="Shader" uid="uid://c1g10jl64nsdm" path="res://Shaders/Vagabond.gdshader" id="1_qi2n0"]
 
 [resource]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_ay5bg")
-uv1_triplanar = true
+render_priority = 0
+shader = ExtResource("1_qi2n0")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("1_ay5bg")
+shader_parameter/alpha_scissor_threshold = 0.05
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/use_triplanar = true
+shader_parameter/triplanar_world_space = true
+shader_parameter/triplanar_sharpness = 8.0
+shader_parameter/ambient_strength = 0.65
+shader_parameter/shadow_color = Color(0.6, 0.6, 0.65, 1)
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/rim_size = 0.05

@@ -81,6 +81,8 @@ var CoreXP : Dictionary = {
 # Timed Resource Drains
 var HealthDrain := 0.0
 var StaminaDrain := 1.0
+var AttackCooldown := 0.2 ## Prevents spamming attacks like this is beta minecraft foh.
+var ActionCooldown := 1.0 ## Cannot do another action/ability until this is done.
 
 #//-----------FUNCTIONS--------------------------------
 func _vital_impact(Vital: String, Amount: int) -> void:

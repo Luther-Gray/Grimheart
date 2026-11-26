@@ -44,18 +44,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		ChaseCamYaw = CameraPivot.rotation.y
 		isLookingBack = true
 	elif Input.is_action_just_released("LOOK_Back"):
+		ChaseCamYaw = 0.0
 		isLookingBack = false
 		
 func _process(delta: float) -> void:
 ### Camera Sway
 	if isCameraForced:
 		return
-	if isLookingBack:
-		pass
 	if Source.InputDir.x > 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), Settings.SwaySpeed * delta)
 	elif Source.InputDir.x < 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(Settings.SwayAmount),Settings.SwaySpeed * delta)
+	else:
+		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
+### Slide Tilt
+	if Source.isSliding:
+		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), 1)
 	else:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)
 ### Chase Cam (Looking Backwards)

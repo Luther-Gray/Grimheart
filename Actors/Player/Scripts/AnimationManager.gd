@@ -26,11 +26,11 @@ func _process(_delta: float) -> void:
 		MovementPlayback.travel("aHang")
 	elif Source.isFalling:
 		MovementPlayback.travel("aFall")
-	elif Source.isSprinting:
+	elif Source.isSprinting and Source.is_on_floor():
 		MovementPlayback.travel("aSprint")
 	elif Source.isMoving and Source.isCrouched:
 		MovementPlayback.travel("aCrouchSpace")
-	elif Source.isMoving:
+	elif Source.isMoving and Source.is_on_floor():
 		MovementPlayback.travel("aWalkSpace")
 	elif Source.isCrouched:
 		MovementPlayback.travel("aCrouchIdle")

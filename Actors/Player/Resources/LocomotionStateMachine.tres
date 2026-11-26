@@ -55,11 +55,9 @@ animation = &"aLeapR"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kr5aq"]
 xfade_time = 0.2
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ia8ke"]
 xfade_time = 0.2
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f6sss"]
 xfade_time = 0.2
@@ -71,7 +69,6 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_emuwr"]
 xfade_time = 0.2
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4sko0"]
 xfade_time = 0.2
@@ -86,7 +83,7 @@ states/aLeapL/position = Vector2(405.82813, 34.786453)
 states/aLeapR/node = SubResource("AnimationNodeAnimation_s8ljq")
 states/aLeapR/position = Vector2(412.5143, 161.88411)
 transitions = ["Start", "aLeapL", SubResource("AnimationNodeStateMachineTransition_kr5aq"), "Start", "aLeapR", SubResource("AnimationNodeStateMachineTransition_ia8ke"), "aLeapL", "End", SubResource("AnimationNodeStateMachineTransition_f6sss"), "aLeapR", "End", SubResource("AnimationNodeStateMachineTransition_0ieod"), "Start", "aJump", SubResource("AnimationNodeStateMachineTransition_emuwr"), "aJump", "End", SubResource("AnimationNodeStateMachineTransition_4sko0")]
-graph_offset = Vector2(6.6171875, 23)
+graph_offset = Vector2(-33.382813, -10.363281)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7m1i7"]
 animation = &"aLanding"
@@ -99,9 +96,6 @@ animation = &"aSlide"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kkbrm"]
 animation = &"aSprint"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4sko0"]
-animation = &"aTicTac"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iwmb3"]
 animation = &"aVault"
@@ -158,9 +152,6 @@ blend_point_7/node = SubResource("AnimationNodeAnimation_rda0l")
 blend_point_7/pos = Vector2(-0.7, -0.7)
 blend_point_7/name = &"7"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ia8ke"]
-animation = &"aWallRunUp"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kkbrm"]
 xfade_time = 0.2
 
@@ -183,9 +174,6 @@ xfade_time = 0.2
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_upr3p"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n45d6"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vnq5c"]
@@ -212,29 +200,18 @@ xfade_time = 0.2
 xfade_time = 0.2
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8np4b"]
-xfade_time = 0.2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hdio0"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gh11b"]
 xfade_time = 0.2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fllei"]
-xfade_time = 0.2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ujyek"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yw7as"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iwmb3"]
 xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6e37q"]
-xfade_time = 0.2
+switch_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6ejb"]
 xfade_time = 0.2
@@ -293,27 +270,15 @@ xfade_time = 0.2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ymlwl"]
 xfade_time = 0.2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yt85l"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t35ly"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_okknf"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3t21u"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q0pck"]
-xfade_time = 0.2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6xita"]
 xfade_time = 0.2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u4k1p"]
 xfade_time = 0.2
 switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ilx8f"]
+xfade_time = 0.1
 
 [resource]
 states/End/position = Vector2(1208.8905, 44.828705)
@@ -323,32 +288,28 @@ states/aClamber/position = Vector2(338.01614, 308.38364)
 states/aClamberCrouch/node = SubResource("AnimationNodeAnimation_ilx8f")
 states/aClamberCrouch/position = Vector2(486.68253, 357.74036)
 states/aCrouchIdle/node = SubResource("AnimationNodeAnimation_j53hc")
-states/aCrouchIdle/position = Vector2(772.7747, 279.69397)
+states/aCrouchIdle/position = Vector2(847.957, 296.8357)
 states/aCrouchSpace/node = SubResource("AnimationNodeBlendSpace2D_4sko0")
-states/aCrouchSpace/position = Vector2(1045.9387, 234.29892)
+states/aCrouchSpace/position = Vector2(1147.1731, 190.851)
 states/aFall/node = SubResource("AnimationNodeAnimation_6e37q")
-states/aFall/position = Vector2(598.7325, 161.33566)
+states/aFall/position = Vector2(617.06586, 82.86284)
 states/aHang/node = SubResource("AnimationNodeAnimation_lxc4y")
 states/aHang/position = Vector2(590.68896, 268.02893)
 states/aIdle/node = SubResource("AnimationNodeAnimation_l6vkj")
 states/aIdle/position = Vector2(390.2367, 101.82254)
 states/aJumpVariants/node = SubResource("AnimationNodeStateMachine_jhh7x")
-states/aJumpVariants/position = Vector2(816.22504, 29.072247)
+states/aJumpVariants/position = Vector2(855.34485, 50.96808)
 states/aLanding/node = SubResource("AnimationNodeAnimation_7m1i7")
-states/aLanding/position = Vector2(475.78, 211.638)
+states/aLanding/position = Vector2(474.62323, 237.22655)
 states/aRoll/node = SubResource("AnimationNodeAnimation_emuwr")
 states/aRoll/position = Vector2(476.0335, 157.45618)
 states/aSlide/node = SubResource("AnimationNodeAnimation_k8e2g")
 states/aSlide/position = Vector2(933.27606, -39.79381)
 states/aSprint/node = SubResource("AnimationNodeAnimation_kkbrm")
 states/aSprint/position = Vector2(589.7644, -40.404102)
-states/aTicTac/node = SubResource("AnimationNodeAnimation_4sko0")
-states/aTicTac/position = Vector2(972.4987, 413.27548)
 states/aVault/node = SubResource("AnimationNodeAnimation_iwmb3")
 states/aVault/position = Vector2(589.9104, -133.69922)
 states/aWalkSpace/node = SubResource("AnimationNodeBlendSpace2D_fllei")
-states/aWalkSpace/position = Vector2(815.8009, 129.53108)
-states/aWallRunUp/node = SubResource("AnimationNodeAnimation_ia8ke")
-states/aWallRunUp/position = Vector2(960.1954, 325.55154)
-transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_n45d6"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aJumpVariants", "aIdle", SubResource("AnimationNodeStateMachineTransition_8np4b"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aJumpVariants", "aSprint", SubResource("AnimationNodeStateMachineTransition_fllei"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aFall", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_yw7as"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aJumpVariants", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_6e37q"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aSprint", "aSlide", SubResource("AnimationNodeStateMachineTransition_3mvtf"), "aFall", "aLanding", SubResource("AnimationNodeStateMachineTransition_m46g3"), "aLanding", "aIdle", SubResource("AnimationNodeStateMachineTransition_7cy04"), "aLanding", "aSprint", SubResource("AnimationNodeStateMachineTransition_stvej"), "aLanding", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_m0e8k"), "aIdle", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_wqyix"), "aCrouchIdle", "aIdle", SubResource("AnimationNodeStateMachineTransition_vy72i"), "aSlide", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_jhh7x"), "aWalkSpace", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_c2opx"), "aIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_v8mwv"), "aCrouchSpace", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_hdyga"), "aCrouchSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_e3tbv"), "aCrouchIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_peq40"), "aCrouchSpace", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_d8b1y"), "aFall", "aRoll", SubResource("AnimationNodeStateMachineTransition_06dkf"), "aRoll", "aIdle", SubResource("AnimationNodeStateMachineTransition_yln03"), "aRoll", "aSprint", SubResource("AnimationNodeStateMachineTransition_7x427"), "aRoll", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_ymlwl"), "aSprint", "aWallRunUp", SubResource("AnimationNodeStateMachineTransition_yt85l"), "aWallRunUp", "aFall", SubResource("AnimationNodeStateMachineTransition_t35ly"), "aJumpVariants", "aWallRunUp", SubResource("AnimationNodeStateMachineTransition_okknf"), "aWallRunUp", "aTicTac", SubResource("AnimationNodeStateMachineTransition_3t21u"), "aTicTac", "aFall", SubResource("AnimationNodeStateMachineTransition_q0pck"), "aHang", "aClamberCrouch", SubResource("AnimationNodeStateMachineTransition_6xita"), "aClamberCrouch", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_u4k1p")]
-graph_offset = Vector2(64.55469, 201.09451)
+states/aWalkSpace/position = Vector2(839.87384, 212.7101)
+transitions = ["Start", "aIdle", SubResource("AnimationNodeStateMachineTransition_kkbrm"), "aSprint", "aIdle", SubResource("AnimationNodeStateMachineTransition_lxc4y"), "aIdle", "aSprint", SubResource("AnimationNodeStateMachineTransition_m1t7r"), "aFall", "aIdle", SubResource("AnimationNodeStateMachineTransition_704ek"), "aFall", "aSprint", SubResource("AnimationNodeStateMachineTransition_s8ljq"), "aIdle", "aFall", SubResource("AnimationNodeStateMachineTransition_k8e2g"), "aSprint", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_qhy2x"), "aIdle", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_upr3p"), "aWalkSpace", "aFall", SubResource("AnimationNodeStateMachineTransition_vnq5c"), "aWalkSpace", "aSprint", SubResource("AnimationNodeStateMachineTransition_7m1i7"), "aFall", "aHang", SubResource("AnimationNodeStateMachineTransition_jiph2"), "aHang", "aFall", SubResource("AnimationNodeStateMachineTransition_87ye5"), "aHang", "aClamber", SubResource("AnimationNodeStateMachineTransition_aao0a"), "aClamber", "aIdle", SubResource("AnimationNodeStateMachineTransition_rda0l"), "aSprint", "aVault", SubResource("AnimationNodeStateMachineTransition_sg1wo"), "aVault", "aSprint", SubResource("AnimationNodeStateMachineTransition_l7nff"), "aWalkSpace", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_hdio0"), "aIdle", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_gh11b"), "aSprint", "aJumpVariants", SubResource("AnimationNodeStateMachineTransition_ujyek"), "aJumpVariants", "aFall", SubResource("AnimationNodeStateMachineTransition_iwmb3"), "aWalkSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_g6ejb"), "aSprint", "aSlide", SubResource("AnimationNodeStateMachineTransition_3mvtf"), "aFall", "aLanding", SubResource("AnimationNodeStateMachineTransition_m46g3"), "aLanding", "aIdle", SubResource("AnimationNodeStateMachineTransition_7cy04"), "aLanding", "aSprint", SubResource("AnimationNodeStateMachineTransition_stvej"), "aLanding", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_m0e8k"), "aIdle", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_wqyix"), "aCrouchIdle", "aIdle", SubResource("AnimationNodeStateMachineTransition_vy72i"), "aSlide", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_jhh7x"), "aWalkSpace", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_c2opx"), "aIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_v8mwv"), "aCrouchSpace", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_hdyga"), "aCrouchSpace", "aIdle", SubResource("AnimationNodeStateMachineTransition_e3tbv"), "aCrouchIdle", "aCrouchSpace", SubResource("AnimationNodeStateMachineTransition_peq40"), "aCrouchSpace", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_d8b1y"), "aFall", "aRoll", SubResource("AnimationNodeStateMachineTransition_06dkf"), "aRoll", "aIdle", SubResource("AnimationNodeStateMachineTransition_yln03"), "aRoll", "aSprint", SubResource("AnimationNodeStateMachineTransition_7x427"), "aRoll", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_ymlwl"), "aHang", "aClamberCrouch", SubResource("AnimationNodeStateMachineTransition_6xita"), "aClamberCrouch", "aCrouchIdle", SubResource("AnimationNodeStateMachineTransition_u4k1p"), "aFall", "aWalkSpace", SubResource("AnimationNodeStateMachineTransition_ilx8f")]
+graph_offset = Vector2(298.9453, 25.438263)

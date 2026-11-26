@@ -23,6 +23,8 @@ var RollTimer: float = 0.0
 # Variable Jump Height
 var WasAirborne : bool = false
 var VariableJumpMult : float = 0.35
+# Animation Lock (Stops the Leap from cutting off prematurely)
+var LeapAnimLock : float = 0.0
 
 func _physics_process(delta: float) -> void:
 	_roll_buffer(delta)
@@ -47,21 +49,24 @@ func _jump(delta: float):
 		CoyoteTimer -= delta
 
 func _jump_anim():
-	if !Source.isMoving:
+	if Source.isMoving and Source.isSprinting:
+		var Leap : String = ["aLeapL", "aLeapR"].pick_random()
+		AnimManager._variant_travel("aJumpVariants", Leap)
+		LeapAnimLock = AnimManager._get_anim_length(Leap)
+	else:
 		AnimManager._variant_travel("aJumpVariants", "aJump")
-	elif Source.isMoving:
-		AnimManager._variant_travel("aJumpVariants", ["aLeapL", "aLeapR"].pick_random())
-		AnimManager.AnimOverride = true
 		
-func _calc_fall(_delta: float) -> void:
+func _calc_fall(delta: float) -> void:
+	LeapAnimLock = maxf(LeapAnimLock - delta, 0.0)
 	if not Source.is_on_floor():
 		Source.isFalling = Source.velocity.y < 0
-		if Source.isFalling and AnimManager.AnimOverride:
+		if Source.isFalling and AnimManager.AnimOverride and LeapAnimLock <= 0.0:
 			AnimManager.AnimOverride = false
 		if !WasAirborne:
 			FallPeak = Source.global_position.y
 			WasAirborne = true
 		else:
+			LeapAnimLock = 0.0
 			FallPeak = maxf(FallPeak, Source.global_position.y)
 	else:
 		Source.isFalling = false
@@ -108,8 +113,8 @@ func _roll_buffer(delta):
 func _roll_timer(delta):
 	if RollTimer > 0.0:
 		RollTimer -= delta
-	if RollTimer <= 0.0:
-		RollTimer = 0.0
-		AnimManager.AnimOverride = false
-		if CameraPivot.isCameraForced:
-					CameraPivot._force_camera(false)
+		if RollTimer <= 0.0:
+			RollTimer = 0.0
+			AnimManager.AnimOverride = false
+			if CameraPivot.isCameraForced:
+						CameraPivot._force_camera(false)

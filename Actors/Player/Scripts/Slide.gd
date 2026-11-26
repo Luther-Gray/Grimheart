@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 			var SlideDirection = -Source.global_transform.basis.z
 			if FloorNormal.dot(Vector3.UP) < 0.95: # If on Slope, Reset Timer
 				SlideTimer = SlideDuration
-			elif FloorNormal.dot(Vector3.UP) < 0.95 and SlideDirection.dot(FloorNormal.slide(Vector3.UP).normalized()) > 0: # If trying to Slide UP a slope, don't slide.
+			elif FloorNormal.slide(Vector3.UP).normalized().dot(Vector3.UP) < 0.95 and SlideDirection.dot(FloorNormal.slide(Vector3.UP).normalized()) > 0: # If trying to Slide UP a slope, don't slide. Don't ask me what that monster slope detection is lol.
 				_end_slide()
 				return
 			else:
