@@ -16,8 +16,8 @@ var TargetColPosition : float = 0.5
 var TargetMarkerPos : float = 0.90
 
 func _physics_process(_delta: float) -> void:
-	if Source.isSliding:
-		return
+	if Source.isFalling: 
+		_release_crouch()
 	if Source.Settings.CrouchToggle:
 		if Input.is_action_just_pressed("MV_Crouch") and !Source.isHanging and !Source.isSprinting:
 			_toggle_crouch()
@@ -28,17 +28,17 @@ func _physics_process(_delta: float) -> void:
 			_release_crouch()
 
 func _toggle_crouch():
-	if !Source.isCrouched and !Source.isMoving:
+	if !Source.isCrouched: ## Then Crouch.
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
-		CameraMarker.position.y = TargetMarkerPos
+		#CameraMarker.position.y = TargetMarkerPos
 		Source.isCrouched = true
 		Source.isSprinting = false
 		Source.MoveSpeed = Source.Stat.CrouchSpeed
-	elif Source.isCrouched and !CrouchRay.is_colliding():
+	elif Source.isCrouched and !CrouchRay.is_colliding(): ## Then Un-Crouch
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-		CameraMarker.position.y = InitMarkerPos
+		#CameraMarker.position.y = InitMarkerPos
 		Source.isCrouched = false
 		Source.MoveSpeed = Source.Stat.WalkSpeed
 
@@ -46,7 +46,7 @@ func _hold_crouch():
 	if !Source.isCrouched:
 		Source.PlayerCollision.shape.height = TargetPlayerHeight
 		Source.PlayerCollision.position.y = TargetColPosition
-		CameraMarker.position.y = TargetMarkerPos
+		#CameraMarker.position.y = TargetMarkerPos
 		Source.isCrouched = true
 		Source.isSprinting = false
 		Source.MoveSpeed = Source.Stat.CrouchSpeed
@@ -55,6 +55,6 @@ func _release_crouch():
 	if Source.isCrouched and !CrouchRay.is_colliding():
 		Source.PlayerCollision.shape.height = InitPlayerHeight
 		Source.PlayerCollision.position.y = InitColPosition
-		CameraMarker.position.y = InitMarkerPos
+		#CameraMarker.position.y = InitMarkerPos
 		Source.MoveSpeed = Source.Stat.WalkSpeed
 		Source.isCrouched = false

@@ -32,13 +32,13 @@ extends Node3D
 @export_range(-1.0, 1.0, 0.1) var LedgeZOffset : float = -0.75
 
 @export_category("Clamber Tuning")
-@export var ClamberForce : float = 2.0 ## Substantially lower than the vault.
+@export var ClamberForce : float = 4.0 ## Substantially lower than the vault.
 @export var ClamberForwardBoost : float = 2.05 
 @export var ClamberHeightBoost : float = 0.5
 @export var ClamberCollisionHeight : float = 0.7 ## How Tall is the player when clambering
 @export var ClamberCrouchF : float = 1.0
 @export var ClamberCrouchBoost : float = 2.05
-@export var ClamberCrouchHeight : float = 0.95
+var ClamberGoal : Vector3
 
 @export_category("Vault Tuning")
 @export var VaultForce : float = 8.5
@@ -88,6 +88,7 @@ func _grab_ledge(): ## Ledge Grab Logic. Cannot Look or Move. Only Ascend or Dro
 	AnimManager._override_travel("aHang")
 	Source.velocity = Vector3.ZERO
 	Source.isHanging = true
+	Source.isJumping = false
 	Jump.WasAirborne = false
 	var LedgeSurface = ClamberProbeHeight.get_collision_point()
 	var WallNormal = ClamberCast.get_collision_normal(0)
@@ -123,24 +124,26 @@ func _clamber_ledge():
 	if ClamberProbeCeiling.is_colliding():
 		AnimManager._override_travel("aClamberCrouch")
 		Crouch._toggle_crouch()
-	elif !ClamberProbeCeiling.is_colliding():
+	if !ClamberProbeCeiling.is_colliding():
 		AnimManager._override_travel("aClamber")
 	Source.isClambering = true
 	Source.isHanging = false
 	CameraPivot.rotation.y = 0.0
 	## Clamber Movement (Duplicate of Vault)
 	#TODO Split this movement into its own function (But, does vaulting need a seperate force than clambering?)
+	ClamberGoal = ClamberProbeHeight.get_collision_point() - (ClamberProbeHeight.get_collision_normal() * 0.5) + Vector3(0, 0.05, 0) ## Move the Clamber to this Destination.
 	var ClamberDirection = (-Source.global_transform.basis.z * Vector3(1, 0, 1)).normalized()
 	Source.velocity.x = ClamberDirection.x * ClamberForwardBoost
 	Source.velocity.z = ClamberDirection.z * ClamberForwardBoost
 	Source.velocity.y = ClamberForce
-	Source.PlayerCollision.shape.height = ClamberCollisionHeight ## Without this, can't clear a ledge 😬
-	Source.position.y = lerp(Source.position.y, Source.position.y + ClamberHeightBoost, 1) ## And without this, I clip into the ledge's floor 😬
+	Source.PlayerCollision.shape.height = Crouch.TargetPlayerHeight ## Without this, can't clear a ledge 😬
+	Source.position = lerp(Source.position, ClamberGoal, 1) ## And without this, I clip into the ledge's floor 😬
 	get_tree().create_timer(ClamberTimer).timeout.connect(func():
 		_end_clamber())
 
 func _end_clamber() -> void:
-	Source.PlayerCollision.shape.height = CollisionInitHeight
+	if !CrouchProbe.is_colliding():
+		Source.PlayerCollision.shape.height = CollisionInitHeight
 	Source.isClambering = false
 	AnimManager.AnimOverride = false
 

@@ -39,7 +39,7 @@ func _process(_delta: float) -> void:
 	### Secondary Anim State Tree (Combat/Interactions)
 	if Input.is_action_just_pressed("ATK_Right") or Input.is_action_just_pressed("ATK_Left"):
 		Source.isUnsheathed = true
-		CombatPlayback.travel("aIdleUnarmed")
+		CombatPlayback.travel("aBoxingIdle")
 		AnimationDirector.set("parameters/StateMachineBlend/blend_amount", 1.0)
 	elif Input.is_action_just_pressed("ATK_Reload"): 
 		AnimationDirector.set("parameters/StateMachineBlend/blend_amount", 0.0)
@@ -47,12 +47,11 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	TargetMoveDirection = Source.InputDir
 	CurrentMoveDirection = lerp(CurrentMoveDirection, TargetMoveDirection, AnimationSpeed * delta)
-	if !Source.isCrouched and !Source.isWallRunning:
+	if !Source.isCrouched:
 		AnimationDirector.set("parameters/LocomotionStateMachine/aWalkSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	elif Source.isCrouched:
 		AnimationDirector.set("parameters/LocomotionStateMachine/aCrouchSpace/blend_position", Vector2(CurrentMoveDirection.x, -CurrentMoveDirection.y))
 	
-
 func _one_shot(Anim: String) -> void: ##Helper Method for One Shot Animations
 	AnimationDirector.set("parameters/LocomotionStateMachine/" + Anim + "/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 

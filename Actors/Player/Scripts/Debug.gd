@@ -5,17 +5,25 @@ extends Control
 
 @onready var property_container: VBoxContainer = $MarginContainer/PropertyContainer
 
+@export_category("Debug Markers")
+@export var CameraMarker : MeshInstance3D
+@export var DirectionMarker : MeshInstance3D
+
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("SYS_Debug"):
 		visible = !visible
-		get_tree().debug_collisions_hint = true
+		CameraMarker.visible = true
+		DirectionMarker.visible = true
+
 
 func _process(_delta: float) -> void:
 	if !visible:
-		get_tree().debug_collisions_hint = false
+		CameraMarker.visible = false
+		DirectionMarker.visible = false
+	
 		return
 	if !is_instance_valid(Source):
 		push_warning("Debug: Source is null or free.")
@@ -30,7 +38,7 @@ func _process(_delta: float) -> void:
 		_add_debug("Slide State", Source.isSliding, 6)
 		_add_debug("Clamber State", Source.isClambering, 7)
 		_add_debug("Crouch State", Source.isCrouched, 8)
-		_add_debug("Wall Running", Source.isWallRunning, 9)
+		_add_debug("Grabbing State", Source.isGrabbing, 9)
 
 func _add_debug(MetricName: String, Metric, ListOrder: int):
 	var DebugLabel = property_container.find_child(MetricName, true, false)

@@ -5,7 +5,7 @@ extends Node3D
 ## The Camera controls anything having to do with mouse movement and mouse locking. When you open a menu, this script is pinged. When you press escape, this script is pinged.
 ## This Camera script also controls Camera Parameters such as head bob, sway, zoom, and the like.
 
-@export var Player: CharacterBody3D
+@export var Source: CharacterBody3D
 @export var CameraMarker : Marker3D
 @onready var CameraPivot: Node3D = self
 @export var Settings : Resource
@@ -29,12 +29,12 @@ func _unhandled_input(event: InputEvent) -> void:
 #// Mouse Look
 	if event is InputEventMouseMotion and isMouseCaptured and !isCameraForced:
 # Left & Right Mouse Look (When on Ledge)
-		if Player.isHanging:
+		if Source.isHanging:
 			CameraPivot.rotation.y -= deg_to_rad(event.relative.x * Settings.MouseSensitivity)
 			CameraPivot.rotation.y = clamp(CameraPivot.rotation.y, deg_to_rad(-60), deg_to_rad(60))
 		else:
 # Left & Right Mouse Look
-			Player.rotate_y(deg_to_rad(-event.relative.x * Settings.MouseSensitivity))
+			Source.rotate_y(deg_to_rad(-event.relative.x * Settings.MouseSensitivity))
 # Up & Down Mouse Look
 		CameraPivot.rotation.x -= deg_to_rad(event.relative.y * Settings.MouseSensitivity)
 #Clamp how far up and down the player can look.
@@ -52,9 +52,9 @@ func _process(delta: float) -> void:
 		return
 	if isLookingBack:
 		pass
-	if Player.InputDir.x > 0:
+	if Source.InputDir.x > 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(-Settings.SwayAmount), Settings.SwaySpeed * delta)
-	elif Player.InputDir.x < 0:
+	elif Source.InputDir.x < 0:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(Settings.SwayAmount),Settings.SwaySpeed * delta)
 	else:
 		CameraPivot.rotation.z = lerp_angle(CameraPivot.rotation.z, deg_to_rad(0), Settings.SwaySpeed * delta)

@@ -4,7 +4,6 @@ By submitting a contribution to this project, you agree to everything below.
 If you do not agree, do not submit anything.
 
 ## 1. Definitions
-
 - "Maintainer" means the individual who publishes this project under the name
   "Luther Gray", together with their successors and assigns.
 - "Project" means this game and its repository, including all code, art, audio,

@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 	PreviousFootstep = FootstepPosition
 
 func _on_footstep() -> void:
-	if !Source.is_on_floor() and !Source.isWallRunning:
+	if !Source.is_on_floor():
 		return
 	AudioPlayer.stream = ConcreteSteps
 	AudioPlayer.play()

@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		_jump(delta)
 
 func _jump(delta: float):
-	if Input.is_action_just_pressed("MV_Jump") and CoyoteTimer > 0:
+	if Input.is_action_just_pressed("MV_Jump") and CoyoteTimer > 0 and !Source.isCrouched:
 		CoyoteTimer = 0
 		Source.isJumping = true
 		Source.velocity.y = Source.Stat.JumpStrength
@@ -47,7 +47,6 @@ func _jump(delta: float):
 		CoyoteTimer -= delta
 
 func _jump_anim():
-	var JumpAnimLength = AnimManager._get_anim_length("root_aClamber")
 	if !Source.isMoving:
 		AnimManager._variant_travel("aJumpVariants", "aJump")
 	elif Source.isMoving:

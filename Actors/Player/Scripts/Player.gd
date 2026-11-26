@@ -33,14 +33,14 @@ var isClambering : bool = false
 var isVaulting : bool = false
 var isCrouched : bool = false
 var isSliding : bool = false
-var isWallRunning : bool = false
+var isGrabbing : bool = false
 
 func _ready() -> void:
 	MoveSpeed = Stat.WalkSpeed
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		if !isHanging and !isClambering and !isWallRunning:
+		if !isHanging and !isClambering:
 			velocity += get_gravity() * delta
 	if !isHanging and !isClambering and !Status.Stunned:
 		InputDir = Input.get_vector("MV_Left", "MV_Right", "MV_Forward", "MV_Backward")
